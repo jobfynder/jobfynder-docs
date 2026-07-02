@@ -1,0 +1,79 @@
+name: EOD Engineering Memory
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date YYYY-MM-DD"
+        required: true
+      completed:
+        description: "What did we complete today?"
+        required: true
+      decisions:
+        description: "Decisions/ADRs made today"
+        required: true
+      issues:
+        description: "Bugs/issues/lessons learned"
+        required: false
+      tomorrow:
+        description: "Tomorrow's objective"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  create-memory:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Engineering Memory Entry
+        run: |
+          mkdir -p engineering-memory/daily
+
+          FILE="engineering-memory/daily/${{ github.event.inputs.date }}.md"
+
+          cat > "$FILE" <<EOF
+          # Engineering Memory
+
+          Date: ${{ github.event.inputs.date }}
+
+          ---
+
+          ## Completed
+
+          ${{ github.event.inputs.completed }}
+
+          ---
+
+          ## Decisions / ADRs
+
+          ${{ github.event.inputs.decisions }}
+
+          ---
+
+          ## Issues / Lessons Learned
+
+          ${{ github.event.inputs.issues }}
+
+          ---
+
+          ## Tomorrow's Objective
+
+          ${{ github.event.inputs.tomorrow }}
+
+          EOF
+
+      - name: Commit Engineering Memory
+        run: |
+          git config user.name "jobfynder-bot"
+          git config user.email "bot@jobfynder.com"
+
+          git add engineering-memory/daily/
+
+          git commit -m "docs: add engineering memory for ${{ github.event.inputs.date }}" || echo "No changes to commit"
+
+          git push
