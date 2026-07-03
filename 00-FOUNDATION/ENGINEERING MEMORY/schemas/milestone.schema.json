@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Jobfynder Engineering Milestone",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "status",
+    "start_date",
+    "completed_date",
+    "repositories",
+    "summary",
+    "deliverables",
+    "verification",
+    "next_milestone"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique milestone identifier, e.g. HERMES-v0.2"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "in_progress", "completed", "blocked"]
+    },
+    "start_date": {
+      "type": "string",
+      "description": "YYYY-MM-DD"
+    },
+    "completed_date": {
+      "type": "string",
+      "description": "YYYY-MM-DD"
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "incidents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lessons_learned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_milestone": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
