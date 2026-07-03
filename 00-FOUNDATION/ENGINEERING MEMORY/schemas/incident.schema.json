@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Jobfynder Engineering Incident",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "date",
+    "status",
+    "severity",
+    "repository",
+    "summary",
+    "symptoms",
+    "root_cause",
+    "resolution",
+    "prevention"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique incident identifier, e.g. INC-0001"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "description": "YYYY-MM-DD"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["open", "resolved", "monitoring"]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "repository": {
+      "type": "string"
+    },
+    "affected_components": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "root_cause": {
+      "type": "string"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "prevention": {
+      "type": "string"
+    },
+    "commands_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lessons_learned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_adrs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
