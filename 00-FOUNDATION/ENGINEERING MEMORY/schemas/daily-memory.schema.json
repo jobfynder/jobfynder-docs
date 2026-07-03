@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Jobfynder Daily Engineering Memory",
+  "type": "object",
+  "required": [
+    "date",
+    "status",
+    "summary",
+    "repositories",
+    "completed",
+    "decisions",
+    "incidents",
+    "lessons_learned",
+    "open_items",
+    "tomorrow_objective"
+  ],
+  "properties": {
+    "date": {
+      "type": "string",
+      "description": "Engineering memory date in YYYY-MM-DD format"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["green", "yellow", "red"]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "completed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "status", "summary"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["accepted", "proposed", "rejected"]
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "incidents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "summary", "resolution"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "root_cause": {
+            "type": "string"
+          },
+          "resolution": {
+            "type": "string"
+          },
+          "prevention": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "lessons_learned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tomorrow_objective": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+## Infrastructure Snapshot
+
+Snapshot Name:
+INTEL1-Hermes-v0.2-Baseline
+
+Reason:
+First stable Hermes deployment with verified deployment workflow.
+
+Restore Point:
+Known-good environment before Hotlist Engine development.
+

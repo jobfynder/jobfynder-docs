@@ -1,0 +1,38 @@
+Snapshot Levels
+🟢 Foundation Snapshot
+
+Examples:
+
+Fresh server
+Docker installed
+Base infrastructure complete
+🟢 Architecture Snapshot
+
+Examples:
+
+Hermes v0.2
+COMM-1 completed
+Jobfynder API stable
+🟢 Release Snapshot
+
+Examples:
+
+Hermes v1.0
+MVP Launch
+Production Release
+🟢 Pre-Migration Snapshot
+
+Before:
+
+PostgreSQL upgrades
+Ubuntu upgrades
+Docker upgrades
+Major refactoring
+My proposal for all Jobfynder servers
+
+Eventually we'll have something like:
+
+Server	Snapshot Frequency
+INTEL-1 (Hermes)	At milestones + before major changes
+COMM-1 (n8n/bridges)	At milestones + before workflow changes
+Production Jobfynder	Before every release and major infrastructure change
