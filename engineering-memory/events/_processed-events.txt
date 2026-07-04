@@ -3,3 +3,4 @@ jobfynder/hermes|refs/heads/main|851ae32867f24311b5f79c6220489b176a851f91
 jobfynder/hermes|refs/heads/main|07f1d661d630a8b2380d08e792b814be9ae11a3c
 jobfynder/hermes|refs/tags/v0.2.1|d7fde2e897d37635b693cdd94ad66335f945d411
 jobfynder/hermes|refs/heads/main|c63877b8aafa56de62222d01af42288706e7c1c9
+jobfynder/hermes|refs/heads/feature/hermes-memory-engine|5fe86207f801502309e3431f9f0b238ed347142e

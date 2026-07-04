@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory-engine.
 
 ---
 
@@ -22,16 +22,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: c63877b
+- Branch: feature/hermes-memory-engine
+- Head SHA: 5fe8620
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- c63877b feat: initialize hermes memory engine modules — Jobfynder Automation
+- 5fe8620 feat: add mission control API — Jobfynder Automation
 - Changed files:
-- added: app/memory_engine/__init__.py
-- added: app/mission_control/__init__.py
-- added: app/session_brief/__init__.py
+- added: app/mission_control/models.py
+- added: app/mission_control/service.py
+- added: app/routers/mission_control.py
+- modified: app/main.py
 
 ---
 
