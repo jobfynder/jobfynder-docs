@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: cea8f3e
+- Head SHA: 2858030
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- cea8f3e feat: add baseline decision detection — Jobfynder Automation
+- 2858030 feat: persist detected decisions as actions — Jobfynder Automation
 - Changed files:
 - modified: app/decision_engine/service.py
 

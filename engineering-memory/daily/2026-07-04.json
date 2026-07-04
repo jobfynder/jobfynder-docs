@@ -9,11 +9,11 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-memory-engine",
-    "Head SHA: cea8f3e",
+    "Head SHA: 2858030",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "cea8f3e feat: add baseline decision detection \u2014 Jobfynder Automation",
+    "2858030 feat: persist detected decisions as actions \u2014 Jobfynder Automation",
     "Changed files:",
     "modified: app/decision_engine/service.py"
   ],
