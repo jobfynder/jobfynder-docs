@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/v0.2.1.
 
 ---
 
@@ -22,14 +22,10 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 07f1d66
-- Commit count: 1
+- Branch: refs/tags/v0.2.1
+- Head SHA: d7fde2e
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- 07f1d66 chore: stabilize hermes docker host gateway — Jobfynder Automation
-- Changed files:
-- modified: docker-compose.yml
 
 ---
 

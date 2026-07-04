@@ -1,21 +1,17 @@
 {
   "date": "2026-07-04",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch refs/tags/v0.2.1.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: main",
-    "Head SHA: 07f1d66",
-    "Commit count: 1",
-    "Triggered by: jobfynder",
-    "Commits:",
-    "07f1d66 chore: stabilize hermes docker host gateway \u2014 Jobfynder Automation",
-    "Changed files:",
-    "modified: docker-compose.yml"
+    "Branch: refs/tags/v0.2.1",
+    "Head SHA: d7fde2e",
+    "Commit count: 0",
+    "Triggered by: jobfynder"
   ],
   "decisions": [
     {
