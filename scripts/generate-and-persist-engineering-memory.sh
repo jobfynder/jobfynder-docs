@@ -11,6 +11,10 @@ HERMES_URL="${HERMES_URL:-http://localhost:8000/v1/engineering-memory/generate}"
 SOURCE_DIR="${SOURCE_DIR:-/tmp/engineering-memory/daily}"
 DEST_DIR="${DEST_DIR:-$DOCS_REPO/engineering-memory/daily}"
 
+GITHUB_EVENT_FILE="${GITHUB_EVENT_FILE:-}"
+GITHUB_EVENT_JSON="${GITHUB_EVENT_JSON:-}"
+GITHUB_EVENT_B64="${GITHUB_EVENT_B64:-}"
+
 echo "Repository: $REPO_NAME"
 echo "File: scripts/generate-and-persist-engineering-memory.sh"
 echo "Action: Generate Hermes engineering memory, persist files into jobfynder-docs, commit, and push"
@@ -36,10 +40,40 @@ echo "Action: Pull latest Git state"
 git pull --rebase origin "$BRANCH"
 
 echo "Action: Generate daily engineering memory from Hermes"
-curl -fsS -X POST "$HERMES_URL" || {
-  echo "ERROR: Hermes generation endpoint failed"
-  exit 1
-}
+
+if [ -n "$GITHUB_EVENT_FILE" ] && [ -f "$GITHUB_EVENT_FILE" ]; then
+  echo "Input mode: GitHub event file"
+  curl -fsS -X POST "$HERMES_URL" \
+    -H "Content-Type: application/json" \
+    --data-binary @"$GITHUB_EVENT_FILE" || {
+      echo "ERROR: Hermes generation endpoint failed"
+      exit 1
+    }
+elif [ -n "$GITHUB_EVENT_B64" ]; then
+  echo "Input mode: GitHub event base64"
+  PAYLOAD_FILE="/tmp/engineering-memory-github-event.json"
+  printf '%s' "$GITHUB_EVENT_B64" | base64 -d > "$PAYLOAD_FILE"
+  curl -fsS -X POST "$HERMES_URL" \
+    -H "Content-Type: application/json" \
+    --data-binary @"$PAYLOAD_FILE" || {
+      echo "ERROR: Hermes generation endpoint failed"
+      exit 1
+    }
+elif [ -n "$GITHUB_EVENT_JSON" ]; then
+  echo "Input mode: GitHub event JSON"
+  curl -fsS -X POST "$HERMES_URL" \
+    -H "Content-Type: application/json" \
+    --data-binary "$GITHUB_EVENT_JSON" || {
+      echo "ERROR: Hermes generation endpoint failed"
+      exit 1
+    }
+else
+  echo "Input mode: local repository scan"
+  curl -fsS -X POST "$HERMES_URL" || {
+    echo "ERROR: Hermes generation endpoint failed"
+    exit 1
+  }
+fi
 
 echo ""
 echo "Verification: Hermes generation endpoint completed"
