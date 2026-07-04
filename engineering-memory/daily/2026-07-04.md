@@ -23,16 +23,17 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: 19f6720
+- Head SHA: dfcd0ca
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 19f6720 feat: add session brief API — Jobfynder Automation
+- dfcd0ca refactor: use workspace as memory source of truth — Jobfynder Automation
 - Changed files:
-- added: app/routers/session_brief.py
-- added: app/session_brief/models.py
-- added: app/session_brief/service.py
-- modified: app/main.py
+- added: app/workspace/__init__.py
+- added: app/workspace/models.py
+- added: app/workspace/service.py
+- modified: app/mission_control/service.py
+- modified: app/session_brief/service.py
 
 ---
 
