@@ -15,6 +15,10 @@ GITHUB_EVENT_FILE="${GITHUB_EVENT_FILE:-}"
 GITHUB_EVENT_JSON="${GITHUB_EVENT_JSON:-}"
 GITHUB_EVENT_B64="${GITHUB_EVENT_B64:-}"
 
+PAYLOAD_FILE="/tmp/engineering-memory-github-event.json"
+PROCESSED_EVENTS_FILE="$DOCS_REPO/engineering-memory/events/_processed-events.txt"
+DEDUP_KEY=""
+
 echo "Repository: $REPO_NAME"
 echo "File: scripts/generate-and-persist-engineering-memory.sh"
 echo "Action: Generate Hermes engineering memory, persist files into jobfynder-docs, commit, and push"
@@ -39,36 +43,62 @@ cd "$DOCS_REPO"
 echo "Action: Pull latest Git state"
 git pull --rebase origin "$BRANCH"
 
-echo "Action: Generate daily engineering memory from Hermes"
+mkdir -p "$DOCS_REPO/engineering-memory/events"
 
 if [ -n "$GITHUB_EVENT_FILE" ] && [ -f "$GITHUB_EVENT_FILE" ]; then
   echo "Input mode: GitHub event file"
-  curl -fsS -X POST "$HERMES_URL" \
-    -H "Content-Type: application/json" \
-    --data-binary @"$GITHUB_EVENT_FILE" || {
-      echo "ERROR: Hermes generation endpoint failed"
-      exit 1
-    }
+  cp "$GITHUB_EVENT_FILE" "$PAYLOAD_FILE"
 elif [ -n "$GITHUB_EVENT_B64" ]; then
   echo "Input mode: GitHub event base64"
-  PAYLOAD_FILE="/tmp/engineering-memory-github-event.json"
   printf '%s' "$GITHUB_EVENT_B64" | base64 -d > "$PAYLOAD_FILE"
+elif [ -n "$GITHUB_EVENT_JSON" ]; then
+  echo "Input mode: GitHub event JSON"
+  printf '%s' "$GITHUB_EVENT_JSON" > "$PAYLOAD_FILE"
+else
+  echo "Input mode: local repository scan"
+  rm -f "$PAYLOAD_FILE"
+fi
+
+if [ -f "$PAYLOAD_FILE" ]; then
+  python3 -m json.tool "$PAYLOAD_FILE" >/dev/null
+
+  DEDUP_KEY="$(
+    python3 - "$PAYLOAD_FILE" <<'PY'
+import json
+import sys
+
+path = sys.argv[1]
+with open(path, "r", encoding="utf-8") as f:
+    payload = json.load(f)
+
+repo = payload.get("repository", {}).get("full_name", "unknown")
+ref = payload.get("ref", "unknown")
+after = payload.get("after") or payload.get("head_commit", {}).get("id") or "unknown"
+
+print(f"{repo}|{ref}|{after}")
+PY
+  )"
+
+  echo "Dedup key: $DEDUP_KEY"
+
+  touch "$PROCESSED_EVENTS_FILE"
+
+  if grep -Fxq "$DEDUP_KEY" "$PROCESSED_EVENTS_FILE"; then
+    echo "Verification: Duplicate GitHub event already processed. Skipping memory generation."
+    exit 0
+  fi
+fi
+
+echo "Action: Generate daily engineering memory from Hermes"
+
+if [ -f "$PAYLOAD_FILE" ]; then
   curl -fsS -X POST "$HERMES_URL" \
     -H "Content-Type: application/json" \
     --data-binary @"$PAYLOAD_FILE" || {
       echo "ERROR: Hermes generation endpoint failed"
       exit 1
     }
-elif [ -n "$GITHUB_EVENT_JSON" ]; then
-  echo "Input mode: GitHub event JSON"
-  curl -fsS -X POST "$HERMES_URL" \
-    -H "Content-Type: application/json" \
-    --data-binary "$GITHUB_EVENT_JSON" || {
-      echo "ERROR: Hermes generation endpoint failed"
-      exit 1
-    }
 else
-  echo "Input mode: local repository scan"
   curl -fsS -X POST "$HERMES_URL" || {
     echo "ERROR: Hermes generation endpoint failed"
     exit 1
@@ -111,6 +141,12 @@ DEST_FILE_COUNT="$(
 if [ "$DEST_FILE_COUNT" = "0" ]; then
   echo "ERROR: Copy failed. No .json or .md files found in $DEST_DIR"
   exit 1
+fi
+
+if [ -n "$DEDUP_KEY" ]; then
+  echo "Action: Record processed GitHub event"
+  touch "$PROCESSED_EVENTS_FILE"
+  grep -Fxq "$DEDUP_KEY" "$PROCESSED_EVENTS_FILE" || echo "$DEDUP_KEY" >> "$PROCESSED_EVENTS_FILE"
 fi
 
 echo "Verification: Found $DEST_FILE_COUNT files in $DEST_DIR"
