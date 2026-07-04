@@ -23,16 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: 5fe8620
+- Head SHA: 52a2630
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 5fe8620 feat: add mission control API — Jobfynder Automation
+- 52a2630 feat: add persistent mission board — Jobfynder Automation
 - Changed files:
-- added: app/mission_control/models.py
-- added: app/mission_control/service.py
-- added: app/routers/mission_control.py
-- modified: app/main.py
+- modified: app/mission_control/service.py
 
 ---
 
