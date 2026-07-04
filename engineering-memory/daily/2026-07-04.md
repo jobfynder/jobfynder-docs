@@ -23,15 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: bfbb82c
+- Head SHA: 17d93dd
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- bfbb82c feat: add action engine REST API — Jobfynder Automation
+- 17d93dd feat: add decision engine foundation — Jobfynder Automation
 - Changed files:
-- added: app/routers/actions.py
-- modified: app/action_engine/service.py
-- modified: app/main.py
+- added: app/decision_engine/__init__.py
+- added: app/decision_engine/models.py
+- added: app/decision_engine/service.py
 
 ---
 
