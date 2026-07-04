@@ -8,36 +8,33 @@ Status: green
 
 # Executive Summary
 
-Hermes generated engineering memory from local repository activity.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
 # Repositories
 
-- hermes
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
-- Source: Hermes local repository scan
-- Repository: hermes
+- Source: GitHub webhook
+- Repository: jobfynder/hermes
 - Branch: main
-- Recent commits:
-- 810a78b test(memory): remove event archive validation file
-- 3aee4d1 test(memory): verify event archive fixed command
-- 045f938 test(memory): verify event archive command
-- dbb515a test(memory): verify event archive after node cleanup
-- e858354 test(memory): verify event archive
-- Changed files:
-- webhook-archive-test.txt
+- Head SHA: d14468b
+- Commit count: 1
+- Triggered by: jobfynder
+- Commits:
+- d14468b test(memory): validate n8n expression webhook payload — Jobfynder Automation
 
 ---
 
 # Architecture Decisions
 
-- ADR-EMI-001 - Engineering Memory generated from repository activity (accepted)
-  - Hermes generates engineering memory from Git activity and renders it into Markdown.
+- ADR-EMI-002 - Engineering Memory accepts GitHub webhook input (accepted)
+  - Hermes can generate engineering memory from GitHub webhook repository, branch, commit, author, and changed-file context.
 
 ---
 
@@ -49,13 +46,14 @@ Hermes generated engineering memory from local repository activity.
 
 # Lessons Learned
 
-- Engineering memory should be generated from source activity instead of manually written.
-- Git metadata provides a reliable starting point for automated daily memory.
+- Repo-aware engineering memory is more useful than generic repository scanning.
+- Webhook payloads provide reliable commit, author, branch, and changed-file context.
 
 ---
 
 # Open Items
 
+- Improve event archive to store full webhook payload.
 - Add failure alerting for memory automation.
 - Add deduplication guard for repeated memory commits.
 
@@ -63,7 +61,7 @@ Hermes generated engineering memory from local repository activity.
 
 # Tomorrow
 
-Continue improving Engineering Memory automation.
+Use repo-aware engineering memory as the default source for GitHub-triggered automation.
 
 ---
 
