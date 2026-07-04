@@ -23,17 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: dfcd0ca
+- Head SHA: e245601
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- dfcd0ca refactor: use workspace as memory source of truth — Jobfynder Automation
+- e245601 feat: add action engine foundation — Jobfynder Automation
 - Changed files:
-- added: app/workspace/__init__.py
-- added: app/workspace/models.py
-- added: app/workspace/service.py
-- modified: app/mission_control/service.py
-- modified: app/session_brief/service.py
+- added: app/action_engine/__init__.py
+- added: app/action_engine/models.py
+- added: app/action_engine/service.py
 
 ---
 
