@@ -23,11 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 2a9c370
+- Head SHA: 851ae32
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 2a9c370 test(memory): validate deduplication guard — Jobfynder Automation
+- 851ae32 fix: register engineering memory router — Jobfynder Automation
+- Changed files:
+- modified: app/main.py
 
 ---
 
