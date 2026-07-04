@@ -32,6 +32,9 @@ fi
 
 cd "$DOCS_REPO"
 
+echo "Action: Pull latest Git state"
+git pull --rebase origin "$BRANCH"
+
 echo "Action: Generate daily engineering memory from Hermes"
 curl -fsS -X POST "$HERMES_URL" || {
   echo "ERROR: Hermes generation endpoint failed"
@@ -79,9 +82,6 @@ fi
 echo "Verification: Found $DEST_FILE_COUNT files in $DEST_DIR"
 ls -la "$DEST_DIR"
 echo ""
-
-echo "Action: Pull latest Git state"
-git pull --rebase origin "$BRANCH"
 
 echo "Action: Stage engineering memory files"
 git add engineering-memory scripts/generate-and-persist-engineering-memory.sh scripts/update-engineering-memory-index.sh
