@@ -64,6 +64,9 @@ mkdir -p "$DEST_DIR"
 echo "Action: Copy generated files into jobfynder-docs"
 docker cp "${HERMES_CONTAINER}:${SOURCE_DIR}/." "$DEST_DIR/"
 
+echo "Action: Update engineering memory index"
+"$DOCS_REPO/scripts/update-engineering-memory-index.sh"
+
 DEST_FILE_COUNT="$(
   find "$DEST_DIR" -maxdepth 1 -type f \( -name '*.json' -o -name '*.md' \) | wc -l | tr -d ' '
 )"
@@ -81,7 +84,7 @@ echo "Action: Pull latest Git state"
 git pull --rebase origin "$BRANCH"
 
 echo "Action: Stage engineering memory files"
-git add engineering-memory/daily
+git add engineering-memory scripts/generate-and-persist-engineering-memory.sh scripts/update-engineering-memory-index.sh
 
 if git diff --cached --quiet; then
   echo "Verification: No new engineering memory changes detected. Nothing to commit."
