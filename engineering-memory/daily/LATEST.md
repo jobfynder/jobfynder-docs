@@ -23,13 +23,16 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: e10df79
+- Head SHA: 7e8020a
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- e10df79 docs(hermes-200): update understanding progress after schema wiring — Jobfynder Automation
+- 7e8020a feat(hermes-200): move skills into editable taxonomy — Jobfynder Automation
 - Changed files:
-- modified: docs/hermes-200/progress.md
+- added: app/understanding/taxonomy/__init__.py
+- added: app/understanding/taxonomy/loader.py
+- added: app/understanding/taxonomy/skills.json
+- modified: app/understanding/parsers/skills.py
 
 ---
 
