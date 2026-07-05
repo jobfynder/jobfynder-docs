@@ -8,29 +8,39 @@ Status: green
 
 # Executive Summary
 
-Hermes generated engineering memory from local repository activity.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory-engine.
 
 ---
 
 # Repositories
 
-- unknown
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
-- Source: Hermes local repository scan
-- Repository: unknown
-- Branch: 
-- Recent commits:
+- Source: GitHub webhook
+- Repository: jobfynder/hermes
+- Branch: feature/hermes-memory-engine
+- Head SHA: b7cb410
+- Commit count: 5
+- Triggered by: local-engineering-memory
+- Commits:
+- b7cb410 test(core): add Hermes smoke test script — Jobfynder Automation
+- 6791453 chore(core): add Docker build ignore rules — Jobfynder Automation
+- f6c6e59 feat(core): add Hermes RBAC user management script — Jobfynder Automation
+- 536b5d1 feat(core): protect parser endpoints with RBAC — Jobfynder Automation
+- 92ecbcc chore(core): use central Hermes version in parser routes — Jobfynder Automation
+- Changed files:
+- added: scripts/hermes-smoke-test.sh
 
 ---
 
 # Architecture Decisions
 
-- ADR-EMI-001 - Engineering Memory generated from repository activity (accepted)
-  - Hermes generates engineering memory from Git activity and renders it into Markdown.
+- ADR-EMI-002 - Engineering Memory accepts GitHub webhook input (accepted)
+  - Hermes can generate engineering memory from GitHub webhook repository, branch, commit, author, and changed-file context.
 
 ---
 
@@ -42,13 +52,14 @@ Hermes generated engineering memory from local repository activity.
 
 # Lessons Learned
 
-- Engineering memory should be generated from source activity instead of manually written.
-- Git metadata provides a reliable starting point for automated daily memory.
+- Repo-aware engineering memory is more useful than generic repository scanning.
+- Webhook payloads provide reliable commit, author, branch, and changed-file context.
 
 ---
 
 # Open Items
 
+- Improve event archive to store full webhook payload.
 - Add failure alerting for memory automation.
 - Add deduplication guard for repeated memory commits.
 
@@ -56,7 +67,7 @@ Hermes generated engineering memory from local repository activity.
 
 # Tomorrow
 
-Continue improving Engineering Memory automation.
+Use repo-aware engineering memory as the default source for GitHub-triggered automation.
 
 ---
 

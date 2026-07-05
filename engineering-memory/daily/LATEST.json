@@ -1,32 +1,43 @@
 {
   "date": "2026-07-05",
   "status": "green",
-  "summary": "Hermes generated engineering memory from local repository activity.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory-engine.",
   "repositories": [
-    "unknown"
+    "jobfynder/hermes"
   ],
   "completed": [
-    "Source: Hermes local repository scan",
-    "Repository: unknown",
-    "Branch: ",
-    "Recent commits:"
+    "Source: GitHub webhook",
+    "Repository: jobfynder/hermes",
+    "Branch: feature/hermes-memory-engine",
+    "Head SHA: b7cb410",
+    "Commit count: 5",
+    "Triggered by: local-engineering-memory",
+    "Commits:",
+    "b7cb410 test(core): add Hermes smoke test script \u2014 Jobfynder Automation",
+    "6791453 chore(core): add Docker build ignore rules \u2014 Jobfynder Automation",
+    "f6c6e59 feat(core): add Hermes RBAC user management script \u2014 Jobfynder Automation",
+    "536b5d1 feat(core): protect parser endpoints with RBAC \u2014 Jobfynder Automation",
+    "92ecbcc chore(core): use central Hermes version in parser routes \u2014 Jobfynder Automation",
+    "Changed files:",
+    "added: scripts/hermes-smoke-test.sh"
   ],
   "decisions": [
     {
-      "id": "ADR-EMI-001",
-      "title": "Engineering Memory generated from repository activity",
+      "id": "ADR-EMI-002",
+      "title": "Engineering Memory accepts GitHub webhook input",
       "status": "accepted",
-      "summary": "Hermes generates engineering memory from Git activity and renders it into Markdown."
+      "summary": "Hermes can generate engineering memory from GitHub webhook repository, branch, commit, author, and changed-file context."
     }
   ],
   "incidents": [],
   "lessons_learned": [
-    "Engineering memory should be generated from source activity instead of manually written.",
-    "Git metadata provides a reliable starting point for automated daily memory."
+    "Repo-aware engineering memory is more useful than generic repository scanning.",
+    "Webhook payloads provide reliable commit, author, branch, and changed-file context."
   ],
   "open_items": [
+    "Improve event archive to store full webhook payload.",
     "Add failure alerting for memory automation.",
     "Add deduplication guard for repeated memory commits."
   ],
-  "tomorrow_objective": "Continue improving Engineering Memory automation."
+  "tomorrow_objective": "Use repo-aware engineering memory as the default source for GitHub-triggered automation."
 }
