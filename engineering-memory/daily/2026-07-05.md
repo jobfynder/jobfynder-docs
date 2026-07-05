@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: 6791453
+- Head SHA: b7cb410
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 6791453 chore(core): add Docker build ignore rules — Jobfynder Automation
+- b7cb410 test(core): add Hermes smoke test script — Jobfynder Automation
 - Changed files:
-- added: .dockerignore
+- added: scripts/hermes-smoke-test.sh
 
 ---
 
