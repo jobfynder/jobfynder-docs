@@ -7,6 +7,7 @@ BRANCH="${BRANCH:-main}"
 
 HERMES_CONTAINER="${HERMES_CONTAINER:-hermes-api}"
 HERMES_URL="${HERMES_URL:-http://localhost:8000/v1/engineering-memory/generate}"
+HERMES_AUTH_TOKEN_FILE="${HERMES_AUTH_TOKEN_FILE:-/root/hermes-n8n-token.txt}"
 
 SOURCE_DIR="${SOURCE_DIR:-/tmp/engineering-memory/daily}"
 DEST_DIR="${DEST_DIR:-$DOCS_REPO/engineering-memory/daily}"
@@ -91,15 +92,29 @@ fi
 
 echo "Action: Generate daily engineering memory from Hermes"
 
+if [ ! -f "$HERMES_AUTH_TOKEN_FILE" ]; then
+  echo "ERROR: Hermes auth token file not found: $HERMES_AUTH_TOKEN_FILE"
+  exit 1
+fi
+
+HERMES_AUTH_TOKEN="$(tr -d '\r\n' < "$HERMES_AUTH_TOKEN_FILE")"
+
+if [ -z "$HERMES_AUTH_TOKEN" ]; then
+  echo "ERROR: Hermes auth token is empty"
+  exit 1
+fi
+
 if [ -f "$PAYLOAD_FILE" ]; then
   curl -fsS -X POST "$HERMES_URL" \
     -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $HERMES_AUTH_TOKEN" \
     --data-binary @"$PAYLOAD_FILE" || {
       echo "ERROR: Hermes generation endpoint failed"
       exit 1
     }
 else
-  curl -fsS -X POST "$HERMES_URL" || {
+  curl -fsS -X POST "$HERMES_URL" \
+    -H "Authorization: Bearer $HERMES_AUTH_TOKEN" || {
     echo "ERROR: Hermes generation endpoint failed"
     exit 1
   }
