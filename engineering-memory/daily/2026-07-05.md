@@ -23,21 +23,17 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 8b8b906
+- Head SHA: 12c11d6
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 8b8b906 feat(hermes-200): add parser foundation and parse-text endpoint — Jobfynder Automation
+- 12c11d6 feat(hermes-200): add local document extractors — Jobfynder Automation
 - Changed files:
-- added: app/routers/understanding.py
-- added: app/understanding/__init__.py
-- added: app/understanding/compression/__init__.py
-- added: app/understanding/extractors/__init__.py
-- added: app/understanding/models.py
-- added: app/understanding/parsers/__init__.py
-- added: app/understanding/quality/__init__.py
-- added: app/understanding/service.py
-- modified: app/main.py
+- added: app/understanding/extractors/docx_extractor.py
+- added: app/understanding/extractors/local_file.py
+- added: app/understanding/extractors/markitdown_extractor.py
+- added: app/understanding/extractors/pdf_extractor.py
+- added: app/understanding/extractors/plain_text.py
 - modified: requirements.txt
 
 ---
