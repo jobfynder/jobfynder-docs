@@ -23,16 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 7e8020a
+- Head SHA: 80ea559
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 7e8020a feat(hermes-200): move skills into editable taxonomy — Jobfynder Automation
+- 80ea559 feat(hermes-200): add parser fallback policy engine — Jobfynder Automation
 - Changed files:
-- added: app/understanding/taxonomy/__init__.py
-- added: app/understanding/taxonomy/loader.py
-- added: app/understanding/taxonomy/skills.json
-- modified: app/understanding/parsers/skills.py
+- added: app/understanding/fallback_policy.py
+- modified: app/understanding/models.py
+- modified: app/understanding/service.py
 
 ---
 
