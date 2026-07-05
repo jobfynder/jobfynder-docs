@@ -1,6 +1,6 @@
 # HERMES-100 Core Platform Closure Checklist
 
-Status: Active
+Status: Production Baseline Complete
 Owner: Jobfynder-Infra
 Stream: HERMES-100 Core Platform
 
@@ -36,10 +36,10 @@ This checklist tracks what must be true before HERMES-100 is marked production b
 
 ## Remaining Before Closure
 
-- [ ] Final smoke test.
-- [ ] Final repo status check.
-- [ ] Engineering Memory update.
-- [ ] Mark HERMES-100 Core Platform Review as production baseline in Capability Matrix.
+- [x] Final smoke test.
+- [x] Final repo status check.
+- [x] Engineering Memory update.
+- [x] Mark HERMES-100 Core Platform Review as production baseline in Capability Matrix.
 
 ---
 
