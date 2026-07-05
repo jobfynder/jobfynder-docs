@@ -23,14 +23,16 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: e3fd29f
+- Head SHA: db08581
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- e3fd29f feat(hermes-200): add compressed llm context to understanding result — Jobfynder Automation
+- db08581 feat(hermes-200): add parse-file upload endpoint — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/models.py
+- modified: app/routers/understanding.py
+- modified: app/understanding/extractors/local_file.py
 - modified: app/understanding/service.py
+- modified: requirements.txt
 
 ---
 
