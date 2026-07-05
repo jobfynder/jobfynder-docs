@@ -24,7 +24,8 @@ Purpose: Simple progress scoreboard for Hermes capabilities
 | Stream | Capability | Status | Notes |
 |---|---|---|---|
 | HERMES-000 | Architecture & Governance | ✅ | Production baseline docs created and pushed |
-| HERMES-100 | Core Platform Review | ⏳ | Next after governance docs |
+| HERMES-100 | Core Platform Review | 🚧 | Started with config, health, and RBAC baseline |
+| HERMES-100 | Access Control & RBAC | ✅ | Token-based RBAC enabled and validated |
 | HERMES-200 | Parse Jobs | ⏳ | To be reviewed |
 | HERMES-200 | Parse Resumes | ⏳ | To be built later |
 | HERMES-200 | Parse Recruiter Emails | ⏳ | Future priority |
