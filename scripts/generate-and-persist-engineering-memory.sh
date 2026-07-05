@@ -8,6 +8,8 @@ BRANCH="${BRANCH:-main}"
 HERMES_CONTAINER="${HERMES_CONTAINER:-hermes-api}"
 HERMES_URL="${HERMES_URL:-http://localhost:8000/v1/engineering-memory/generate}"
 HERMES_AUTH_TOKEN_FILE="${HERMES_AUTH_TOKEN_FILE:-/root/hermes-n8n-token.txt}"
+LOCAL_REPO_DIR="${LOCAL_REPO_DIR:-/opt/hermes}"
+LOCAL_REPO_FULL_NAME="${LOCAL_REPO_FULL_NAME:-jobfynder/hermes}"
 
 SOURCE_DIR="${SOURCE_DIR:-/tmp/engineering-memory/daily}"
 DEST_DIR="${DEST_DIR:-$DOCS_REPO/engineering-memory/daily}"
@@ -19,6 +21,7 @@ GITHUB_EVENT_B64="${GITHUB_EVENT_B64:-}"
 PAYLOAD_FILE="/tmp/engineering-memory-github-event.json"
 PROCESSED_EVENTS_FILE="$DOCS_REPO/engineering-memory/events/_processed-events.txt"
 DEDUP_KEY=""
+LOCAL_SCAN_MODE="0"
 
 echo "Repository: $REPO_NAME"
 echo "File: scripts/generate-and-persist-engineering-memory.sh"
@@ -56,13 +59,99 @@ elif [ -n "$GITHUB_EVENT_JSON" ]; then
   echo "Input mode: GitHub event JSON"
   printf '%s' "$GITHUB_EVENT_JSON" > "$PAYLOAD_FILE"
 else
-  echo "Input mode: local repository scan"
-  rm -f "$PAYLOAD_FILE"
+  echo "Input mode: local repository scan from host repo"
+  LOCAL_SCAN_MODE="1"
+
+  python3 - "$LOCAL_REPO_DIR" "$LOCAL_REPO_FULL_NAME" "$PAYLOAD_FILE" <<'PYBUILD'
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+repo_dir = sys.argv[1]
+full_name = sys.argv[2]
+payload_file = Path(sys.argv[3])
+
+def git(*args):
+    return subprocess.check_output(
+        ["git", "-C", repo_dir, *args],
+        text=True,
+    ).strip()
+
+branch = git("branch", "--show-current") or "unknown"
+after = git("rev-parse", "HEAD")
+
+log_output = git("log", "-n", "5", "--format=%H%x1f%s%x1f%an")
+commits = []
+
+for line in log_output.splitlines():
+    parts = line.split("\x1f")
+    if len(parts) != 3:
+        continue
+
+    commit_id, message, author_name = parts
+
+    commits.append({
+        "id": commit_id,
+        "message": message,
+        "author": {
+            "name": author_name,
+        },
+        "added": [],
+        "modified": [],
+        "removed": [],
+    })
+
+added = []
+modified = []
+removed = []
+
+status_output = subprocess.check_output(
+    ["git", "-C", repo_dir, "diff-tree", "--no-commit-id", "--name-status", "-r", after],
+    text=True,
+).strip()
+
+for line in status_output.splitlines():
+    if not line.strip():
+        continue
+
+    status, file_path = line.split(maxsplit=1)
+
+    if status.startswith("A"):
+        added.append(file_path)
+    elif status.startswith("D"):
+        removed.append(file_path)
+    else:
+        modified.append(file_path)
+
+if commits:
+    commits[0]["added"] = added
+    commits[0]["modified"] = modified
+    commits[0]["removed"] = removed
+
+payload = {
+    "repository": {
+        "full_name": full_name,
+        "name": full_name.split("/")[-1],
+    },
+    "ref": f"refs/heads/{branch}",
+    "after": after,
+    "commits": commits,
+    "head_commit": commits[0] if commits else None,
+    "sender": {
+        "login": "local-engineering-memory",
+    },
+}
+
+payload_file.write_text(json.dumps(payload, indent=2) + "\n")
+PYBUILD
 fi
 
 if [ -f "$PAYLOAD_FILE" ]; then
   python3 -m json.tool "$PAYLOAD_FILE" >/dev/null
+fi
 
+if [ -f "$PAYLOAD_FILE" ] && [ "$LOCAL_SCAN_MODE" != "1" ]; then
   DEDUP_KEY="$(
     python3 - "$PAYLOAD_FILE" <<'PY'
 import json
@@ -158,7 +247,7 @@ if [ "$DEST_FILE_COUNT" = "0" ]; then
   exit 1
 fi
 
-if [ -n "$DEDUP_KEY" ]; then
+if [ -n "$DEDUP_KEY" ] && [ "$LOCAL_SCAN_MODE" != "1" ]; then
   echo "Action: Record processed GitHub event"
   touch "$PROCESSED_EVENTS_FILE"
   grep -Fxq "$DEDUP_KEY" "$PROCESSED_EVENTS_FILE" || echo "$DEDUP_KEY" >> "$PROCESSED_EVENTS_FILE"
