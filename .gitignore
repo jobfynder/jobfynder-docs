@@ -1,2 +1,6 @@
 # jobfynder-docs
 Engineering Operating System, Architecture, Standards, ADRs and Documentation for the Jobfynder Platform.
+
+# Hermes runtime state - do not commit
+mission-control/
+workspace/
