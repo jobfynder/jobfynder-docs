@@ -23,13 +23,22 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: d0e7e2b
+- Head SHA: 8b8b906
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- d0e7e2b docs(hermes-200): define understanding tool stack — Jobfynder Automation
+- 8b8b906 feat(hermes-200): add parser foundation and parse-text endpoint — Jobfynder Automation
 - Changed files:
-- added: docs/hermes-200/tool-stack-decision.md
+- added: app/routers/understanding.py
+- added: app/understanding/__init__.py
+- added: app/understanding/compression/__init__.py
+- added: app/understanding/extractors/__init__.py
+- added: app/understanding/models.py
+- added: app/understanding/parsers/__init__.py
+- added: app/understanding/quality/__init__.py
+- added: app/understanding/service.py
+- modified: app/main.py
+- modified: requirements.txt
 
 ---
 
