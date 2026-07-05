@@ -28,6 +28,7 @@ Purpose: Simple progress scoreboard for Hermes capabilities
 | HERMES-100 | Access Control & RBAC | ✅ | Token-based RBAC enabled and validated |
 | HERMES-100 | API Version Consistency | ✅ | Central Hermes version used in health and parser responses |
 | HERMES-100 | Docker Build Hygiene | ✅ | .dockerignore added and validated |
+| HERMES-100 | Smoke Test Script | ✅ | Deployment smoke test added and validated |
 | HERMES-100 | RBAC User Management | ✅ | Server-side user add/list/disable script added |
 | HERMES-200 | Parse Jobs | ⏳ | To be reviewed |
 | HERMES-200 | Parse Resumes | ⏳ | To be built later |
