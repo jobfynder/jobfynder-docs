@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 220361f
+- Head SHA: 165b89a
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 220361f feat(hermes-200): add resume contact field extraction — Jobfynder Automation
+- 165b89a test(hermes-200): include resume contact extraction in smoke test — Jobfynder Automation
 - Changed files:
-- added: app/understanding/parsers/contact.py
-- modified: app/understanding/parsers/basic.py
-- modified: app/understanding/structured.py
+- modified: scripts/hermes-200-smoke-test.sh
 
 ---
 
