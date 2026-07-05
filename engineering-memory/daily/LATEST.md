@@ -8,35 +8,29 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory-engine.
+Hermes generated engineering memory from local repository activity.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- unknown
 
 ---
 
 # Completed Today
 
-- Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: feature/hermes-memory-engine
-- Head SHA: b7cb410
-- Commit count: 1
-- Triggered by: jobfynder
-- Commits:
-- b7cb410 test(core): add Hermes smoke test script — Jobfynder Automation
-- Changed files:
-- added: scripts/hermes-smoke-test.sh
+- Source: Hermes local repository scan
+- Repository: unknown
+- Branch: 
+- Recent commits:
 
 ---
 
 # Architecture Decisions
 
-- ADR-EMI-002 - Engineering Memory accepts GitHub webhook input (accepted)
-  - Hermes can generate engineering memory from GitHub webhook repository, branch, commit, author, and changed-file context.
+- ADR-EMI-001 - Engineering Memory generated from repository activity (accepted)
+  - Hermes generates engineering memory from Git activity and renders it into Markdown.
 
 ---
 
@@ -48,14 +42,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 
 # Lessons Learned
 
-- Repo-aware engineering memory is more useful than generic repository scanning.
-- Webhook payloads provide reliable commit, author, branch, and changed-file context.
+- Engineering memory should be generated from source activity instead of manually written.
+- Git metadata provides a reliable starting point for automated daily memory.
 
 ---
 
 # Open Items
 
-- Improve event archive to store full webhook payload.
 - Add failure alerting for memory automation.
 - Add deduplication guard for repeated memory commits.
 
@@ -63,7 +56,7 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 
 # Tomorrow
 
-Use repo-aware engineering memory as the default source for GitHub-triggered automation.
+Continue improving Engineering Memory automation.
 
 ---
 
