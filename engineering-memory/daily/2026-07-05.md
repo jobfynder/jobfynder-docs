@@ -23,14 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: f525f50
+- Head SHA: 12b8d4d
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- f525f50 feat(hermes-200): add configurable fallback flags — Jobfynder Automation
+- 12b8d4d docs(hermes-200): document fallback config flags — Jobfynder Automation
 - Changed files:
-- modified: app/config.py
-- modified: app/understanding/service.py
+- modified: .env.example
 
 ---
 
