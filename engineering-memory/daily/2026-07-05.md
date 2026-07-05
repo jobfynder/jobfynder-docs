@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 0835fcd
+- Head SHA: 59d3409
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 0835fcd feat(hermes-200): add extraction quality scoring — Jobfynder Automation
+- 59d3409 feat(hermes-200): add token budget compression — Jobfynder Automation
 - Changed files:
-- added: app/understanding/quality/scoring.py
-- modified: app/understanding/models.py
-- modified: app/understanding/service.py
+- added: app/understanding/compression/token_budget.py
 
 ---
 
