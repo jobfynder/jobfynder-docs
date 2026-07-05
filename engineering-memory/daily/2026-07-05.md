@@ -23,14 +23,16 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: 554f8db
+- Head SHA: 74a3982
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 554f8db feat: add workspace API endpoint — Jobfynder Automation
+- 74a3982 feat(core): add Hermes config and health metadata — Jobfynder Automation
 - Changed files:
-- added: app/routers/workspace.py
+- added: app/config.py
+- modified: .env.example
 - modified: app/main.py
+- modified: app/routers/health.py
 
 ---
 
