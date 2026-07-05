@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: f6c6e59
+- Head SHA: 6791453
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- f6c6e59 feat(core): add Hermes RBAC user management script — Jobfynder Automation
+- 6791453 chore(core): add Docker build ignore rules — Jobfynder Automation
 - Changed files:
-- added: scripts/hermes-access-control.py
+- added: .dockerignore
 
 ---
 
