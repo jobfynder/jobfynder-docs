@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: 92ecbcc
+- Head SHA: 536b5d1
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 92ecbcc chore(core): use central Hermes version in parser routes — Jobfynder Automation
+- 536b5d1 feat(core): protect parser endpoints with RBAC — Jobfynder Automation
 - Changed files:
 - modified: app/routers/consultants.py
 - modified: app/routers/jobs.py
