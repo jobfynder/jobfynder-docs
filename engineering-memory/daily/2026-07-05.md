@@ -23,13 +23,16 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: ba71eee
+- Head SHA: b6331e5
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- ba71eee feat(hermes-200): prefer markitdown before local extractor fallbacks — Jobfynder Automation
+- b6331e5 feat(hermes-200): add basic local skills parser — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/extractors/local_file.py
+- added: app/understanding/parsers/basic.py
+- added: app/understanding/parsers/skills.py
+- modified: app/understanding/service.py
+- modified: requirements.txt
 
 ---
 
