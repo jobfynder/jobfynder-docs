@@ -24,7 +24,6 @@ Purpose: Simple progress scoreboard for Hermes capabilities
 | Stream | Capability | Status | Notes |
 |---|---|---|---|
 | HERMES-000 | Architecture & Governance | ✅ | Production baseline docs created and pushed |
-| HERMES-100 | Core Platform Review | 🚧 | Started with config, health, and RBAC baseline |
 | HERMES-100 | Access Control & RBAC | ✅ | Token-based RBAC enabled and validated |
 | HERMES-100 | API Version Consistency | ✅ | Central Hermes version used in health and parser responses |
 | HERMES-100 | Docker Build Hygiene | ✅ | .dockerignore added and validated |
