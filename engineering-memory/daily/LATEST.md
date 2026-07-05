@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory-engine.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-understanding.
 
 ---
 
@@ -22,18 +22,14 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-memory-engine
-- Head SHA: b7cb410
-- Commit count: 5
-- Triggered by: local-engineering-memory
+- Branch: feature/hermes-200-understanding
+- Head SHA: d0e7e2b
+- Commit count: 1
+- Triggered by: jobfynder
 - Commits:
-- b7cb410 test(core): add Hermes smoke test script — Jobfynder Automation
-- 6791453 chore(core): add Docker build ignore rules — Jobfynder Automation
-- f6c6e59 feat(core): add Hermes RBAC user management script — Jobfynder Automation
-- 536b5d1 feat(core): protect parser endpoints with RBAC — Jobfynder Automation
-- 92ecbcc chore(core): use central Hermes version in parser routes — Jobfynder Automation
+- d0e7e2b docs(hermes-200): define understanding tool stack — Jobfynder Automation
 - Changed files:
-- added: scripts/hermes-smoke-test.sh
+- added: docs/hermes-200/tool-stack-decision.md
 
 ---
 
