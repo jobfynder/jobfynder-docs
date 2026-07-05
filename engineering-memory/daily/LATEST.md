@@ -23,18 +23,18 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-memory
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-memory-engine
-- Head SHA: c8a1c91
+- Head SHA: 2ccb9d2
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- c8a1c91 feat(core): add RBAC foundation — Jobfynder Automation
+- 2ccb9d2 feat(core): wire RBAC permissions into platform routes — Jobfynder Automation
 - Changed files:
-- added: app/routers/security.py
-- added: app/security/__init__.py
-- added: app/security/rbac.py
-- modified: .env.example
-- modified: app/main.py
-- modified: docker-compose.yml
+- modified: app/routers/actions.py
+- modified: app/routers/engineering_memory.py
+- modified: app/routers/mission_control.py
+- modified: app/routers/security.py
+- modified: app/routers/session_brief.py
+- modified: app/routers/workspace.py
 
 ---
 
