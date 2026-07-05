@@ -23,13 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 59d3409
+- Head SHA: e3fd29f
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 59d3409 feat(hermes-200): add token budget compression — Jobfynder Automation
+- e3fd29f feat(hermes-200): add compressed llm context to understanding result — Jobfynder Automation
 - Changed files:
-- added: app/understanding/compression/token_budget.py
+- modified: app/understanding/models.py
+- modified: app/understanding/service.py
 
 ---
 
