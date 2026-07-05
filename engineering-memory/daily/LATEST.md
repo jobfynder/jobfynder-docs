@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: a80165a
+- Head SHA: e10df79
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- a80165a feat(hermes-200): wire structured schemas into basic parser — Jobfynder Automation
+- e10df79 docs(hermes-200): update understanding progress after schema wiring — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/parsers/basic.py
+- modified: docs/hermes-200/progress.md
 
 ---
 
