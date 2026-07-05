@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 99f0e39
+- Head SHA: f1afd7e
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 99f0e39 test(hermes-200): include taxonomy endpoint in smoke test — Jobfynder Automation
+- f1afd7e docs(hermes-200): record taxonomy endpoint milestone — Jobfynder Automation
 - Changed files:
-- modified: scripts/hermes-200-smoke-test.sh
+- modified: docs/hermes-200/progress.md
 
 ---
 
