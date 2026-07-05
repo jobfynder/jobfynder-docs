@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 12b8d4d
+- Head SHA: bbd55a4
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 12b8d4d docs(hermes-200): document fallback config flags — Jobfynder Automation
+- bbd55a4 docs(hermes-200): update progress after taxonomy and fallback policy — Jobfynder Automation
 - Changed files:
-- modified: .env.example
+- modified: docs/hermes-200/progress.md
 
 ---
 
