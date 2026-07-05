@@ -53,3 +53,34 @@ Never paste tokens in chat, commits, logs, screenshots, or documentation.
 ## Current Status
 
 HERMES-100 Access Control and RBAC is production baseline complete.
+
+---
+
+## User Management Script
+
+Hermes includes a simple server-side script to manage RBAC users:
+
+/opt/hermes/scripts/hermes-access-control.py
+
+List users:
+
+python3 /opt/hermes/scripts/hermes-access-control.py list
+
+Add a user:
+
+python3 /opt/hermes/scripts/hermes-access-control.py add \
+  --id user-id \
+  --name "User Name" \
+  --role viewer \
+  --permissions messages:understand,jobs:parse
+
+Disable a user:
+
+python3 /opt/hermes/scripts/hermes-access-control.py disable \
+  --id user-id
+
+When a user is added, the token is saved outside Git under:
+
+/root/hermes-token-user-id.txt
+
+Never print or share the token publicly.
