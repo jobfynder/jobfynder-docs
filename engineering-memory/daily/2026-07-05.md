@@ -23,18 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 12c11d6
+- Head SHA: 0835fcd
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 12c11d6 feat(hermes-200): add local document extractors — Jobfynder Automation
+- 0835fcd feat(hermes-200): add extraction quality scoring — Jobfynder Automation
 - Changed files:
-- added: app/understanding/extractors/docx_extractor.py
-- added: app/understanding/extractors/local_file.py
-- added: app/understanding/extractors/markitdown_extractor.py
-- added: app/understanding/extractors/pdf_extractor.py
-- added: app/understanding/extractors/plain_text.py
-- modified: requirements.txt
+- added: app/understanding/quality/scoring.py
+- modified: app/understanding/models.py
+- modified: app/understanding/service.py
 
 ---
 
