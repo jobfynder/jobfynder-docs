@@ -38,7 +38,7 @@ Every other route must have a clear target RBAC permission before external produ
 
 ---
 
-## Planned Routes
+## Active / Planned Routes
 
 | Stream | Route | Method | Access | Target Permission | Purpose |
 |---|---|---:|---|---|---|
