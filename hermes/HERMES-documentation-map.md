@@ -95,6 +95,7 @@ Code branch:
 
 feature/hermes-300-matching
 
-Checkpoint tag:
+Checkpoint tags:
 
-hermes-300-matching-policy-v1
+- hermes-300-matching-policy-v1
+- hermes-300-policy-guardrail-v1
