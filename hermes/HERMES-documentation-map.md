@@ -85,8 +85,6 @@ hermes-200-foundation-v1
 
 ---
 
-## Current Module
-
 HERMES-300 Matching & Decision Intelligence:
 
 hermes/HERMES-300-matching-decision-intelligence.md
@@ -95,9 +93,9 @@ Closure checklist:
 
 hermes/HERMES-300-closure-checklist.md
 
-Code branch:
+Code tag:
 
-feature/hermes-300-matching
+hermes-300-foundation-v1
 
 Checkpoint tags:
 
@@ -106,3 +104,9 @@ Checkpoint tags:
 - hermes-300-active-policy-endpoint-v1
 - hermes-300-policy-snapshot-results-v1
 - hermes-300-foundation-v1
+
+---
+
+## Current Module
+
+No active Hermes module is currently open after HERMES-300 closure.
