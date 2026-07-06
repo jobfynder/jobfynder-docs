@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-understanding.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-200-foundation-v1.
 
 ---
 
@@ -22,14 +22,10 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-200-understanding
-- Head SHA: 50194ca
-- Commit count: 1
+- Branch: refs/tags/hermes-200-foundation-v1
+- Head SHA: 30ce9a9
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- 50194ca docs(hermes-200): add consolidated understanding checkpoint — Jobfynder Automation
-- Changed files:
-- added: docs/hermes-200/consolidated-checkpoint.md
 
 ---
 
