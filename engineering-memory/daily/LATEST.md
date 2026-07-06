@@ -23,13 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: a6a873c
+- Head SHA: fe73acc
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- a6a873c docs(hermes-200): record parser validation milestone — Jobfynder Automation
+- fe73acc feat(hermes-200): add safe unstructured fallback placeholder — Jobfynder Automation
 - Changed files:
-- modified: docs/hermes-200/progress.md
+- added: app/understanding/extractors/unstructured_extractor.py
+- modified: .env.example
+- modified: app/config.py
 
 ---
 
