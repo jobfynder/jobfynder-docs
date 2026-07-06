@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-300-policy-snapshot-results-v1.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-300-foundation-v1.
 
 ---
 
@@ -22,8 +22,8 @@ GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-300-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: refs/tags/hermes-300-policy-snapshot-results-v1
-- Head SHA: 458a7e0
+- Branch: refs/tags/hermes-300-foundation-v1
+- Head SHA: 2c5968f
 - Commit count: 0
 - Triggered by: jobfynder
 

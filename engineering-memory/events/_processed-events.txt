@@ -81,3 +81,4 @@ jobfynder/hermes|refs/heads/feature/hermes-300-matching|bde627dfa1c1b5719e500126
 jobfynder/hermes|refs/tags/hermes-300-active-policy-endpoint-v1|25089d8e986e27caac62bbcc5f12632e381b570e
 jobfynder/hermes|refs/heads/feature/hermes-300-matching|2c5968f3aa48bc5dea0c9fdff22442260622f1f0
 jobfynder/hermes|refs/tags/hermes-300-policy-snapshot-results-v1|458a7e0c25de4849707e78a6f6089e027460d346
+jobfynder/hermes|refs/tags/hermes-300-foundation-v1|2c5968f3aa48bc5dea0c9fdff22442260622f1f0
