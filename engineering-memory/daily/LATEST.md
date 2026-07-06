@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-matching.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-300-active-policy-endpoint-v1.
 
 ---
 
@@ -22,17 +22,10 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-ma
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-300-matching
-- Head SHA: bde627d
-- Commit count: 1
+- Branch: refs/tags/hermes-300-active-policy-endpoint-v1
+- Head SHA: 25089d8
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- bde627d feat(hermes-300): expose active matching policy endpoint — Jobfynder Automation
-- Changed files:
-- modified: app/matching/models.py
-- modified: app/matching/policy.py
-- modified: app/routers/matching.py
-- modified: scripts/hermes-smoke-test.sh
 
 ---
 
