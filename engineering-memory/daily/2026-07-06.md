@@ -23,16 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-ma
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-300-matching
-- Head SHA: fe4532d
-- Commit count: 2
+- Head SHA: 7022cb6
+- Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 2b99ebc feat(hermes-300): add basic resume to job scorer — Jobfynder Automation
-- fe4532d feat(hermes-300): expose resume to job matching endpoint — Jobfynder Automation
+- 7022cb6 test(hermes-300): add matching endpoint smoke coverage — Jobfynder Automation
 - Changed files:
-- added: app/matching/scorer.py
-- added: app/routers/matching.py
-- modified: app/main.py
+- modified: scripts/hermes-smoke-test.sh
 
 ---
 
