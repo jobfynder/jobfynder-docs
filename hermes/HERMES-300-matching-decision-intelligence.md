@@ -93,6 +93,7 @@ Checkpoint tags:
 - `hermes-300-matching-policy-v1`
 - `hermes-300-policy-guardrail-v1`
 - `hermes-300-active-policy-endpoint-v1`
+- `hermes-300-policy-snapshot-results-v1`
 
 Latest HERMES-300 code commits:
 
@@ -128,6 +129,7 @@ Live validation completed:
 - Safe guardrail checkpoint tag created and pushed: `hermes-300-policy-guardrail-v1`
 - Protected `/matching/policy` endpoint exposes the active matcher version, weights, and thresholds
 - Match results now include `policy_snapshot` showing the exact matcher version, weights, and thresholds used to produce the score
+- Safe policy snapshot results checkpoint tag created and pushed: `hermes-300-policy-snapshot-results-v1`
 - Safe active policy endpoint checkpoint tag created and pushed: `hermes-300-active-policy-endpoint-v1`
 - Current matcher version: `basic_local_matcher_v1`
 
