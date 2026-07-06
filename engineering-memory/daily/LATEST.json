@@ -9,13 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-200-understanding",
-    "Head SHA: 5a5c7aa",
+    "Head SHA: 50194ca",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "5a5c7aa docs(hermes-200): record document quality threshold milestone \u2014 Jobfynder Automation",
+    "50194ca docs(hermes-200): add consolidated understanding checkpoint \u2014 Jobfynder Automation",
     "Changed files:",
-    "modified: docs/hermes-200/progress.md"
+    "added: docs/hermes-200/consolidated-checkpoint.md"
   ],
   "decisions": [
     {
