@@ -1,6 +1,6 @@
 # HERMES-300 — Closure Checklist
 
-Status: Closure-ready baseline  
+Status: Closed baseline  
 Module: Matching & Decision Intelligence  
 Code branch: feature/hermes-300-matching  
 Latest code checkpoint: hermes-300-foundation-v1  
@@ -86,6 +86,6 @@ HERMES-300 baseline is:
 
 ## Closure Decision
 
-HERMES-300 can be closed as a production-safe baseline once the final closure verification passes.
+HERMES-300 is closed as a production-safe baseline.
 
 Future improvements should continue in a later Hermes stream, not by expanding this baseline endlessly.

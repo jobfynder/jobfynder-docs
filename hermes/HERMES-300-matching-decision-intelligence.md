@@ -1,6 +1,6 @@
 # HERMES-300 — Matching & Decision Intelligence
 
-Status: Closure-ready baseline — local deterministic matching foundation complete  
+Status: Closed — production-safe local deterministic matching foundation complete  
 Base checkpoint: hermes-200-foundation-v1  
 Official docs repo: jobfynder/jobfynder-docs
 
