@@ -92,12 +92,14 @@ Latest HERMES-300 code commits:
 
 - `2b99ebc` — `feat(hermes-300): add basic resume to job scorer`
 - `fe4532d` — `feat(hermes-300): expose resume to job matching endpoint`
+- `7022cb6` — `test(hermes-300): add matching endpoint smoke coverage`
 
 Live validation completed:
 
 - Docker rebuild completed
 - OpenAPI route verified
 - Authenticated live endpoint smoke test passed
+- Main Hermes smoke test now validates `/matching/resume-to-job`
 - Current matcher version: `basic_local_matcher_v1`
 
 ---
