@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: a0d7822
+- Head SHA: 0e80942
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- a0d7822 test(hermes-200): include job description field extraction in smoke test — Jobfynder Automation
+- 0e80942 docs(hermes-200): record job description extraction milestone — Jobfynder Automation
 - Changed files:
-- modified: scripts/hermes-200-smoke-test.sh
+- modified: docs/hermes-200/progress.md
 
 ---
 
