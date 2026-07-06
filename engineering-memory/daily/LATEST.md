@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 2b58a20
+- Head SHA: a4e5702
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 2b58a20 feat(hermes-200): add parser result version metadata — Jobfynder Automation
+- a4e5702 test(hermes-200): include parser version metadata in smoke test — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/models.py
+- modified: scripts/hermes-200-smoke-test.sh
 
 ---
 
