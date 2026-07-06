@@ -42,7 +42,7 @@ Every other route must have a clear target RBAC permission before external produ
 
 | Stream | Route | Method | Access | Target Permission | Purpose |
 |---|---|---:|---|---|---|
-| HERMES-300 | `/matching/resume-to-job` | POST | Not built yet | `matching:evaluate` | Score resume-to-job match |
+| HERMES-300 | `/matching/resume-to-job` | POST | Internal protected | `matching:evaluate` | Score resume-to-job match with deterministic local matcher |
 
 ---
 

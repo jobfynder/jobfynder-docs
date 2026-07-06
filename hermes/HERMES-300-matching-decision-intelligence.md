@@ -1,6 +1,6 @@
 # HERMES-300 — Matching & Decision Intelligence
 
-Status: Started  
+Status: In progress — first local matching endpoint built  
 Base checkpoint: hermes-200-foundation-v1  
 Official docs repo: jobfynder/jobfynder-docs
 
@@ -80,9 +80,25 @@ HERMES-300 should return:
 
 ---
 
-## First Endpoint Planned
+## First Endpoint Built
 
 POST /matching/resume-to-job
+
+Code branch:
+
+`feature/hermes-300-matching`
+
+Latest HERMES-300 code commits:
+
+- `2b99ebc` — `feat(hermes-300): add basic resume to job scorer`
+- `fe4532d` — `feat(hermes-300): expose resume to job matching endpoint`
+
+Live validation completed:
+
+- Docker rebuild completed
+- OpenAPI route verified
+- Authenticated live endpoint smoke test passed
+- Current matcher version: `basic_local_matcher_v1`
 
 ---
 
