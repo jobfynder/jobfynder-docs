@@ -23,13 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 5d9ea95
+- Head SHA: 27dd9aa
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 5d9ea95 docs(hermes-200): record parser version metadata milestone — Jobfynder Automation
+- 27dd9aa feat(hermes-200): add document quality thresholds — Jobfynder Automation
 - Changed files:
-- modified: docs/hermes-200/progress.md
+- added: app/understanding/quality/thresholds.py
+- modified: app/understanding/service.py
 
 ---
 
