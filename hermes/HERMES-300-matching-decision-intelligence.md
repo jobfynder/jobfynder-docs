@@ -99,6 +99,7 @@ Latest HERMES-300 code commits:
 - `7a44cfc` — `feat(hermes-300): add matching endpoint for understanding output`
 - `4032baf` — `test(hermes-300): add understanding output endpoint smoke coverage`
 - `10da47f` — `fix(hermes-300): improve matching explanation formatting`
+- `54da152` — `refactor(hermes-300): extract matching scoring policy`
 
 Live validation completed:
 
@@ -112,6 +113,7 @@ Live validation completed:
 - Live `/matching/resume-to-job/from-understanding` endpoint validates HERMES-200 parsed output directly
 - Main Hermes smoke test now covers both matching endpoints
 - Live matcher explanation formatting now uses readable comma spacing
+- Matching scoring weights, thresholds, and matcher version are now centralized in `app/matching/policy.py`
 - Current matcher version: `basic_local_matcher_v1`
 
 ---
