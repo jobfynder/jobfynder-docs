@@ -2,41 +2,66 @@
 
 Status: Active
 Owner: Jobfynder-Infra
-Stream: HERMES-100 Core Platform
-
----
-
-## Purpose
-
-This document tracks Hermes API routes, access level, and RBAC permission requirements.
-
----
-
-## Routes
-
-| Route | Method | Access | Permission | Purpose |
-|---|---|---|---|---|
-| /health | GET | Public | None | Health check |
-| /security/rbac/status | GET | Protected | security:read | RBAC status |
-| /v1/engineering-memory/generate | POST | Protected | engineering_memory:write | Generate Engineering Memory |
-| /v1/messages/understand | POST | Protected | messages:understand | Understand incoming text |
-| /v1/jobs/parse | POST | Protected | jobs:parse | Parse job text |
-| /v1/consultants/parse | POST | Protected | consultants:parse | Parse consultant/resume text |
-| /mission-control | GET | Protected | mission_control:read | Mission board |
-| /session-brief | GET | Protected | session_brief:read | Next session brief |
-| /workspace | GET | Protected | workspace:read | Hermes workspace |
-| /actions | GET | Protected | actions:read | List actions |
-| /actions/{action_id} | GET | Protected | actions:read | Get action |
-| /actions | POST | Protected | actions:write | Create action |
-| /actions/{action_id} | PUT | Protected | actions:write | Update action |
-| /actions/{action_id} | DELETE | Protected | actions:write | Delete action |
+Last updated: 2026-07-06
 
 ---
 
 ## Rule
 
-Only /health should remain public.
+Only `/health` should remain public.
 
-Every other Hermes route should have a clear RBAC permission.
+Every other route must have a clear target RBAC permission before external production exposure.
 
-When a new route is added, update this file.
+---
+
+## Active Routes
+
+| Stream | Route | Method | Access | Target Permission | Purpose |
+|---|---|---:|---|---|---|
+| HERMES-100 | `/health` | GET | Public | None | Health check |
+| HERMES-100 | `/security/rbac/status` | GET | Protected | `security:read` | RBAC status |
+| HERMES-100 | `/mission-control` | GET | Protected | `mission_control:read` | Mission board |
+| HERMES-100 | `/session-brief` | GET | Protected | `session_brief:read` | Session brief |
+| HERMES-100 | `/workspace` | GET | Protected | `workspace:read` | Workspace |
+| HERMES-100 | `/actions` | GET | Protected | `actions:read` | List actions |
+| HERMES-100 | `/actions/{action_id}` | GET | Protected | `actions:read` | Get action |
+| HERMES-100 | `/actions` | POST | Protected | `actions:write` | Create action |
+| HERMES-100 | `/actions/{action_id}` | PUT | Protected | `actions:write` | Update action |
+| HERMES-100 | `/actions/{action_id}` | DELETE | Protected | `actions:write` | Delete action |
+| HERMES-100 | `/v1/engineering-memory/generate` | POST | Protected | `engineering_memory:write` | Generate Engineering Memory |
+| HERMES-100 | `/v1/messages/understand` | POST | Protected | `messages:understand` | Legacy text understanding |
+| HERMES-100 | `/v1/jobs/parse` | POST | Protected | `jobs:parse` | Legacy job parser |
+| HERMES-100 | `/v1/consultants/parse` | POST | Protected | `consultants:parse` | Legacy consultant parser |
+| HERMES-200 | `/understanding/parse-text` | POST | Internal foundation | `understanding:parse` | Parse resume, JD, or message text |
+| HERMES-200 | `/understanding/parse-file` | POST | Internal foundation | `understanding:parse` | Upload and parse resume/JD files |
+| HERMES-200 | `/understanding/taxonomy/skills` | GET | Internal foundation | `understanding:read` | Read skills taxonomy |
+
+---
+
+## Planned Routes
+
+| Stream | Route | Method | Access | Target Permission | Purpose |
+|---|---|---:|---|---|---|
+| HERMES-300 | `/matching/resume-to-job` | POST | Not built yet | `matching:evaluate` | Score resume-to-job match |
+
+---
+
+## Official References
+
+HERMES-200 official doc:
+
+`hermes/HERMES-200-understanding-foundation.md`
+
+HERMES-300 official doc:
+
+`hermes/HERMES-300-matching-decision-intelligence.md`
+
+Documentation map:
+
+`hermes/HERMES-documentation-map.md`
+
+---
+
+## Maintenance Rule
+
+When a new Hermes route is added, update this file and the official module documentation in `/opt/jobfynder-docs/hermes`.
