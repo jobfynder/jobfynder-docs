@@ -90,3 +90,11 @@ hermes-200-foundation-v1
 HERMES-300 Matching & Decision Intelligence:
 
 hermes/HERMES-300-matching-decision-intelligence.md
+
+Code branch:
+
+feature/hermes-300-matching
+
+Checkpoint tag:
+
+hermes-300-matching-policy-v1
