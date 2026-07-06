@@ -95,6 +95,7 @@ Latest HERMES-300 code commits:
 - `7022cb6` — `test(hermes-300): add matching endpoint smoke coverage`
 - `c318567` — `test(hermes-300): add matching decision scenario coverage`
 - `7d3c399` — `feat(hermes-300): add understanding to matching adapter`
+- `ad685d6` — `test(hermes-300): add understanding adapter scenario coverage`
 
 Live validation completed:
 
@@ -104,6 +105,7 @@ Live validation completed:
 - Main Hermes smoke test now validates `/matching/resume-to-job`
 - Deterministic decision scenarios now validate `submit`, `review`, and `reject` outcomes
 - HERMES-200 structured output can now be adapted into HERMES-300 match requests
+- Dedicated adapter scenario validates HERMES-200-style structured data into HERMES-300 scoring
 - Current matcher version: `basic_local_matcher_v1`
 
 ---
