@@ -88,6 +88,10 @@ Code branch:
 
 `feature/hermes-300-matching`
 
+Checkpoint tag:
+
+`hermes-300-matching-policy-v1`
+
 Latest HERMES-300 code commits:
 
 - `2b99ebc` — `feat(hermes-300): add basic resume to job scorer`
@@ -114,6 +118,7 @@ Live validation completed:
 - Main Hermes smoke test now covers both matching endpoints
 - Live matcher explanation formatting now uses readable comma spacing
 - Matching scoring weights, thresholds, and matcher version are now centralized in `app/matching/policy.py`
+- Safe checkpoint tag created and pushed: `hermes-300-matching-policy-v1`
 - Current matcher version: `basic_local_matcher_v1`
 
 ---
