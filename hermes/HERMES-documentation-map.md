@@ -91,6 +91,10 @@ HERMES-300 Matching & Decision Intelligence:
 
 hermes/HERMES-300-matching-decision-intelligence.md
 
+Closure checklist:
+
+hermes/HERMES-300-closure-checklist.md
+
 Code branch:
 
 feature/hermes-300-matching
