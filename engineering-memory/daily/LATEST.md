@@ -23,12 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-ma
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-300-matching
-- Head SHA: 10da47f
+- Head SHA: 54da152
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 10da47f fix(hermes-300): improve matching explanation formatting — Jobfynder Automation
+- 54da152 refactor(hermes-300): extract matching scoring policy — Jobfynder Automation
 - Changed files:
+- added: app/matching/policy.py
+- modified: app/matching/models.py
 - modified: app/matching/scorer.py
 
 ---
