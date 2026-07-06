@@ -23,13 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-ma
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-300-matching
-- Head SHA: ad685d6
+- Head SHA: 7a44cfc
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- ad685d6 test(hermes-300): add understanding adapter scenario coverage — Jobfynder Automation
+- 7a44cfc feat(hermes-300): add matching endpoint for understanding output — Jobfynder Automation
 - Changed files:
-- added: scripts/hermes-300-understanding-adapter-scenario.py
+- modified: app/matching/models.py
+- modified: app/routers/matching.py
 
 ---
 
