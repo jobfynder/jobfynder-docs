@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-200-un
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-200-understanding
-- Head SHA: 7242873
+- Head SHA: 7f865f8
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 7242873 feat(hermes-200): extract required and preferred jd skills — Jobfynder Automation
+- 7f865f8 test(hermes-200): include required preferred jd skills in smoke test — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/parsers/basic.py
-- modified: app/understanding/parsers/job_description_fields.py
-- modified: app/understanding/structured.py
+- modified: scripts/hermes-200-smoke-test.sh
 
 ---
 
