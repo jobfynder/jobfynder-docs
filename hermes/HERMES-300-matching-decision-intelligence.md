@@ -106,6 +106,7 @@ Latest HERMES-300 code commits:
 - `10da47f` — `fix(hermes-300): improve matching explanation formatting`
 - `54da152` — `refactor(hermes-300): extract matching scoring policy`
 - `2ed2fbc` — `test(hermes-300): add matching policy validation guardrail`
+- `bde627d` — `feat(hermes-300): expose active matching policy endpoint`
 
 Live validation completed:
 
@@ -123,6 +124,7 @@ Live validation completed:
 - Safe checkpoint tag created and pushed: `hermes-300-matching-policy-v1`
 - Main smoke test now validates HERMES-300 scoring policy weights and thresholds
 - Safe guardrail checkpoint tag created and pushed: `hermes-300-policy-guardrail-v1`
+- Protected `/matching/policy` endpoint exposes the active matcher version, weights, and thresholds
 - Current matcher version: `basic_local_matcher_v1`
 
 ---
