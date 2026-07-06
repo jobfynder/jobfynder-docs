@@ -99,3 +99,4 @@ Checkpoint tags:
 
 - hermes-300-matching-policy-v1
 - hermes-300-policy-guardrail-v1
+- hermes-300-active-policy-endpoint-v1
