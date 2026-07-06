@@ -104,6 +104,7 @@ Latest HERMES-300 code commits:
 - `4032baf` — `test(hermes-300): add understanding output endpoint smoke coverage`
 - `10da47f` — `fix(hermes-300): improve matching explanation formatting`
 - `54da152` — `refactor(hermes-300): extract matching scoring policy`
+- `2ed2fbc` — `test(hermes-300): add matching policy validation guardrail`
 
 Live validation completed:
 
@@ -119,6 +120,7 @@ Live validation completed:
 - Live matcher explanation formatting now uses readable comma spacing
 - Matching scoring weights, thresholds, and matcher version are now centralized in `app/matching/policy.py`
 - Safe checkpoint tag created and pushed: `hermes-300-matching-policy-v1`
+- Main smoke test now validates HERMES-300 scoring policy weights and thresholds
 - Current matcher version: `basic_local_matcher_v1`
 
 ---
