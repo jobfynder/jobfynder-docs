@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-matching.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-300-policy-guardrail-v1.
 
 ---
 
@@ -22,15 +22,10 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-ma
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-300-matching
-- Head SHA: 2ed2fbc
-- Commit count: 1
+- Branch: refs/tags/hermes-300-policy-guardrail-v1
+- Head SHA: 25cbc11
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- 2ed2fbc test(hermes-300): add matching policy validation guardrail — Jobfynder Automation
-- Changed files:
-- added: scripts/hermes-300-policy-validation.py
-- modified: scripts/hermes-smoke-test.sh
 
 ---
 
