@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-200-foundation-v1.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-300-matching.
 
 ---
 
@@ -22,10 +22,15 @@ GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-200-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: refs/tags/hermes-200-foundation-v1
-- Head SHA: 30ce9a9
-- Commit count: 0
+- Branch: feature/hermes-300-matching
+- Head SHA: ff4cd4b
+- Commit count: 1
 - Triggered by: jobfynder
+- Commits:
+- ff4cd4b feat(hermes-300): add matching data models — Jobfynder Automation
+- Changed files:
+- added: app/matching/__init__.py
+- added: app/matching/models.py
 
 ---
 
