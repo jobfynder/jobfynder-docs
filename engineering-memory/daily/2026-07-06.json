@@ -9,13 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-200-understanding",
-    "Head SHA: 104f868",
+    "Head SHA: 5a5c7aa",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "104f868 test(hermes-200): include quality thresholds in smoke test \u2014 Jobfynder Automation",
+    "5a5c7aa docs(hermes-200): record document quality threshold milestone \u2014 Jobfynder Automation",
     "Changed files:",
-    "modified: scripts/hermes-200-smoke-test.sh"
+    "modified: docs/hermes-200/progress.md"
   ],
   "decisions": [
     {
