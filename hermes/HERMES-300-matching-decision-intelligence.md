@@ -1,6 +1,6 @@
 # HERMES-300 — Matching & Decision Intelligence
 
-Status: In progress — first local matching endpoint built  
+Status: Closure-ready baseline — local deterministic matching foundation complete  
 Base checkpoint: hermes-200-foundation-v1  
 Official docs repo: jobfynder/jobfynder-docs
 
@@ -71,18 +71,23 @@ HERMES-300 should return:
 
 - match_score
 - decision
-- matched_skills
+- score_breakdown
+- matched_required_skills
 - missing_required_skills
 - matched_preferred_skills
 - reasons
 - risks
 - recommendation
+- matcher_version
+- policy_snapshot
 
 ---
 
-## First Endpoint Built
+## Active Endpoints Built
 
-POST /matching/resume-to-job
+- GET /matching/policy
+- POST /matching/resume-to-job
+- POST /matching/resume-to-job/from-understanding
 
 Code branch:
 
