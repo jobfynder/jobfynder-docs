@@ -3,7 +3,7 @@
 Status: Closure-ready baseline  
 Module: Matching & Decision Intelligence  
 Code branch: feature/hermes-300-matching  
-Latest code checkpoint: hermes-300-policy-snapshot-results-v1  
+Latest code checkpoint: hermes-300-foundation-v1  
 Official docs repo: jobfynder/jobfynder-docs
 
 ---
@@ -80,6 +80,7 @@ HERMES-300 baseline is:
 - `hermes-300-policy-guardrail-v1`
 - `hermes-300-active-policy-endpoint-v1`
 - `hermes-300-policy-snapshot-results-v1`
+- `hermes-300-foundation-v1`
 
 ---
 
