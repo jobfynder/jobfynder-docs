@@ -88,9 +88,10 @@ Code branch:
 
 `feature/hermes-300-matching`
 
-Checkpoint tag:
+Checkpoint tags:
 
-`hermes-300-matching-policy-v1`
+- `hermes-300-matching-policy-v1`
+- `hermes-300-policy-guardrail-v1`
 
 Latest HERMES-300 code commits:
 
@@ -121,6 +122,7 @@ Live validation completed:
 - Matching scoring weights, thresholds, and matcher version are now centralized in `app/matching/policy.py`
 - Safe checkpoint tag created and pushed: `hermes-300-matching-policy-v1`
 - Main smoke test now validates HERMES-300 scoring policy weights and thresholds
+- Safe guardrail checkpoint tag created and pushed: `hermes-300-policy-guardrail-v1`
 - Current matcher version: `basic_local_matcher_v1`
 
 ---
