@@ -9,13 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-200-understanding",
-    "Head SHA: 2eb8bc7",
+    "Head SHA: a6a873c",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "2eb8bc7 test(hermes-200): include parser validation in smoke test \u2014 Jobfynder Automation",
+    "a6a873c docs(hermes-200): record parser validation milestone \u2014 Jobfynder Automation",
     "Changed files:",
-    "modified: scripts/hermes-200-smoke-test.sh"
+    "modified: docs/hermes-200/progress.md"
   ],
   "decisions": [
     {
