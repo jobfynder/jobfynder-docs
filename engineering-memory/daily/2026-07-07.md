@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-700-mu
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-700-multi-agent
-- Head SHA: 2186580
+- Head SHA: 6f90507
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 2186580 feat(hermes-700): add agent handoff envelope — Jobfynder Automation
+- 6f90507 feat(hermes-700): add agent audit event — Jobfynder Automation
 - Changed files:
 - modified: app/agents/models.py
 - modified: app/agents/service.py
