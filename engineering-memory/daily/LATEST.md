@@ -23,20 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-400-ta
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-400-taxonomy-intelligence
-- Head SHA: 08caf87
+- Head SHA: ed08769
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 08caf87 feat(hermes-400): add taxonomy foundation — Jobfynder Automation
+- ed08769 feat(hermes-400): expose taxonomy endpoints — Jobfynder Automation
 - Changed files:
-- added: app/understanding/taxonomy/canonical_skills.json
-- added: app/understanding/taxonomy/job_titles.json
-- added: app/understanding/taxonomy/models.py
-- added: app/understanding/taxonomy/normalizer.py
-- added: app/understanding/taxonomy/skill_aliases.json
-- added: app/understanding/taxonomy/title_aliases.json
-- added: scripts/hermes-400-taxonomy-validation.py
-- modified: app/understanding/taxonomy/loader.py
+- added: scripts/hermes-400-taxonomy-api-check.py
+- modified: app/routers/understanding.py
 
 ---
 
