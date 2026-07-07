@@ -95,3 +95,4 @@ jobfynder/hermes|refs/heads/feature/hermes-400-taxonomy-intelligence|71dc08dd53a
 jobfynder/hermes|refs/heads/feature/hermes-400-taxonomy-intelligence|b17b8acf587af498f4ed42be70d382183daec4fc
 jobfynder/hermes|refs/tags/hermes-400-foundation-v1|6e30f822c4178f910ab16216b18c5c057a08e717
 jobfynder/hermes|refs/tags/hermes-500-foundation-v1|8f6b0f42b26deef84cb8682698007407c2af4b3e
+jobfynder/hermes|refs/tags/hermes-600-foundation-v1|006d97156c80db93f2db6ef3841375faf3011b94
