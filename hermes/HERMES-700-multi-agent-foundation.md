@@ -557,3 +557,56 @@ Updated current code state:
 - Commit: `c2fc718`
 - Message: `feat(hermes-700): add agents snapshot endpoint`
 
+
+---
+
+### Step 016 — Full Current-State Verification
+
+Status: Passed.
+
+Code repository state:
+
+- Repository: `/opt/hermes`
+- Branch: `feature/hermes-700-multi-agent`
+- Commit: `c2fc718`
+- Origin branch: matched
+- Working tree: clean
+
+Code verification:
+
+- Docker build passed
+- `python -m compileall app scripts` passed inside Docker
+- `scripts/hermes-700-agent-registry-check.py` passed inside Docker
+- Live `scripts/hermes-700-agent-api-check.py` passed
+- Direct `GET /agents/snapshot` returned healthy status
+- Snapshot fixture exists at `docs/hermes-700/api-fixtures/agents-snapshot-response.json`
+
+OpenAPI verification:
+
+- `GET /agents/health` present
+- `GET /agents/registry` present
+- `GET /agents/snapshot` present
+- `GET /agents/{agent_id}` present
+- `POST /agents/dry-run` present
+
+Snapshot closure readiness:
+
+- `agent_registry`: true
+- `role_agents_defined`: true
+- `dry_run_supported`: true
+- `execute_blocked_by_policy`: true
+- `policy_decisions`: true
+- `handoff_envelope`: true
+- `audit_event`: true
+- `rbac_routes`: true
+- `api_fixtures`: true
+
+Documentation repository state:
+
+- Repository: `/opt/jobfynder-docs`
+- Branch: `main`
+- Commit: `f04525e`
+- Origin branch: matched
+- Working tree: clean
+- Documentation map shows HERMES-700 as the active Hermes module
+
