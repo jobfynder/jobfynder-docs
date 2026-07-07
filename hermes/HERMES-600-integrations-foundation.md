@@ -302,3 +302,86 @@ Verification completed:
 Purpose:
 
 These fixtures provide stable copy-ready examples for Jobfynder backend, n8n, and future ingestion channels to integrate with Hermes without guessing request and response shapes.
+
+---
+
+## Step 008 — Integration Retry and Error Policy
+
+Status: Passed
+
+Code branch:
+
+`feature/hermes-600-integrations`
+
+Code commits:
+
+- `26afc9b feat(hermes-600): add integration retry policy`
+- `305c031 feat(hermes-600): expose integration retry policy API`
+
+Files added:
+
+- `/opt/hermes/scripts/hermes-600-retry-policy-check.py`
+- `/opt/hermes/scripts/hermes-600-retry-api-check.py`
+
+Files updated:
+
+- `/opt/hermes/app/integrations/models.py`
+- `/opt/hermes/app/integrations/service.py`
+- `/opt/hermes/app/routers/integrations.py`
+
+API routes added:
+
+- `GET /integrations/retry-policy`
+- `POST /integrations/retry-decision`
+
+Retry decisions supported:
+
+- `retry`
+- `do_not_retry`
+- `needs_review`
+
+Retryable HTTP status codes:
+
+- `408`
+- `429`
+- `500`
+- `502`
+- `503`
+- `504`
+
+Non-retryable HTTP status codes:
+
+- `400`
+- `401`
+- `403`
+- `404`
+- `409`
+- `422`
+
+Retryable error types:
+
+- `timeout`
+- `rate_limited`
+- `temporary_network`
+- `server_error`
+
+Non-retryable error types:
+
+- `validation_error`
+- `authentication_error`
+- `permission_error`
+- `not_found`
+- `duplicate`
+
+Verification completed:
+
+- Docker build passed
+- Docker compile passed
+- Retry policy check passed
+- Host live retry API check passed
+- Docker service URL retry API check passed
+- OpenAPI route validation passed
+
+Purpose:
+
+This gives Jobfynder, n8n, webhooks, email, WhatsApp, Telegram, Slack, and future ingestion channels a deterministic way to decide whether failed integration events should be retried, stopped, or moved to manual review.
