@@ -114,6 +114,7 @@ HERMES-400 Taxonomy & Signal Intelligence:
 - Status: Active
 - Started from HERMES-300 closed baseline
 - Code branch: feature/hermes-400-taxonomy-intelligence
+- Code tag: hermes-400-foundation-v1
 - Official doc: hermes/HERMES-400-taxonomy-signal-intelligence.md
 
 ## HERMES-400 Taxonomy Routes

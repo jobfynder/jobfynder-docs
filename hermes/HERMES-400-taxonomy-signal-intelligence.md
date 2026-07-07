@@ -336,6 +336,10 @@ Latest verified code commit:
 
 `1f21f8a`
 
+Foundation code tag:
+
+`hermes-400-foundation-v1`
+
 Implementation scope completed:
 
 - canonical skill registry
@@ -571,10 +575,14 @@ Current code commit:
 
 `1f21f8a`
 
+Current code tag:
+
+`hermes-400-foundation-v1`
+
 Current code branch:
 
 `feature/hermes-400-taxonomy-intelligence`
 
 Current status:
 
-Ready for foundation tag and closure documentation.
+Foundation tag created. Ready for closure documentation.
