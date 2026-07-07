@@ -427,3 +427,168 @@ Next HERMES-500 work should focus on:
 7. API contract fixture examples
 8. Final module verification and closure process
 
+
+---
+
+## 16. Handoff Adapter Implementation
+
+### Step 008 — Submission Handoff Adapters Added
+
+Status: Passed
+
+Code commit:
+
+- `4c7c962`
+- Message: `feat(hermes-500): add submission handoff adapters`
+
+Added files:
+
+- `app/submission_intelligence/adapters.py`
+- `scripts/hermes-500-handoff-adapter-check.py`
+
+Updated files:
+
+- `app/submission_intelligence/models.py`
+- `app/routers/submissions.py`
+
+Added model:
+
+- `SubmissionHandoffEvaluationRequest`
+
+Added API endpoint:
+
+- `POST /submissions/evaluate/from-handoff`
+
+Purpose:
+
+The handoff adapter converts outputs from earlier Hermes modules into the HERMES-500 submission intelligence request shape.
+
+Input sources:
+
+- HERMES-200 Understanding result
+- HERMES-300 Matching result
+- HERMES-400 Taxonomy context
+
+Output target:
+
+- HERMES-500 `SubmissionIntelligenceRequest`
+
+The adapter creates:
+
+- `SubmissionRequirementSnapshot`
+- `SubmissionConsultantSnapshot`
+- `match_result` payload
+- `parser_result` payload
+- `taxonomy_context` payload
+- duplicate-check keys
+
+Docker verification passed:
+
+- Docker build passed
+- Python compile passed
+- Existing HERMES-500 foundation check passed
+- New handoff adapter check passed
+
+---
+
+## 17. Live Handoff API Verification
+
+### Step 009 — Live API Handoff Endpoint Verification
+
+Status: Passed
+
+Verified live API with Docker service:
+
+- Container: `hermes-api`
+- Port: `8000`
+- Health: passed
+- Hermes version: `0.2.3`
+- Environment: development
+
+Validated existing endpoint:
+
+- `GET /submissions/workflow-policy`
+
+Validated new endpoint:
+
+- `POST /submissions/evaluate/from-handoff`
+
+Validated handoff paths:
+
+1. Valid handoff input
+   - Current stage: `discovered`
+   - Match decision: `submit`
+   - Match score: `88.5`
+   - Result: `recommended_stage = matched`
+   - Follow-up required: yes
+
+2. Duplicate-risk handoff input
+   - Current stage: `matched`
+   - Existing key: `consultant-handoff-api-001:job-handoff-api-001`
+   - Result: `recommended_stage = duplicate_risk`
+   - Conflict type: `possible_duplicate_submission`
+   - Follow-up priority: `high`
+
+OpenAPI validation confirmed these routes:
+
+- `/submissions/workflow-policy`
+- `/submissions/evaluate`
+- `/submissions/evaluate/from-handoff`
+
+Current code state after Step 009:
+
+- Repo: `/opt/hermes`
+- Branch: `feature/hermes-500-submission-intelligence`
+- Commit: `4c7c962`
+
+---
+
+## 18. Current HERMES-500 API Surface
+
+HERMES-500 currently exposes three submission intelligence endpoints.
+
+### GET `/submissions/workflow-policy`
+
+Returns the deterministic workflow policy.
+
+Use this when Jobfynder needs to know:
+
+- allowed stages
+- allowed transitions
+- terminal states
+- active workflow version
+
+### POST `/submissions/evaluate`
+
+Evaluates a direct HERMES-500 submission intelligence request.
+
+Use this when Jobfynder already has structured submission objects.
+
+### POST `/submissions/evaluate/from-handoff`
+
+Evaluates a handoff payload from earlier Hermes modules.
+
+Use this when Jobfynder or Hermes has:
+
+- parsed resume result
+- parsed job result
+- match result
+- taxonomy context
+- optional existing submission keys
+
+This endpoint is the main bridge between understanding, matching, taxonomy, and workflow intelligence.
+
+---
+
+## 19. Updated Next Implementation Targets
+
+Next HERMES-500 work should focus on:
+
+1. Add explicit event mapping for introduction and submission actions.
+2. Add deterministic follow-up rule expansion.
+3. Add outcome detector foundation.
+4. Add API fixture examples for all three HERMES-500 endpoints.
+5. Add invalid transition tests.
+6. Add docs for Jobfynder API integration handoff.
+7. Run final Docker and live API verification before closure.
+
