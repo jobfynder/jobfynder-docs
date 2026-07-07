@@ -493,3 +493,67 @@ Current implemented foundation:
 - Repeatable local and live API verification scripts
 - API fixtures
 
+
+---
+
+### Step 014 — Agents Snapshot Endpoint
+
+Status: Passed.
+
+Code commit:
+
+- `c2fc718`
+- Message: `feat(hermes-700): add agents snapshot endpoint`
+
+Implemented:
+
+- `AgentSnapshotResponse`
+- `get_agent_snapshot()`
+- `GET /agents/snapshot`
+- Snapshot assertions in `scripts/hermes-700-agent-registry-check.py`
+- Snapshot live API assertions in `scripts/hermes-700-agent-api-check.py`
+- Snapshot fixture: `docs/hermes-700/api-fixtures/agents-snapshot-response.json`
+
+Snapshot response includes:
+
+- `snapshot_version`
+- `status`
+- `agent_version`
+- `policy_version`
+- `handoff_version`
+- `audit_version`
+- `agent_count`
+- `supported_agents`
+- `supported_action_modes`
+- `safety_mode`
+- `execution_mode`
+- `api_routes`
+- `closure_readiness`
+
+Closure readiness flags:
+
+- `agent_registry`
+- `role_agents_defined`
+- `dry_run_supported`
+- `execute_blocked_by_policy`
+- `policy_decisions`
+- `handoff_envelope`
+- `audit_event`
+- `rbac_routes`
+- `api_fixtures`
+
+Verification:
+
+- Compile passed
+- Docker build passed
+- Registry check inside Docker passed
+- Live Agents API check passed
+- Snapshot fixture validation passed
+
+Updated current code state:
+
+- `/opt/hermes`
+- Branch: `feature/hermes-700-multi-agent`
+- Commit: `c2fc718`
+- Message: `feat(hermes-700): add agents snapshot endpoint`
+
