@@ -9,14 +9,12 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-400-taxonomy-intelligence",
-    "Head SHA: 7bd62c0",
+    "Head SHA: 936570c",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "7bd62c0 feat(hermes-400): add taxonomy signal extraction \u2014 Jobfynder Automation",
+    "936570c chore(hermes-400): clean taxonomy model whitespace \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: app/understanding/taxonomy/signals.py",
-    "added: scripts/hermes-400-signal-extraction-check.py",
     "modified: app/understanding/taxonomy/models.py"
   ],
   "decisions": [
