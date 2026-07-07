@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-400-taxonomy-intelligence.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-400-foundation-v1.
 
 ---
 
@@ -22,16 +22,10 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-400-ta
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-400-taxonomy-intelligence
-- Head SHA: b17b8ac
-- Commit count: 1
+- Branch: refs/tags/hermes-400-foundation-v1
+- Head SHA: 6e30f82
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- b17b8ac feat(hermes-400): add taxonomy snapshot foundation — Jobfynder Automation
-- Changed files:
-- added: app/understanding/taxonomy/versioning.py
-- added: scripts/hermes-400-taxonomy-snapshot-check.py
-- modified: app/understanding/taxonomy/models.py
 
 ---
 
