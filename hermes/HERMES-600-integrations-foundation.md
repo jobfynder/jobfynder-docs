@@ -251,3 +251,54 @@ Verification completed:
 Notes:
 
 The long Step 006-B command was split into smaller safe steps after the console disconnected. Final verification passed before committing the endpoint.
+
+---
+
+## Step 007 — Integrations API Fixtures
+
+Status: Passed
+
+Code branch:
+
+`feature/hermes-600-integrations`
+
+Code commit:
+
+- `57c825a docs(hermes-600): add integrations API fixtures`
+
+Files added:
+
+- `/opt/hermes/docs/hermes-600/api-fixtures/README.md`
+- `/opt/hermes/docs/hermes-600/api-fixtures/integrations-health-response.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/event-normalize-request.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/event-normalize-response.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/event-normalize-needs-review-request.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/event-normalize-needs-review-response.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/jobfynder-submission-handoff-request.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/jobfynder-submission-handoff-response.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/jobfynder-submission-handoff-duplicate-request.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/jobfynder-submission-handoff-duplicate-response.json`
+- `/opt/hermes/scripts/hermes-600-api-fixture-check.py`
+
+Routes covered:
+
+- `GET /integrations/health`
+- `POST /integrations/events/normalize`
+- `POST /integrations/jobfynder/submission-handoff/evaluate`
+
+Fixture groups:
+
+1. Integration health response
+2. Generic event normalization request and response
+3. Needs-review event normalization request and response
+4. Jobfynder submission handoff request and response
+5. Jobfynder duplicate-risk handoff request and response
+
+Verification completed:
+
+- Standard Python fixture validation passed
+- Docker fixture validation passed
+
+Purpose:
+
+These fixtures provide stable copy-ready examples for Jobfynder backend, n8n, and future ingestion channels to integrate with Hermes without guessing request and response shapes.
