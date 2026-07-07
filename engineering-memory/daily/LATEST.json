@@ -9,15 +9,14 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-400-taxonomy-intelligence",
-    "Head SHA: 740fc05",
+    "Head SHA: 71dc08d",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "740fc05 feat(hermes-400): add taxonomy suggestion queue foundation \u2014 Jobfynder Automation",
+    "71dc08d feat(hermes-400): expose taxonomy suggestion endpoint \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: app/understanding/taxonomy/suggestions.py",
-    "added: scripts/hermes-400-suggestion-queue-check.py",
-    "modified: app/understanding/taxonomy/models.py"
+    "modified: app/routers/understanding.py",
+    "modified: scripts/hermes-400-taxonomy-api-check.py"
   ],
   "decisions": [
     {
