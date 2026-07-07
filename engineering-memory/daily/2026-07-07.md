@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-700-multi-agent.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-700-foundation-v1.
 
 ---
 
@@ -22,19 +22,10 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-700-mu
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-700-multi-agent
-- Head SHA: c2fc718
-- Commit count: 1
+- Branch: refs/tags/hermes-700-foundation-v1
+- Head SHA: e68cdab
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- c2fc718 feat(hermes-700): add agents snapshot endpoint — Jobfynder Automation
-- Changed files:
-- added: docs/hermes-700/api-fixtures/agents-snapshot-response.json
-- modified: app/agents/models.py
-- modified: app/agents/service.py
-- modified: app/routers/agents.py
-- modified: scripts/hermes-700-agent-api-check.py
-- modified: scripts/hermes-700-agent-registry-check.py
 
 ---
 

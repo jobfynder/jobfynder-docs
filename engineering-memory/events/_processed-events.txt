@@ -105,3 +105,4 @@ jobfynder/hermes|refs/heads/feature/hermes-700-multi-agent|21865807da79f0b78fd19
 jobfynder/hermes|refs/heads/feature/hermes-700-multi-agent|6f905073265b7ab6463ea9b0f37a260477817b56
 jobfynder/hermes|refs/heads/feature/hermes-700-multi-agent|301680a94ac088b36a1a5a4d7a560e73ed7f4f4e
 jobfynder/hermes|refs/heads/feature/hermes-700-multi-agent|c2fc7188eed15208bb97103414006f4f9e086238
+jobfynder/hermes|refs/tags/hermes-700-foundation-v1|e68cdabedd298734630f03d044155eb27a8466a1
