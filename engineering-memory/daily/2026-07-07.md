@@ -23,14 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-400-ta
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-400-taxonomy-intelligence
-- Head SHA: ed08769
+- Head SHA: 7bd62c0
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- ed08769 feat(hermes-400): expose taxonomy endpoints — Jobfynder Automation
+- 7bd62c0 feat(hermes-400): add taxonomy signal extraction — Jobfynder Automation
 - Changed files:
-- added: scripts/hermes-400-taxonomy-api-check.py
-- modified: app/routers/understanding.py
+- added: app/understanding/taxonomy/signals.py
+- added: scripts/hermes-400-signal-extraction-check.py
+- modified: app/understanding/taxonomy/models.py
 
 ---
 
