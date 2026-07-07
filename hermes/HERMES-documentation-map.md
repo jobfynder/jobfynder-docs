@@ -72,6 +72,13 @@ For every Hermes module:
 
 ## Closed Modules
 
+- HERMES-700 — Multi-Agent Foundation
+  - Final code branch: `feature/hermes-700-multi-agent`
+  - Final code commit: `c2fc718`
+  - Final code tag: `hermes-700-foundation-v1`
+  - Official doc: `hermes/HERMES-700-multi-agent-foundation.md`
+
+
 - [HERMES-600 — Integrations Foundation](./HERMES-600-integrations-foundation.md) — Closed
 
 - [HERMES-500 — Submission Intelligence & Workflow Foundation](./HERMES-500-submission-intelligence-workflow-foundation.md) — Closed
@@ -140,13 +147,13 @@ Current active Hermes module: None.
 
 ## Active Modules
 
-- HERMES-700 — Multi-Agent Foundation
+None.
 
 
 Active Hermes module: None.
 
 
-## HERMES-700 Active Module
+## HERMES-700 Closed Module
 
 HERMES-700 Multi-Agent Foundation:
 
