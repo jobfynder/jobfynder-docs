@@ -536,3 +536,35 @@ Verified API routes:
 Purpose:
 
 This confirms the HERMES-600 integrations foundation is stable across Docker, live host API, Docker service networking, fixtures, retry decisions, event identity, and Jobfynder submission handoff behavior.
+
+
+---
+
+## Final Closure Status
+
+Status: Closed
+
+Final code branch:
+
+`feature/hermes-600-integrations`
+
+Final code commit:
+
+- `7c23d1f docs(hermes-600): add retry and identity API fixtures`
+
+Final verified routes:
+
+- `GET /integrations/health`
+- `POST /integrations/events/normalize`
+- `POST /integrations/jobfynder/submission-handoff/evaluate`
+- `GET /integrations/retry-policy`
+- `POST /integrations/retry-decision`
+- `POST /integrations/events/identity`
+
+Closure summary:
+
+HERMES-600 established the integrations foundation for Hermes. It added normalized integration events, Jobfynder submission handoff, deterministic retry decisions, event identity/idempotency, API fixtures, and full regression verification across Docker, host API, and Docker service networking.
+
+Closure decision:
+
+HERMES-600 is complete and ready for final code tag, push, and post-closure snapshot.
