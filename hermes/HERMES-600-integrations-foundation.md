@@ -184,3 +184,70 @@ Verification completed:
 Notes:
 
 The integrations API check was updated to support `HERMES_API_BASE_URL` so the same verification script works from both the host and Docker network context.
+
+---
+
+## Step 006 — Jobfynder Submission Handoff Integration
+
+Status: Passed
+
+Code branch:
+
+`feature/hermes-600-integrations`
+
+Code commits:
+
+- `7d26acf feat(hermes-600): add Jobfynder submission handoff adapter`
+- `7ba2584 feat(hermes-600): expose Jobfynder submission handoff API`
+
+Files added:
+
+- `/opt/hermes/app/integrations/jobfynder.py`
+- `/opt/hermes/scripts/hermes-600-jobfynder-adapter-check.py`
+- `/opt/hermes/scripts/hermes-600-jobfynder-api-check.py`
+
+Files updated:
+
+- `/opt/hermes/app/integrations/models.py`
+- `/opt/hermes/app/routers/integrations.py`
+
+API route added:
+
+- `POST /integrations/jobfynder/submission-handoff/evaluate`
+
+Purpose:
+
+This endpoint accepts a Jobfynder integration envelope and produces two outputs:
+
+1. A normalized Hermes integration event
+2. A HERMES-500 submission intelligence evaluation
+
+The adapter converts Jobfynder payloads into `SubmissionIntelligenceRequest` so Jobfynder can call Hermes using an integration-safe handoff contract.
+
+Supported handoff behavior:
+
+- Accept Jobfynder workflow handoff events
+- Convert requirement snapshot
+- Convert consultant snapshot
+- Convert recruiter/vendor/employer relationship snapshot
+- Convert event snapshot
+- Pass match result into submission intelligence
+- Pass taxonomy context into submission intelligence
+- Detect duplicate submission risk through existing submission keys
+- Return recommended submission workflow stage
+- Return correlation ID for traceability
+
+Verification completed:
+
+- Python syntax check passed
+- Docker build passed
+- Docker compile passed
+- Integrations core check passed
+- Jobfynder adapter check passed
+- Host live API check passed
+- Docker service URL API check passed
+- OpenAPI route validation passed
+
+Notes:
+
+The long Step 006-B command was split into smaller safe steps after the console disconnected. Final verification passed before committing the endpoint.
