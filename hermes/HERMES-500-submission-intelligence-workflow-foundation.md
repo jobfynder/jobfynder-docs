@@ -993,3 +993,160 @@ Remaining closure work:
 7. Push code and docs.
 8. Run post-closure verification.
 
+
+---
+
+## 33. Jobfynder API Integration Handoff
+
+### Step 017 — Integration Contract
+
+Status: Passed
+
+This section explains how the Jobfynder backend should call HERMES-500.
+
+HERMES-500 exposes three integration surfaces:
+
+1. `GET /submissions/workflow-policy`
+2. `POST /submissions/evaluate`
+3. `POST /submissions/evaluate/from-handoff`
+
+---
+
+## 34. Recommended Jobfynder Backend Usage
+
+Jobfynder should use HERMES-500 in three cases.
+
+### Case 1 — Show Workflow Policy
+
+Use:
+
+- `GET /submissions/workflow-policy`
+
+Purpose:
+
+- Load supported submission stages.
+- Load allowed transitions.
+- Load terminal stages.
+- Keep tracker stage mapping consistent.
+
+### Case 2 — Evaluate Direct Submission Event
+
+Use:
+
+- `POST /submissions/evaluate`
+
+Use this when Jobfynder already knows the current stage and event.
+
+Examples:
+
+- Introduction requested
+- Introduction accepted
+- Consultant submitted
+- Interview recorded
+- Offer recorded
+- Placement recorded
+- Rejection recorded
+- Withdrawal recorded
+
+Expected output:
+
+- Recommended stage
+- Stage changed yes/no
+- Follow-up instruction
+- Conflicts
+- Outcome
+- Next actions
+
+
+### Case 3 — Evaluate From Handoff
+
+Use:
+
+- `POST /submissions/evaluate/from-handoff`
+
+Use this when Jobfynder sends Hermes outputs from:
+
+- HERMES-200 Understanding
+- HERMES-300 Matching
+- HERMES-400 Taxonomy Intelligence
+
+Expected output:
+
+- Matched or review stage
+- Duplicate risk if applicable
+- Missing skill risk if applicable
+- Follow-up instruction
+- Tracker handoff metadata
+
+---
+
+## 35. Jobfynder Tracker Mapping
+
+| Hermes Field | Jobfynder Usage |
+|---|---|
+| `recommended_stage` | Tracker stage |
+| `stage_changed` | Whether to update tracker item |
+| `follow_up.required` | Create follow-up task |
+| `follow_up.priority` | Task priority |
+| `follow_up.suggested_action` | Task instruction |
+| `conflicts` | Show warning or block action |
+| `outcome.outcome_type` | Submission outcome |
+| `next_actions` | Suggested recruiter actions |
+| `handoff.job_id` | Jobfynder job reference |
+| `handoff.consultant_id` | Jobfynder consultant reference |
+
+---
+
+## 36. Integration Safety Rules
+
+Jobfynder backend should follow these rules:
+
+1. Never blindly overwrite a terminal stage.
+2. If `conflicts` is not empty, require review.
+3. If `stage_changed` is false, do not update tracker stage.
+4. If `follow_up.required` is true, create a follow-up task.
+5. If `recommended_stage` is `duplicate_risk`, block auto-submit.
+6. If `outcome.outcome_type` is `placed`, mark the workflow complete.
+7. Store the full Hermes response for audit/debugging.
+
+---
+
+## 37. Current Integration Readiness
+
+HERMES-500 is ready for Jobfynder backend integration at foundation level.
+
+Ready capabilities:
+
+- Submission lifecycle policy
+- Direct workflow event evaluation
+- Handoff-based evaluation
+- Duplicate-risk detection
+- Invalid-transition protection
+- Follow-up recommendation
+- Outcome detection
+- API fixtures
+- Live API verification
+
+Not included in HERMES-500 foundation:
+
+- Database persistence
+- Authentication enforcement
+- Webhook delivery
+- Background jobs
+- Jobfynder UI implementation
+- Human approval workflow UI
+
+---
+
+## 38. Updated Remaining Work Before Closure
+
+Remaining closure work:
+
+1. Run full final Docker verification.
+2. Run full final live API verification.
+3. Update documentation map from active to closed.
+4. Commit final official docs.
+5. Create final code tag `hermes-500-foundation-v1`.
+6. Push code and docs.
+7. Run post-closure verification.
+
