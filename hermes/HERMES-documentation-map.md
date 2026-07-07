@@ -143,4 +143,15 @@ Current active Hermes module: None.
 - None
 
 
-No active Hermes module is currently open after HERMES-500 closure.
+Active Hermes module: HERMES-700 — Multi-Agent Foundation.
+
+
+## HERMES-700 Active Module
+
+HERMES-700 Multi-Agent Foundation:
+
+- Status: Active
+- Started from HERMES-600 closed baseline
+- Code branch: `/opt/hermes` branch `feature/hermes-700-multi-agent`
+- Official doc: `hermes/HERMES-700-multi-agent-foundation.md`
+- Purpose: role-aware, permission-aware, auditable Hermes agent foundation
