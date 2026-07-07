@@ -115,3 +115,16 @@ HERMES-400 Taxonomy & Signal Intelligence:
 - Started from HERMES-300 closed baseline
 - Code branch: feature/hermes-400-taxonomy-intelligence
 - Official doc: hermes/HERMES-400-taxonomy-signal-intelligence.md
+
+## HERMES-400 Taxonomy Routes
+
+
+| HERMES-400 | `/understanding/taxonomy/skills` | GET | Internal/public depending deployment policy | understanding:read | Read legacy skills taxonomy |
+| HERMES-400 | `/understanding/taxonomy/skills/canonical` | GET | Internal/public depending deployment policy | understanding:read | Read canonical skill taxonomy |
+| HERMES-400 | `/understanding/taxonomy/skills/aliases` | GET | Internal/public depending deployment policy | understanding:read | Read skill alias taxonomy |
+| HERMES-400 | `/understanding/taxonomy/job-titles` | GET | Internal/public depending deployment policy | understanding:read | Read canonical job title taxonomy |
+| HERMES-400 | `/understanding/taxonomy/job-title-aliases` | GET | Internal/public depending deployment policy | understanding:read | Read job title alias taxonomy |
+| HERMES-400 | `/understanding/taxonomy/snapshot` | GET | Internal/public depending deployment policy | understanding:read | Read taxonomy version snapshot |
+| HERMES-400 | `/understanding/taxonomy/normalize` | POST | Internal/public depending deployment policy | understanding:parse | Normalize skills and job titles |
+| HERMES-400 | `/understanding/taxonomy/extract-signals` | POST | Internal/public depending deployment policy | understanding:parse | Extract normalized taxonomy signals from text |
+| HERMES-400 | `/understanding/taxonomy/suggestions` | POST | Internal protected recommended | understanding:parse | Create review-required taxonomy suggestions |

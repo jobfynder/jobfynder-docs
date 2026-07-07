@@ -321,3 +321,260 @@ Opened after HERMES-300 closure from:
 - code tag: hermes-300-foundation-v1
 - code commit: 2c5968f
 - docs commit: f93c62d
+
+---
+
+## 11. Foundation Implementation Completed
+
+HERMES-400 foundation implementation is now complete in the Hermes code repo.
+
+Code branch:
+
+`feature/hermes-400-taxonomy-intelligence`
+
+Latest verified code commit:
+
+`1f21f8a`
+
+Implementation scope completed:
+
+- canonical skill registry
+- skill alias registry
+- canonical job title registry
+- job title alias registry
+- taxonomy loader extensions
+- taxonomy normalizer
+- taxonomy signal extraction
+- taxonomy suggestion queue foundation
+- taxonomy snapshot foundation
+- taxonomy API endpoints
+- Understanding output integration
+- HERMES-300 matching adapter integration
+- Docker/live API verification
+
+---
+
+## 12. Taxonomy Data Foundation
+
+HERMES-400 added versioned taxonomy files under:
+
+`app/understanding/taxonomy`
+
+Files added:
+
+- `canonical_skills.json`
+- `skill_aliases.json`
+- `job_titles.json`
+- `title_aliases.json`
+
+Current foundation snapshot counts:
+
+- canonical skills: 35
+- skill aliases: 42
+- job titles: 14
+- title aliases: 37
+
+Current taxonomy versions:
+
+- `jobfynder_canonical_skills_v1`
+- `jobfynder_skill_aliases_v1`
+- `jobfynder_job_titles_v1`
+- `jobfynder_title_aliases_v1`
+
+Snapshot name:
+
+`hermes-400-taxonomy-foundation-v1`
+
+---
+
+## 13. Normalization Foundation
+
+Hermes can now normalize common skills and aliases.
+
+Examples:
+
+- JS → JavaScript
+- ReactJS → React
+- K8s → Kubernetes
+- RESTful API → REST API
+
+Hermes can also normalize common recruiting job titles and aliases.
+
+Examples:
+
+- SRE → Site Reliability Engineer
+- Bench Sales → Bench Sales Recruiter
+- React UI Developer → Frontend React Developer
+- BDM → Business Development Manager
+
+---
+
+## 14. Signal Extraction Foundation
+
+Hermes can now extract taxonomy signals from free text.
+
+Signal extraction returns:
+
+- normalized skills
+- normalized job titles
+- match type
+- confidence
+- source span positions
+- taxonomy versions
+
+Example extracted skills:
+
+- AWS
+- JavaScript
+- Kubernetes
+- PostgreSQL
+- React
+- REST API
+
+Example extracted job titles:
+
+- Frontend React Developer
+- Site Reliability Engineer
+
+---
+
+## 15. Suggestion Queue Foundation
+
+Unknown skills and job titles are not automatically added to taxonomy.
+
+Instead, Hermes creates review-required suggestions.
+
+Example:
+
+- Vector Database → review-required skill suggestion
+- Prompt Engineer → review-required job title suggestion
+
+Safety rule:
+
+No HERMES-400 suggestion is auto-approved.
+
+All new taxonomy learning must remain reviewable.
+
+---
+
+## 16. Understanding Integration
+
+HERMES-400 taxonomy signals are now included inside HERMES Understanding output.
+
+`structured_data` now includes:
+
+- `taxonomy_signals`
+- `normalized_skills`
+- `normalized_job_titles`
+
+This keeps HERMES-200 Understanding compatible while making it taxonomy-aware.
+
+---
+
+## 17. Matching Integration
+
+HERMES-300 matching now uses HERMES-400 normalized skills when available.
+
+The matching adapter now:
+
+- prefers `normalized_skills`
+- normalizes required skills
+- normalizes preferred skills
+- remains backward-compatible with older `skills` fields
+
+This means matching can handle aliases like:
+
+- JS
+- ReactJS
+- K8s
+- fast api
+- python3
+
+without requiring the original parser to already know the canonical form.
+
+---
+
+## 18. Active HERMES-400 API Endpoints
+
+HERMES-400 added these Understanding taxonomy endpoints:
+
+- `GET /understanding/taxonomy/skills`
+- `GET /understanding/taxonomy/skills/canonical`
+- `GET /understanding/taxonomy/skills/aliases`
+- `GET /understanding/taxonomy/job-titles`
+- `GET /understanding/taxonomy/job-title-aliases`
+- `GET /understanding/taxonomy/snapshot`
+- `POST /understanding/taxonomy/normalize`
+- `POST /understanding/taxonomy/extract-signals`
+- `POST /understanding/taxonomy/suggestions`
+
+---
+
+## 19. Verification Scripts
+
+HERMES-400 added these verification scripts:
+
+- `scripts/hermes-400-taxonomy-validation.py`
+- `scripts/hermes-400-signal-extraction-check.py`
+- `scripts/hermes-400-understanding-taxonomy-check.py`
+- `scripts/hermes-400-matching-taxonomy-adapter-check.py`
+- `scripts/hermes-400-suggestion-queue-check.py`
+- `scripts/hermes-400-taxonomy-snapshot-check.py`
+- `scripts/hermes-400-taxonomy-api-check.py`
+
+All verification scripts passed inside the Hermes Docker runtime.
+
+---
+
+## 20. Live Verification Completed
+
+Live verification was completed after rebuilding the running `hermes-api` container.
+
+Verified live endpoints:
+
+- health endpoint
+- taxonomy snapshot endpoint
+- taxonomy normalization endpoint
+- taxonomy suggestions endpoint
+- taxonomy signal extraction endpoint
+
+Live snapshot returned:
+
+- canonical skills: 35
+- skill aliases: 42
+- job titles: 14
+- title aliases: 37
+- validation status: passed
+
+---
+
+## 21. HERMES-400 Safety Rules
+
+HERMES-400 foundation follows these safety rules:
+
+- taxonomy changes are versioned
+- aliases resolve to canonical values
+- unknown terms go to review queue
+- unknown terms are not auto-approved
+- matching remains deterministic
+- HERMES-300 remains backward-compatible
+- no LLM is required for foundation behavior
+- live taxonomy learning is not enabled yet
+
+---
+
+## 22. Current Status
+
+HERMES-400 foundation implementation is verification-passed.
+
+Current code commit:
+
+`1f21f8a`
+
+Current code branch:
+
+`feature/hermes-400-taxonomy-intelligence`
+
+Current status:
+
+Ready for foundation tag and closure documentation.
