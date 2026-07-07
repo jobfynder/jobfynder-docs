@@ -672,5 +672,6 @@ Future Hermes multi-agent work must start from:
 
 - Code tag: `hermes-700-foundation-v1`
 - Code commit: `c2fc718`
-- Official docs closure commit: `0749bce`
+- Official docs closure section commit: `0749bce`
+- Official docs final closure map state commit: `62e9b1c`
 
