@@ -238,3 +238,258 @@ Actions:
 - Create code branch `feature/hermes-700-multi-agent`
 - Create official HERMES-700 documentation
 - Update Hermes documentation map
+
+### Step 006 — Agent Registry and Dry-Run Router
+
+Status: Passed.
+
+Code commit:
+
+- `/opt/hermes` branch `feature/hermes-700-multi-agent`
+- Commit: `37ce96a`
+- Message: `feat(hermes-700): add agent registry and dry-run router`
+
+Implemented:
+
+- `app/agents/__init__.py`
+- `app/agents/models.py`
+- `app/agents/service.py`
+- `app/routers/agents.py`
+- `scripts/hermes-700-agent-registry-check.py`
+- Router wiring in `app/main.py`
+
+Agents added:
+
+- Founder Agent
+- Recruiter Agent
+- Bench Sales Agent
+- Consultant Agent
+- Engineering Agent
+- Support Agent
+
+Safety behavior:
+
+- Dry-run first
+- Human review required
+- Execute mode blocked
+- High-risk actions such as submit, send, email, approve, verify, deploy, delete, billing, WhatsApp, and LinkedIn are blocked into review-required prepared actions
+
+Verification:
+
+- Docker build passed
+- Compile check passed
+- Agent registry check passed
+
+---
+
+### Step 007 — Live RBAC-Protected Agents API Verification
+
+Status: Passed.
+
+Verified live routes:
+
+- `GET /agents/health`
+- `GET /agents/registry`
+- `GET /agents/{agent_id}`
+- `POST /agents/dry-run`
+
+RBAC behavior:
+
+- Protected routes correctly returned `Missing access token` without bearer token
+- Live API passed with existing `pavan-admin` wildcard token
+- RBAC remained enabled
+
+Verified outcomes:
+
+- Safe recruiter dry run returned `accepted`
+- Bench Sales execute/send/submit request returned `needs_review`
+- Blocked execute result returned `executed=false`
+- Unknown agent returned `rejected`
+
+---
+
+### Step 008 — Repeatable Agents API Check and Fixtures
+
+Status: Passed.
+
+Code commit:
+
+- Commit: `42eccb9`
+- Message: `test(hermes-700): add agents API check and fixtures`
+
+Implemented:
+
+- `scripts/hermes-700-agent-api-check.py`
+
+Fixtures added:
+
+- `docs/hermes-700/api-fixtures/agents-health-response.json`
+- `docs/hermes-700/api-fixtures/agents-registry-response.json`
+- `docs/hermes-700/api-fixtures/bench-sales-agent-response.json`
+- `docs/hermes-700/api-fixtures/blocked-execute-response.json`
+- `docs/hermes-700/api-fixtures/safe-dry-run-response.json`
+- `docs/hermes-700/api-fixtures/unknown-agent-response.json`
+
+Verification:
+
+- Live Agents API check passed
+- Fixture validation passed
+- Fixtures committed and pushed
+
+---
+
+### Step 009 — Agent Policy Enforcement Foundation
+
+Status: Passed.
+
+Code commits:
+
+- `1ddf34c` — `feat(hermes-700): enforce agent policy decisions`
+- `b62612f` — `test(hermes-700): refresh policy audit API fixtures`
+
+Implemented:
+
+- `capability_id` on `AgentRunRequest`
+- `AgentPolicyDecision`
+- `evaluate_agent_policy`
+- Agent capability validation
+- Actor permission validation
+- Policy snapshot in response audit
+- Router-level propagation of authenticated actor id, role, and permissions into agent context
+
+Verified policy behavior:
+
+- Valid recruiter `job_review` dry run is allowed
+- Invalid capability is rejected
+- Missing actor permissions return `needs_review`
+- Execute mode for capability remains blocked
+- Policy information appears in `audit.policy`
+
+Verification:
+
+- Compile passed
+- Local registry check passed
+- Docker rebuild passed
+- Live API check passed after force-recreate
+- Policy fixtures refreshed and validated
+
+---
+
+### Step 010 — Agent Handoff Envelope Foundation
+
+Status: Passed.
+
+Code commit:
+
+- `2186580`
+- Message: `feat(hermes-700): add agent handoff envelope`
+
+Implemented:
+
+- `AgentHandoffEnvelope`
+- `AgentHandoffTarget`
+- `AgentHandoffStatus`
+- `build_agent_handoff`
+- `handoff` field on `AgentRunResult`
+
+Handoff targets:
+
+- `human_review`
+- `n8n`
+- `jobfynder_api`
+- `engineering_memory`
+- `none`
+
+Handoff statuses:
+
+- `prepared`
+- `blocked`
+- `not_required`
+
+Verified handoff behavior:
+
+- Safe dry-run result creates `prepared` handoff
+- Blocked execute result creates `blocked` handoff
+- Handoff target is `human_review`
+- Human approval remains required
+
+Verification:
+
+- Compile passed
+- Local registry check passed
+- Docker rebuild and force-recreate passed
+- Live API check passed
+- Handoff fixture validation passed
+
+---
+
+### Step 011 — Agent Execution Audit Event Foundation
+
+Status: Passed.
+
+Code commits:
+
+- `6f90507` — `feat(hermes-700): add agent audit event`
+- `301680a` — `test(hermes-700): fix agent audit registry assertions`
+
+Implemented:
+
+- `AgentAuditEvent`
+- `audit_event` field on `AgentRunResult`
+- `AGENT_AUDIT_VERSION`
+- deterministic audit event id generation
+- `build_agent_audit_event`
+
+Audit event version:
+
+- `hermes_agent_audit_event_v1`
+
+Audit event behavior:
+
+- Event type: `agent_run_completed`
+- Includes agent id
+- Includes role
+- Includes capability id
+- Includes requested and effective action mode
+- Includes decision
+- Includes `executed=false`
+- Includes human review requirement
+- Includes policy version
+- Includes handoff version
+- Includes actor context when available
+- Includes risk and prepared-action counts
+
+Verification:
+
+- Compile passed
+- Docker rebuild passed
+- Registry check inside rebuilt container passed
+- Live Agents API check passed
+- Audit fixtures validated
+- Registry-check assertion mistake was corrected in `301680a`
+
+---
+
+## Current HERMES-700 Code State
+
+Latest code commit:
+
+- `/opt/hermes`
+- Branch: `feature/hermes-700-multi-agent`
+- Commit: `301680a`
+- Message: `test(hermes-700): fix agent audit registry assertions`
+
+Current implemented foundation:
+
+- Agent registry
+- Role-aware agent definitions
+- Capability registry
+- Dry-run execution
+- RBAC-protected API routes
+- Agent policy decisions
+- Controlled prepared actions
+- Handoff envelope
+- Audit event
+- Repeatable local and live API verification scripts
+- API fixtures
+
