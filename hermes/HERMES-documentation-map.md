@@ -47,6 +47,7 @@ Current official Hermes docs include:
 - hermes/HERMES-100-core-platform-closure-checklist.md
 - hermes/HERMES-200-understanding-foundation.md
 - hermes/HERMES-300-matching-decision-intelligence.md
+- hermes/HERMES-400-taxonomy-signal-intelligence.md
 - hermes/hermes-api-route-inventory.md
 - hermes/hermes-capability-matrix.md
 - hermes/hermes-deployment-runbook.md
@@ -109,4 +110,8 @@ Checkpoint tags:
 
 ## Current Module
 
-No active Hermes module is currently open after HERMES-300 closure.
+HERMES-400 Taxonomy & Signal Intelligence:
+- Status: Active
+- Started from HERMES-300 closed baseline
+- Code branch: feature/hermes-400-taxonomy-intelligence
+- Official doc: hermes/HERMES-400-taxonomy-signal-intelligence.md
