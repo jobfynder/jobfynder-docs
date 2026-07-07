@@ -23,9 +23,18 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-700-mu
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-700-multi-agent
-- Head SHA: 7c23d1f
-- Commit count: 0
+- Head SHA: 37ce96a
+- Commit count: 1
 - Triggered by: jobfynder
+- Commits:
+- 37ce96a feat(hermes-700): add agent registry and dry-run router — Jobfynder Automation
+- Changed files:
+- added: app/agents/__init__.py
+- added: app/agents/models.py
+- added: app/agents/service.py
+- added: app/routers/agents.py
+- added: scripts/hermes-700-agent-registry-check.py
+- modified: app/main.py
 
 ---
 
