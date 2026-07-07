@@ -203,3 +203,227 @@ HERMES-500 can close only when:
 - official docs repo is pushed
 - documentation map marks HERMES-500 as closed
 - next module can safely start from a stable baseline
+
+---
+
+## 11. Implementation Progress
+
+### Step 001 — Baseline Verification
+
+Status: Passed
+
+Verified closed HERMES-400 baseline before opening HERMES-500.
+
+Code repo:
+
+- Repo: `/opt/hermes`
+- Branch at baseline: `feature/hermes-400-taxonomy-intelligence`
+- Commit: `1f21f8a`
+- Tag: `hermes-400-foundation-v1`
+
+Docs repo:
+
+- Repo: `/opt/jobfynder-docs`
+- Branch: `main`
+- Commit: `3034017`
+
+Result:
+
+- HERMES-400 closed baseline verified.
+- Safe to open HERMES-500.
+
+### Step 002 — Module Opened
+
+Status: Passed
+
+Created HERMES-500 code branch:
+
+- Branch: `feature/hermes-500-submission-intelligence`
+- Baseline commit: `1f21f8a`
+
+Created official module document:
+
+- `hermes/HERMES-500-submission-intelligence-workflow-foundation.md`
+
+Updated Hermes documentation map to mark HERMES-500 as active.
+
+Docs commit:
+
+- `3697306`
+- Message: `docs(hermes): open HERMES-500 submission intelligence`
+
+### Step 003 — Repository Structure Inspection
+
+Status: Passed
+
+Confirmed Hermes has the expected structure:
+
+- `app/main.py`
+- `app/routers`
+- `app/understanding`
+- `app/matching`
+- `app/understanding/taxonomy`
+- `scripts`
+
+Decision:
+
+HERMES-500 should follow the existing Hermes architecture by adding:
+
+- `app/submission_intelligence`
+- `app/routers/submissions.py`
+- HERMES-500 verification script under `scripts`
+
+### Step 004 — Submission Intelligence Foundation Added
+
+Status: Passed
+
+Code commit:
+
+- `9625129`
+- Message: `feat(hermes-500): add submission intelligence foundation`
+
+Added files:
+
+- `app/submission_intelligence/__init__.py`
+- `app/submission_intelligence/models.py`
+- `app/submission_intelligence/lifecycle.py`
+- `app/submission_intelligence/service.py`
+- `app/routers/submissions.py`
+- `scripts/hermes-500-submission-intelligence-check.py`
+
+Updated file:
+
+- `app/main.py`
+
+Foundation capabilities added:
+
+- Submission lifecycle stages
+- Allowed workflow transitions
+- Terminal stage list
+- Submission intelligence request/response models
+- Requirement snapshot model
+- Consultant snapshot model
+- Relationship snapshot model
+- Submission event model
+- Follow-up model
+- Outcome model
+- Conflict model
+- Duplicate-risk detection foundation
+- Stage recommendation foundation
+- Workflow handoff contract
+- Local Docker verification script
+
+### Step 005 — Live API Verification
+
+Status: Passed
+
+Verified live Docker API after rebuilding and restarting `hermes-api`.
+
+Health endpoint:
+
+- `GET /health`
+- Result: healthy
+- Service: Hermes
+- Version: `0.2.3`
+- Environment: development
+
+HERMES-500 endpoints verified:
+
+- `GET /submissions/workflow-policy`
+- `POST /submissions/evaluate`
+
+Verified paths:
+
+1. Workflow policy response
+2. Matchable consultant/job response
+3. Duplicate-risk response
+4. OpenAPI route presence
+
+Confirmed OpenAPI routes:
+
+- `/submissions/workflow-policy`
+- `/submissions/evaluate`
+
+Container status:
+
+- Container: `hermes-api`
+- Port: `8000`
+- Status: running
+
+---
+
+## 12. Current Code State
+
+Current HERMES-500 code state:
+
+- Repo: `/opt/hermes`
+- Branch: `feature/hermes-500-submission-intelligence`
+- Current commit: `9625129`
+- Current status: foundation committed and live API verified
+
+Current official docs state before this update:
+
+- Repo: `/opt/jobfynder-docs`
+- Branch: `main`
+- Previous HERMES-500 docs commit: `3697306`
+
+---
+
+## 13. Current Implemented API Contract
+
+### GET `/submissions/workflow-policy`
+
+Returns the current deterministic submission workflow policy.
+
+Includes:
+
+- workflow version
+- supported stages
+- allowed transitions
+- terminal stages
+
+### POST `/submissions/evaluate`
+
+Evaluates a submission workflow input and returns:
+
+- current stage
+- recommended stage
+- whether the stage changed
+- generated workflow events
+- follow-up requirement
+- conflicts
+- outcome
+- reasons
+- risks
+- next actions
+- handoff payload for Jobfynder API
+
+---
+
+## 14. Current HERMES-500 Foundation Behavior
+
+The foundation currently supports:
+
+1. Moving a discovered candidate/job pair to `matched` when matching output says the candidate should be submitted or reviewed.
+2. Creating a workflow event when a stage change is recommended.
+3. Creating follow-up instructions when a candidate is matchable.
+4. Detecting duplicate-risk when a consultant/job key already exists.
+5. Returning conflict details for duplicate-risk cases.
+6. Returning a deterministic handoff payload for Jobfynder API.
+7. Exposing workflow policy and evaluation contracts through the live API.
+
+---
+
+## 15. Next Implementation Targets
+
+Next HERMES-500 work should focus on:
+
+1. Parser-to-submission workflow handoff
+2. Matching-to-submission workflow handoff
+3. Taxonomy-to-submission explanation handoff
+4. Better event type mapping
+5. Deterministic follow-up rule expansion
+6. Outcome detector foundation
+7. API contract fixture examples
+8. Final module verification and closure process
+
