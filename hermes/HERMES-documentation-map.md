@@ -134,9 +134,11 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Hermes Module
 
-No active Hermes module is currently open after HERMES-500 closure.
+Current active Hermes module: HERMES-600 — Integrations Foundation.
 
 ## Active Modules
+
+- [HERMES-600 — Integrations Foundation](./HERMES-600-integrations-foundation.md) — Active
 
 
 No active Hermes module is currently open after HERMES-500 closure.
