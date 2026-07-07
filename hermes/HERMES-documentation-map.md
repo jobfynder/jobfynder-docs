@@ -136,14 +136,14 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Hermes Module
 
-Current active Hermes module: HERMES-700 — Multi-Agent Foundation.
+Current active Hermes module: None.
 
 ## Active Modules
 
 - HERMES-700 — Multi-Agent Foundation
 
 
-Active Hermes module: HERMES-700 — Multi-Agent Foundation.
+Active Hermes module: None.
 
 
 ## HERMES-700 Active Module

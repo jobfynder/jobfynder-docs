@@ -610,3 +610,67 @@ Documentation repository state:
 - Working tree: clean
 - Documentation map shows HERMES-700 as the active Hermes module
 
+
+---
+
+## Final Closure — HERMES-700 Multi-Agent Foundation
+
+Status: Closed.
+
+Closure date:
+
+- 2026-07-07
+
+Final code repository state:
+
+- Repository: `/opt/hermes`
+- Branch: `feature/hermes-700-multi-agent`
+- Final commit: `c2fc718`
+- Final tag: `hermes-700-foundation-v1`
+- Tag target: `c2fc7188eed15208bb97103414006f4f9e086238`
+- Origin branch: matched
+- Working tree: clean
+
+Final verification:
+
+- Docker build passed
+- `python -m compileall app scripts` passed inside Docker
+- `scripts/hermes-700-agent-registry-check.py` passed inside Docker
+- Live `scripts/hermes-700-agent-api-check.py` passed
+- OpenAPI route verification passed
+- `GET /agents/snapshot` returned healthy status
+- All snapshot closure readiness flags were true
+
+Final implemented foundation:
+
+- Agent registry
+- Role-aware agents
+- Capability registry
+- Dry-run execution
+- RBAC-protected agent routes
+- Agent policy decisions
+- Controlled prepared actions
+- Agent handoff envelope
+- Agent audit event
+- Agents snapshot endpoint
+- API fixtures
+- Repeatable local and live verification scripts
+
+Final API routes:
+
+- `GET /agents/health`
+- `GET /agents/registry`
+- `GET /agents/snapshot`
+- `GET /agents/{agent_id}`
+- `POST /agents/dry-run`
+
+Final closure decision:
+
+HERMES-700 is closed as the Multi-Agent Foundation v1 baseline.
+
+Future Hermes multi-agent work must start from:
+
+- Code tag: `hermes-700-foundation-v1`
+- Code commit: `c2fc718`
+- Official docs commit containing closure: pending this documentation commit
+
