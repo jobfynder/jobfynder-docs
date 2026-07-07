@@ -23,12 +23,17 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-700-mu
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-700-multi-agent
-- Head SHA: 301680a
+- Head SHA: c2fc718
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 301680a test(hermes-700): fix agent audit registry assertions — Jobfynder Automation
+- c2fc718 feat(hermes-700): add agents snapshot endpoint — Jobfynder Automation
 - Changed files:
+- added: docs/hermes-700/api-fixtures/agents-snapshot-response.json
+- modified: app/agents/models.py
+- modified: app/agents/service.py
+- modified: app/routers/agents.py
+- modified: scripts/hermes-700-agent-api-check.py
 - modified: scripts/hermes-700-agent-registry-check.py
 
 ---
