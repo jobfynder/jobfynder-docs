@@ -9,18 +9,19 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-700-multi-agent",
-    "Head SHA: 37ce96a",
+    "Head SHA: 42eccb9",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "37ce96a feat(hermes-700): add agent registry and dry-run router \u2014 Jobfynder Automation",
+    "42eccb9 test(hermes-700): add agents API check and fixtures \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: app/agents/__init__.py",
-    "added: app/agents/models.py",
-    "added: app/agents/service.py",
-    "added: app/routers/agents.py",
-    "added: scripts/hermes-700-agent-registry-check.py",
-    "modified: app/main.py"
+    "added: docs/hermes-700/api-fixtures/agents-health-response.json",
+    "added: docs/hermes-700/api-fixtures/agents-registry-response.json",
+    "added: docs/hermes-700/api-fixtures/bench-sales-agent-response.json",
+    "added: docs/hermes-700/api-fixtures/blocked-execute-response.json",
+    "added: docs/hermes-700/api-fixtures/safe-dry-run-response.json",
+    "added: docs/hermes-700/api-fixtures/unknown-agent-response.json",
+    "added: scripts/hermes-700-agent-api-check.py"
   ],
   "decisions": [
     {
