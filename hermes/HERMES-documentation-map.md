@@ -72,6 +72,8 @@ For every Hermes module:
 
 ## Closed Modules
 
+- [HERMES-500 — Submission Intelligence & Workflow Foundation](./HERMES-500-submission-intelligence-workflow-foundation.md) — Closed
+
 HERMES-100 Core Platform:
 
 hermes/HERMES-100-core-platform-closure-checklist.md
@@ -136,6 +138,5 @@ No active Hermes module is currently open after HERMES-500 closure.
 
 ## Active Modules
 
-- [HERMES-500 — Submission Intelligence & Workflow Foundation](./HERMES-500-submission-intelligence-workflow-foundation.md) — Closed
 
 No active Hermes module is currently open after HERMES-500 closure.
