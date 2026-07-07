@@ -923,3 +923,73 @@ Remaining closure work:
 8. Push code and docs.
 9. Run post-closure verification.
 
+
+---
+
+## 31. API Fixture Examples Added
+
+### Step 015 — API Fixtures
+
+Status: Passed
+
+Code commit:
+
+- `2d8c1ab`
+- Message: `docs(hermes-500): add submission intelligence API fixtures`
+
+Fixture location in code repo:
+
+- `/opt/hermes/docs/hermes-500/api-fixtures`
+
+Validation script:
+
+- `/opt/hermes/scripts/hermes-500-api-fixture-check.py`
+
+Fixtures added:
+
+1. `workflow-policy-response.json`
+2. `evaluate-intro-request.json`
+3. `evaluate-intro-response.json`
+4. `evaluate-invalid-transition-request.json`
+5. `evaluate-invalid-transition-response.json`
+6. `evaluate-from-handoff-request.json`
+7. `evaluate-from-handoff-response.json`
+8. `evaluate-from-handoff-duplicate-request.json`
+9. `evaluate-from-handoff-duplicate-response.json`
+10. `README.md`
+
+Verified checks:
+
+- Standard Python fixture validation passed
+- Docker build passed
+- Docker compile check passed
+- HERMES-500 foundation check passed
+- HERMES-500 handoff adapter check passed
+- HERMES-500 workflow rules check passed
+- Docker fixture validation passed
+
+Purpose:
+
+These fixtures document the practical request and response examples for:
+
+- `GET /submissions/workflow-policy`
+- `POST /submissions/evaluate`
+- `POST /submissions/evaluate/from-handoff`
+
+This gives Jobfynder API/backend developers stable examples for integrating with HERMES-500.
+
+---
+
+## 32. Updated Remaining Work Before Closure
+
+Remaining closure work:
+
+1. Add Jobfynder API integration handoff documentation.
+2. Run full final Docker verification.
+3. Run full final live API verification.
+4. Update documentation map from active to closed.
+5. Commit final official docs.
+6. Create final code tag `hermes-500-foundation-v1`.
+7. Push code and docs.
+8. Run post-closure verification.
+
