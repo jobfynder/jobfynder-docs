@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-600-foundation-v1.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-700-multi-agent.
 
 ---
 
@@ -22,8 +22,8 @@ GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-600-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: refs/tags/hermes-600-foundation-v1
-- Head SHA: 006d971
+- Branch: feature/hermes-700-multi-agent
+- Head SHA: 7c23d1f
 - Commit count: 0
 - Triggered by: jobfynder
 
