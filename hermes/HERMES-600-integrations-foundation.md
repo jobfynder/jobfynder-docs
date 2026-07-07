@@ -488,3 +488,51 @@ Verification completed:
 Purpose:
 
 These fixtures give Jobfynder backend, n8n, and future ingestion channels stable examples for retry policy decisions and idempotent event identity handling.
+
+---
+
+## Step 011 — Full Code Regression Verification
+
+Status: Passed
+
+Code branch:
+
+`feature/hermes-600-integrations`
+
+Code commit verified:
+
+- `7c23d1f docs(hermes-600): add retry and identity API fixtures`
+
+Verification completed:
+
+- Code repo clean before verification
+- Docker build passed
+- Docker compile passed
+- HERMES-600 integrations core check passed
+- HERMES-600 Jobfynder adapter check passed
+- HERMES-600 retry policy check passed
+- HERMES-600 event identity check passed
+- HERMES-600 API fixture validation passed
+- Live host API health check passed
+- Host live integrations API check passed
+- Host live Jobfynder handoff API check passed
+- Host live retry API check passed
+- Host live event identity API check passed
+- Docker service URL integrations API check passed
+- Docker service URL Jobfynder handoff API check passed
+- Docker service URL retry API check passed
+- Docker service URL event identity API check passed
+- Code repo remained clean after verification
+
+Verified API routes:
+
+- `GET /integrations/health`
+- `POST /integrations/events/normalize`
+- `POST /integrations/jobfynder/submission-handoff/evaluate`
+- `GET /integrations/retry-policy`
+- `POST /integrations/retry-decision`
+- `POST /integrations/events/identity`
+
+Purpose:
+
+This confirms the HERMES-600 integrations foundation is stable across Docker, live host API, Docker service networking, fixtures, retry decisions, event identity, and Jobfynder submission handoff behavior.
