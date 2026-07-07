@@ -446,3 +446,45 @@ Verification completed:
 Purpose:
 
 This prevents duplicate webhook, n8n, email, WhatsApp, Telegram, Slack, and Jobfynder API events from creating duplicate Hermes work. Replayed events can now be identified deterministically before downstream processing.
+
+---
+
+## Step 010 — Retry and Event Identity API Fixtures
+
+Status: Passed
+
+Code branch:
+
+`feature/hermes-600-integrations`
+
+Code commit:
+
+- `7c23d1f docs(hermes-600): add retry and identity API fixtures`
+
+Files added:
+
+- `/opt/hermes/docs/hermes-600/api-fixtures/retry-policy-response.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/retry-decision-request.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/retry-decision-response.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/event-identity-request.json`
+- `/opt/hermes/docs/hermes-600/api-fixtures/event-identity-response.json`
+
+Files updated:
+
+- `/opt/hermes/docs/hermes-600/api-fixtures/README.md`
+- `/opt/hermes/scripts/hermes-600-api-fixture-check.py`
+
+Routes covered:
+
+- `GET /integrations/retry-policy`
+- `POST /integrations/retry-decision`
+- `POST /integrations/events/identity`
+
+Verification completed:
+
+- Standard Python fixture validation passed
+- Docker fixture validation passed
+
+Purpose:
+
+These fixtures give Jobfynder backend, n8n, and future ingestion channels stable examples for retry policy decisions and idempotent event identity handling.
