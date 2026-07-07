@@ -1150,3 +1150,88 @@ Remaining closure work:
 6. Push code and docs.
 7. Run post-closure verification.
 
+
+---
+
+## 39. Final Docker Verification
+
+### Step 018 — Final Docker Verification
+
+Status: Passed
+
+Code verified:
+
+- Repo: `/opt/hermes`
+- Branch: `feature/hermes-500-submission-intelligence`
+- Commit: `2d8c1ab`
+
+Checks passed:
+
+- Docker build
+- Python compile
+- Submission intelligence foundation check
+- Handoff adapter check
+- Workflow rules check
+- API fixture validation
+
+---
+
+## 40. Final Live API Verification
+
+### Step 019 — Final Live API Verification
+
+Status: Passed
+
+Code verified:
+
+- Repo: `/opt/hermes`
+- Branch: `feature/hermes-500-submission-intelligence`
+- Commit: `2d8c1ab`
+
+Live service verified:
+
+- Container: `hermes-api`
+- Port: `8000`
+
+Live checks passed:
+
+- `GET /health`
+- `GET /submissions/workflow-policy`
+- `POST /submissions/evaluate`
+- Invalid transition protection
+- `POST /submissions/evaluate/from-handoff`
+- Duplicate handoff protection
+
+---
+
+## 41. HERMES-500 Closure Readiness
+
+HERMES-500 is ready for closure.
+
+Final code commit:
+
+- `2d8c1ab`
+
+Final foundation capabilities:
+
+- Submission lifecycle policy
+- Direct submission event evaluation
+- Handoff-based submission evaluation
+- Understanding/Matching/Taxonomy handoff adapter
+- Duplicate-risk detection
+- Invalid-transition protection
+- Follow-up recommendation
+- Outcome detection
+- API fixtures
+- Jobfynder API integration handoff documentation
+- Docker verification
+- Live API verification
+
+Remaining closure actions:
+
+1. Update Hermes documentation map from active to closed.
+2. Commit final docs.
+3. Create code tag `hermes-500-foundation-v1`.
+4. Push code and docs.
+5. Run post-closure verification.
+
