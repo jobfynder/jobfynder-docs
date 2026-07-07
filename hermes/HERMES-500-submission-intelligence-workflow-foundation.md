@@ -745,3 +745,181 @@ Next HERMES-500 work should focus on:
 5. Run final live API verification.
 6. Update documentation map.
 7. Tag final HERMES-500 foundation release.
+
+---
+
+## 27. Live Workflow Rules API Verification
+
+### Step 013 — Live Workflow Rules API Verification
+
+Status: Passed
+
+Verified deterministic workflow rules through the live Hermes Docker API.
+
+Code state verified:
+
+- Repo: `/opt/hermes`
+- Branch: `feature/hermes-500-submission-intelligence`
+- Commit: `bfe7053`
+
+Live service verified:
+
+- Container: `hermes-api`
+- Port: `8000`
+- Health endpoint: passed
+- Hermes version: `0.2.3`
+- Environment: development
+
+Endpoint verified:
+
+- `POST /submissions/evaluate`
+
+---
+
+## 28. Live Workflow Scenarios Verified
+
+The following live API scenarios passed.
+
+### 1. Introduction Requested
+
+Input:
+
+- Current stage: `matched`
+- Event type: `intro_requested`
+
+Result:
+
+- Recommended stage: `intro_requested`
+- Stage changed: yes
+- Follow-up required: yes
+- Priority: `medium`
+- Suggested action: follow up with receiving recruiter
+
+### 2. Introduction Accepted
+
+Input:
+
+- Current stage: `intro_requested`
+- Event type: `intro_accepted`
+
+Result:
+
+- Recommended stage: `intro_accepted`
+- Stage changed: yes
+- Follow-up required: yes
+- Priority: `high`
+- Suggested action: prepare consultant submission package
+
+### 3. Submitted
+
+Input:
+
+- Current stage: `intro_accepted`
+- Event type: `submitted`
+
+Result:
+
+- Recommended stage: `submitted`
+- Stage changed: yes
+- Outcome type: `submitted`
+- Follow-up required: yes
+- Suggested action: track recruiter response and next screening step
+
+### 4. Offer Outcome
+
+Input:
+
+- Current stage: `interview`
+- Event type: `outcome_recorded`
+- Outcome type: `offer`
+
+Result:
+
+- Recommended stage: `offer`
+- Stage changed: yes
+- Outcome type: `offer`
+- Follow-up required: yes
+- Priority: `high`
+- Suggested action: track offer details, acceptance, joining date, and closure risk
+
+### 5. Placement Outcome
+
+Input:
+
+- Current stage: `offer`
+- Event type: `outcome_recorded`
+- Outcome type: `placed`
+
+Result:
+
+- Recommended stage: `placed`
+- Stage changed: yes
+- Outcome type: `placed`
+- Follow-up required: no
+- Next action: archive or review for reporting
+
+### 6. Invalid Transition Protection
+
+Input:
+
+- Current stage: `discovered`
+- Event type: `outcome_recorded`
+- Outcome type: `placed`
+
+Result:
+
+- Recommended stage remained: `discovered`
+- Stage changed: no
+- Conflict type: `invalid_stage_transition`
+- Follow-up required: yes
+- Priority: `high`
+- Risk: transition from `discovered` to `placed` is not allowed
+
+---
+
+## 29. Current HERMES-500 Verification Status
+
+HERMES-500 has now passed:
+
+1. Baseline verification
+2. Module opening
+3. Repository structure inspection
+4. Submission intelligence foundation Docker verification
+5. Submission intelligence foundation live API verification
+6. Handoff adapter Docker verification
+7. Handoff adapter live API verification
+8. Deterministic workflow rules Docker verification
+9. Deterministic workflow rules live API verification
+
+Current production-foundation capabilities:
+
+- Submission lifecycle policy
+- Direct submission evaluation
+- Handoff-based submission evaluation
+- Understanding-to-submission adapter
+- Matching-to-submission adapter
+- Taxonomy-to-submission context adapter
+- Duplicate-risk detection
+- Invalid transition protection
+- Introduction workflow events
+- Submission workflow events
+- Outcome workflow events
+- Follow-up intelligence
+- OpenAPI route exposure
+
+---
+
+## 30. Remaining Work Before HERMES-500 Closure
+
+Remaining closure work:
+
+1. Add API fixture examples for all HERMES-500 endpoints.
+2. Add Jobfynder API integration handoff documentation.
+3. Run full final Docker verification.
+4. Run full final live API verification.
+5. Update documentation map from active to closed.
+6. Commit final official docs.
+7. Create final code tag `hermes-500-foundation-v1`.
+8. Push code and docs.
+9. Run post-closure verification.
+
