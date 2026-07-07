@@ -106,3 +106,81 @@ HERMES-600 can close when:
 9. Official docs are updated.
 10. Final tag is created and pushed.
 
+
+---
+
+## Step 004 — Integrations Core and API Foundation
+
+Status: Passed
+
+Code branch:
+
+`feature/hermes-600-integrations`
+
+Code commits:
+
+- `a15a665 feat(hermes-600): add integrations core foundation`
+- `ab2fb2e feat(hermes-600): expose integrations API router`
+- `90e9567 test(hermes-600): make integrations API check docker-aware`
+
+Files added:
+
+- `/opt/hermes/app/integrations/__init__.py`
+- `/opt/hermes/app/integrations/models.py`
+- `/opt/hermes/app/integrations/service.py`
+- `/opt/hermes/app/routers/integrations.py`
+- `/opt/hermes/scripts/hermes-600-integrations-core-check.py`
+- `/opt/hermes/scripts/hermes-600-integrations-api-check.py`
+
+Files updated:
+
+- `/opt/hermes/app/main.py`
+
+API routes added:
+
+- `GET /integrations/health`
+- `POST /integrations/events/normalize`
+
+Foundation contracts added:
+
+- `IntegrationProvider`
+- `IntegrationEventType`
+- `IntegrationSource`
+- `IntegrationEnvelope`
+- `IntegrationNormalizedEvent`
+- `IntegrationHealthResponse`
+
+Supported providers:
+
+- `jobfynder_api`
+- `n8n`
+- `webhook`
+- `email`
+- `telegram`
+- `whatsapp`
+- `slack`
+- `unknown`
+
+Supported event types:
+
+- `document_received`
+- `job_received`
+- `resume_received`
+- `match_requested`
+- `submission_event`
+- `workflow_handoff`
+- `notification_requested`
+- `unknown`
+
+Verification completed:
+
+- Docker build passed
+- Python compile passed
+- Integrations core check passed
+- Live host API check passed
+- Docker service URL API check passed
+- OpenAPI route validation passed
+
+Notes:
+
+The integrations API check was updated to support `HERMES_API_BASE_URL` so the same verification script works from both the host and Docker network context.
