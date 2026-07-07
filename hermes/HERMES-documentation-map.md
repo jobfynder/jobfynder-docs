@@ -132,10 +132,10 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Hermes Module
 
-No active Hermes module is currently open after HERMES-400 closure.
+No active Hermes module is currently open after HERMES-500 closure.
 
 ## Active Modules
 
-- [HERMES-500 — Submission Intelligence & Workflow Foundation](./HERMES-500-submission-intelligence-workflow-foundation.md) — Active
+- [HERMES-500 — Submission Intelligence & Workflow Foundation](./HERMES-500-submission-intelligence-workflow-foundation.md) — Closed
 
-Current active Hermes module: HERMES-500 — Submission Intelligence & Workflow Foundation.
+No active Hermes module is currently open after HERMES-500 closure.
