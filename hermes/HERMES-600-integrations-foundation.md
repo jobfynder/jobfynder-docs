@@ -385,3 +385,64 @@ Verification completed:
 Purpose:
 
 This gives Jobfynder, n8n, webhooks, email, WhatsApp, Telegram, Slack, and future ingestion channels a deterministic way to decide whether failed integration events should be retried, stopped, or moved to manual review.
+
+---
+
+## Step 009 — Integration Event Identity and Idempotency
+
+Status: Passed
+
+Code branch:
+
+`feature/hermes-600-integrations`
+
+Code commits:
+
+- `78f83b6 feat(hermes-600): add integration event identity`
+- `f945748 feat(hermes-600): expose integration event identity API`
+
+Files added:
+
+- `/opt/hermes/scripts/hermes-600-event-identity-check.py`
+- `/opt/hermes/scripts/hermes-600-event-identity-api-check.py`
+
+Files updated:
+
+- `/opt/hermes/app/integrations/models.py`
+- `/opt/hermes/app/integrations/service.py`
+- `/opt/hermes/app/routers/integrations.py`
+
+API route added:
+
+- `POST /integrations/events/identity`
+
+Identity fields generated:
+
+- `idempotency_key`
+- `payload_fingerprint`
+- `correlation_id`
+- `provider`
+- `event_type`
+- `replay_safe`
+
+Identity inputs used:
+
+- idempotency namespace
+- integration provider
+- event type
+- source external ID
+- correlation ID
+- stable payload fingerprint
+
+Verification completed:
+
+- Docker build passed
+- Docker compile passed
+- Event identity core check passed
+- Host live event identity API check passed
+- Docker service URL event identity API check passed
+- OpenAPI route validation passed
+
+Purpose:
+
+This prevents duplicate webhook, n8n, email, WhatsApp, Telegram, Slack, and Jobfynder API events from creating duplicate Hermes work. Replayed events can now be identified deterministically before downstream processing.
