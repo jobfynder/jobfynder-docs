@@ -23,19 +23,17 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-700-mu
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feature/hermes-700-multi-agent
-- Head SHA: 42eccb9
+- Head SHA: 1ddf34c
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 42eccb9 test(hermes-700): add agents API check and fixtures — Jobfynder Automation
+- 1ddf34c feat(hermes-700): enforce agent policy decisions — Jobfynder Automation
 - Changed files:
-- added: docs/hermes-700/api-fixtures/agents-health-response.json
-- added: docs/hermes-700/api-fixtures/agents-registry-response.json
-- added: docs/hermes-700/api-fixtures/bench-sales-agent-response.json
-- added: docs/hermes-700/api-fixtures/blocked-execute-response.json
-- added: docs/hermes-700/api-fixtures/safe-dry-run-response.json
-- added: docs/hermes-700/api-fixtures/unknown-agent-response.json
-- added: scripts/hermes-700-agent-api-check.py
+- modified: app/agents/models.py
+- modified: app/agents/service.py
+- modified: app/routers/agents.py
+- modified: scripts/hermes-700-agent-api-check.py
+- modified: scripts/hermes-700-agent-registry-check.py
 
 ---
 
