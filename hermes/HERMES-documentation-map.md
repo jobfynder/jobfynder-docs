@@ -108,10 +108,10 @@ Checkpoint tags:
 
 ---
 
-## Current Module
+## HERMES-400 Closed Module
 
 HERMES-400 Taxonomy & Signal Intelligence:
-- Status: Active
+- Status: Closed
 - Started from HERMES-300 closed baseline
 - Code branch: feature/hermes-400-taxonomy-intelligence
 - Code tag: hermes-400-foundation-v1
@@ -129,3 +129,7 @@ HERMES-400 Taxonomy & Signal Intelligence:
 | HERMES-400 | `/understanding/taxonomy/normalize` | POST | Internal/public depending deployment policy | understanding:parse | Normalize skills and job titles |
 | HERMES-400 | `/understanding/taxonomy/extract-signals` | POST | Internal/public depending deployment policy | understanding:parse | Extract normalized taxonomy signals from text |
 | HERMES-400 | `/understanding/taxonomy/suggestions` | POST | Internal protected recommended | understanding:parse | Create review-required taxonomy suggestions |
+
+## Active Hermes Module
+
+No active Hermes module is currently open after HERMES-400 closure.

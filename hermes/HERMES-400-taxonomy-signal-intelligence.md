@@ -585,4 +585,73 @@ Current code branch:
 
 Current status:
 
-Foundation tag created. Ready for closure documentation.
+Closed with foundation tag `hermes-400-foundation-v1`.
+
+---
+
+## 23. Closure Summary
+
+HERMES-400 is officially closed.
+
+Final code branch:
+
+`feature/hermes-400-taxonomy-intelligence`
+
+Final code commit:
+
+`1f21f8a`
+
+Final code tag:
+
+`hermes-400-foundation-v1`
+
+Final official docs commit before closure:
+
+`65e1dc3`
+
+Foundation status:
+
+Verification-passed and tagged.
+
+Closed scope delivered:
+
+- versioned taxonomy foundation
+- skill normalization
+- job title normalization
+- signal extraction
+- suggestion queue foundation
+- taxonomy snapshot endpoint
+- Understanding integration
+- Matching integration
+- live Docker API verification
+- official documentation update
+
+Out of scope for HERMES-400 and deferred to future modules:
+
+- admin taxonomy approval UI
+- automated taxonomy learning
+- production database-backed taxonomy storage
+- outcome-weighted taxonomy learning
+- recruiter graph learning
+- messenger signal routing
+- analytics dashboards
+
+Closure decision:
+
+HERMES-400 is complete as a foundation module and safe to close.
+
+---
+
+## 24. Next Recommended Hermes Module
+
+Next recommended module:
+
+`HERMES-500 — Submission Intelligence & Workflow Foundation`
+
+Reason:
+
+HERMES-200 understands documents.
+HERMES-300 matches candidates and jobs.
+HERMES-400 normalizes taxonomy and signals.
+
+The next logical foundation is to turn matches into structured submissions, introductions, and workflow-ready recruiting actions.
