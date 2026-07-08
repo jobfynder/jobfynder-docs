@@ -141,17 +141,9 @@ HERMES-400 Taxonomy & Signal Intelligence:
 | HERMES-400 | `/understanding/taxonomy/extract-signals` | POST | Internal/public depending deployment policy | understanding:parse | Extract normalized taxonomy signals from text |
 | HERMES-400 | `/understanding/taxonomy/suggestions` | POST | Internal protected recommended | understanding:parse | Create review-required taxonomy suggestions |
 
-## Active Hermes Module
+## Active Module
 
-Current active Hermes module: None.
-
-## Active Modules
-
-None.
-
-
-Active Hermes module: None.
-
+- [HERMES-450 — Channel Intake & Parser Integration Foundation](HERMES-450-channel-intake-parser-integration-foundation.md)
 
 ## HERMES-700 Closed Module
 
