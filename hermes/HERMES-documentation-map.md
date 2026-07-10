@@ -55,6 +55,7 @@ Current official Hermes docs include:
 - hermes/hermes-platform-architecture.md
 - hermes/hermes-rbac-access-control.md
 - hermes/hermes-smoke-test.md
+- hermes/HERMES-750-portkey-prompt-runtime-foundation.md
 
 ---
 
@@ -71,6 +72,12 @@ For every Hermes module:
 ---
 
 ## Closed Modules
+
+- HERMES-750 — Portkey Prompt Runtime Foundation
+  - Final code branch: feature/hermes-750-portkey-prompt-runtime
+  - Final code commit: 1869e82
+  - Final code tag: hermes-750-prompt-runtime-v1
+  - Official doc: hermes/HERMES-750-portkey-prompt-runtime-foundation.md
 
 - HERMES-700 — Multi-Agent Foundation
   - Final code branch: `feature/hermes-700-multi-agent`
@@ -143,13 +150,13 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Module
 
-- [HERMES-450 — Channel Intake & Parser Integration Foundation](HERMES-450-channel-intake-parser-integration-foundation.md)
+Current active Hermes module: None.
 
 ## HERMES-700 Closed Module
 
 HERMES-700 Multi-Agent Foundation:
 
-- Status: Active
+- Status: Closed
 - Started from HERMES-600 closed baseline
 - Code branch: `/opt/hermes` branch `feature/hermes-700-multi-agent`
 - Official doc: `hermes/HERMES-700-multi-agent-foundation.md`

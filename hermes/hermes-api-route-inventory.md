@@ -67,3 +67,12 @@ Documentation map:
 ## Maintenance Rule
 
 When a new Hermes route is added, update this file and the official module documentation in `/opt/jobfynder-docs/hermes`.
+
+## HERMES-750 Prompt Runtime Routes
+
+| Module | Route | Method | Protection | Permission | Purpose |
+|---|---|---:|---|---|---|
+| HERMES-750 | /prompts/health | GET | RBAC | agents:read | Read prompt runtime health |
+| HERMES-750 | /prompts/registry | GET | RBAC | agents:read | List prompt registry definitions |
+| HERMES-750 | /prompts/{prompt_id} | GET | RBAC | agents:read | Read a single prompt definition |
+| HERMES-750 | /prompts/run | POST | RBAC | agents:run | Render and run prompt through dry-run-first policy |
