@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-450-channel-intake.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-450-foundation-v1.
 
 ---
 
@@ -22,8 +22,8 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-450-ch
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-450-channel-intake
-- Head SHA: 98b221c
+- Branch: refs/tags/hermes-450-foundation-v1
+- Head SHA: 00a0957
 - Commit count: 0
 - Triggered by: jobfynder
 
