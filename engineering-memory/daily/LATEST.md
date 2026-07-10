@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-450-foundation-v1.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-800-resume-builder-foundation-v1.
 
 ---
 
@@ -22,8 +22,8 @@ GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-450-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: refs/tags/hermes-450-foundation-v1
-- Head SHA: 00a0957
+- Branch: refs/tags/hermes-800-resume-builder-foundation-v1
+- Head SHA: ea8d0c6
 - Commit count: 0
 - Triggered by: jobfynder
 
