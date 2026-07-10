@@ -150,7 +150,12 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Module
 
-Current active Hermes module: None.
+Current active Hermes module: HERMES-800 — Resume Builder Intelligence Foundation.
+
+- Code branch: feature/hermes-800-resume-builder-intelligence
+- Official doc: hermes/HERMES-800-resume-builder-intelligence-foundation.md
+- Status: Open
+
 
 ## HERMES-700 Closed Module
 
