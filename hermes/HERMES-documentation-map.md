@@ -158,7 +158,13 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Module
 
-Current active Hermes module: None.
+Current active Hermes module: HERMES-775 — Portkey Production Runtime and Multi-Model Routing.
+
+- Code branch: feature/hermes-775-prompt-runtime-production
+- Base code tag: hermes-800-resume-builder-foundation-v1
+- Base code commit: d9196b1
+- Official doc: hermes/HERMES-775-portkey-production-runtime-and-multi-model-routing.md
+- Status: Open
 
 
 ## HERMES-700 Closed Module
