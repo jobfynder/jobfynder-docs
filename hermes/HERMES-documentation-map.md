@@ -1,6 +1,6 @@
 # Hermes Documentation Map
 
-Status: Active rule  
+Status: Active rule
 Owner: Jobfynder-Infra
 
 ---
@@ -72,6 +72,14 @@ For every Hermes module:
 ---
 
 ## Closed Modules
+
+- HERMES-800 — Resume Builder Intelligence Foundation
+  - Final code branch: feature/hermes-800-resume-builder-intelligence
+  - Final code commit: d9196b1
+  - Final code tag: hermes-800-resume-builder-foundation-v1
+  - Official doc: hermes/HERMES-800-resume-builder-intelligence-foundation.md
+  - Status: Closed
+
 
 - HERMES-750 — Portkey Prompt Runtime Foundation
   - Final code branch: feature/hermes-750-portkey-prompt-runtime
@@ -150,11 +158,7 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Module
 
-Current active Hermes module: HERMES-800 — Resume Builder Intelligence Foundation.
-
-- Code branch: feature/hermes-800-resume-builder-intelligence
-- Official doc: hermes/HERMES-800-resume-builder-intelligence-foundation.md
-- Status: Open
+Current active Hermes module: None.
 
 
 ## HERMES-700 Closed Module

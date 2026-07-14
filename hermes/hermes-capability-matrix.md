@@ -1,7 +1,7 @@
 # Hermes Capability Matrix
 
-Status: Active  
-Owner: Jobfynder-Infra  
+Status: Active
+Owner: Jobfynder-Infra
 Purpose: Simple progress scoreboard for Hermes capabilities
 
 ---
@@ -75,3 +75,4 @@ Next item:
 Create Hermes Engineering Playbook.
 | HERMES-100 | Core Platform Review | ✅ | Production baseline complete after final smoke test, repo check, and Engineering Memory update |
 | HERMES-750 | Portkey Prompt Runtime | ✅ | Closed foundation; dry-run-first, RBAC-protected, Portkey-ready |
+| HERMES-800 | Resume Builder Intelligence | ✅ | Closed foundation; deterministic analysis, dry-run suggestions, taxonomy normalization, tailoring, quality checks, human review |

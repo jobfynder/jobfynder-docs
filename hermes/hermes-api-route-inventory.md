@@ -76,3 +76,16 @@ When a new Hermes route is added, update this file and the official module docum
 | HERMES-750 | /prompts/registry | GET | RBAC | agents:read | List prompt registry definitions |
 | HERMES-750 | /prompts/{prompt_id} | GET | RBAC | agents:read | Read a single prompt definition |
 | HERMES-750 | /prompts/run | POST | RBAC | agents:run | Render and run prompt through dry-run-first policy |
+
+## HERMES-800 Resume Builder Intelligence Routes
+
+| Module | Route | Method | Protection | Permission | Purpose |
+|---|---|---|---|---|---|
+| HERMES-800 | `/resume-builder/health` | GET | RBAC | `resume_builder:read` | Read Resume Builder foundation health |
+| HERMES-800 | `/resume-builder/policy` | GET | RBAC | `resume_builder:read` | Read Resume Builder safety policy |
+| HERMES-800 | `/resume-builder/analyze` | POST | RBAC | `resume_builder:analyze` | Run deterministic resume safety analysis |
+| HERMES-800 | `/resume-builder/summary/suggest` | POST | RBAC | `resume_builder:suggest` | Prepare a dry-run summary suggestion |
+| HERMES-800 | `/resume-builder/bullets/suggest` | POST | RBAC | `resume_builder:suggest` | Prepare a dry-run bullet rewrite suggestion |
+| HERMES-800 | `/resume-builder/skills/normalize` | POST | RBAC | `resume_builder:analyze` | Normalize resume skills through Hermes taxonomy |
+| HERMES-800 | `/resume-builder/tailor` | POST | RBAC | `resume_builder:analyze` | Analyze deterministic job-targeted tailoring opportunities |
+| HERMES-800 | `/resume-builder/quality/analyze` | POST | RBAC | `resume_builder:analyze` | Analyze resume quality, completeness, and provenance |
