@@ -111,3 +111,4 @@ jobfynder/hermes|refs/heads/feature/hermes-450-channel-intake|98b221c24fa49ed62f
 jobfynder/hermes|refs/tags/hermes-450-foundation-v1|00a0957f6ebd3213f05033e03ad359f92581dcf8
 jobfynder/hermes|refs/tags/hermes-800-resume-builder-foundation-v1|ea8d0c623eb327fb0b73ebb10742415c1e20f288
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|709494c64412bf909d3b0286feea6029f0bc8c12
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feature/profile-granular-apis|709494c64412bf909d3b0286feea6029f0bc8c12
