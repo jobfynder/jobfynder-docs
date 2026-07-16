@@ -23,17 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 72cecaf
+- Head SHA: 7a209c9
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 72cecaf hermess modulue — root
+- 7a209c9 Fix Hermes service Prisma field mappings so the Nest build succeeds. — atultiwari
 - Changed files:
-- added: src/hermes/hermes-auth.guard.ts
-- added: src/hermes/hermes.controller.ts
-- added: src/hermes/hermes.module.ts
-- added: src/hermes/hermes.service.ts
-- modified: src/app.module.ts
+- modified: src/hermes/hermes.service.ts
 
 ---
 
