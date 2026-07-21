@@ -114,3 +114,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|709494c64412bf909d3b0286feea
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feature/profile-granular-apis|709494c64412bf909d3b0286feea6029f0bc8c12
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|72cecafd5a28c11ca8e2a0c1b45c5ac2562beba4
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|7a209c9d26a4bd10a0df0e875e512b4c82e95242
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|005e2030ee6e7afe69335df9d2730f57a0db3e22
