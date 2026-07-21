@@ -1,26 +1,22 @@
 {
   "date": "2026-07-21",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.",
+  "summary": "GitHub push event processed for jobfynder/jobfynder-infra on branch feature/comm-telegram-message-chunking.",
   "repositories": [
-    "jobfynder-admin/jobFynder-BE-nestJS"
+    "jobfynder/jobfynder-infra"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
-    "Branch: main",
-    "Head SHA: 005e203",
+    "Repository: jobfynder/jobfynder-infra",
+    "Branch: feature/comm-telegram-message-chunking",
+    "Head SHA: 0d7616a",
     "Commit count: 1",
-    "Triggered by: atult120",
+    "Triggered by: jobfynder",
     "Commits:",
-    "005e203 Add missing profile employer write APIs and confirm FE integration gaps. \u2014 atultiwari",
+    "0d7616a fix(comm): split long Telegram responses safely \u2014 Pavan Kumar Narra",
     "Changed files:",
-    "added: profile-frontend-integration-gaps.md",
-    "modified: profile-backend-api-spec.md",
-    "modified: src/profile/employer-ops/dto/employer-ops.dto.ts",
-    "modified: src/profile/employer-ops/employer-ops.controller.ts",
-    "modified: src/profile/employer-ops/employer-ops.service.ts",
-    "modified: src/profile/profile-transformers.service.ts"
+    "added: communication/scripts/comm-telegram-message-chunking-check.py",
+    "modified: communication/comm_gateway/telegram_outbound.py"
   ],
   "decisions": [
     {
