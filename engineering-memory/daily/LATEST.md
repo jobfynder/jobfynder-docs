@@ -23,14 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: fa5aef1
+- Head SHA: e1eedbe
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- fa5aef1 Make employer foundedYear optional and return it from profile details. — atultiwari
+- e1eedbe Fix open-positions updates failing on fake test-data IDs. — atultiwari
 - Changed files:
-- modified: src/profile/header/dto/employer-header.dto.ts
-- modified: src/profile/header/header.service.ts
+- modified: src/profile/employer-ops/employer-ops.service.ts
 - modified: src/profile/profile-transformers.service.ts
 
 ---
