@@ -42,7 +42,7 @@
     "guard_script": "/opt/jobfynder-docs/scripts/env-guard.py"
   },
   "portkey_langfuse": {
-    "status": "configured_in_env",
+    "status": "env_configured + hermes-api restarted, portkey_configured=True",
     "env": "/opt/jobfynder-infra/intelligence/.env",
     "keys_set": [
       "PORTKEY_API_KEY",
@@ -52,8 +52,7 @@
       "LANGFUSE_BASE_URL"
     ],
     "needs": [
-      "container restart to load env",
-      "route LLM calls via Portkey for actual tracing"
+      "route LLM calls via Portkey to observe traces in Langfuse"
     ]
   }
 }
