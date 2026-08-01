@@ -1,7 +1,7 @@
 {
   "$schema": "Jobfynder Tools Registry",
   "description": "Registry of external tools/software used across Jobfynder operations.",
-  "updated": "2026-08-01T15:34:25Z",
+  "updated": "2026-08-01T15:42:43Z",
   "tools": [
     {
       "name": "DeepSeek",
@@ -100,12 +100,19 @@
       "id": "tool-012"
     },
     {
+      "name": "ProductLift",
+      "url": "https://www.productlift.dev",
+      "category": "Feedback Management",
+      "description": "Feedback management tool used at https://feedback.jobfynder.com",
+      "id": "tool-013"
+    },
+    {
       "name": "Tailscale",
       "url": "https://tailscale.com",
       "category": "Networking",
       "description": "Zero-config mesh VPN",
       "added": "2026-08-01",
-      "id": "tool-013"
+      "id": "tool-014"
     },
     {
       "name": "Notion",
@@ -113,7 +120,7 @@
       "category": "Productivity",
       "description": "Docs, notes & shared workspace",
       "added": "2026-08-01",
-      "id": "tool-014"
+      "id": "tool-015"
     },
     {
       "name": "Centrifugo",
@@ -121,10 +128,10 @@
       "category": "Realtime Messaging",
       "description": "Pub/sub server for realtime app events",
       "added": "2026-08-01",
-      "id": "tool-015"
+      "id": "tool-016"
     },
     {
-      "id": "tool-016",
+      "id": "tool-017",
       "name": "AI-ARK",
       "url": "https://ai-ark.com/",
       "category": "Sales Intelligence",
@@ -137,7 +144,7 @@
       "category": "Sales Intelligence",
       "description": "LinkedIn outreach automation",
       "added": "2026-08-01",
-      "id": "tool-017"
+      "id": "tool-018"
     },
     {
       "name": "Hostinger",
@@ -145,10 +152,10 @@
       "category": "Web Hosting",
       "description": "Budget-friendly web & VPS hosting",
       "added": "2026-08-01",
-      "id": "tool-018"
+      "id": "tool-019"
     },
     {
-      "id": "tool-019",
+      "id": "tool-020",
       "name": "BrightData",
       "url": "https://brightdata.com/",
       "category": "Web Scraping",
