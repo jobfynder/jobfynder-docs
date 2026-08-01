@@ -38,6 +38,22 @@
     "n8n API key rotation (user-side)"
   ],
   "anti_runaway": {
-    "rule": "Before any registry/verification action, read this file. If the fact is already recorded, do NOT re-run tools, re-check, or re-commit. Report the recorded fact and stop."
+    "rule": "MANDATORY: if a fact is already recorded in this file, do NOT re-run tools, do NOT re-verify, do NOT re-commit. Report the recorded fact and stop.",
+    "guard_script": "/opt/jobfynder-docs/scripts/env-guard.py"
+  },
+  "portkey_langfuse": {
+    "status": "configured_in_env",
+    "env": "/opt/jobfynder-infra/intelligence/.env",
+    "keys_set": [
+      "PORTKEY_API_KEY",
+      "PORTKEY_BASE_URL",
+      "LANGFUSE_SECRET_KEY",
+      "LANGFUSE_PUBLIC_KEY",
+      "LANGFUSE_BASE_URL"
+    ],
+    "needs": [
+      "container restart to load env",
+      "route LLM calls via Portkey for actual tracing"
+    ]
   }
 }
