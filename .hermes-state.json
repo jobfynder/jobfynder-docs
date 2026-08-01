@@ -4,8 +4,8 @@
   "registries": {
     "tools": {
       "path": "/opt/jobfynder-docs/tools/jobfynder-tools.json",
-      "count": 24,
-      "last_commit": "091cc90",
+      "count": 25,
+      "last_commit": "125376f",
       "cli": "/opt/jobfynder-docs/scripts/jobfynder-tools.py"
     },
     "links": {
@@ -18,15 +18,24 @@
   },
   "bitwarden": {
     "standard": "All new passwords/keys/credentials go to Bitwarden via bw CLI.",
-    "stored": ["n8n API Key", "Centrifugo - Hermes Server", "Hermes WebUI (Tailscale)"]
+    "stored": [
+      "n8n API Key",
+      "Centrifugo - Hermes Server",
+      "Hermes WebUI (Tailscale)",
+      "Reoon Email Verifier"
+    ]
   },
   "server": {
     "health": "OK",
     "bots": "Admin + Sourcing gateways on OpenRouter (google/gemini-3.5-flash), MoA disabled",
     "ip": "167.71.217.230"
   },
-  "cancelled": ["BrightData scraper build"],
-  "pending_manual": ["n8n API key rotation (user-side)"],
+  "cancelled": [
+    "BrightData scraper build"
+  ],
+  "pending_manual": [
+    "n8n API key rotation (user-side)"
+  ],
   "anti_runaway": {
     "rule": "Before any registry/verification action, read this file. If the fact is already recorded, do NOT re-run tools, re-check, or re-commit. Report the recorded fact and stop."
   }
