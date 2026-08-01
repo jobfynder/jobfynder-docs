@@ -1,26 +1,10 @@
 {
   "$schema": "Jobfynder Links Registry",
   "description": "Canonical registry of URLs used across Jobfynder development and operations.",
-  "updated": "2026-08-01T00:00:00Z",
+  "updated": "2026-08-01T15:58:26Z",
   "links": [
     {
       "id": "link-001",
-      "name": "Jobfynder Main Site",
-      "url": "https://jobfynder.com/",
-      "category": "Public Site",
-      "purpose": "Main Jobfynder website",
-      "status": "active"
-    },
-    {
-      "id": "link-002",
-      "name": "Jobfynder Feedback",
-      "url": "https://feedback.jobfynder.com/",
-      "category": "Public Site",
-      "purpose": "ProductLift feedback management portal",
-      "status": "active"
-    },
-    {
-      "id": "link-003",
       "name": "Jobfynder Core API",
       "url": "https://api.jobfynder.com",
       "category": "API",
@@ -28,15 +12,7 @@
       "status": "configured"
     },
     {
-      "id": "link-004",
-      "name": "Hermes Dashboard",
-      "url": "https://hermes.jobfynder.com/",
-      "category": "Internal",
-      "purpose": "Hermes Agent web dashboard (proxied via NPM, backend port 9119)",
-      "status": "active"
-    },
-    {
-      "id": "link-005",
+      "id": "link-002",
       "name": "Nvoids Job Board",
       "url": "https://jobs.nvoids.com/",
       "category": "External Source",
@@ -44,7 +20,23 @@
       "status": "blocked"
     },
     {
-      "id": "link-006",
+      "name": "Jobfynder Radaar",
+      "url": "https://radaar.jobfynder.com",
+      "category": "External Tool",
+      "purpose": "Radaar.io social media marketing tool for Jobfynder ecosystem",
+      "status": "active",
+      "id": "link-003"
+    },
+    {
+      "id": "link-004",
+      "name": "Langfuse",
+      "url": "https://cloud.langfuse.com",
+      "category": "External Tool",
+      "purpose": "LLM observability (LANGFUSE_HOST)",
+      "status": "active"
+    },
+    {
+      "id": "link-005",
       "name": "Hermes API Local",
       "url": "http://127.0.0.1:8000",
       "category": "Internal",
@@ -52,23 +44,63 @@
       "status": "active"
     },
     {
-      "id": "link-007",
-      "name": "Typesense",
-      "url": "http://127.0.0.1:8108",
+      "id": "link-006",
+      "name": "Hermes Dashboard",
+      "url": "https://hermes.jobfynder.com/",
       "category": "Internal",
-      "purpose": "Typesense search engine (jobfynder-typesense container, port 8108)",
+      "purpose": "Hermes Agent web dashboard - INTEL server where Hermes is installed (IP: 167.71.217.230, proxied via NPM, backend port 9119)",
       "status": "active"
     },
     {
-      "id": "link-008",
-      "name": "Portainer",
-      "url": "https://127.0.0.1:9443",
+      "name": "Jobfynder Chat (Chatwoot)",
+      "url": "https://chat.jobfynder.com",
       "category": "Internal",
-      "purpose": "Docker management UI",
-      "status": "active"
+      "purpose": "Chatwoot chat admin/agent login backend for customer support",
+      "status": "active",
+      "id": "link-007"
     },
     {
-      "id": "link-009",
+      "name": "Jobfynder COMM Server",
+      "url": "https://comm.jobfynder.com",
+      "category": "Internal",
+      "purpose": "COMM server for Jobfynder - IP: 152.42.219.165",
+      "status": "active",
+      "id": "link-008"
+    },
+    {
+      "name": "Jobfynder CRM",
+      "url": "https://crm.jobfyder.com",
+      "category": "Internal",
+      "purpose": "CRM for Jobfynder (note: domain given as jobfyder.com - verify spelling)",
+      "status": "active",
+      "id": "link-009"
+    },
+    {
+      "name": "Jobfynder n8n",
+      "url": "https://connect.jobfynder.com",
+      "category": "Internal",
+      "purpose": "n8n server for Jobfynder ecosystem (workflow automation)",
+      "status": "active",
+      "id": "link-010"
+    },
+    {
+      "name": "Jobfynder Reports (Metabase)",
+      "url": "https://report.jobfynder.com",
+      "category": "Internal",
+      "purpose": "Metabase reporting for CRM",
+      "status": "active",
+      "id": "link-011"
+    },
+    {
+      "name": "Jobfynder Testing Server",
+      "url": "https://testing.jobfynder.com",
+      "category": "Internal",
+      "purpose": "Testing server for Jobfynder development",
+      "status": "active",
+      "id": "link-012"
+    },
+    {
+      "id": "link-013",
       "name": "Nginx Proxy Manager",
       "url": "http://127.0.0.1:81",
       "category": "Internal",
@@ -76,11 +108,35 @@
       "status": "active"
     },
     {
-      "id": "link-010",
-      "name": "Langfuse",
-      "url": "https://cloud.langfuse.com",
-      "category": "External Tool",
-      "purpose": "LLM observability (LANGFUSE_HOST)",
+      "id": "link-014",
+      "name": "Portainer",
+      "url": "https://127.0.0.1:9443",
+      "category": "Internal",
+      "purpose": "Docker management UI",
+      "status": "active"
+    },
+    {
+      "id": "link-015",
+      "name": "Typesense",
+      "url": "http://127.0.0.1:8108",
+      "category": "Internal",
+      "purpose": "Typesense search engine (jobfynder-typesense container, port 8108)",
+      "status": "active"
+    },
+    {
+      "id": "link-016",
+      "name": "Jobfynder Feedback",
+      "url": "https://feedback.jobfynder.com/",
+      "category": "Public Site",
+      "purpose": "ProductLift feedback management portal",
+      "status": "active"
+    },
+    {
+      "id": "link-017",
+      "name": "Jobfynder Main Site",
+      "url": "https://jobfynder.com/",
+      "category": "Public Site",
+      "purpose": "Main Jobfynder website",
       "status": "active"
     }
   ]
