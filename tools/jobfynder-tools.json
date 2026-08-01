@@ -1,7 +1,7 @@
 {
   "$schema": "Jobfynder Tools Registry",
   "description": "Registry of external tools/software used across Jobfynder operations.",
-  "updated": "2026-08-01T15:42:43Z",
+  "updated": "2026-08-01T16:38:49Z",
   "tools": [
     {
       "name": "DeepSeek",
@@ -92,19 +92,26 @@
       "id": "tool-011"
     },
     {
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "category": "Development",
+      "description": "AI-powered code editor",
+      "id": "tool-012"
+    },
+    {
       "name": "Kit",
       "url": "https://kit.com",
       "category": "Email Marketing",
       "description": "Creator email & newsletter platform",
       "added": "2026-08-01",
-      "id": "tool-012"
+      "id": "tool-013"
     },
     {
       "name": "ProductLift",
       "url": "https://www.productlift.dev",
       "category": "Feedback Management",
       "description": "Feedback management tool used at https://feedback.jobfynder.com",
-      "id": "tool-013"
+      "id": "tool-014"
     },
     {
       "name": "Tailscale",
@@ -112,7 +119,7 @@
       "category": "Networking",
       "description": "Zero-config mesh VPN",
       "added": "2026-08-01",
-      "id": "tool-014"
+      "id": "tool-015"
     },
     {
       "name": "Notion",
@@ -120,7 +127,7 @@
       "category": "Productivity",
       "description": "Docs, notes & shared workspace",
       "added": "2026-08-01",
-      "id": "tool-015"
+      "id": "tool-016"
     },
     {
       "name": "Centrifugo",
@@ -128,10 +135,10 @@
       "category": "Realtime Messaging",
       "description": "Pub/sub server for realtime app events",
       "added": "2026-08-01",
-      "id": "tool-016"
+      "id": "tool-017"
     },
     {
-      "id": "tool-017",
+      "id": "tool-018",
       "name": "AI-ARK",
       "url": "https://ai-ark.com/",
       "category": "Sales Intelligence",
@@ -144,7 +151,28 @@
       "category": "Sales Intelligence",
       "description": "LinkedIn outreach automation",
       "added": "2026-08-01",
-      "id": "tool-018"
+      "id": "tool-019"
+    },
+    {
+      "name": "Bing Webmaster",
+      "url": "https://www.bing.com/webmasters",
+      "category": "SEO / Analytics",
+      "description": "Bing search indexing and SEO tools",
+      "id": "tool-020"
+    },
+    {
+      "name": "Google Analytics",
+      "url": "https://analytics.google.com",
+      "category": "SEO / Analytics",
+      "description": "Web and app analytics",
+      "id": "tool-021"
+    },
+    {
+      "name": "Google Search Console",
+      "url": "https://search.google.com/search-console",
+      "category": "SEO / Analytics",
+      "description": "Monitor and optimize search presence",
+      "id": "tool-022"
     },
     {
       "name": "Hostinger",
@@ -152,10 +180,10 @@
       "category": "Web Hosting",
       "description": "Budget-friendly web & VPS hosting",
       "added": "2026-08-01",
-      "id": "tool-019"
+      "id": "tool-023"
     },
     {
-      "id": "tool-020",
+      "id": "tool-024",
       "name": "BrightData",
       "url": "https://brightdata.com/",
       "category": "Web Scraping",
