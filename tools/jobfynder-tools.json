@@ -1,109 +1,109 @@
 {
   "$schema": "Jobfynder Tools Registry",
   "description": "Registry of external tools/software used across Jobfynder operations.",
-  "updated": "2026-08-01T00:00:00Z",
+  "updated": "2026-08-01T15:34:25Z",
   "tools": [
-    {
-      "id": "tool-001",
-      "name": "AI-ARK",
-      "url": "https://ai-ark.com/",
-      "category": "Sales intelligence",
-      "description": "Apollo alternative for lead/sales intelligence and prospecting.",
-      "added": "2026-07-26"
-    },
-    {
-      "name": "Aimfox",
-      "url": "https://aimfox.com",
-      "category": "Sales / outreach",
-      "description": "LinkedIn outreach and prospecting automation platform.",
-      "added": "2026-08-01",
-      "id": "tool-002"
-    },
-    {
-      "id": "tool-003",
-      "name": "BrightData",
-      "url": "https://brightdata.com/",
-      "category": "Web scraping / data collection",
-      "description": "Web scraping platform with Web Unlocker, proxies and data collection APIs for bypassing anti-bot protection.",
-      "added": "2026-07-26"
-    },
-    {
-      "name": "Centrifugo",
-      "url": "https://centrifugal.dev",
-      "category": "Realtime messaging",
-      "description": "Realtime messaging / pub-sub server.",
-      "added": "2026-08-01",
-      "id": "tool-004"
-    },
-    {
-      "name": "ChatGPT",
-      "url": "https://chatgpt.com",
-      "category": "AI assistant",
-      "description": "OpenAI's AI assistant.",
-      "added": "2026-08-01",
-      "id": "tool-005"
-    },
-    {
-      "name": "Chatwoot",
-      "url": "https://chatwoot.com",
-      "category": "Customer support",
-      "description": "Open-source customer support and live chat platform.",
-      "added": "2026-08-01",
-      "id": "tool-006"
-    },
-    {
-      "name": "Claude",
-      "url": "https://claude.ai",
-      "category": "AI assistant",
-      "description": "Anthropic's AI assistant.",
-      "added": "2026-08-01",
-      "id": "tool-007"
-    },
-    {
-      "name": "DeepInfra",
-      "url": "https://deepinfra.com",
-      "category": "AI inference",
-      "description": "Serverless LLM inference platform.",
-      "added": "2026-08-01",
-      "id": "tool-008"
-    },
     {
       "name": "DeepSeek",
       "url": "https://deepseek.com",
       "category": "AI / LLM",
-      "description": "LLM provider (used as primary model provider in Hermes).",
+      "description": "Open-weight LLM provider; Hermes primary model",
       "added": "2026-08-01",
-      "id": "tool-009"
+      "id": "tool-001"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "category": "AI Assistant",
+      "description": "OpenAI's conversational AI assistant",
+      "added": "2026-08-01",
+      "id": "tool-002"
+    },
+    {
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "category": "AI Assistant",
+      "description": "Anthropic's conversational AI assistant",
+      "added": "2026-08-01",
+      "id": "tool-003"
+    },
+    {
+      "name": "DeepInfra",
+      "url": "https://deepinfra.com",
+      "category": "AI Inference",
+      "description": "Serverless LLM inference platform",
+      "added": "2026-08-01",
+      "id": "tool-004"
+    },
+    {
+      "name": "Portkey",
+      "url": "https://portkey.ai",
+      "category": "AI Infrastructure",
+      "description": "LLM gateway for routing & failover",
+      "added": "2026-08-01",
+      "id": "tool-005"
+    },
+    {
+      "name": "Langfuse",
+      "url": "https://langfuse.com",
+      "category": "AI Observability",
+      "description": "LLM tracing, monitoring & evaluation",
+      "added": "2026-08-01",
+      "id": "tool-006"
     },
     {
       "name": "Elestio",
       "url": "https://elest.io",
-      "category": "Cloud hosting",
-      "description": "Managed hosting for open-source applications.",
+      "category": "Cloud Hosting",
+      "description": "Managed hosting for open-source apps",
       "added": "2026-08-01",
-      "id": "tool-010"
+      "id": "tool-007"
+    },
+    {
+      "name": "DigitalOcean",
+      "url": "https://www.digitalocean.com",
+      "category": "Cloud Infrastructure",
+      "description": "Cloud hosting; current Jobfynder server",
+      "added": "2026-08-01",
+      "id": "tool-008"
     },
     {
       "name": "Ghost",
       "url": "https://ghost.org",
-      "category": "Publishing",
-      "description": "Newsletter and blog publishing platform.",
+      "category": "Content & Publishing",
+      "description": "Newsletter & blog publishing CMS",
+      "added": "2026-08-01",
+      "id": "tool-009"
+    },
+    {
+      "name": "EspoCRM",
+      "url": "https://www.espocrm.com",
+      "category": "CRM",
+      "description": "Open-source CRM & sales pipeline",
+      "added": "2026-08-01",
+      "id": "tool-010"
+    },
+    {
+      "name": "Chatwoot",
+      "url": "https://chatwoot.com",
+      "category": "Customer Support",
+      "description": "Open-source helpdesk & live chat",
       "added": "2026-08-01",
       "id": "tool-011"
     },
     {
       "name": "Kit",
       "url": "https://kit.com",
-      "category": "Email marketing",
-      "description": "Email and newsletter marketing platform (formerly ConvertKit).",
+      "category": "Email Marketing",
+      "description": "Creator email & newsletter platform",
       "added": "2026-08-01",
       "id": "tool-012"
     },
     {
-      "name": "Langfuse",
-      "url": "https://langfuse.com",
-      "category": "AI observability",
-      "description": "LLM tracing, monitoring and evaluation platform.",
+      "name": "Tailscale",
+      "url": "https://tailscale.com",
+      "category": "Networking",
+      "description": "Zero-config mesh VPN",
       "added": "2026-08-01",
       "id": "tool-013"
     },
@@ -111,49 +111,49 @@
       "name": "Notion",
       "url": "https://notion.so",
       "category": "Productivity",
-      "description": "Notes, docs and project management workspace.",
+      "description": "Docs, notes & shared workspace",
       "added": "2026-08-01",
       "id": "tool-014"
     },
     {
-      "name": "Portkey",
-      "url": "https://portkey.ai",
-      "category": "AI infrastructure",
-      "description": "AI gateway for LLM routing, load-balancing and observability.",
+      "name": "Centrifugo",
+      "url": "https://centrifugal.dev",
+      "category": "Realtime Messaging",
+      "description": "Pub/sub server for realtime app events",
       "added": "2026-08-01",
       "id": "tool-015"
     },
     {
-      "name": "Tailscale",
-      "url": "https://tailscale.com",
-      "category": "Networking",
-      "description": "Secure mesh VPN / WireGuard-based networking.",
-      "added": "2026-08-01",
-      "id": "tool-016"
+      "id": "tool-016",
+      "name": "AI-ARK",
+      "url": "https://ai-ark.com/",
+      "category": "Sales Intelligence",
+      "description": "Apollo alternative for lead prospecting",
+      "added": "2026-07-26"
     },
     {
-      "name": "DigitalOcean",
-      "url": "https://www.digitalocean.com",
-      "category": "Cloud infrastructure",
-      "description": "Cloud hosting provider (current Jobfynder server).",
+      "name": "Aimfox",
+      "url": "https://aimfox.com",
+      "category": "Sales Intelligence",
+      "description": "LinkedIn outreach automation",
       "added": "2026-08-01",
       "id": "tool-017"
     },
     {
-      "name": "EspoCRM",
-      "url": "https://www.espocrm.com",
-      "category": "CRM",
-      "description": "Open-source CRM platform.",
+      "name": "Hostinger",
+      "url": "https://www.hostinger.com",
+      "category": "Web Hosting",
+      "description": "Budget-friendly web & VPS hosting",
       "added": "2026-08-01",
       "id": "tool-018"
     },
     {
-      "name": "Hostinger",
-      "url": "https://www.hostinger.com",
-      "category": "Web hosting",
-      "description": "Web hosting provider.",
-      "added": "2026-08-01",
-      "id": "tool-019"
+      "id": "tool-019",
+      "name": "BrightData",
+      "url": "https://brightdata.com/",
+      "category": "Web Scraping",
+      "description": "Anti-bot scraping, proxies & data collection",
+      "added": "2026-07-26"
     }
   ]
 }
