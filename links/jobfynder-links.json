@@ -1,0 +1,87 @@
+{
+  "$schema": "Jobfynder Links Registry",
+  "description": "Canonical registry of URLs used across Jobfynder development and operations.",
+  "updated": "2026-08-01T00:00:00Z",
+  "links": [
+    {
+      "id": "link-001",
+      "name": "Jobfynder Main Site",
+      "url": "https://jobfynder.com/",
+      "category": "Public Site",
+      "purpose": "Main Jobfynder website",
+      "status": "active"
+    },
+    {
+      "id": "link-002",
+      "name": "Jobfynder Feedback",
+      "url": "https://feedback.jobfynder.com/",
+      "category": "Public Site",
+      "purpose": "ProductLift feedback management portal",
+      "status": "active"
+    },
+    {
+      "id": "link-003",
+      "name": "Jobfynder Core API",
+      "url": "https://api.jobfynder.com",
+      "category": "API",
+      "purpose": "Jobfynder core API (JOBFYNDER_CORE_API_URL)",
+      "status": "configured"
+    },
+    {
+      "id": "link-004",
+      "name": "Hermes Dashboard",
+      "url": "https://hermes.jobfynder.com/",
+      "category": "Internal",
+      "purpose": "Hermes Agent web dashboard (proxied via NPM, backend port 9119)",
+      "status": "active"
+    },
+    {
+      "id": "link-005",
+      "name": "Nvoids Job Board",
+      "url": "https://jobs.nvoids.com/",
+      "category": "External Source",
+      "purpose": "Third-party job board (currently IP-blacklisted by Cloudflare)",
+      "status": "blocked"
+    },
+    {
+      "id": "link-006",
+      "name": "Hermes API Local",
+      "url": "http://127.0.0.1:8000",
+      "category": "Internal",
+      "purpose": "Hermes API service (hermes-api container, port 8000)",
+      "status": "active"
+    },
+    {
+      "id": "link-007",
+      "name": "Typesense",
+      "url": "http://127.0.0.1:8108",
+      "category": "Internal",
+      "purpose": "Typesense search engine (jobfynder-typesense container, port 8108)",
+      "status": "active"
+    },
+    {
+      "id": "link-008",
+      "name": "Portainer",
+      "url": "https://127.0.0.1:9443",
+      "category": "Internal",
+      "purpose": "Docker management UI",
+      "status": "active"
+    },
+    {
+      "id": "link-009",
+      "name": "Nginx Proxy Manager",
+      "url": "http://127.0.0.1:81",
+      "category": "Internal",
+      "purpose": "NPM admin UI (proxy management)",
+      "status": "active"
+    },
+    {
+      "id": "link-010",
+      "name": "Langfuse",
+      "url": "https://cloud.langfuse.com",
+      "category": "External Tool",
+      "purpose": "LLM observability (LANGFUSE_HOST)",
+      "status": "active"
+    }
+  ]
+}
