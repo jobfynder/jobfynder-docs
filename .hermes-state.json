@@ -42,7 +42,7 @@
     "guard_script": "/opt/jobfynder-docs/scripts/env-guard.py"
   },
   "portkey_langfuse": {
-    "status": "langfuse_sdk_tracing_confirmed",
+    "status": "langfuse_tracing_enriched_and_confirmed",
     "env": "/opt/jobfynder-infra/intelligence/.env",
     "keys_set": [
       "PORTKEY_API_KEY",
@@ -56,6 +56,8 @@
     ],
     "notes": "v4 SDK (start_as_current_observation/as_type=generation) sends traces directly. Verified: trace 20d410ef78d93c83ebe02b8d8d23ba4f 'prompt-generation'. Portkey gateway-side export is plan-gated (0 traces); SDK path is plan-independent.",
     "next_step": "Enable Langfuse in the Portkey Config the virtual key uses (Dashboard > Configs > config > Integrations), or on paid plan. Server-side wiring confirmed.",
-    "skill": "cloned from github.com/langfuse/skills into skills/langfuse (nested .git stripped)"
+    "skill": "cloned from github.com/langfuse/skills into skills/langfuse (nested .git stripped)",
+    "enrichment": "user_id + session_id + metadata land on trace (verified ALL_ENRICHMENT_CONFIRMED)",
+    "trace_proof": "trace 28d8d732d7cbe9e351a84049bc05c9f1 userId=test-user-42 sessionId=test-session-99"
   }
 }

@@ -69,18 +69,27 @@ def _trace_to_langfuse(prompt, messages, model, output, usage, *, trace_context=
         user_id = attrs.pop("user_id", None)
         session_id = attrs.pop("session_id", None)
         metadata = attrs.pop("metadata", None)
-        with propagate_attributes(user_id=user_id, session_id=session_id, metadata=metadata):
-            with client.start_as_current_observation(
-                name=trace_name,
-                as_type="generation",
-                model=model,
-                input={"messages": [m.model_dump() for m in messages]},
-            ) as gen:
-                gen.update(
-                    output=output,
-                    usage_details=usage_details,
-                    status_message="success",
-                )
+        # Match the exact v4 pattern proven to work in isolation: a root
+        # SPAN wraps propagate_attributes, which wraps the generation child.
+        # propagate_attributes attaches trace-level attributes only when the
+        # app root is a span (a generation root did not land them).
+        with client.start_as_current_observation(
+            name=trace_name,
+        ) as root_span:
+            with propagate_attributes(
+                user_id=user_id, session_id=session_id, metadata=metadata
+            ):
+                with client.start_as_current_observation(
+                    name=f"{trace_name}-llm",
+                    as_type="generation",
+                    model=model,
+                    input={"messages": [m.model_dump() for m in messages]},
+                ) as gen:
+                    gen.update(
+                        output=output,
+                        usage_details=usage_details,
+                        status_message="success",
+                    )
         client.flush()
     except Exception:
         try:
@@ -236,7 +245,7 @@ def _call_portkey(prompt, messages: list[PromptRenderedMessage], *, trace_contex
 
     usage = data.get("usage", {})
     # Langfuse SDK tracing (plan-independent) — best-effort, never raises.
-    _trace_to_langfuse(prompt, messages, model, output, usage)
+    _trace_to_langfuse(prompt, messages, model, output, usage, trace_context=trace_context)
     return output, usage
 
 
