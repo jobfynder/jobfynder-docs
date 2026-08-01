@@ -1,0 +1,15 @@
+{
+  "$schema": "Jobfynder Tools Registry",
+  "description": "Registry of external tools/software used across Jobfynder operations.",
+  "updated": "2026-07-26T00:00:00Z",
+  "tools": [
+    {
+      "id": "tool-001",
+      "name": "AI-ARK",
+      "url": "https://ai-ark.com/",
+      "category": "Sales intelligence",
+      "description": "Apollo alternative for lead/sales intelligence and prospecting.",
+      "added": "2026-07-26"
+    }
+  ]
+}
