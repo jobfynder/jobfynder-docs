@@ -22,7 +22,8 @@
       "n8n API Key",
       "Centrifugo - Hermes Server",
       "Hermes WebUI (Tailscale)",
-      "Reoon Email Verifier"
+      "Reoon Email Verifier",
+      "Langfuse"
     ]
   },
   "server": {
