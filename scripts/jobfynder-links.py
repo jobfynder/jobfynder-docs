@@ -73,45 +73,83 @@ def check(data):
     return errors
 
 
+def _table(headers, rows):
+    """Render a markdown-style table with aligned columns."""
+    widths = [len(h) for h in headers]
+    for r in rows:
+        for i, c in enumerate(r):
+            widths[i] = max(widths[i], len(c))
+    out = []
+    out.append("| " + " | ".join(h.ljust(widths[i]) for i, h in enumerate(headers)) + " |")
+    out.append("|-" + "-|-".join("-" * w for w in widths) + "-|")
+    for r in rows:
+        out.append("| " + " | ".join(c.ljust(widths[i]) for i, c in enumerate(r)) + " |")
+    return out
+
+
 def cmd_list(data):
     servers = data.get("servers", [])
-    cats = defaultdict(list)
-    for l in data["links"]:
-        cats[l["category"]].append(l)
-
+    links = data["links"]
+    by_id = {l["id"]: l for l in links}
+    srv_by_id = {s["id"]: s for s in servers}
     out = []
-    # Servers block
+
+    # Servers / Infrastructure
     if servers:
-        out.append("## 🗄 Servers")
+        out.append("## 🗄 Infrastructure")
+        rows = []
         for s in sorted(servers, key=lambda x: x.get("name", "")):
-            out.append(f"{s['id']} · {s['name']} · {s.get('ip','')} · {s.get('role','')}")
+            rows.append([s["id"], s.get("name", ""), s.get("ip", ""), s.get("role", "")])
+        out.extend(_table(["ID", "Server", "IP", "Role"], rows))
         out.append("")
 
-    # Category ordering (unknown categories appended alphabetically)
-    known = [c for c in CATEGORY_ORDER if c in cats]
-    unknown = sorted(c for c in cats if c not in CATEGORY_ORDER)
-    for cat in known + unknown:
-        items = sorted(cats[cat], key=lambda x: x["name"].lower())
-        emoji = CATEGORY_EMOJI.get(cat.lower(), "")
-        out.append(f"{emoji} {cat}".strip())
+    def bucket(pred, category=None):
+        return [l for l in links if (category is None or l["category"] == category) and pred(l)]
+
+    # Public
+    pub = bucket(lambda l: l["category"] == "Public Site") + bucket(lambda l: l["category"] == "API")
+    if pub:
+        out.append("## 🌐 Services — Public")
+        rows = []
+        for l in sorted(pub, key=lambda x: x["name"].lower()):
+            rows.append([l["id"], l["name"], display_url(l["url"]),
+                         l.get("ip", "—"), l.get("access", "—")])
+        out.extend(_table(["ID", "Service", "URL", "IP", "Access"], rows))
         out.append("")
-        for l in items:
-            out.append(f"{l['id']}")
-            out.append(f"• Name: {l['name']}")
-            out.append(f"• URL: {display_url(l['url'])}")
-            out.append(f"• Category: {l['category']}")
-            out.append(f"• Purpose: {l.get('purpose','')}")
-            if l.get("ip"):
-                out.append(f"• IP: {l['ip']}")
-            if l.get("server"):
-                sid = l["server"]
-                sname = next((s.get("name", "") for s in servers if s.get("id") == sid), "")
-                label = f"{sid} ({sname})" if sname else sid
-                out.append(f"• Server: {label}")
-            if l.get("access"):
-                out.append(f"• Access: {l['access']}")
-            out.append(f"• Status: {l.get('status','')}")
-            out.append("")
+
+    # Internal on INTEL server
+    intel = [l for l in links if l.get("server") == "srv-001"]
+    if intel:
+        out.append("## 🛠 Services — Internal (INTEL · " + (srv_by_id.get("srv-001", {}).get("ip", "")) + ")")
+        rows = []
+        for l in sorted(intel, key=lambda x: x["name"].lower()):
+            rows.append([l["id"], l["name"], display_url(l["url"]), l.get("access", "—"),
+                         l.get("note", "")])
+        out.extend(_table(["ID", "Service", "URL / Port", "Access", "Notes"], rows))
+        out.append("")
+
+    # Internal on other hosts
+    other_int = [l for l in links if l["category"] == "Internal" and l.get("server") != "srv-001"]
+    if other_int:
+        out.append("## 🛠 Services — Internal (Other hosts)")
+        rows = []
+        for l in sorted(other_int, key=lambda x: x["name"].lower()):
+            rows.append([l["id"], l["name"], display_url(l["url"]),
+                         l.get("ip", "—"), l.get("access", "—")])
+        out.extend(_table(["ID", "Service", "URL", "IP", "Access"], rows))
+        out.append("")
+
+    # External
+    ext = [l for l in links if l["category"] in ("External Source", "External Tool")]
+    if ext:
+        out.append("## 🌍 External")
+        rows = []
+        for l in sorted(ext, key=lambda x: x["name"].lower()):
+            rows.append([l["id"], l["name"], display_url(l["url"]),
+                         l.get("status", ""), l.get("note", "")])
+        out.extend(_table(["ID", "Service", "URL", "Status", "Notes"], rows))
+        out.append("")
+
     return "\n".join(out).rstrip() + "\n"
 
 

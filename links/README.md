@@ -32,34 +32,23 @@ Canonical reference hub for all URLs, hosts, services and access details across 
 - **Listing links:** when asked "jobfynder links" / "list the links" / "listout the links", output every link using the Canonical display format below.
 
 ## Canonical display format
-Group by category (heading first), links alphabetical within category, categories in this order: **🔌 API → 🌐 Public Site → 🌍 External Source → 🧩 External Tool → 🛠 Internal**. Include the optional lines (`IP`, `Server`, `Access`) only when present in the JSON.
+`jobfynder links` output uses aligned **markdown tables**, grouped by logical infrastructure buckets (not raw category strings), in this order:
+
+1. **🗄 Infrastructure** — every server (ID · name · IP · role)
+2. **🌐 Services — Public** — public sites + API (ID · Service · URL · IP · Access)
+3. **🛠 Services — Internal (INTEL · IP)** — services running on the INTEL server (ID · Service · URL/Port · Access · Notes)
+4. **🛠 Services — Internal (Other hosts)** — internal services on other hosts (ID · Service · URL · IP · Access)
+5. **🌍 External** — external tools/sources (ID · Service · URL · Status · Notes)
+
+Within each table, services are sorted alphabetically. Purpose is embedded in the Service cell (e.g. `Feedback — ProductLift portal`); ports, container names and Cloudflare flags go in Notes. This collapses the old ~130-line bullet list into ~30 lines of dense, scannable output.
 
 ```
-🔌 API
-
-link-005
-• Name: Jobfynder Core API
-• URL: api.jobfynder.com
-• Category: API
-• Purpose: Jobfynder core API (JOBFYNDER_CORE_API_URL)
-• Status: configured
-```
-
-Example with optional fields:
-
-```
-🛠 Internal
-
-link-007
-• Name: Hermes Dashboard
-• URL: hermes.jobfynder.com
-• Category: Internal
-• Purpose: Hermes Agent web dashboard (INTEL server)
-• IP: 167.71.217.230
-• Server: srv-001 (hermes.jobfynder.com)
-• Access: Login required
-• Status: active
+## 🛠 Services — Internal (INTEL · 167.71.217.230)
+| ID       | Service          | URL / Port     | Access   | Notes |
+|----------|------------------|----------------|----------|-------|
+| link-007 | Hermes Dashboard | hermes.jobfynder.com | Login | NPM proxy → :9119 |
+| link-014 | Hermes API       | 127.0.0.1:8000 | Internal | container jobfynder-hermes-api |
 ```
 
 ## Servers
-Listed under `servers[]` in the JSON; summarized at the top of `list` output.
+Listed under `servers[]` in the JSON; shown in the Infrastructure table at the top of `list` output.
