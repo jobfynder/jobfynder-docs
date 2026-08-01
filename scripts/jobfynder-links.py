@@ -87,15 +87,36 @@ def _table(headers, rows):
     return out
 
 
+def _md_link(name, url):
+    """Return a clickable markdown link."""
+    return f"[{name}]({url})"
+
+
 def cmd_list(data):
     servers = data.get("servers", [])
     links = data["links"]
-    by_id = {l["id"]: l for l in links}
     srv_by_id = {s["id"]: s for s in servers}
     out = []
 
-    # Servers / Infrastructure
+    # ---- Clickable Index (Table of Contents) ----
+    out.append("## 📑 Index")
+    tocs = []
     if servers:
+        tocs.append("- [Infrastructure](#infrastructure)")
+    sections = [
+        ("Services — Public", "#services--public"),
+        ("Services — Internal (INTEL)", "#services--internal-intel"),
+        ("Services — Internal (Other hosts)", "#services--internal-other-hosts"),
+        ("External", "#external"),
+    ]
+    for label, anchor in sections:
+        tocs.append(f"- [{label}]({anchor})")
+    out.extend(tocs)
+    out.append("")
+
+    # ---- Servers / Infrastructure ----
+    if servers:
+        out.append("<a name='infrastructure'></a>")
         out.append("## 🗄 Infrastructure")
         rows = []
         for s in sorted(servers, key=lambda x: x.get("name", "")):
@@ -103,51 +124,55 @@ def cmd_list(data):
         out.extend(_table(["ID", "Server", "IP", "Role"], rows))
         out.append("")
 
-    def bucket(pred, category=None):
-        return [l for l in links if (category is None or l["category"] == category) and pred(l)]
+    def bucket(pred):
+        return [l for l in links if pred(l)]
 
     # Public
-    pub = bucket(lambda l: l["category"] == "Public Site") + bucket(lambda l: l["category"] == "API")
+    pub = bucket(lambda l: l["category"] in ("Public Site", "API"))
     if pub:
+        out.append("<a name='services--public'></a>")
         out.append("## 🌐 Services — Public")
         rows = []
         for l in sorted(pub, key=lambda x: x["name"].lower()):
-            rows.append([l["id"], l["name"], display_url(l["url"]),
-                         l.get("ip", "—"), l.get("access", "—")])
-        out.extend(_table(["ID", "Service", "URL", "IP", "Access"], rows))
+            rows.append([l["id"], _md_link(l["name"], l["url"]), display_url(l["url"]),
+                         l.get("description", "—")])
+        out.extend(_table(["ID", "Service", "URL", "Description"], rows))
         out.append("")
 
     # Internal on INTEL server
     intel = [l for l in links if l.get("server") == "srv-001"]
     if intel:
+        out.append("<a name='services--internal-intel'></a>")
         out.append("## 🛠 Services — Internal (INTEL · " + (srv_by_id.get("srv-001", {}).get("ip", "")) + ")")
         rows = []
         for l in sorted(intel, key=lambda x: x["name"].lower()):
-            rows.append([l["id"], l["name"], display_url(l["url"]), l.get("access", "—"),
-                         l.get("note", "")])
-        out.extend(_table(["ID", "Service", "URL / Port", "Access", "Notes"], rows))
+            rows.append([l["id"], _md_link(l["name"], l["url"]), display_url(l["url"]),
+                         l.get("description", "—"), l.get("note", "")])
+        out.extend(_table(["ID", "Service", "URL / Port", "Description", "Notes"], rows))
         out.append("")
 
     # Internal on other hosts
     other_int = [l for l in links if l["category"] == "Internal" and l.get("server") != "srv-001"]
     if other_int:
+        out.append("<a name='services--internal-other-hosts'></a>")
         out.append("## 🛠 Services — Internal (Other hosts)")
         rows = []
         for l in sorted(other_int, key=lambda x: x["name"].lower()):
-            rows.append([l["id"], l["name"], display_url(l["url"]),
-                         l.get("ip", "—"), l.get("access", "—")])
-        out.extend(_table(["ID", "Service", "URL", "IP", "Access"], rows))
+            rows.append([l["id"], _md_link(l["name"], l["url"]), display_url(l["url"]),
+                         l.get("description", "—")])
+        out.extend(_table(["ID", "Service", "URL", "Description"], rows))
         out.append("")
 
     # External
     ext = [l for l in links if l["category"] in ("External Source", "External Tool")]
     if ext:
+        out.append("<a name='external'></a>")
         out.append("## 🌍 External")
         rows = []
         for l in sorted(ext, key=lambda x: x["name"].lower()):
-            rows.append([l["id"], l["name"], display_url(l["url"]),
-                         l.get("status", ""), l.get("note", "")])
-        out.extend(_table(["ID", "Service", "URL", "Status", "Notes"], rows))
+            rows.append([l["id"], _md_link(l["name"], l["url"]), display_url(l["url"]),
+                         l.get("description", "—"), l.get("status", "")])
+        out.extend(_table(["ID", "Service", "URL", "Description", "Status"], rows))
         out.append("")
 
     return "\n".join(out).rstrip() + "\n"

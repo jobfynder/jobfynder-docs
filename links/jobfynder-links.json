@@ -10,7 +10,13 @@
       "ip": "167.71.217.230",
       "role": "Primary application server - runs Hermes Agent, Hermes API, Typesense, Portainer, Nginx Proxy Manager",
       "region": "DigitalOcean",
-      "related_links": ["hermes-dashboard", "hermes-api", "portainer", "npm", "typesense"]
+      "related_links": [
+        "hermes-dashboard",
+        "hermes-api",
+        "portainer",
+        "npm",
+        "typesense"
+      ]
     },
     {
       "id": "srv-002",
@@ -18,32 +24,33 @@
       "hostname": "comm.jobfynder.com",
       "ip": "152.42.219.165",
       "role": "Communications server (messaging infrastructure)",
-      "related_links": ["comm-server"]
+      "related_links": [
+        "comm-server"
+      ]
     }
   ],
   "links": [
     {
       "id": "link-001",
-      "name": "Jobfynder Main Site",
-      "url": "https://jobfynder.com/",
-      "ip": "104.26.15.116",
-      "category": "Public Site",
-      "subcategory": "Marketing / Homepage",
-      "purpose": "Main Jobfynder website and marketing presence",
-      "access": "Public - no login required",
-      "status": "active",
-      "note": "Behind Cloudflare (104.26.15.116)"
+      "name": "Jobfynder Core API",
+      "url": "https://api.jobfynder.com",
+      "category": "API",
+      "purpose": "Jobfynder core API (JOBFYNDER_CORE_API_URL)",
+      "access": "API auth required",
+      "status": "configured",
+      "note": "Internal/local entry: http://127.0.0.1:8000",
+      "description": "Backend core API for Jobfynder"
     },
     {
       "id": "link-002",
-      "name": "Jobfynder Feedback",
-      "url": "https://feedback.jobfynder.com/",
-      "ip": "167.233.71.83",
-      "category": "Public Site",
-      "subcategory": "Customer Feedback",
-      "purpose": "ProductLift feedback management portal",
-      "access": "Public - user-submitted feedback; admin via ProductLift dashboard",
-      "status": "active"
+      "name": "Nvoids Job Board",
+      "url": "https://jobs.nvoids.com/",
+      "category": "External Source",
+      "subcategory": "Third-party Job Board",
+      "purpose": "External job board data source (scraping candidate)",
+      "access": "Public - but Cloudflare has IP-blacklisted scraping (currently blocked from server IP)",
+      "status": "blocked",
+      "description": "External job board (scraping target, currently blocked)"
     },
     {
       "id": "link-003",
@@ -54,7 +61,8 @@
       "subcategory": "Social Media Marketing",
       "purpose": "Radaar.io social media marketing tool for the Jobfynder ecosystem",
       "access": "Login required (Radaar.io account)",
-      "status": "active"
+      "status": "active",
+      "description": "Social media marketing via Radaar.io"
     },
     {
       "id": "link-004",
@@ -64,30 +72,24 @@
       "subcategory": "AI Observability",
       "purpose": "LLM tracing, monitoring & evaluation",
       "access": "Login required (cloud.langfuse.com) - LANGFUSE_HOST env",
-      "status": "active"
+      "status": "active",
+      "description": "LLM observability / tracing dashboard"
     },
     {
       "id": "link-005",
-      "name": "Jobfynder Core API",
-      "url": "https://api.jobfynder.com",
-      "category": "API",
-      "purpose": "Jobfynder core API (JOBFYNDER_CORE_API_URL)",
-      "access": "API auth required",
-      "status": "configured",
-      "note": "Internal/local entry: http://127.0.0.1:8000"
+      "name": "Hermes API Local",
+      "url": "http://127.0.0.1:8000",
+      "category": "Internal",
+      "subcategory": "Hermes Agent",
+      "purpose": "Hermes API service (hermes-api container, port 8000)",
+      "access": "Internal only",
+      "status": "active",
+      "server": "srv-001",
+      "note": "Docker container: jobfynder-hermes-api",
+      "description": "Hermes API local endpoint (container)"
     },
     {
       "id": "link-006",
-      "name": "Nvoids Job Board",
-      "url": "https://jobs.nvoids.com/",
-      "category": "External Source",
-      "subcategory": "Third-party Job Board",
-      "purpose": "External job board data source (scraping candidate)",
-      "access": "Public - but Cloudflare has IP-blacklisted scraping (currently blocked from server IP)",
-      "status": "blocked"
-    },
-    {
-      "id": "link-007",
       "name": "Hermes Dashboard",
       "url": "https://hermes.jobfynder.com/",
       "ip": "167.71.217.230",
@@ -97,7 +99,22 @@
       "access": "Login required (Hermes dashboard) - NPM proxied to backend port 9119",
       "status": "active",
       "server": "srv-001",
-      "note": "Backend: http://127.0.0.1:9119"
+      "note": "Backend: http://127.0.0.1:9119",
+      "description": "Hermes Agent web dashboard (INTEL)"
+    },
+    {
+      "name": "Hermes WebUI (Tailscale)",
+      "url": "https://intel.tailb37ef4.ts.net/",
+      "category": "Internal",
+      "subcategory": "Hermes Agent",
+      "purpose": "Hermes Agent Web UI accessed via Tailscale on INTEL server (login admin)",
+      "description": "Hermes Web UI over Tailscale (creds in Bitwarden)",
+      "access": "Login required (admin - see Bitwarden 'Hermes WebUI')",
+      "ip": "100.84.69.124",
+      "server": "srv-001",
+      "status": "active",
+      "note": "Tailscale: intel.tailb37ef4.ts.net",
+      "id": "link-007"
     },
     {
       "id": "link-008",
@@ -109,7 +126,8 @@
       "purpose": "Chatwoot chat admin/agent login backend for customer support",
       "access": "Admin/agent login required",
       "status": "active",
-      "note": "Behind Cloudflare (172.67.73.131)"
+      "note": "Behind Cloudflare (172.67.73.131)",
+      "description": "Chatwoot customer-support console"
     },
     {
       "id": "link-009",
@@ -121,7 +139,8 @@
       "purpose": "COMM server for the Jobfynder ecosystem",
       "access": "Restricted / admin",
       "status": "active",
-      "server": "srv-002"
+      "server": "srv-002",
+      "description": "Communications / messaging server"
     },
     {
       "id": "link-010",
@@ -133,7 +152,8 @@
       "purpose": "CRM for Jobfynder",
       "access": "Login required",
       "status": "active",
-      "note": "Behind Cloudflare (172.67.73.131)"
+      "note": "Behind Cloudflare (172.67.73.131)",
+      "description": "Jobfynder CRM console"
     },
     {
       "id": "link-011",
@@ -144,7 +164,8 @@
       "subcategory": "Workflow Automation",
       "purpose": "n8n server for the Jobfynder ecosystem (workflow automation)",
       "access": "Login required (n8n)",
-      "status": "active"
+      "status": "active",
+      "description": "n8n workflow-automation server"
     },
     {
       "id": "link-012",
@@ -154,7 +175,8 @@
       "subcategory": "Reporting / BI",
       "purpose": "Metabase reporting for CRM",
       "access": "Login required (Metabase)",
-      "status": "active"
+      "status": "active",
+      "description": "Metabase BI / CRM reporting"
     },
     {
       "id": "link-013",
@@ -166,19 +188,20 @@
       "purpose": "Testing server for Jobfynder development",
       "access": "Restricted / dev",
       "status": "active",
-      "note": "Behind Cloudflare (104.26.14.116)"
+      "note": "Behind Cloudflare (104.26.14.116)",
+      "description": "Staging/testing environment"
     },
     {
       "id": "link-014",
-      "name": "Hermes API Local",
-      "url": "http://127.0.0.1:8000",
+      "name": "Nginx Proxy Manager",
+      "url": "http://127.0.0.1:81",
       "category": "Internal",
-      "subcategory": "Hermes Agent",
-      "purpose": "Hermes API service (hermes-api container, port 8000)",
-      "access": "Internal only",
+      "subcategory": "Networking / Proxy",
+      "purpose": "NPM admin UI for reverse proxy management",
+      "access": "Login required (NPM admin)",
       "status": "active",
       "server": "srv-001",
-      "note": "Docker container: jobfynder-hermes-api"
+      "description": "Reverse-proxy admin (NPM)"
     },
     {
       "id": "link-015",
@@ -189,21 +212,11 @@
       "purpose": "Docker management UI",
       "access": "Login required (Portainer admin)",
       "status": "active",
-      "server": "srv-001"
+      "server": "srv-001",
+      "description": "Docker management UI (Portainer)"
     },
     {
       "id": "link-016",
-      "name": "Nginx Proxy Manager",
-      "url": "http://127.0.0.1:81",
-      "category": "Internal",
-      "subcategory": "Networking / Proxy",
-      "purpose": "NPM admin UI for reverse proxy management",
-      "access": "Login required (NPM admin)",
-      "status": "active",
-      "server": "srv-001"
-    },
-    {
-      "id": "link-017",
       "name": "Typesense",
       "url": "http://127.0.0.1:8108",
       "category": "Internal",
@@ -211,7 +224,33 @@
       "purpose": "Typesense search engine (jobfynder-typesense container, port 8108)",
       "access": "API key required (TYPESENSE_API_KEY)",
       "status": "active",
-      "server": "srv-001"
+      "server": "srv-001",
+      "description": "Typesense search engine"
+    },
+    {
+      "id": "link-017",
+      "name": "Jobfynder Feedback",
+      "url": "https://feedback.jobfynder.com/",
+      "ip": "167.233.71.83",
+      "category": "Public Site",
+      "subcategory": "Customer Feedback",
+      "purpose": "ProductLift feedback management portal",
+      "access": "Public - user-submitted feedback; admin via ProductLift dashboard",
+      "status": "active",
+      "description": "Customer feedback portal (ProductLift)"
+    },
+    {
+      "id": "link-018",
+      "name": "Jobfynder Main Site",
+      "url": "https://jobfynder.com/",
+      "ip": "104.26.15.116",
+      "category": "Public Site",
+      "subcategory": "Marketing / Homepage",
+      "purpose": "Main Jobfynder website and marketing presence",
+      "access": "Public - no login required",
+      "status": "active",
+      "note": "Behind Cloudflare (104.26.15.116)",
+      "description": "Public marketing homepage for Jobfynder"
     }
   ]
 }
