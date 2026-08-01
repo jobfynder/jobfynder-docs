@@ -20,6 +20,68 @@ RUNTIME_VERSION = "hermes_prompt_runtime_v1"
 PROVIDER_NAME = "portkey"
 DEFAULT_PORTKEY_BASE_URL = "https://api.portkey.ai/v1/chat/completions"
 
+_langfuse_client = None
+
+
+def _get_langfuse():
+    """Lazy singleton Langfuse client. Kept internal so a missing langfuse
+    package never breaks module import."""
+    global _langfuse_client
+    if _langfuse_client is None:
+        from langfuse import Langfuse
+        _langfuse_client = Langfuse(
+            public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
+            secret_key=os.getenv("LANGFUSE_SECRET_KEY"),
+            host=os.getenv("LANGFUSE_BASE_URL", "https://us.cloud.langfuse.com"),
+        )
+    return _langfuse_client
+
+
+def _trace_to_langfuse(prompt, messages, model, output, usage):
+    """Send a generation trace to Langfuse directly via the v4 SDK.
+
+    Plan-independent: sends traces straight to Langfuse without relying on
+    Portkey's gateway-side export. Uses the official v4 API
+    (start_as_current_observation/as_type='generation'). Best-effort — a
+    tracing failure must never break the LLM call, but the exception is
+    logged so problems stay debuggable.
+
+    Baseline best-practice fields captured: model name, input, output, token
+    usage (usage_details), and a descriptive trace name.
+    """
+    lf_pub = os.getenv("LANGFUSE_PUBLIC_KEY")
+    lf_sec = os.getenv("LANGFUSE_SECRET_KEY")
+    if not (lf_pub and lf_sec):
+        return
+    try:
+        client = _get_langfuse()
+        trace_name = getattr(prompt, "prompt_id", None) or "prompt-generation"
+        usage_details = {
+            "input": int(usage.get("prompt_tokens") or 0),
+            "output": int(usage.get("completion_tokens") or 0),
+            "total": int(usage.get("total_tokens") or 0),
+        }
+        with client.start_as_current_observation(
+            name=trace_name,
+            as_type="generation",
+            model=model,
+            input={"messages": [m.model_dump() for m in messages]},
+        ) as gen:
+            gen.update(
+                output=output,
+                usage_details=usage_details,
+                status_message="success",
+            )
+        client.flush()
+    except Exception:
+        try:
+            import logging
+            logging.getLogger("langfuse_trace").exception(
+                "Langfuse tracing failed (non-fatal)"
+            )
+        except Exception:
+            pass
+
 
 def env_bool(name: str, default: bool) -> bool:
     value = os.getenv(name)
@@ -125,14 +187,14 @@ def _call_portkey(prompt, messages: list[PromptRenderedMessage]) -> tuple[str, d
     lf_sec = os.getenv("LANGFUSE_SECRET_KEY")
     lf_host = os.getenv("LANGFUSE_BASE_URL", "https://us.cloud.langfuse.com")
     if lf_pub and lf_sec:
-        import urllib.parse
-        lf_payload = json.dumps({
+        lf_payload = json.dumps([{
             "langfuse": {
                 "publicKey": lf_pub,
                 "secretKey": lf_sec,
+                "host": lf_host,
                 "baseUrl": lf_host,
             }
-        })
+        }])
         headers["x-portkey-integrations"] = urllib.parse.quote(lf_payload)
 
     body = {
@@ -164,6 +226,8 @@ def _call_portkey(prompt, messages: list[PromptRenderedMessage]) -> tuple[str, d
         raise RuntimeError("portkey_response_missing_content")
 
     usage = data.get("usage", {})
+    # Langfuse SDK tracing (plan-independent) — best-effort, never raises.
+    _trace_to_langfuse(prompt, messages, model, output, usage)
     return output, usage
 
 
