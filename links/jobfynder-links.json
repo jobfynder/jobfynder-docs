@@ -69,9 +69,9 @@
     },
     {
       "name": "Jobfynder CRM",
-      "url": "https://crm.jobfyder.com",
+      "url": "https://crm.jobfynder.com",
       "category": "Internal",
-      "purpose": "CRM for Jobfynder (note: domain given as jobfyder.com - verify spelling)",
+      "purpose": "CRM for Jobfynder",
       "status": "active",
       "id": "link-009"
     },
