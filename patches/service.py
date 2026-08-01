@@ -37,7 +37,7 @@ def _get_langfuse():
     return _langfuse_client
 
 
-def _trace_to_langfuse(prompt, messages, model, output, usage):
+def _trace_to_langfuse(prompt, messages, model, output, usage, *, trace_context=None):
     """Send a generation trace to Langfuse directly via the v4 SDK.
 
     Plan-independent: sends traces straight to Langfuse without relying on
@@ -47,13 +47,17 @@ def _trace_to_langfuse(prompt, messages, model, output, usage):
     logged so problems stay debuggable.
 
     Baseline best-practice fields captured: model name, input, output, token
-    usage (usage_details), and a descriptive trace name.
+    usage (usage_details), and a descriptive trace name. trace_context may
+    carry user_id / session_id / metadata, which are applied via the v4
+    propagate_attributes context manager (the only supported way to set
+    trace-level attributes in this SDK version).
     """
     lf_pub = os.getenv("LANGFUSE_PUBLIC_KEY")
     lf_sec = os.getenv("LANGFUSE_SECRET_KEY")
     if not (lf_pub and lf_sec):
         return
     try:
+        from langfuse import propagate_attributes
         client = _get_langfuse()
         trace_name = getattr(prompt, "prompt_id", None) or "prompt-generation"
         usage_details = {
@@ -61,17 +65,22 @@ def _trace_to_langfuse(prompt, messages, model, output, usage):
             "output": int(usage.get("completion_tokens") or 0),
             "total": int(usage.get("total_tokens") or 0),
         }
-        with client.start_as_current_observation(
-            name=trace_name,
-            as_type="generation",
-            model=model,
-            input={"messages": [m.model_dump() for m in messages]},
-        ) as gen:
-            gen.update(
-                output=output,
-                usage_details=usage_details,
-                status_message="success",
-            )
+        attrs = dict(trace_context or {})
+        user_id = attrs.pop("user_id", None)
+        session_id = attrs.pop("session_id", None)
+        metadata = attrs.pop("metadata", None)
+        with propagate_attributes(user_id=user_id, session_id=session_id, metadata=metadata):
+            with client.start_as_current_observation(
+                name=trace_name,
+                as_type="generation",
+                model=model,
+                input={"messages": [m.model_dump() for m in messages]},
+            ) as gen:
+                gen.update(
+                    output=output,
+                    usage_details=usage_details,
+                    status_message="success",
+                )
         client.flush()
     except Exception:
         try:
@@ -157,7 +166,7 @@ def _dry_run_output(prompt_id: str) -> str:
     )
 
 
-def _call_portkey(prompt, messages: list[PromptRenderedMessage]) -> tuple[str, dict]:
+def _call_portkey(prompt, messages: list[PromptRenderedMessage], *, trace_context: dict | None = None) -> tuple[str, dict]:
     api_key = os.getenv("PORTKEY_API_KEY")
     if not api_key:
         raise RuntimeError("portkey_api_key_missing")
@@ -279,7 +288,15 @@ def run_prompt(request: PromptRunRequest) -> PromptRunResult:
 
     try:
         if effective_mode == "live":
-            output_text, usage = _call_portkey(prompt, messages)
+            meta = dict(request.metadata or {})
+            trace_context = {}
+            for key in ("user_id", "session_id"):
+                if meta.get(key):
+                    trace_context[key] = meta[key]
+            meta_rest = {k: v for k, v in meta.items() if k not in ("user_id", "session_id")}
+            if meta_rest:
+                trace_context["metadata"] = meta_rest
+            output_text, usage = _call_portkey(prompt, messages, trace_context=trace_context)
             reasons = ["Prompt executed through Portkey-compatible runtime."]
         else:
             output_text = _dry_run_output(prompt.prompt_id)
