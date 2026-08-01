@@ -4,7 +4,7 @@
   "registries": {
     "tools": {
       "path": "/opt/jobfynder-docs/tools/jobfynder-tools.json",
-      "count": 25,
+      "count": 28,
       "last_commit": "125376f",
       "cli": "/opt/jobfynder-docs/scripts/jobfynder-tools.py"
     },
@@ -42,7 +42,7 @@
     "guard_script": "/opt/jobfynder-docs/scripts/env-guard.py"
   },
   "portkey_langfuse": {
-    "status": "fully_configured_and_verified",
+    "status": "portkey_call_verified_OK; header sent; Langfuse 0 traces - account-side config required",
     "env": "/opt/jobfynder-infra/intelligence/.env",
     "keys_set": [
       "PORTKEY_API_KEY",
@@ -54,6 +54,7 @@
     "needs": [
       "route LLM calls via Portkey to observe traces in Langfuse"
     ],
-    "notes": "Patch mounted read-only; header test BASE_URL_OK=True, keys unquoted; container healthy port 8000 HTTP 200"
+    "notes": "Patch mounted read-only; header test BASE_URL_OK=True, keys unquoted; container healthy port 8000 HTTP 200",
+    "next_step": "Enable Langfuse in the Portkey Config the virtual key uses (Dashboard > Configs > config > Integrations), or on paid plan. Server-side wiring confirmed."
   }
 }

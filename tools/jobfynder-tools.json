@@ -1,7 +1,7 @@
 {
   "$schema": "Jobfynder Tools Registry",
   "description": "Registry of external tools/software used across Jobfynder operations.",
-  "updated": "2026-08-01T16:54:52Z",
+  "updated": "2026-08-01T18:56:16Z",
   "tools": [
     {
       "name": "DeepSeek",
@@ -99,26 +99,33 @@
       "id": "tool-012"
     },
     {
+      "name": "Unstructured",
+      "url": "https://unstructured.io",
+      "category": "Document Parsing/ETL",
+      "description": "Parses complex/important fallback documents (PDFs, HTML) into clean structured data",
+      "id": "tool-013"
+    },
+    {
       "name": "Kit",
       "url": "https://kit.com",
       "category": "Email Marketing",
       "description": "Creator email & newsletter platform",
       "added": "2026-08-01",
-      "id": "tool-013"
+      "id": "tool-014"
     },
     {
       "name": "Reoon Email Verifier",
       "url": "https://emailverifier.reoon.com",
       "category": "Email Verification",
       "description": "Email verification tool (credentials in Bitwarden)",
-      "id": "tool-014"
+      "id": "tool-015"
     },
     {
       "name": "ProductLift",
       "url": "https://www.productlift.dev",
       "category": "Feedback Management",
       "description": "Feedback management tool used at https://feedback.jobfynder.com",
-      "id": "tool-015"
+      "id": "tool-016"
     },
     {
       "name": "Tailscale",
@@ -126,7 +133,7 @@
       "category": "Networking",
       "description": "Zero-config mesh VPN",
       "added": "2026-08-01",
-      "id": "tool-016"
+      "id": "tool-017"
     },
     {
       "name": "Notion",
@@ -134,7 +141,7 @@
       "category": "Productivity",
       "description": "Docs, notes & shared workspace",
       "added": "2026-08-01",
-      "id": "tool-017"
+      "id": "tool-018"
     },
     {
       "name": "Centrifugo",
@@ -142,10 +149,10 @@
       "category": "Realtime Messaging",
       "description": "Pub/sub server for realtime app events",
       "added": "2026-08-01",
-      "id": "tool-018"
+      "id": "tool-019"
     },
     {
-      "id": "tool-019",
+      "id": "tool-020",
       "name": "AI-ARK",
       "url": "https://ai-ark.com/",
       "category": "Sales Intelligence",
@@ -158,28 +165,42 @@
       "category": "Sales Intelligence",
       "description": "LinkedIn outreach automation",
       "added": "2026-08-01",
-      "id": "tool-020"
+      "id": "tool-021"
+    },
+    {
+      "name": "Cal.com",
+      "url": "https://cal.com",
+      "category": "Scheduling",
+      "description": "Open-source scheduling/booking platform (Calendly alternative)",
+      "id": "tool-022"
     },
     {
       "name": "Bing Webmaster",
       "url": "https://www.bing.com/webmasters",
       "category": "SEO / Analytics",
       "description": "Bing search indexing and SEO tools",
-      "id": "tool-021"
+      "id": "tool-023"
     },
     {
       "name": "Google Analytics",
       "url": "https://analytics.google.com",
       "category": "SEO / Analytics",
       "description": "Web and app analytics",
-      "id": "tool-022"
+      "id": "tool-024"
     },
     {
       "name": "Google Search Console",
       "url": "https://search.google.com/search-console",
       "category": "SEO / Analytics",
       "description": "Monitor and optimize search presence",
-      "id": "tool-023"
+      "id": "tool-025"
+    },
+    {
+      "name": "Cloudflare R2",
+      "url": "https://r2.cloudflare.com",
+      "category": "Storage",
+      "description": "S3-compatible object storage with zero egress fees",
+      "id": "tool-026"
     },
     {
       "name": "Hostinger",
@@ -187,10 +208,10 @@
       "category": "Web Hosting",
       "description": "Budget-friendly web & VPS hosting",
       "added": "2026-08-01",
-      "id": "tool-024"
+      "id": "tool-027"
     },
     {
-      "id": "tool-025",
+      "id": "tool-028",
       "name": "BrightData",
       "url": "https://brightdata.com/",
       "category": "Web Scraping",
