@@ -107,6 +107,12 @@ def _call_portkey(prompt, messages: list[PromptRenderedMessage]) -> tuple[str, d
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
+        # Cloudflare rejects urllib's default User-Agent (HTTP 403 / error 1010).
+        # Send a real browser UA so Portkey's edge accepts the request.
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+        ),
     }
 
     if virtual_key:
