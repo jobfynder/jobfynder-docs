@@ -59,5 +59,20 @@
     "skill": "cloned from github.com/langfuse/skills into skills/langfuse (nested .git stripped)",
     "enrichment": "user_id + session_id + metadata land on trace (verified ALL_ENRICHMENT_CONFIRMED)",
     "trace_proof": "trace 28d8d732d7cbe9e351a84049bc05c9f1 userId=test-user-42 sessionId=test-session-99"
+  },
+  "backup": {
+    "dir": "/root/jobfynder-backup",
+    "created": "2026-08-01",
+    "artifacts": [
+      "jobfynder-docs.bundle",
+      "patched-service.py",
+      "docker-compose.yml",
+      "env.bak (chmod 600)",
+      "requirements.txt",
+      "RESTORE.md"
+    ],
+    "image": "hermes-hermes-api-snapshot:20260801",
+    "restore_dry_run": "PASSED (cloned bundle to /tmp, tree matches)",
+    "note": "Restore steps in /root/jobfynder-backup/RESTORE.md"
   }
 }
