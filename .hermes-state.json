@@ -1,0 +1,33 @@
+{
+  "last_updated": "2026-08-01",
+  "note": "Compact operational state to prevent context runaway. Read this FIRST in any new turn; do not re-verify or re-derive facts recorded here.",
+  "registries": {
+    "tools": {
+      "path": "/opt/jobfynder-docs/tools/jobfynder-tools.json",
+      "count": 24,
+      "last_commit": "091cc90",
+      "cli": "/opt/jobfynder-docs/scripts/jobfynder-tools.py"
+    },
+    "links": {
+      "path": "/opt/jobfynder-docs/links/jobfynder-links.json",
+      "count": 18,
+      "last_commit": "3091b0c",
+      "cli": "/opt/jobfynder-docs/scripts/jobfynder-links.py",
+      "readme": "/opt/jobfynder-docs/links/README.md"
+    }
+  },
+  "bitwarden": {
+    "standard": "All new passwords/keys/credentials go to Bitwarden via bw CLI.",
+    "stored": ["n8n API Key", "Centrifugo - Hermes Server", "Hermes WebUI (Tailscale)"]
+  },
+  "server": {
+    "health": "OK",
+    "bots": "Admin + Sourcing gateways on OpenRouter (google/gemini-3.5-flash), MoA disabled",
+    "ip": "167.71.217.230"
+  },
+  "cancelled": ["BrightData scraper build"],
+  "pending_manual": ["n8n API key rotation (user-side)"],
+  "anti_runaway": {
+    "rule": "Before any registry/verification action, read this file. If the fact is already recorded, do NOT re-run tools, re-check, or re-commit. Report the recorded fact and stop."
+  }
+}
