@@ -10,6 +10,14 @@
       "category": "Sales intelligence",
       "description": "Apollo alternative for lead/sales intelligence and prospecting.",
       "added": "2026-07-26"
+    },
+    {
+      "id": "tool-002",
+      "name": "BrightData",
+      "url": "https://brightdata.com/",
+      "category": "Web scraping / data collection",
+      "description": "Web scraping platform with Web Unlocker, proxies and data collection APIs for bypassing anti-bot protection.",
+      "added": "2026-07-26"
     }
   ]
 }
