@@ -4,3 +4,6 @@ Engineering Operating System, Architecture, Standards, ADRs and Documentation fo
 # Hermes runtime state - do not commit
 mission-control/
 workspace/
+
+# Separate nested git repository (managed independently)
+decision-ledger/
