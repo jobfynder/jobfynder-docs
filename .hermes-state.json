@@ -109,6 +109,13 @@
         "tcp_reachable": "VERIFIED from INTEL 2026-08-02"
       }
     },
-    "note": "self-hosted on Elestio; NOT the old cloud Langfuse us.cloud.langfuse.com"
+    "note": "self-hosted on Elestio; NOT the old cloud Langfuse us.cloud.langfuse.com",
+    "verified_probes_2026_08_02": {
+      "langfuse": "/api/public/health -> 200, version 4.1.0 (self-hosted confirmed)",
+      "langfuse_otel_get": "/api/public/otel -> 404 on GET (OTLP is POST; re-verify with POST)",
+      "portkey": "GET / -> 200; /v1/models -> 400 (needs auth header)",
+      "milvus": "TCP 19530 reachable; plaintext GRPC (no TLS banner)",
+      "note": "Cloud Langfuse item (4b0aaebd, us.cloud.langfuse.com) is the OLD instance - do NOT reuse its keys for self-hosted"
+    }
   }
 }
