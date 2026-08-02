@@ -101,12 +101,12 @@
     ],
     "jf_embedding": {
       "status": "DONE",
-      "verified": "2026-08-02 (my probe: /v1/embeddings model=jf-embedding -> HTTP 200, 1024-dim, 0.93s)",
+      "verified": "2026-08-02 (live probe: /v1/embeddings model=jf-embedding -> HTTP 200, dim=1024, 0.93s)",
       "provider": "DeepInfra BAAI/bge-m3 (mode embedding)",
       "key_vault": "Bitwarden 7f20f39f DeepInfra API Key",
-      "routing": "jf-embedding now -> deepinfra/BAAI/bge-m3 (no longer deepseek-chat)"
+      "note": "was routing to deepseek-chat (no /embeddings); now correct embedding model"
     },
     "redis_cache": "verified working (1st~1.4s / 2nd<1ms or 0.75s; no double charge)",
-    "status": "ALL_GREEN (jf-fast/structured/writing/reasoning pass; jf-embedding DONE; redis cache + allowlists pass)"
+    "status": "ALL_GREEN"
   }
 }
