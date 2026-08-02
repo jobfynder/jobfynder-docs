@@ -25,7 +25,20 @@
       "Hermes WebUI (Tailscale)",
       "Reoon Email Verifier",
       "Langfuse"
-    ]
+    ],
+    "elestio_milvus": {
+      "id": "c57e77ab",
+      "name": "Elestio - Milvus",
+      "user": "root",
+      "stored": "2026-08-02"
+    },
+    "elestio_langfuse": {
+      "id": "2f48f369",
+      "name": "Elestio - Langfuse",
+      "user": "pavan@jobfynder.com",
+      "stored": "2026-08-02",
+      "note": "self-hosted, NOT cloud"
+    }
   },
   "server": {
     "health": "OK",
@@ -99,14 +112,18 @@
         "cname": "langfuse-tnnaf-u14612.vm.elestio.app",
         "ipv4": "152.53.61.104",
         "service_id": 546059,
-        "health_https_200": "VERIFIED from INTEL 2026-08-02"
+        "health_https_200": "VERIFIED from INTEL 2026-08-02",
+        "admin_ui": "https://langfuse-tnnaf-u14612.vm.elestio.app:443",
+        "pgadmin": ":33374"
       },
       "milvus": {
         "cname": "milvus-semantic-caching-u14612.vm.elestio.app",
         "ipv4": "152.53.202.164",
         "service_id": 546057,
         "port": 19530,
-        "tcp_reachable": "VERIFIED from INTEL 2026-08-02"
+        "tcp_reachable": "VERIFIED from INTEL 2026-08-02",
+        "version": "v2.4.7",
+        "auth": "root user (password in Bitwarden c57e77ab)"
       }
     },
     "note": "self-hosted on Elestio; NOT the old cloud Langfuse us.cloud.langfuse.com",
