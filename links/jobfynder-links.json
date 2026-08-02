@@ -1,7 +1,7 @@
 {
   "$schema": "Jobfynder Links Registry",
   "description": "Canonical reference hub for all URLs, hosts, services and access details across the Jobfynder ecosystem.",
-  "updated": "2026-08-02T08:50:25Z",
+  "updated": "2026-08-02T15:07:42Z",
   "servers": [
     {
       "id": "srv-001",
@@ -228,7 +228,7 @@
       "description": "Typesense search engine"
     },
     {
-      "id": "link-019",
+      "id": "link-017",
       "name": "Jobfynder Feedback",
       "url": "https://feedback.jobfynder.com/",
       "ip": "167.233.71.83",
@@ -240,7 +240,7 @@
       "description": "Customer feedback portal (ProductLift)"
     },
     {
-      "id": "link-020",
+      "id": "link-018",
       "name": "Jobfynder Main Site",
       "url": "https://jobfynder.com/",
       "ip": "104.26.15.116",
@@ -251,6 +251,16 @@
       "status": "active",
       "note": "Behind Cloudflare (104.26.15.116)",
       "description": "Public marketing homepage for Jobfynder"
+    },
+    {
+      "name": "Redis AI Gateway",
+      "url": "https://redisgateway.jobfynder.com",
+      "category": "Redis AI Gateway - Elestio",
+      "purpose": "Elestio-hosted Redis AI Gateway; IP 152.53.202.147",
+      "status": "active",
+      "id": "link-019",
+      "hosting": "Elestio",
+      "ip": "152.53.202.147"
     }
   ]
 }
