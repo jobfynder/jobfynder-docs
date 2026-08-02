@@ -14,7 +14,7 @@
       "last_commit": "3091b0c",
       "cli": "/opt/jobfynder-docs/scripts/jobfynder-links.py",
       "readme": "/opt/jobfynder-docs/links/README.md",
-      "notes": "+Milvus, Portkey UI, Langfuse UI (2026-08-01). DNS resolves to Cloudflare (wildcard/apex), NOT INTEL IP; services not yet reachable/installed \u2014 see routing note."
+      "notes": "21 links incl. Milvus/Portkey UI/Langfuse UI - hosted on Elestio (separate servers), pending install/DNS/proxy; NOT on INTEL (user 2026-08-01)"
     }
   },
   "bitwarden": {

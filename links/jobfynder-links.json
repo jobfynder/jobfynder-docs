@@ -232,16 +232,20 @@
       "url": "https://portkey.jobfynder.com",
       "category": "LLM gateway",
       "purpose": "Self-hosted Portkey AI gateway dashboard",
-      "status": "active",
-      "id": "link-017"
+      "status": "pending_install",
+      "id": "link-017",
+      "hosting": "Elestio (separate server)",
+      "notes": " | Elestio-hosted; pending install/DNS/proxy config"
     },
     {
       "name": "Langfuse UI",
       "url": "https://langfuse.jobfynder.com",
       "category": "LLM observability",
       "purpose": "Self-hosted Langfuse tracing dashboard",
-      "status": "active",
-      "id": "link-018"
+      "status": "pending_install",
+      "id": "link-018",
+      "hosting": "Elestio (separate server)",
+      "notes": " | Elestio-hosted; pending install/DNS/proxy config"
     },
     {
       "id": "link-019",
@@ -273,8 +277,10 @@
       "url": "https://milvus.jobfynder.com",
       "category": "Vector database",
       "purpose": "Self-hosted vector DB (installed on INTEL)",
-      "status": "active",
-      "id": "link-021"
+      "status": "pending_install",
+      "id": "link-021",
+      "hosting": "Elestio (separate server)",
+      "notes": " | Elestio-hosted; pending install/DNS/proxy config"
     }
   ]
 }
