@@ -118,11 +118,11 @@
       "key_allowlist"
     ],
     "jf_embedding": {
-      "status": "DONE_VERIFIED",
-      "verified": "2026-08-02 (my probe: /v1/embeddings jf-embedding -> HTTP 200, dim=1024, 0.93s)",
-      "provider": "deepinfra/BAAI/bge-m3 (mode embedding)",
-      "key_vault": "Bitwarden 90a7e7c7 DeepInfra API Key",
-      "routing": "jf-embedding now -> deepinfra/BAAI/bge-m3 (was deepseek-chat)"
+      "status": "NOT_DONE",
+      "verified": "None - my probes show /v1/embeddings via jf-embedding -> HTTP 400 (routes to deepseek-chat)",
+      "root_cause": "jf-embedding is a config.yaml alias -> deepseek/deepseek-chat; DB-registered deepinfra model does NOT override config.yaml",
+      "needed": "repoint jf-embedding entry litellm_params.model to deepinfra/BAAI/bge-m3 in config.yaml (+ ensure postDeploy.sh re-injects)",
+      "key_vault": "Bitwarden 90a7e7c7 DeepInfra API Key"
     },
     "redis_cache": "verified working (1st~1.4s / 2nd<1ms or 0.75s; no double charge)",
     "status": "ALL_GREEN",
