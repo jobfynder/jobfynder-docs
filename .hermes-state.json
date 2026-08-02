@@ -146,5 +146,9 @@
       "port": "6379",
       "purpose": "Langfuse's OWN internal redis (events/queue) - separate, do not touch for LiteLLM"
     }
+  },
+  "docs": {
+    "ai_infra_summary": "docs/AI-INFRA-SUMMARY-2026-08-02.md",
+    "saved": "2026-08-02"
   }
 }
