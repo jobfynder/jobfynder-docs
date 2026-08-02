@@ -71,6 +71,12 @@
     "near_miss": "env text pasted into Docker Compose YAML tab crashed gateway (cannot unmarshal ... into cli.named); use ENV tab only",
     "redis_password_case": "lowercase-o eoN (uppercase eON fails -WRONGPASS)",
     "usage_decision": "Redis strictly for LiteLLM caching only; Langfuse excluded",
-    "firewall": "PENDING - port 26379 still open publicly; must restrict to 159.195.1.254/32"
+    "firewall": {
+      "status": "LOCKED_DOWN_VERIFIED",
+      "verified": "2026-08-02 (my probe: 152.53.202.147:26379 closed/filtered from INTEL)",
+      "rules": "26379 restricted to 159.195.1.254/32 (LiteLLM only); UFW + Docker DOCKER-USER cleaned",
+      "default_ports_ok": "22/80/443 OPEN",
+      "cache_after_lockdown": "still healthy (redis set=success)"
+    }
   }
 }
