@@ -89,5 +89,17 @@
     "signup_disabled": "VERIFIED 2026-08-02 (my probe: /auth/sign-up 404, /auth/sign-in 200, admin session pavan@jobfynder.com works)",
     "url": "https://langfuse.jobfynder.com",
     "version": "4.1.0"
+  },
+  "litellm_tests": {
+    "report_source": "codex/user 2026-08-02",
+    "pass": [
+      "jf-fast classification",
+      "jf-structured extraction",
+      "jf-writing generation",
+      "redis_cache_hit",
+      "key_allowlist"
+    ],
+    "jf_embedding": "OPEN - routes to deepseek-chat (chat model, no /embeddings); needs real embedding model",
+    "redis_cache": "verified working (1st~1.4s / 2nd<1ms or 0.75s; no double charge)"
   }
 }
