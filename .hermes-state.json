@@ -90,13 +90,22 @@
     "url": "https://langfuse.jobfynder.com",
     "version": "4.1.0",
     "prompts": {
-      "status": "REPORTED_92_IMPORTED_PENDING_VERIFICATION",
-      "reported_by": "codex 2026-08-02",
-      "project": "Jobfynder AI Infrastructure",
-      "domains": "Onboarding..Admin (20)",
-      "labels": "dev + latest",
-      "verify_need": "self-hosted Langfuse project API keys (public+secret) or Prompts page screenshot",
-      "prereq_issue": "project API keys deleted in Portkey cleanup; not re-created/vaulted. old cloud pk-lf-c561... in item 4b0aaebd is NOT the self-hosted key"
+      "status": "CONFIRMED_BY_SCREENSHOT",
+      "project": "jobfynder / jobfynder-ai",
+      "project_id": "cmsbr7woa0006qh07me6rfbas",
+      "report": "92 prompts, page 1/2 @50 rows, all chat type, created 2026-08-02 14:12, observations 0",
+      "observations_0": "confirms no live LLM traffic through Langfuse yet - LiteLLM .env Langfuse keys still to set",
+      "naming": "dot notation (jf.admin.ai-anomaly.explain); folders need '/' rename later if desired"
+    },
+    "keys": {
+      "litellm_production": {
+        "item": "f06b724a",
+        "verified": "HTTP 200, project jobfynder-ai"
+      },
+      "hermes_production": {
+        "item": "2295c691",
+        "verified": "HTTP 200, project jobfynder-ai"
+      }
     }
   },
   "litellm_tests": {
