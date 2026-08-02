@@ -77,6 +77,12 @@
       "rules": "26379 restricted to 159.195.1.254/32 (LiteLLM only); UFW + Docker DOCKER-USER cleaned",
       "default_ports_ok": "22/80/443 OPEN",
       "cache_after_lockdown": "still healthy (redis set=success)"
+    },
+    "persistence": {
+      "mechanism": "postDeploy.sh via elestio.yml postDeployCommand (REPORTED by codex 2026-08-02)",
+      "verification": "PENDING - cannot inspect from INTEL (no SSH to Elestio box); confirm via cache/ping on NEXT redeploy",
+      "requirement": "script must use $REDIS_HOST/$REDIS_PASSWORD env vars, NOT hardcoded literals (uppercase-O password FAILED live auth; only lowercase-o works)",
+      "note": "known persistence risk: Elestio redeploy drops config.yaml cache block"
     }
   },
   "langfuse": {
