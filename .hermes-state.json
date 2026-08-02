@@ -78,5 +78,10 @@
       "default_ports_ok": "22/80/443 OPEN",
       "cache_after_lockdown": "still healthy (redis set=success)"
     }
+  },
+  "langfuse": {
+    "signup_disabled": "VERIFIED 2026-08-02 (my probe: /auth/sign-up 404, /auth/sign-in 200, admin session pavan@jobfynder.com works)",
+    "url": "https://langfuse.jobfynder.com",
+    "version": "4.1.0"
   }
 }
