@@ -1,7 +1,7 @@
 {
   "$schema": "Jobfynder Links Registry",
   "description": "Canonical reference hub for all URLs, hosts, services and access details across the Jobfynder ecosystem.",
-  "updated": "2026-08-01T00:00:00Z",
+  "updated": "2026-08-02T08:50:25Z",
   "servers": [
     {
       "id": "srv-001",
@@ -228,7 +228,23 @@
       "description": "Typesense search engine"
     },
     {
-      "id": "link-017",
+      "name": "Portkey UI",
+      "url": "https://portkey.jobfynder.com",
+      "category": "LLM gateway",
+      "purpose": "Self-hosted Portkey AI gateway dashboard",
+      "status": "active",
+      "id": "link-017"
+    },
+    {
+      "name": "Langfuse UI",
+      "url": "https://langfuse.jobfynder.com",
+      "category": "LLM observability",
+      "purpose": "Self-hosted Langfuse tracing dashboard",
+      "status": "active",
+      "id": "link-018"
+    },
+    {
+      "id": "link-019",
       "name": "Jobfynder Feedback",
       "url": "https://feedback.jobfynder.com/",
       "ip": "167.233.71.83",
@@ -240,7 +256,7 @@
       "description": "Customer feedback portal (ProductLift)"
     },
     {
-      "id": "link-018",
+      "id": "link-020",
       "name": "Jobfynder Main Site",
       "url": "https://jobfynder.com/",
       "ip": "104.26.15.116",
@@ -251,6 +267,14 @@
       "status": "active",
       "note": "Behind Cloudflare (104.26.15.116)",
       "description": "Public marketing homepage for Jobfynder"
+    },
+    {
+      "name": "Milvus",
+      "url": "https://milvus.jobfynder.com",
+      "category": "Vector database",
+      "purpose": "Self-hosted vector DB (installed on INTEL)",
+      "status": "active",
+      "id": "link-021"
     }
   ]
 }

@@ -10,10 +10,11 @@
     },
     "links": {
       "path": "/opt/jobfynder-docs/links/jobfynder-links.json",
-      "count": 18,
+      "count": 21,
       "last_commit": "3091b0c",
       "cli": "/opt/jobfynder-docs/scripts/jobfynder-links.py",
-      "readme": "/opt/jobfynder-docs/links/README.md"
+      "readme": "/opt/jobfynder-docs/links/README.md",
+      "notes": "+Milvus, Portkey UI, Langfuse UI (2026-08-01). DNS resolves to Cloudflare (wildcard/apex), NOT INTEL IP; services not yet reachable/installed \u2014 see routing note."
     }
   },
   "bitwarden": {
