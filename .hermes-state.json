@@ -106,7 +106,12 @@
         "ipv4": "159.195.1.53",
         "global_private_ip": "10.30.71.7",
         "service_id": 546063,
-        "health_https_200": "VERIFIED from INTEL 2026-08-02"
+        "health_https_200": "VERIFIED from INTEL 2026-08-02",
+        "port_sweep_2026_08_02": {
+          "gateway_8787": "OPEN on 159.195.1.53",
+          "milvus_bridge_8080": "closed/filtered from INTEL (internal only or not exposed)",
+          "public_http": "all /health /v1/models behind Cloudflare 403 (needs auth/UA)"
+        }
       },
       "langfuse": {
         "cname": "langfuse-tnnaf-u14612.vm.elestio.app",
@@ -114,7 +119,8 @@
         "service_id": 546059,
         "health_https_200": "VERIFIED from INTEL 2026-08-02",
         "admin_ui": "https://langfuse-tnnaf-u14612.vm.elestio.app:443",
-        "pgadmin": ":33374"
+        "pgadmin": ":33374",
+        "admin_login": "works (session user pavan@jobfynder.com); project list + OTLP need project API keys"
       },
       "milvus": {
         "cname": "milvus-semantic-caching-u14612.vm.elestio.app",
