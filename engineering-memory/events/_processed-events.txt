@@ -118,3 +118,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|005e2030ee6e7afe69335df9d273
 jobfynder/jobfynder-infra|refs/heads/feature/comm-telegram-message-chunking|0d7616a713881ff610ad7abaf5316c38cb30174e
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|fa5aef16c0141d2b19d455204529b19e33794acb
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|e1eedbe241eee1e44b72684f0daa7d7e7331580b
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|127be79db4a3c2bb98b14dd33adfd812df82d586
