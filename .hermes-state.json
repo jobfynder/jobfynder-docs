@@ -8,14 +8,7 @@
       "last_commit": "125376f",
       "cli": "/opt/jobfynder-docs/scripts/jobfynder-tools.py"
     },
-    "links": {
-      "path": "/opt/jobfynder-docs/links/jobfynder-links.json",
-      "count": 21,
-      "last_commit": "3091b0c",
-      "cli": "/opt/jobfynder-docs/scripts/jobfynder-links.py",
-      "readme": "/opt/jobfynder-docs/links/README.md",
-      "notes": "21 links incl. Milvus/Portkey UI/Langfuse UI - hosted on Elestio (separate servers), pending install/DNS/proxy; NOT on INTEL (user 2026-08-01)"
-    }
+    "links": 20
   },
   "bitwarden": {
     "standard": "All new passwords/keys/credentials go to Bitwarden via bw CLI.",
