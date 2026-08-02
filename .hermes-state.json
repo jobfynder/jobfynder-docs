@@ -40,6 +40,13 @@
       "keys": "regenerated 2026-08-02 - public+secret stored as fields in item 2f48f369",
       "old_public_key": "REMOVED",
       "health_via_public_url": "OK version 4.1.0"
+    },
+    "anthropic_key": {
+      "id": "ed984fff",
+      "name": "Anthropic Claude API Key",
+      "stored_as": "field api_key (secure note type 2)",
+      "added": "2026-08-02",
+      "note": "stored in Bitwarden for Portkey provider wiring"
     }
   },
   "server": {
