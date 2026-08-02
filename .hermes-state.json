@@ -54,5 +54,12 @@
     "hermes_bots": "DeepSeek direct (deepseek-v4-flash); NOT via Portkey; NOT in Langfuse \u2014 deliberate, user-confirmed scope",
     "hermes_api_prompt_runtime": "via Portkey (api.portkey.ai/v1/chat/completions); every call traced in Langfuse \u2014 verified",
     "user_confirmed": "2026-08-01"
+  },
+  "decisions": {
+    "redis_usage": {
+      "decision": "Redis is STRICTLY for LiteLLM caching only; Langfuse does NOT get Redis access",
+      "made_by": "user",
+      "date": "2026-08-02"
+    }
   }
 }
