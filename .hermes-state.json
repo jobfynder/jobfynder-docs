@@ -80,5 +80,35 @@
     "hermes_bots": "DeepSeek direct (deepseek-v4-flash); NOT via Portkey; NOT in Langfuse \u2014 deliberate, user-confirmed scope",
     "hermes_api_prompt_runtime": "via Portkey (api.portkey.ai/v1/chat/completions); every call traced in Langfuse \u2014 verified",
     "user_confirmed": "2026-08-01"
+  },
+  "elestio": {
+    "project": "default-project",
+    "project_id": 16075,
+    "account": "pavan@benchteq.com",
+    "region": "Germany, Nuremberg (Netcup)",
+    "plan": "MEDIUM-2C-4G",
+    "services": {
+      "portkey": {
+        "cname": "portkey-u14612.vm.elestio.app",
+        "ipv4": "159.195.1.53",
+        "global_private_ip": "10.30.71.7",
+        "service_id": 546063,
+        "health_https_200": "VERIFIED from INTEL 2026-08-02"
+      },
+      "langfuse": {
+        "cname": "langfuse-tnnaf-u14612.vm.elestio.app",
+        "ipv4": "152.53.61.104",
+        "service_id": 546059,
+        "health_https_200": "VERIFIED from INTEL 2026-08-02"
+      },
+      "milvus": {
+        "cname": "milvus-semantic-caching-u14612.vm.elestio.app",
+        "ipv4": "152.53.202.164",
+        "service_id": 546057,
+        "port": 19530,
+        "tcp_reachable": "VERIFIED from INTEL 2026-08-02"
+      }
+    },
+    "note": "self-hosted on Elestio; NOT the old cloud Langfuse us.cloud.langfuse.com"
   }
 }
