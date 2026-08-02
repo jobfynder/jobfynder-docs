@@ -61,5 +61,16 @@
       "made_by": "user",
       "date": "2026-08-02"
     }
+  },
+  "litellm_redis": {
+    "status": "CACHE_OPERATIONAL",
+    "verified": "2026-08-02 (my own probe: /cache/ping healthy, redis set=success; 3-call test: 1.67s->0.75s->0.79s identical output = cache hits)",
+    "root_cause": "LiteLLM v1.83 ignores REDIS_* env for cache; requires cache block in /opt/app/config.yaml under litellm_settings",
+    "fix_location": "/opt/app/config.yaml on Elestio litellm VM (config file, NOT env tab)",
+    "warning_persistence": "Elestio Update/Change-version/redeploy can overwrite config.yaml and silently drop the fix",
+    "near_miss": "env text pasted into Docker Compose YAML tab crashed gateway (cannot unmarshal ... into cli.named); use ENV tab only",
+    "redis_password_case": "lowercase-o eoN (uppercase eON fails -WRONGPASS)",
+    "usage_decision": "Redis strictly for LiteLLM caching only; Langfuse excluded",
+    "firewall": "PENDING - port 26379 still open publicly; must restrict to 159.195.1.254/32"
   }
 }
