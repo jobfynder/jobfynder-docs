@@ -130,5 +130,21 @@
       "jf-embedding: config.yaml alias still routes to deepseek/deepseek-chat (DB registration did NOT stick; config.yaml takes precedence). Need terminal edit of config.yaml to repoint to deepinfra/BAAI/bge-m3.",
       "LiteLLM->Langfuse tracing: LANGFUSE_PUBLIC_KEY/SECRET_KEY in LiteLLM .env may still be empty - prompts in Langfuse != live traces flowing."
     ]
+  },
+  "redis_clarification": {
+    "note": "THERE ARE TWO DIFFERENT REDIS INSTANCES - do not conflate",
+    "litellm_redis": {
+      "host": "redis-ai-gateway-u14612.vm.elestio.app / 152.53.202.147 / private 10.30.71.5",
+      "port": "26379 (NOT 6379)",
+      "env": "REDIS_HOST=10.30.71.5 REDIS_PORT=26379",
+      "auth": "lowercase-o eoN-... +OK verified",
+      "status": "cache proven working, firewalled to 159.195.1.254/32",
+      "purpose": "LiteLLM caching ONLY"
+    },
+    "langfuse_internal_redis": {
+      "host": "172.17.0.1",
+      "port": "6379",
+      "purpose": "Langfuse's OWN internal redis (events/queue) - separate, do not touch for LiteLLM"
+    }
   }
 }
