@@ -36,8 +36,10 @@
       "id": "2f48f369",
       "name": "Elestio - Langfuse",
       "user": "pavan@jobfynder.com",
-      "stored": "2026-08-02",
-      "note": "self-hosted, NOT cloud"
+      "base_url": "https://langfuse.jobfynder.com",
+      "keys": "regenerated 2026-08-02 - public+secret stored as fields in item 2f48f369",
+      "old_public_key": "REMOVED",
+      "health_via_public_url": "OK version 4.1.0"
     }
   },
   "server": {
