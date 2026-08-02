@@ -74,5 +74,10 @@
     "image": "hermes-hermes-api-snapshot:20260801",
     "restore_dry_run": "PASSED (cloned bundle to /tmp, tree matches)",
     "note": "Restore steps in /root/jobfynder-backup/RESTORE.md"
+  },
+  "routing_decision": {
+    "hermes_bots": "DeepSeek direct (deepseek-v4-flash); NOT via Portkey; NOT in Langfuse \u2014 deliberate, user-confirmed scope",
+    "hermes_api_prompt_runtime": "via Portkey (api.portkey.ai/v1/chat/completions); every call traced in Langfuse \u2014 verified",
+    "user_confirmed": "2026-08-01"
   }
 }
