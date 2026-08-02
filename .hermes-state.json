@@ -88,7 +88,16 @@
   "langfuse": {
     "signup_disabled": "VERIFIED 2026-08-02 (my probe: /auth/sign-up 404, /auth/sign-in 200, admin session pavan@jobfynder.com works)",
     "url": "https://langfuse.jobfynder.com",
-    "version": "4.1.0"
+    "version": "4.1.0",
+    "prompts": {
+      "status": "REPORTED_92_IMPORTED_PENDING_VERIFICATION",
+      "reported_by": "codex 2026-08-02",
+      "project": "Jobfynder AI Infrastructure",
+      "domains": "Onboarding..Admin (20)",
+      "labels": "dev + latest",
+      "verify_need": "self-hosted Langfuse project API keys (public+secret) or Prompts page screenshot",
+      "prereq_issue": "project API keys deleted in Portkey cleanup; not re-created/vaulted. old cloud pk-lf-c561... in item 4b0aaebd is NOT the self-hosted key"
+    }
   },
   "litellm_tests": {
     "report_source": "codex/user 2026-08-02",
@@ -107,6 +116,10 @@
       "routing": "jf-embedding now -> deepinfra/BAAI/bge-m3 (was deepseek-chat)"
     },
     "redis_cache": "verified working (1st~1.4s / 2nd<1ms or 0.75s; no double charge)",
-    "status": "ALL_GREEN"
+    "status": "ALL_GREEN",
+    "open_items": [
+      "jf-embedding: config.yaml alias still routes to deepseek/deepseek-chat (DB registration did NOT stick; config.yaml takes precedence). Need terminal edit of config.yaml to repoint to deepinfra/BAAI/bge-m3.",
+      "LiteLLM->Langfuse tracing: LANGFUSE_PUBLIC_KEY/SECRET_KEY in LiteLLM .env may still be empty - prompts in Langfuse != live traces flowing."
+    ]
   }
 }
