@@ -150,5 +150,23 @@
   "docs": {
     "ai_infra_summary": "docs/AI-INFRA-SUMMARY-2026-08-02.md",
     "saved": "2026-08-02"
+  },
+  "scheduled_reports": {
+    "daily_infra_status": {
+      "status": "LIVE_CRON",
+      "job_id": "dea9713e3023",
+      "schedule": "0 15 * * * (10:00 EST / 15:00 UTC daily)",
+      "deliver": "origin (this Telegram chat)",
+      "mode": "no-agent script -> /root/.hermes/scripts/ai_infra_status.py",
+      "script_self_sufficient": "fetches LiteLLM master key from Bitwarden (Elestio - LiteLLM) if not in env",
+      "scope": [
+        "LiteLLM gateway",
+        "Redis cache (cache/ping)",
+        "Langfuse health",
+        "Langfuse signup(404)",
+        "Redis public 26379(closed)"
+      ],
+      "created": "2026-08-03"
+    }
   }
 }
