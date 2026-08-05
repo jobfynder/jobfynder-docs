@@ -8,47 +8,35 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-email-parsing.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: f199468
+- Repository: jobfynder/hermes
+- Branch: feature/hermes-850-email-parsing
+- Head SHA: 5f08c22
 - Commit count: 1
-- Triggered by: atult120
+- Triggered by: jobfynder
 - Commits:
-- f199468 Add LinkedIn profile scrape import via Bright Data. — atultiwari
+- 5f08c22 feat(hermes-850): add deterministic email parsing foundation — Jobfynder Automation
 - Changed files:
-- added: .env.example
-- added: jest.config.js
-- added: onboarding-linkedin-import-backend-spec.md
-- added: postman/linkedin-scrape-import.postman_collection.json
-- added: src/linkedin/brightdata.client.spec.ts
-- added: src/linkedin/brightdata.client.ts
-- added: src/linkedin/dto/scrape-profile.dto.ts
-- added: src/linkedin/linkedin-url.util.spec.ts
-- added: src/linkedin/linkedin-url.util.ts
-- added: src/linkedin/linkedin.controller.ts
-- added: src/linkedin/linkedin.module.ts
-- added: src/linkedin/linkedin.service.spec.ts
-- added: src/linkedin/linkedin.service.ts
-- modified: package-lock.json
-- modified: package.json
-- modified: src/app.module.ts
-- modified: src/common/errors/app-error.ts
-- modified: src/common/filters/all-exceptions.filter.ts
-- modified: src/config/configuration.ts
-- modified: src/config/env.validation.ts
+- added: app/email_parsing/__init__.py
+- added: app/email_parsing/parsers.py
+- added: app/email_parsing/routing.py
+- added: scripts/hermes-850-email-integration-check.py
+- added: scripts/hermes-850-email-parsing-check.py
+- modified: app/channels/service.py
+- modified: app/providers/email/service.py
+- modified: scripts/hermes-450-channel-intake-check.py
 
 ---
 
