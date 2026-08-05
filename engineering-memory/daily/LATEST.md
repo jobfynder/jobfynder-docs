@@ -23,34 +23,32 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 207358b
+- Head SHA: f199468
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 207358b Close profile API gaps: GET fidelity, write endpoints, and stop test-data stubs. — atultiwari
+- f199468 Add LinkedIn profile scrape import via Bright Data. — atultiwari
 - Changed files:
-- added: prisma/migrations/20260804120000_add_value_proposition_relocation/migration.sql
-- added: src/prompts/education.prompt
-- modified: prisma/schema.prisma
-- modified: src/ai/ai.service.ts
-- modified: src/common/utils/date-parser.util.ts
-- modified: src/content-generation/content-generation.service.ts
-- modified: src/content-generation/dto/generate-content.dto.ts
-- modified: src/profile/common/master-data.service.ts
-- modified: src/profile/consultant-sections/consultant-crud.controller.ts
-- modified: src/profile/consultant-sections/consultant-crud.service.ts
-- modified: src/profile/consultant-sections/consultant-sections.controller.ts
-- modified: src/profile/consultant-sections/consultant-sections.service.ts
-- modified: src/profile/consultant-sections/dto/crud.dto.ts
-- modified: src/profile/consultant-sections/dto/sections.dto.ts
-- modified: src/profile/employer-ops/dto/employer-ops.dto.ts
-- modified: src/profile/employer-ops/employer-ops.service.ts
-- modified: src/profile/header/dto/employer-header.dto.ts
-- modified: src/profile/header/dto/recruiter-header.dto.ts
-- modified: src/profile/header/header.service.ts
-- modified: src/profile/profile-transformers.service.ts
-- modified: src/profile/profile.module.ts
-- modified: src/profile/profile.service.ts
+- added: .env.example
+- added: jest.config.js
+- added: onboarding-linkedin-import-backend-spec.md
+- added: postman/linkedin-scrape-import.postman_collection.json
+- added: src/linkedin/brightdata.client.spec.ts
+- added: src/linkedin/brightdata.client.ts
+- added: src/linkedin/dto/scrape-profile.dto.ts
+- added: src/linkedin/linkedin-url.util.spec.ts
+- added: src/linkedin/linkedin-url.util.ts
+- added: src/linkedin/linkedin.controller.ts
+- added: src/linkedin/linkedin.module.ts
+- added: src/linkedin/linkedin.service.spec.ts
+- added: src/linkedin/linkedin.service.ts
+- modified: package-lock.json
+- modified: package.json
+- modified: src/app.module.ts
+- modified: src/common/errors/app-error.ts
+- modified: src/common/filters/all-exceptions.filter.ts
+- modified: src/config/configuration.ts
+- modified: src/config/env.validation.ts
 
 ---
 
