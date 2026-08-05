@@ -123,3 +123,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|d8da9c3c071256da3a71234f8ce226c
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|207358bb52af40d539b6e32e0f6efec943f7dc84
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|f1994686694e1ebd37a2a29886f0883871aafb2b
 jobfynder/hermes|refs/heads/feature/hermes-850-email-parsing|5f08c22b104bdeb14c9e71945a89ce2a1a6f15a5
+jobfynder/hermes|refs/heads/feature/hermes-850-email-parsing|fd2f088418287e9427a44bb332444c8d8a4f7a7c

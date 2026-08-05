@@ -9,20 +9,15 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: feature/hermes-850-email-parsing",
-    "Head SHA: 5f08c22",
+    "Head SHA: fd2f088",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "5f08c22 feat(hermes-850): add deterministic email parsing foundation \u2014 Jobfynder Automation",
+    "fd2f088 fix(hermes-850): enforce email parser guardrails \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: app/email_parsing/__init__.py",
-    "added: app/email_parsing/parsers.py",
-    "added: app/email_parsing/routing.py",
-    "added: scripts/hermes-850-email-integration-check.py",
-    "added: scripts/hermes-850-email-parsing-check.py",
-    "modified: app/channels/service.py",
-    "modified: app/providers/email/service.py",
-    "modified: scripts/hermes-450-channel-intake-check.py"
+    "modified: app/email_parsing/parsers.py",
+    "modified: app/email_parsing/routing.py",
+    "modified: scripts/hermes-850-email-parsing-check.py"
   ],
   "decisions": [
     {
