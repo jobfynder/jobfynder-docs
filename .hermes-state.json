@@ -153,9 +153,9 @@
   },
   "scheduled_reports": {
     "daily_infra_status": {
-      "status": "LIVE_CRON",
+      "status": "REPAIRED_VERIFIED_2026-08-08",
       "job_id": "dea9713e3023",
-      "schedule": "0 15 * * * (10:00 EST / 15:00 UTC daily)",
+      "schedule": "0 15 * * * (15:00 UTC = 10:00 EST standard time)",
       "deliver": "origin (this Telegram chat)",
       "mode": "no-agent script -> /root/.hermes/scripts/ai_infra_status.py",
       "script_self_sufficient": "fetches LiteLLM master key from Bitwarden (Elestio - LiteLLM) if not in env",
@@ -166,7 +166,11 @@
         "Langfuse signup(404)",
         "Redis public 26379(closed)"
       ],
-      "created": "2026-08-03"
+      "created": "2026-08-03",
+      "root_cause": "script lived in /root/.hermes/scripts/ but cron reads /root/.hermes-admin/scripts/ -> 'Script not found' on all 4 runs",
+      "fix": "copied script to /root/.hermes-admin/scripts/ai_infra_status.py; added root-only env file ai_infra_status.env (key from Bitwarden, chmod 600, not in git); added browser UA to all curl (Cloudflare 403); reworked signup check; wrapped in try/except",
+      "verified": "manual run dd3b7c4eb3cf44c6919257a688b28a0e COMPLETED (source=direct); script exit 0, output '\ud83d\udfe2 ALL HEALTHY' in cron-like env",
+      "note": "DST: currently EDT in Aug, so 15:00 UTC = 11:00 EDT right now. Set true '10 EST' seasonal adjustment if desired."
     }
   }
 }
