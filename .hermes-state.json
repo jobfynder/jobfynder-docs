@@ -172,5 +172,23 @@
       "verified": "manual run dd3b7c4eb3cf44c6919257a688b28a0e COMPLETED (source=direct); script exit 0, output '\ud83d\udfe2 ALL HEALTHY' in cron-like env",
       "note": "DST: currently EDT in Aug, so 15:00 UTC = 11:00 EDT right now. Set true '10 EST' seasonal adjustment if desired."
     }
+  },
+  "runtime": {
+    "memory_tool_fix": {
+      "status": "COMPLETE_VERIFIED",
+      "date": "2026-08-08",
+      "root_cause": "memory was in agent.disabled_toolsets AND not in any enabled platform_toolsets (hermes config set stored lists as quoted strings so 'memory' wasn't recognized)",
+      "fixes": [
+        "removed memory from agent.disabled_toolsets",
+        "agent.platform_toolsets.telegram = [clarify,terminal,file,memory] (proper YAML list)",
+        "agent.platform_toolsets.cli = [browser,clarify,context_engine,file,terminal,memory] (proper YAML list)",
+        "gateway restarted -> memory tool enabled"
+      ],
+      "self_learn_path": "/root/.hermes-admin/scripts/memory-append.py (tested, commits to vault 528f9be)",
+      "backups": "config.yaml.bak* in /root/.hermes-admin/",
+      "verified": "hermes memory status: Memory tool enabled; YAML valid; gateway active"
+    },
+    "reliability_rule": "Always state verified-by-probe OR per-report-unverified. Never relay unverified ISSUE RESOLVED.",
+    "cron_script_dir": "/root/.hermes-admin/scripts/ (NOT /root/.hermes/scripts/)"
   }
 }
