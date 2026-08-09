@@ -23,13 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: f661a6a
+- Head SHA: da03dae
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- f661a6a Add CSRF headers to authenticated API mutations — Pavan
+- da03dae Fix Messenger realtime CSRF token handling — Pavan
 - Changed files:
 - modified: src/api/apiClient.ts
+- modified: src/features/messenger/MessengerRealtimeProvider.tsx
 
 ---
 
