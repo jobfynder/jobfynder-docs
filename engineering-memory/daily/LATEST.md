@@ -23,13 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch main
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: main
-- Head SHA: ae395b6
-- Commit count: 1
+- Head SHA: 43a3b84
+- Commit count: 2
 - Triggered by: jobfynder-admin
 - Commits:
-- ae395b6 Fix Cloudflare Worker SPA routing — Pavan
+- d85483e Sync package-lock for Cloudflare build — Pavan
+- 43a3b84 Update package-lock.json — Pavan
 - Changed files:
-- modified: wrangler.jsonc
+- modified: package-lock.json
 
 ---
 
