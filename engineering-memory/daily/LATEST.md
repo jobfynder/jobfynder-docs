@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch main
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: main
-- Head SHA: d97c030
+- Branch: dev
+- Head SHA: 9c9618f
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- d97c030 Rebuild frontend with VITE_SERVER_URL — Pavan
+- 9c9618f Update README.md — Pavan
 - Changed files:
 - modified: README.md
 
