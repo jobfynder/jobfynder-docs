@@ -23,15 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 34686cb
+- Head SHA: b83c83a
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 34686cb Register Messenger route and add Centrifuge client — Pavan
+- b83c83a Fix cookie-based auth session handling — Pavan
 - Changed files:
-- modified: package-lock.json
-- modified: package.json
-- modified: src/routes.ts
+- modified: src/pages/auth/login.tsx
+- modified: src/store/useAuthStore.ts
 
 ---
 
