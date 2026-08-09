@@ -9,16 +9,15 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
     "Branch: dev",
-    "Head SHA: da61cd8",
+    "Head SHA: 34686cb",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "da61cd8 Fix Cloudflare React Router deployment and browser-only PDF loading \u2014 Pavan",
+    "34686cb Register Messenger route and add Centrifuge client \u2014 Pavan",
     "Changed files:",
-    "added: src/lib/pdfjs.client.ts",
-    "modified: src/components/components/private/job-tracker-detail/recruiter/Profile.tsx",
-    "removed: worker.js",
-    "removed: wrangler.jsonc"
+    "modified: package-lock.json",
+    "modified: package.json",
+    "modified: src/routes.ts"
   ],
   "decisions": [
     {
