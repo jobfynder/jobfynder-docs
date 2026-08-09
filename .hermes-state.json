@@ -189,6 +189,13 @@
       "verified": "hermes memory status: Memory tool enabled; YAML valid; gateway active"
     },
     "reliability_rule": "Always state verified-by-probe OR per-report-unverified. Never relay unverified ISSUE RESOLVED.",
-    "cron_script_dir": "/root/.hermes-admin/scripts/ (NOT /root/.hermes/scripts/)"
+    "cron_script_dir": "/root/.hermes-admin/scripts/ (NOT /root/.hermes/scripts/)",
+    "daily_server_status_auto_extract_fix": {
+      "status": "COMPLETE_VERIFIED",
+      "date": "2026-08-09",
+      "root_cause": "daily-server-status.py shelled to `hermes config get`, which under cron (no HERMES_HOME) read wrong config -> 'Config key not set' -> rendered as ERR. Actual config correct (auto_extract=true, compression threshold=0.15).",
+      "fix": "script now reads config.yaml directly via Python (env-independent). Verified ALL HEALTHY under cron env.",
+      "cleanup": "removed stale /root/.hermes/scripts/ai_infra_status.py duplicate"
+    }
   }
 }
