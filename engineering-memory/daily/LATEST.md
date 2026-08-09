@@ -23,13 +23,26 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 9c9618f
-- Commit count: 1
+- Head SHA: 653160a
+- Commit count: 2
 - Triggered by: jobfynder-admin
 - Commits:
-- 9c9618f Update README.md — Pavan
+- eb2af87 Add Cloudflare Worker for Vite SPA routing and configure wrangler settings — Nishant Arora
+- 653160a Integrate Messenger into dev frontend — Pavan
 - Changed files:
-- modified: README.md
+- added: docs/messenger/UI-INTEGRATION-v1.md
+- added: src/features/messenger/MessengerPage.test.tsx
+- added: src/features/messenger/MessengerPage.tsx
+- added: src/features/messenger/MessengerRealtimeClient.test.ts
+- added: src/features/messenger/MessengerRealtimeClient.ts
+- added: src/features/messenger/MessengerRealtimeProvider.tsx
+- added: src/features/messenger/messengerApi.test.ts
+- added: src/features/messenger/messengerApi.ts
+- added: src/features/messenger/realtimeEvents.ts
+- added: src/store/useOrganisationStore.ts
+- added: worker.js
+- added: wrangler.jsonc
+- modified: src/routes/index.tsx
 
 ---
 
