@@ -9,14 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
     "Branch: main",
-    "Head SHA: 43a3b84",
-    "Commit count: 2",
+    "Head SHA: d97c030",
+    "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "d85483e Sync package-lock for Cloudflare build \u2014 Pavan",
-    "43a3b84 Update package-lock.json \u2014 Pavan",
+    "d97c030 Rebuild frontend with VITE_SERVER_URL \u2014 Pavan",
     "Changed files:",
-    "modified: package-lock.json"
+    "modified: README.md"
   ],
   "decisions": [
     {

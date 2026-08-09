@@ -23,14 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch main
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: main
-- Head SHA: 43a3b84
-- Commit count: 2
+- Head SHA: d97c030
+- Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- d85483e Sync package-lock for Cloudflare build — Pavan
-- 43a3b84 Update package-lock.json — Pavan
+- d97c030 Rebuild frontend with VITE_SERVER_URL — Pavan
 - Changed files:
-- modified: package-lock.json
+- modified: README.md
 
 ---
 
