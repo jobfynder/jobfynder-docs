@@ -127,3 +127,4 @@ jobfynder/hermes|refs/heads/feature/hermes-850-email-parsing|fd2f088418287e9427a
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|97ab0a1d3b820c26af0a036aba72b3133ba46189
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|3fafb129c3deaed5edc4b7fd947039d9c6d9f2d2
 jobfynder-admin/jobFynder-FE-vite|refs/heads/main|82622688d3c7b314fd689ffc659060ebc077dd39
+jobfynder-admin/jobFynder-FE-vite|refs/heads/main|ae395b60d85039f7f69de3e1f94562e05dd38350
