@@ -8,93 +8,75 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: main
-- Head SHA: 3fafb12
-- Commit count: 7
+- Head SHA: 8262268
+- Commit count: 6
 - Triggered by: jobfynder-admin
 - Commits:
-- 806ad1a Harden Core authentication sessions — Pavan
-- 0b1690d feat(messenger): add core persistence API — Pavan
-- 26b81b3 test(messenger): verify unread count boundary — Pavan
-- 0482eef feat(messenger): secure Centrifugo token authorization — Pavan
-- 753fcb8 feat(messenger): add transactional realtime outbox — Pavan
-- 730d311 feat(messenger): complete realtime recovery operations — Pavan
-- 3fafb12 docs(messenger): record Phase 3D readiness gate — Pavan
+- 58cda57 Migrate frontend to secure cookie sessions — Pavan
+- 6506fb6 feat(messenger): integrate core REST messaging — Pavan
+- 5ad0149 feat(messenger): restore approved UI parity — Pavan
+- ee73a5b feat(messenger): add Centrifugo connection foundation — Pavan
+- b65c442 feat(messenger): reconcile realtime delivery events — Pavan
+- 8262268 feat(messenger): add realtime typing and presence UX — Pavan
 - Changed files:
-- added: docs/auth/AUTHENTICATION-v1.md
-- added: docs/messenger/CENTRIFUGO-DELIVERY-v1.md
-- added: docs/messenger/CENTRIFUGO-INTEGRATION-v1.md
-- added: docs/messenger/CENTRIFUGO-OPERATIONS-v1.md
-- added: docs/messenger/CENTRIFUGO-PRODUCTION-CHECKLIST.md
-- added: docs/messenger/CORE-PERSISTENCE-v1.md
-- added: prisma/migrations/20260809000000_auth_session_hardening/migration.sql
-- added: prisma/migrations/20260809010000_messenger_core_persistence/migration.sql
-- added: prisma/migrations/20260809030000_messenger_realtime_outbox/migration.sql
-- added: src/auth-core/auth-session.service.spec.ts
-- added: src/auth-core/auth-session.service.ts
-- added: src/auth-core/csrf-exempt.decorator.ts
-- added: src/auth-core/csrf.service.spec.ts
-- added: src/auth-core/csrf.service.ts
-- added: src/auth-core/guards/csrf.guard.spec.ts
-- added: src/auth-core/guards/csrf.guard.ts
-- added: src/config/env.validation.spec.ts
-- added: src/messenger/centrifugo-publisher.service.spec.ts
-- added: src/messenger/centrifugo-publisher.service.ts
-- added: src/messenger/dto/messenger-realtime.dto.ts
-- added: src/messenger/dto/messenger.dto.ts
-- added: src/messenger/messenger-events.ts
-- added: src/messenger/messenger-outbox.service.spec.ts
-- added: src/messenger/messenger-outbox.service.ts
-- added: src/messenger/messenger-realtime.service.spec.ts
-- added: src/messenger/messenger-realtime.service.ts
-- added: src/messenger/messenger.controller.spec.ts
-- added: src/messenger/messenger.controller.ts
-- added: src/messenger/messenger.module.ts
-- added: src/messenger/messenger.service.spec.ts
-- added: src/messenger/messenger.service.ts
-- added: src/org-team/org.service.spec.ts
+- added: .env.example
+- added: docs/messenger/UI-INTEGRATION-v1.md
+- added: src/features/messenger/MessengerPage.test.tsx
+- added: src/features/messenger/MessengerPage.tsx
+- added: src/features/messenger/MessengerRealtimeClient.test.ts
+- added: src/features/messenger/MessengerRealtimeClient.ts
+- added: src/features/messenger/MessengerRealtimeProvider.tsx
+- added: src/features/messenger/messengerApi.test.ts
+- added: src/features/messenger/messengerApi.ts
+- added: src/features/messenger/realtimeEvents.ts
+- added: src/lib/apiClient.ts
+- added: src/store/useOrganisationStore.ts
+- added: src/test/setup.ts
+- added: vitest.config.ts
 - modified: .env.example
-- modified: docs/messenger/CENTRIFUGO-INTEGRATION-v1.md
-- modified: docs/messenger/CENTRIFUGO-OPERATIONS-v1.md
-- modified: prisma/schema.prisma
-- modified: src/app.module.ts
-- modified: src/auth-core/auth-core.module.ts
-- modified: src/auth-core/guards/jwt-auth.guard.ts
-- modified: src/auth-core/token.service.ts
-- modified: src/auth/auth.controller.ts
-- modified: src/auth/auth.service.ts
-- modified: src/auth/dto/auth.dto.ts
-- modified: src/config/configuration.ts
-- modified: src/config/env.validation.ts
-- modified: src/health/health.controller.ts
-- modified: src/main.ts
-- modified: src/messenger/dto/messenger-realtime.dto.ts
-- modified: src/messenger/messenger-outbox.service.spec.ts
-- modified: src/messenger/messenger-outbox.service.ts
-- modified: src/messenger/messenger-realtime.service.spec.ts
-- modified: src/messenger/messenger-realtime.service.ts
-- modified: src/messenger/messenger.controller.ts
-- modified: src/messenger/messenger.module.ts
-- modified: src/messenger/messenger.service.spec.ts
-- modified: src/messenger/messenger.service.ts
-- modified: src/oauth/oauth.controller.ts
-- modified: src/oauth/oauth.service.ts
-- modified: src/org-team/employer-team.module.ts
-- modified: src/org-team/org.service.ts
+- modified: package-lock.json
+- modified: package.json
+- modified: src/components/LogoutButton.tsx
+- modified: src/components/OAuthCodeHandler.tsx
+- modified: src/components/components/auth/forgot-password/otp.tsx
+- modified: src/components/components/auth/onboarding/bench-sales/bench-sales.tsx
+- modified: src/components/components/auth/onboarding/consultant/consultant-form.tsx
+- modified: src/components/components/auth/onboarding/employer/employer.tsx
+- modified: src/components/components/auth/onboarding/recruiter/recruiter.tsx
+- modified: src/components/components/auth/onboarding/service-provider/service-provider.tsx
+- modified: src/features/messenger/MessengerPage.test.tsx
+- modified: src/features/messenger/MessengerPage.tsx
+- modified: src/features/messenger/MessengerRealtimeClient.test.ts
+- modified: src/features/messenger/MessengerRealtimeClient.ts
+- modified: src/features/messenger/MessengerRealtimeProvider.tsx
+- modified: src/features/messenger/messengerApi.test.ts
+- modified: src/features/messenger/messengerApi.ts
+- modified: src/features/messenger/realtimeEvents.ts
+- modified: src/hooks/README.md
+- modified: src/hooks/useApiMutation.ts
+- modified: src/hooks/useApiQuery.ts
+- modified: src/pages/auth/RoleUpdate.tsx
+- modified: src/pages/auth/login.tsx
+- modified: src/routes/index.tsx
+- modified: src/services/authService.ts
+- modified: src/store/useAuthStore.ts
+- modified: vite.config.ts
+- removed: src/utils/auth.ts
 
 ---
 
