@@ -23,13 +23,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: b83c83a
+- Head SHA: 0e70928
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- b83c83a Fix cookie-based auth session handling — Pavan
+- 0e70928 Fix cookie auth hydration for protected routes — Pavan
 - Changed files:
-- modified: src/pages/auth/login.tsx
 - modified: src/store/useAuthStore.ts
 
 ---
