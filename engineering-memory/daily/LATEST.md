@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 0e70928
+- Head SHA: f661a6a
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 0e70928 Fix cookie auth hydration for protected routes — Pavan
+- f661a6a Add CSRF headers to authenticated API mutations — Pavan
 - Changed files:
-- modified: src/store/useAuthStore.ts
+- modified: src/api/apiClient.ts
 
 ---
 
