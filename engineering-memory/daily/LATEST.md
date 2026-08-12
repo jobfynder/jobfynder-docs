@@ -8,28 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 5b5520c
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: dev
+- Head SHA: 414da7d
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 5b5520c Reduce Messenger outbox publish latency — Pavan
+- 414da7d Make Messenger typing indicator realtime and resilient — Pavan
 - Changed files:
-- modified: src/messenger/messenger-outbox.service.ts
+- modified: src/hooks/useThread.js
 
 ---
 
