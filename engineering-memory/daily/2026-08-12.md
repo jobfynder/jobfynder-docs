@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: ac742d3
+- Head SHA: 23b98ba
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- ac742d3 Stabilize Messenger realtime sidebar sync and null guards — Pavan
+- 23b98ba Preserve Messenger participant identity during realtime updates — Pavan
 - Changed files:
-- modified: src/components/messenger/ConversationSidebar.jsx
-- modified: src/features/messenger/MessengerRealtimeProvider.tsx
-- modified: src/features/messenger/messengerApi.ts
+- modified: src/lib/messengerApi.ts
 
 ---
 
