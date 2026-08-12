@@ -9,13 +9,14 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: main",
-    "Head SHA: 4495b6c",
+    "Head SHA: 7c2e690",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "4495b6c Support Messenger participant search across connections \u2014 Pavan",
+    "7c2e690 Add Messenger participant directory search \u2014 Pavan",
     "Changed files:",
-    "modified: src/connections/connections.controller.ts"
+    "modified: src/messenger/messenger.controller.ts",
+    "modified: src/messenger/messenger.service.ts"
   ],
   "decisions": [
     {

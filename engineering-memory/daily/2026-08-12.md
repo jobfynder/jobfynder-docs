@@ -23,13 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 4495b6c
+- Head SHA: 7c2e690
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 4495b6c Support Messenger participant search across connections — Pavan
+- 7c2e690 Add Messenger participant directory search — Pavan
 - Changed files:
-- modified: src/connections/connections.controller.ts
+- modified: src/messenger/messenger.controller.ts
+- modified: src/messenger/messenger.service.ts
 
 ---
 
