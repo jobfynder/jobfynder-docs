@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: d863359
+- Head SHA: ef5deb3
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- d863359 Use live Centrifugo connection state in Messenger UI — Pavan
+- ef5deb3 Guard Messenger conversation context against null IDs — Pavan
 - Changed files:
-- modified: src/components/messenger/shell/MessengerConnectionStatus.jsx
-- modified: src/components/messenger/shell/MessengerHeader.jsx
-- modified: src/components/messenger/shell/MessengerShell.jsx
+- modified: src/lib/messengerApi.ts
 
 ---
 
