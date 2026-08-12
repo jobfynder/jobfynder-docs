@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 23b98ba
+- Head SHA: 66a4560
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 23b98ba Preserve Messenger participant identity during realtime updates — Pavan
+- 66a4560 Handle Messenger context panel when no conversation is selected — Pavan
 - Changed files:
-- modified: src/lib/messengerApi.ts
+- modified: src/components/messenger/shell/ConversationContextRegion.jsx
 
 ---
 
