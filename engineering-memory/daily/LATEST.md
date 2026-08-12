@@ -23,16 +23,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: f60a6cb
+- Head SHA: ac742d3
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- f60a6cb Polish Messenger desktop conversation workspace — Pavan
+- ac742d3 Stabilize Messenger realtime sidebar sync and null guards — Pavan
 - Changed files:
-- modified: src/components/messenger/ChatView.jsx
-- modified: src/components/messenger/ContextPanel.jsx
-- modified: src/components/messenger/messages/MessageItem.jsx
-- modified: src/components/messenger/messages/MessageList.jsx
+- modified: src/components/messenger/ConversationSidebar.jsx
+- modified: src/features/messenger/MessengerRealtimeProvider.tsx
+- modified: src/features/messenger/messengerApi.ts
 
 ---
 
