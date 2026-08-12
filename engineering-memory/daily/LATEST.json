@@ -9,13 +9,16 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
     "Branch: dev",
-    "Head SHA: 414da7d",
+    "Head SHA: f60a6cb",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "414da7d Make Messenger typing indicator realtime and resilient \u2014 Pavan",
+    "f60a6cb Polish Messenger desktop conversation workspace \u2014 Pavan",
     "Changed files:",
-    "modified: src/hooks/useThread.js"
+    "modified: src/components/messenger/ChatView.jsx",
+    "modified: src/components/messenger/ContextPanel.jsx",
+    "modified: src/components/messenger/messages/MessageItem.jsx",
+    "modified: src/components/messenger/messages/MessageList.jsx"
   ],
   "decisions": [
     {
