@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: e5438b6
+- Head SHA: 5dfd973
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- e5438b6 Resume now opens the document picker directly. — Pavan
+- 5dfd973 Update SharePicker.jsx — Pavan
 - Changed files:
-- modified: src/components/messenger/MessageComposer.jsx
+- modified: src/components/messenger/composer/SharePicker.jsx
 
 ---
 
