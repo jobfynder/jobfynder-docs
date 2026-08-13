@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 86aea94
+- Head SHA: e5438b6
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 86aea94 Resume is now integrated under the existing Share menu and build passed. — Pavan
+- e5438b6 Resume now opens the document picker directly. — Pavan
 - Changed files:
 - modified: src/components/messenger/MessageComposer.jsx
 
