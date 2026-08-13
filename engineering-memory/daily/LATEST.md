@@ -23,26 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 416240e
+- Head SHA: b5ca79c
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 416240e Complete Messenger realtime attachments and resume sharing — Pavan
+- b5ca79c Fix Messenger ResumeCard runtime crash — Pavan
 - Changed files:
-- added: src/hooks/useCall.js
-- added: src/hooks/useGroupCall.js
-- modified: src/components/messenger/ContextPanel.jsx
-- modified: src/components/messenger/MessageComposer.jsx
-- modified: src/components/messenger/composer/ResumePicker.jsx
-- modified: src/components/messenger/composer/useAttachments.js
-- modified: src/components/messenger/messages/AttachmentCard.jsx
 - modified: src/components/messenger/messages/ResumeCard.jsx
-- modified: src/components/messenger/mobile/MobileContextSheet.jsx
-- modified: src/features/messenger/MessengerRealtimeClient.ts
-- modified: src/features/messenger/messengerApi.ts
-- modified: src/hooks/useThread.js
-- modified: src/lib/attachmentApi.js
-- modified: src/lib/featureFlags.js
 
 ---
 
