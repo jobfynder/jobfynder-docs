@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 0e60f13
+- Head SHA: 1841344
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 0e60f13 improving typing indicator speed — Pavan
+- 1841344 Optimize frontend production chunking — Pavan
 - Changed files:
-- modified: src/hooks/useThread.js
+- modified: vite.config.ts
 
 ---
 

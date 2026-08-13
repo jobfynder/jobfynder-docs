@@ -9,13 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
     "Branch: dev",
-    "Head SHA: 0e60f13",
+    "Head SHA: 1841344",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "0e60f13 improving typing indicator speed \u2014 Pavan",
+    "1841344 Optimize frontend production chunking \u2014 Pavan",
     "Changed files:",
-    "modified: src/hooks/useThread.js"
+    "modified: vite.config.ts"
   ],
   "decisions": [
     {

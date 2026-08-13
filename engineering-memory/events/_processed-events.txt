@@ -165,3 +165,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|5dfd9736140e6ebe648f012d75b0a65
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|3104b6c868357f0dc905b63f1a3922d43e06a696
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|51196aa5945ea7108d0295f19baefa92583b2b9d
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|0e60f13736e5d6157e0166172a2507f3dbd65a2e
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|1841344684b3ae501a449fa7b0409f8c5710318e
