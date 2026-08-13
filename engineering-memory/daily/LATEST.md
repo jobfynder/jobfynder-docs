@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 1841344
+- Head SHA: fbe4752
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 1841344 Optimize frontend production chunking — Pavan
+- fbe4752 Stabilize Messenger sidebar conversation loading — Pavan
 - Changed files:
-- modified: vite.config.ts
+- modified: src/components/messenger/ConversationSidebar.jsx
 
 ---
 
