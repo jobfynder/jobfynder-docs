@@ -8,28 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
-- Head SHA: e953698
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: main
+- Head SHA: 9a97571
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- e953698 Connect Messenger participant search to Prisma API — Pavan
+- 9a97571 Enable Messenger attachment message types — Pavan
 - Changed files:
-- modified: src/lib/messengerApi.ts
+- modified: src/messenger/messenger.service.ts
 
 ---
 
