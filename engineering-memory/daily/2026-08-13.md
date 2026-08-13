@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: b5ca79c
+- Head SHA: 86aea94
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- b5ca79c Fix Messenger ResumeCard runtime crash — Pavan
+- 86aea94 Resume is now integrated under the existing Share menu and build passed. — Pavan
 - Changed files:
-- modified: src/components/messenger/messages/ResumeCard.jsx
+- modified: src/components/messenger/MessageComposer.jsx
 
 ---
 
