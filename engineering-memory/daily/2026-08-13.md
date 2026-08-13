@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: fbe4752
+- Head SHA: 7b8d4d5
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- fbe4752 Stabilize Messenger sidebar conversation loading — Pavan
+- 7b8d4d5 Deduplicate Messenger conversation detail requests — Pavan
 - Changed files:
-- modified: src/components/messenger/ConversationSidebar.jsx
+- modified: src/features/messenger/messengerApi.ts
 
 ---
 
