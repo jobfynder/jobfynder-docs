@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 51196aa
+- Head SHA: 0e60f13
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 51196aa Realtime provider now supports both _id and id. — Pavan
+- 0e60f13 improving typing indicator speed — Pavan
 - Changed files:
-- added: src/components/messenger/composer/SharePicker.jsx.bak-resume-direct-upload
-- added: src/features/messenger/MessengerRealtimeProvider.tsx.bak-userid-fallback
-- modified: src/features/messenger/MessengerRealtimeProvider.tsx
+- modified: src/hooks/useThread.js
 
 ---
 
