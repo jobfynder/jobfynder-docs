@@ -8,28 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/chatwoot-auth-identity.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/chatwoot-auth-identity.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/chatwoot-auth-identity
-- Head SHA: 17b92d2
+- Head SHA: 9d66eeb
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 17b92d2 Document Chatwoot backend settings — JobFynder
+- 9d66eeb fix: keep authenticated support isolated — JobFynder
 - Changed files:
-- modified: .env.example
+- modified: src/components/ChatwootSupportWidget.tsx
 
 ---
 
