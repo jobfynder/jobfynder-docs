@@ -23,12 +23,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: b8fcc66
+- Head SHA: c6f876c
 - Commit count: 2
 - Triggered by: jobfynder-admin
 - Commits:
-- 91474c5 Add ImportProfileOnboarding component for unified profile import process — Nishant Arora
-- b8fcc66 Add backend specification for LinkedIn profile import during onboarding — Nishant Arora
+- 948eb10 Load archived Messenger conversations — Pavan
+- c6f876c Merge branch 'dev' of https://github.com/jobfynder-admin/jobFynder-FE-vite into dev — Pavan
 - Changed files:
 - added: docs/onboarding-linkedin-import-backend-spec.md
 - added: src/components/components/auth/onboarding/ImportProfileOnboarding.tsx
@@ -43,7 +43,6 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - added: src/utils/onboardingOAuthContext.ts
 - modified: src/api/apiClient.ts
 - modified: src/components/ChatwootSupportWidget.tsx
-- modified: src/components/components/auth/onboarding/ImportProfileOnboarding.tsx
 - modified: src/components/components/auth/onboarding/bench-sales/bench-sales.tsx
 - modified: src/components/components/auth/onboarding/bench-sales/index.tsx
 - modified: src/components/components/auth/onboarding/checklist.tsx
@@ -94,6 +93,9 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - modified: src/components/components/private/profile/tabs/employerTabItems.tsx
 - modified: src/components/components/private/profile/tabs/recruiterTabItems.tsx
 - modified: src/components/components/private/profile/tabs/serviceProviderTabItems.tsx
+- modified: src/components/messenger/ConversationSidebar.jsx
+- modified: src/features/messenger/messengerApi.ts
+- modified: src/lib/messengerApi.ts
 - modified: src/pages/auth/RoleUpdate.tsx
 - modified: src/pages/auth/callback.tsx
 - modified: src/pages/auth/login.tsx
