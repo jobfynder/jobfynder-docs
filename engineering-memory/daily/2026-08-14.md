@@ -23,9 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/remove-chatwoot-reset-from-logout
-- Head SHA: 36d4a76
-- Commit count: 0
+- Head SHA: 3875c64
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- 3875c64 Let Jobfynder logout complete independently — JobFynder
+- Changed files:
+- modified: src/store/useAuthStore.ts
 
 ---
 
