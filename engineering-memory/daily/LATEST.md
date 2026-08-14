@@ -23,9 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/full-navigation-after-logout
-- Head SHA: 40adb20
-- Commit count: 0
+- Head SHA: 3f1c4e8
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- 3f1c4e8 Navigate cleanly after logout — JobFynder
+- Changed files:
+- modified: src/store/useAuthStore.ts
 
 ---
 
