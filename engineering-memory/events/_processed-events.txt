@@ -186,3 +186,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-safe-inbox-switch|c2
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-safe-inbox-switch|d62ea2cebef6f702171472286299e8edef58f629
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|a0028e47b5e89a4f7c092531f3213e725d0f4687
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-reset-before-inbox-switch|a0028e47b5e89a4f7c092531f3213e725d0f4687
+jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-reset-before-inbox-switch|6f9ade5e024b6a45de0b31bd8eb7d3a8d3f8d1c9
