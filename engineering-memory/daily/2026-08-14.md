@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/chatwoot-auth-identity
-- Head SHA: 0b3d6ea
+- Head SHA: 1939d4b
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 0b3d6ea Add secure Chatwoot support identity endpoint — JobFynder
+- 1939d4b Register Chatwoot support module — JobFynder
 - Changed files:
-- added: src/support/chatwoot-support-identity.service.spec.ts
+- modified: src/app.module.ts
 
 ---
 
