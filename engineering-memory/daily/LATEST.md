@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/chatwoot-reset-before-inbox-switch.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: codex/chatwoot-reset-before-inbox-switch
-- Head SHA: 6f9ade5
+- Branch: dev
+- Head SHA: 10b753e
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 6f9ade5 Reset Chatwoot identity before switching inbox — JobFynder
+- 10b753e Reset Chatwoot identity before switching inboxes — JobFynder
 - Changed files:
 - modified: src/components/ChatwootSupportWidget.tsx
 
