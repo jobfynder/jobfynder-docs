@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/migrate-legacy-chatwoot-session.
 
 ---
 
@@ -22,14 +22,10 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
+- Branch: codex/migrate-legacy-chatwoot-session
 - Head SHA: 8075a46
-- Commit count: 1
+- Commit count: 0
 - Triggered by: jobfynder-admin
-- Commits:
-- 8075a46 Navigate cleanly to login after logout — JobFynder
-- Changed files:
-- modified: src/store/useAuthStore.ts
 
 ---
 

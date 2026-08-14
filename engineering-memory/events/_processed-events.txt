@@ -200,3 +200,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|40adb20c978e8759770e52e95166fc9
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/full-navigation-after-logout|40adb20c978e8759770e52e95166fc95937eb74f
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/full-navigation-after-logout|3f1c4e87958926b19d0a8a1a53f07beed6f6a68c
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|8075a468d501c190300265437f4069dff2cf5c41
+jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/migrate-legacy-chatwoot-session|8075a468d501c190300265437f4069dff2cf5c41
