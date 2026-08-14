@@ -23,9 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/chatwoot-ready-before-identity
-- Head SHA: 74cf682
-- Commit count: 0
+- Head SHA: c35d971
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- c35d971 Wait for Chatwoot frame before applying identity — JobFynder
+- Changed files:
+- modified: src/services/chatwoot-support.ts
 
 ---
 
