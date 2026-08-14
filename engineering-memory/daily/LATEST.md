@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/full-navigation-after-logout.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: codex/full-navigation-after-logout
-- Head SHA: 3f1c4e8
+- Branch: dev
+- Head SHA: 8075a46
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3f1c4e8 Navigate cleanly after logout — JobFynder
+- 8075a46 Navigate cleanly to login after logout — JobFynder
 - Changed files:
 - modified: src/store/useAuthStore.ts
 
