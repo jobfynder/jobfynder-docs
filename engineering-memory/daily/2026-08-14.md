@@ -8,30 +8,35 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: c28ffec
-- Commit count: 1
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: dev
+- Head SHA: 510b147
+- Commit count: 2
 - Triggered by: jobfynder-admin
 - Commits:
-- c28ffec Add Messenger conversation archive support — Pavan
+- 6b6feb1 Wire Messenger conversation archive — Pavan
+- 510b147 Merge branch 'dev' of https://github.com/jobfynder-admin/jobFynder-FE-vite into dev — Pavan
 - Changed files:
-- modified: src/messenger/dto/messenger.dto.ts
-- modified: src/messenger/messenger.controller.ts
-- modified: src/messenger/messenger.service.ts
+- added: .github/workflows/chatwoot-integration-check.yml
+- modified: src/components/ChatwootSupportWidget.tsx
+- modified: src/components/messenger/ConversationSidebar.jsx
+- modified: src/features/messenger/messengerApi.ts
+- modified: src/lib/messengerApi.ts
+- modified: src/services/chatwoot-support.ts
+- modified: src/store/useAuthStore.ts
 
 ---
 
