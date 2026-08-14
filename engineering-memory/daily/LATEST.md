@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/chatwoot-do-not-reload-on-logout.
 
 ---
 
@@ -22,14 +22,10 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
+- Branch: codex/chatwoot-do-not-reload-on-logout
 - Head SHA: 10b753e
-- Commit count: 1
+- Commit count: 0
 - Triggered by: jobfynder-admin
-- Commits:
-- 10b753e Reset Chatwoot identity before switching inboxes — JobFynder
-- Changed files:
-- modified: src/components/ChatwootSupportWidget.tsx
 
 ---
 
