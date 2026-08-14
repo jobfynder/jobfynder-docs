@@ -206,3 +206,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/migrate-legacy-chatwoot-sessi
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|c4315cdaa00d9cdd54045579ba623a2eccf7c5e4
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/versioned-chatwoot-session-migration|c4315cdaa00d9cdd54045579ba623a2eccf7c5e4
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/versioned-chatwoot-session-migration|5edeebc86ab9dd7b5160f6b98fc389d0380522df
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|8533b017415d92b12e9e50540e5b39c3a841fb40
