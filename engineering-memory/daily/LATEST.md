@@ -23,9 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/versioned-chatwoot-session-migration
-- Head SHA: c4315cd
-- Commit count: 0
+- Head SHA: 5edeebc
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- 5edeebc Run legacy Chatwoot migration once per browser — JobFynder
+- Changed files:
+- modified: src/services/chatwoot-support.ts
 
 ---
 
