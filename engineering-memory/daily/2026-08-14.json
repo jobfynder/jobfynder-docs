@@ -9,13 +9,14 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
     "Branch: dev",
-    "Head SHA: 2c16bfc",
+    "Head SHA: a0076df",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "2c16bfc Improve archived conversation row layout \u2014 Pavan",
+    "a0076df Polish Messenger sidebar conversation rows \u2014 Pavan",
     "Changed files:",
-    "modified: src/components/messenger/ConversationRow.jsx"
+    "modified: src/components/messenger/ConversationRow.jsx",
+    "modified: src/components/messenger/NavLeaf.jsx"
   ],
   "decisions": [
     {
