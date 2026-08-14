@@ -23,9 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/chatwoot-safe-inbox-switch
-- Head SHA: c2e5fbf
-- Commit count: 0
+- Head SHA: d62ea2c
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- d62ea2c Reload safely when Chatwoot inbox changes — JobFynder
+- Changed files:
+- modified: src/components/ChatwootSupportWidget.tsx
 
 ---
 
