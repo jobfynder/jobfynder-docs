@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/chatwoot-auth-identity
-- Head SHA: 31e4533
+- Head SHA: 13f5f0c
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 31e4533 feat: apply secure support identity and routing labels — JobFynder
+- 13f5f0c fix: support deployed backend identity response — JobFynder
 - Changed files:
 - modified: src/services/chatwoot-support.ts
 
