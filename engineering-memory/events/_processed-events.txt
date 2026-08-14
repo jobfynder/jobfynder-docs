@@ -209,3 +209,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/versioned-chatwoot-session-mi
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|8533b017415d92b12e9e50540e5b39c3a841fb40
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/finalize-chatwoot-identity-migration|8533b017415d92b12e9e50540e5b39c3a841fb40
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/finalize-chatwoot-identity-migration|ac7d49dc7c08d3187d03e726261dbcb3ab9f1c60
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|6088ddd71bffa627a7cf02418e0ddb7aaec8f7f7

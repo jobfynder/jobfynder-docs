@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/finalize-chatwoot-identity-migration.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: codex/finalize-chatwoot-identity-migration
-- Head SHA: ac7d49d
+- Branch: dev
+- Head SHA: 6088ddd
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- ac7d49d fix: finalize verified Chatwoot identity migration — JobFynder
+- 6088ddd Finalize verified Chatwoot identity migration (#12) — JobFynder
 - Changed files:
 - modified: src/services/chatwoot-support.ts
 
