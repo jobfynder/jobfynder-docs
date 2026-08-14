@@ -168,3 +168,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|0e60f13736e5d6157e0166172a2507f
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|1841344684b3ae501a449fa7b0409f8c5710318e
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|fbe4752dc01ee287fd6efa665f8b41a2193da1e8
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|7b8d4d5d7ff5645c011e965fe71a6a80f1958422
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/chatwoot-auth-identity|c28319fb2ceca9723a9d4067ec095e7ebcc8179d
