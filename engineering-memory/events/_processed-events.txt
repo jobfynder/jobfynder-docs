@@ -191,3 +191,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|10b753e3b8923e4a5db1a979048098e
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-do-not-reload-on-logout|10b753e3b8923e4a5db1a979048098e14b1fad0f
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-do-not-reload-on-logout|ef8ac45c05ae93db02f035aaf4fe792e5cd5ba23
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|8a018bc0833d4a0f34a08398c150eb1e78e0113f
+jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-safe-logout-order|8a018bc0833d4a0f34a08398c150eb1e78e0113f
