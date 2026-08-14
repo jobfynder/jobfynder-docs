@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/chatwoot-safe-logout-order.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,13 +22,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: codex/chatwoot-safe-logout-order
-- Head SHA: f9d6218
+- Branch: dev
+- Head SHA: 36d4a76
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- f9d6218 Reset Chatwoot after Jobfynder logout — JobFynder
+- 36d4a76 Keep Chatwoot reset from interrupting logout — JobFynder
 - Changed files:
+- modified: src/services/chatwoot-support.ts
 - modified: src/store/useAuthStore.ts
 
 ---
