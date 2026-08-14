@@ -182,3 +182,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|74cf6823098966ffe2a24f1aa2c71c7
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-ready-before-identity|74cf6823098966ffe2a24f1aa2c71c7856c096a1
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-ready-before-identity|c35d971afbd74f6fa4801bc6b83ee42f525ae9ce
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|c2e5fbfca0a828d517e48c7e2cac9fb953bffe6d
+jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-safe-inbox-switch|c2e5fbfca0a828d517e48c7e2cac9fb953bffe6d

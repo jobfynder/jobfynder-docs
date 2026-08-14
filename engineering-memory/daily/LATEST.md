@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/chatwoot-safe-inbox-switch.
 
 ---
 
@@ -22,14 +22,10 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
+- Branch: codex/chatwoot-safe-inbox-switch
 - Head SHA: c2e5fbf
-- Commit count: 1
+- Commit count: 0
 - Triggered by: jobfynder-admin
-- Commits:
-- c2e5fbf Wait for Chatwoot frame before applying user identity — JobFynder
-- Changed files:
-- modified: src/services/chatwoot-support.ts
 
 ---
 
