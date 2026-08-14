@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/chatwoot-auth-identity.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,14 +22,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: codex/chatwoot-auth-identity
-- Head SHA: bcf48ad
+- Branch: dev
+- Head SHA: 74cf682
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- bcf48ad ci: verify Chatwoot integration — JobFynder
+- 74cf682 Fix authenticated Chatwoot support routing — JobFynder
 - Changed files:
 - added: .github/workflows/chatwoot-integration-check.yml
+- modified: src/components/ChatwootSupportWidget.tsx
+- modified: src/services/chatwoot-support.ts
 
 ---
 
