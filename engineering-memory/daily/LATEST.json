@@ -1,21 +1,17 @@
 {
   "date": "2026-08-14",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/finalize-chatwoot-identity-migration.",
   "repositories": [
     "jobfynder-admin/jobFynder-FE-vite"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
-    "Branch: dev",
+    "Branch: codex/finalize-chatwoot-identity-migration",
     "Head SHA: 8533b01",
-    "Commit count: 1",
-    "Triggered by: jobfynder-admin",
-    "Commits:",
-    "8533b01 Run legacy Chatwoot migration once per browser \u2014 JobFynder",
-    "Changed files:",
-    "modified: src/services/chatwoot-support.ts"
+    "Commit count: 0",
+    "Triggered by: jobfynder-admin"
   ],
   "decisions": [
     {
