@@ -23,9 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch code
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: codex/chatwoot-do-not-reload-on-logout
-- Head SHA: 10b753e
-- Commit count: 0
+- Head SHA: ef8ac45
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- ef8ac45 Do not reload Jobfynder during logout — JobFynder
+- Changed files:
+- modified: src/components/ChatwootSupportWidget.tsx
 
 ---
 

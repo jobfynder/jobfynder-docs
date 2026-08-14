@@ -189,3 +189,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-reset-before-inbox-s
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-reset-before-inbox-switch|6f9ade5e024b6a45de0b31bd8eb7d3a8d3f8d1c9
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|10b753e3b8923e4a5db1a979048098e14b1fad0f
 jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-do-not-reload-on-logout|10b753e3b8923e4a5db1a979048098e14b1fad0f
+jobfynder-admin/jobFynder-FE-vite|refs/heads/codex/chatwoot-do-not-reload-on-logout|ef8ac45c05ae93db02f035aaf4fe792e5cd5ba23
