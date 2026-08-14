@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch codex/remove-chatwoot-reset-from-logout.
 
 ---
 
@@ -22,15 +22,10 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
+- Branch: codex/remove-chatwoot-reset-from-logout
 - Head SHA: 36d4a76
-- Commit count: 1
+- Commit count: 0
 - Triggered by: jobfynder-admin
-- Commits:
-- 36d4a76 Keep Chatwoot reset from interrupting logout — JobFynder
-- Changed files:
-- modified: src/services/chatwoot-support.ts
-- modified: src/store/useAuthStore.ts
 
 ---
 
