@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feature/network-module-dev.
 
 ---
 
@@ -22,14 +22,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
-- Head SHA: fa86eb4
+- Branch: feature/network-module-dev
+- Head SHA: f98c7da
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- fa86eb4 fix(messenger): keep workspace mounted when toggling sidebar — Pavan
+- f98c7da feat(network): wire My Network tab to real relationship API — Pavan
 - Changed files:
-- modified: src/components/messenger/shell/MessengerDesktopLayout.jsx
+- added: src/features/network/networkApi.ts
+- modified: src/components/components/public/network/tabs/ConnectionsTab.tsx
+- modified: src/components/components/public/network/tabs/connections/ConnectionCard.tsx
 
 ---
 
