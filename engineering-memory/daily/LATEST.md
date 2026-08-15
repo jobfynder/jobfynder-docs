@@ -8,31 +8,36 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feature/network-module.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
-- Head SHA: d020fd5
-- Commit count: 2
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feature/network-module
+- Head SHA: bf84c1f
+- Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- f98c7da feat(network): wire My Network tab to real relationship API — Pavan
-- d020fd5 Merge feature/network-module-dev: wire My Network tab to real relationship API — Pavan
+- bf84c1f feat(network): full spec build-out — strength scoring, mute fix, endpoints — Pavan
 - Changed files:
-- added: src/features/network/networkApi.ts
-- modified: src/components/components/public/network/tabs/ConnectionsTab.tsx
-- modified: src/components/components/public/network/tabs/connections/ConnectionCard.tsx
+- added: .claude/skills/network-module/SKILL.md
+- added: prisma/migrations/20260815190000_network_strength_and_origin/migration.sql
+- added: src/cron/network-strength-scoring.service.ts
+- modified: prisma/schema.prisma
+- modified: src/cron/cron.module.ts
+- modified: src/network/dto/network.dto.ts
+- modified: src/network/network-event.types.ts
+- modified: src/network/network-relationship.service.ts
+- modified: src/network/network.controller.ts
 
 ---
 

@@ -1,24 +1,29 @@
 {
   "date": "2026-08-15",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feature/network-module.",
   "repositories": [
-    "jobfynder-admin/jobFynder-FE-vite"
+    "jobfynder-admin/jobFynder-BE-nestJS"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-FE-vite",
-    "Branch: dev",
-    "Head SHA: d020fd5",
-    "Commit count: 2",
+    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
+    "Branch: feature/network-module",
+    "Head SHA: bf84c1f",
+    "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "f98c7da feat(network): wire My Network tab to real relationship API \u2014 Pavan",
-    "d020fd5 Merge feature/network-module-dev: wire My Network tab to real relationship API \u2014 Pavan",
+    "bf84c1f feat(network): full spec build-out \u2014 strength scoring, mute fix, endpoints \u2014 Pavan",
     "Changed files:",
-    "added: src/features/network/networkApi.ts",
-    "modified: src/components/components/public/network/tabs/ConnectionsTab.tsx",
-    "modified: src/components/components/public/network/tabs/connections/ConnectionCard.tsx"
+    "added: .claude/skills/network-module/SKILL.md",
+    "added: prisma/migrations/20260815190000_network_strength_and_origin/migration.sql",
+    "added: src/cron/network-strength-scoring.service.ts",
+    "modified: prisma/schema.prisma",
+    "modified: src/cron/cron.module.ts",
+    "modified: src/network/dto/network.dto.ts",
+    "modified: src/network/network-event.types.ts",
+    "modified: src/network/network-relationship.service.ts",
+    "modified: src/network/network.controller.ts"
   ],
   "decisions": [
     {
