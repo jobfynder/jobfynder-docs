@@ -23,12 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: acc5f65
+- Head SHA: 4976e75
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- acc5f65 fix(messenger): keep typing indicator visible — Pavan
+- 4976e75 chore(messenger): remove realtime debug instrumentation — Pavan
 - Changed files:
+- modified: src/features/messenger/MessengerRealtimeClient.ts
+- modified: src/features/messenger/MessengerRealtimeProvider.tsx
 - modified: src/hooks/useThread.js
 
 ---
