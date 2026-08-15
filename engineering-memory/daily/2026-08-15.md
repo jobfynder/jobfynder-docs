@@ -23,19 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 3d08a38
+- Head SHA: fa86eb4
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3d08a38 fix(messenger): derive capabilities from authenticated role — Pavan
+- fa86eb4 fix(messenger): keep workspace mounted when toggling sidebar — Pavan
 - Changed files:
-- modified: src/components/messenger/shell/MessengerHeader.jsx
-- modified: src/components/messenger/shell/MessengerShell.jsx
-- modified: src/lib/contextCapabilities.js
-- modified: src/lib/messengerCapabilities.js
-- modified: src/lib/messengerFilters.js
-- modified: src/lib/messengerRoles.js
-- modified: src/lib/recruiterContent.js
+- modified: src/components/messenger/shell/MessengerDesktopLayout.jsx
 
 ---
 
