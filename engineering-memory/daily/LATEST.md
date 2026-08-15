@@ -23,14 +23,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 6b94e8f
+- Head SHA: 5271075
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 6b94e8f debug(messenger): trace typing realtime lifecycle — Pavan
+- 5271075 debug(messenger): trace openConversation identity — Pavan
 - Changed files:
-- modified: src/features/messenger/MessengerRealtimeClient.ts
-- modified: src/features/messenger/MessengerRealtimeProvider.tsx
 - modified: src/hooks/useThread.js
 
 ---
