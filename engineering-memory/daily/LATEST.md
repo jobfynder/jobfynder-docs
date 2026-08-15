@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feature/network-module.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,16 +22,20 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: feature/network-module
-- Head SHA: 2690782
+- Branch: dev
+- Head SHA: 3d08a38
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 2690782 feat(network): wire My Network tab to real relationship API — Pavan
+- 3d08a38 fix(messenger): derive capabilities from authenticated role — Pavan
 - Changed files:
-- added: src/features/network/networkApi.ts
-- modified: src/components/components/public/network/tabs/ConnectionsTab.tsx
-- modified: src/components/components/public/network/tabs/connections/ConnectionCard.tsx
+- modified: src/components/messenger/shell/MessengerHeader.jsx
+- modified: src/components/messenger/shell/MessengerShell.jsx
+- modified: src/lib/contextCapabilities.js
+- modified: src/lib/messengerCapabilities.js
+- modified: src/lib/messengerFilters.js
+- modified: src/lib/messengerRoles.js
+- modified: src/lib/recruiterContent.js
 
 ---
 

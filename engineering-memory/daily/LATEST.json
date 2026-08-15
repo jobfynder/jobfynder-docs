@@ -1,23 +1,27 @@
 {
   "date": "2026-08-15",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feature/network-module.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.",
   "repositories": [
     "jobfynder-admin/jobFynder-FE-vite"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
-    "Branch: feature/network-module",
-    "Head SHA: 2690782",
+    "Branch: dev",
+    "Head SHA: 3d08a38",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "2690782 feat(network): wire My Network tab to real relationship API \u2014 Pavan",
+    "3d08a38 fix(messenger): derive capabilities from authenticated role \u2014 Pavan",
     "Changed files:",
-    "added: src/features/network/networkApi.ts",
-    "modified: src/components/components/public/network/tabs/ConnectionsTab.tsx",
-    "modified: src/components/components/public/network/tabs/connections/ConnectionCard.tsx"
+    "modified: src/components/messenger/shell/MessengerHeader.jsx",
+    "modified: src/components/messenger/shell/MessengerShell.jsx",
+    "modified: src/lib/contextCapabilities.js",
+    "modified: src/lib/messengerCapabilities.js",
+    "modified: src/lib/messengerFilters.js",
+    "modified: src/lib/messengerRoles.js",
+    "modified: src/lib/recruiterContent.js"
   ],
   "decisions": [
     {
