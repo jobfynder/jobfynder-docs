@@ -23,14 +23,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: ba20b75
+- Head SHA: 9461470
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- ba20b75 feat(messenger): enable message edit and delete actions — Pavan
+- 9461470 fix(messenger): resolve replied message references — Pavan
 - Changed files:
-- modified: src/components/messenger/messages/MessageActions.jsx
-- modified: src/features/messenger/messengerApi.ts
 - modified: src/hooks/useThread.js
 
 ---
