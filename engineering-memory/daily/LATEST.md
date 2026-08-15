@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 9461470
+- Head SHA: 5fb16b7
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 9461470 fix(messenger): resolve replied message references — Pavan
+- 5fb16b7 fix(messenger): link replies to source messages — Pavan
 - Changed files:
-- modified: src/hooks/useThread.js
+- modified: src/components/messenger/messages/MessageItem.jsx
 
 ---
 
