@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feature/network-module-dev.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,12 +22,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: feature/network-module-dev
-- Head SHA: f98c7da
-- Commit count: 1
+- Branch: dev
+- Head SHA: d020fd5
+- Commit count: 2
 - Triggered by: jobfynder-admin
 - Commits:
 - f98c7da feat(network): wire My Network tab to real relationship API — Pavan
+- d020fd5 Merge feature/network-module-dev: wire My Network tab to real relationship API — Pavan
 - Changed files:
 - added: src/features/network/networkApi.ts
 - modified: src/components/components/public/network/tabs/ConnectionsTab.tsx
