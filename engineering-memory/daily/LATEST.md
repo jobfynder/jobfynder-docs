@@ -8,28 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
-- Head SHA: 61663ab
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: main
+- Head SHA: e5dc77f
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 61663ab fix(messenger): archive conversations without sidebar reload — Pavan
+- e5dc77f feat(messenger): add message edit and delete — Pavan
 - Changed files:
-- modified: src/components/messenger/ConversationSidebar.jsx
+- modified: src/messenger/dto/messenger.dto.ts
+- modified: src/messenger/messenger-events.ts
+- modified: src/messenger/messenger.controller.ts
+- modified: src/messenger/messenger.service.ts
 
 ---
 
