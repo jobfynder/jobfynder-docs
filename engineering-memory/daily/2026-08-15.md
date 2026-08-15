@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 3d95ee5
+- Head SHA: acc5f65
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3d95ee5 debug(messenger): trace typing identity handling — Pavan
+- acc5f65 fix(messenger): keep typing indicator visible — Pavan
 - Changed files:
 - modified: src/hooks/useThread.js
 
