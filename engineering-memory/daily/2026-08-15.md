@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: a3e5be0
+- Head SHA: dccbceb
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- a3e5be0 fix(messenger): hide deleted messages from timeline — Pavan
+- dccbceb fix(messenger): refresh reply references after message changes — Pavan
 - Changed files:
-- modified: src/components/messenger/messages/MessageList.jsx
+- modified: src/hooks/useThread.js
 
 ---
 

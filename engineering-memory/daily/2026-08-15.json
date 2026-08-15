@@ -9,13 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-FE-vite",
     "Branch: dev",
-    "Head SHA: a3e5be0",
+    "Head SHA: dccbceb",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "a3e5be0 fix(messenger): hide deleted messages from timeline \u2014 Pavan",
+    "dccbceb fix(messenger): refresh reply references after message changes \u2014 Pavan",
     "Changed files:",
-    "modified: src/components/messenger/messages/MessageList.jsx"
+    "modified: src/hooks/useThread.js"
   ],
   "decisions": [
     {
