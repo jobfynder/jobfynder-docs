@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: a6e15bb
+- Head SHA: 61663ab
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- a6e15bb fix(messenger): normalize participant identity separator — Pavan
+- 61663ab fix(messenger): archive conversations without sidebar reload — Pavan
 - Changed files:
-- modified: src/components/messenger/NewConversationDialog.jsx
+- modified: src/components/messenger/ConversationSidebar.jsx
 
 ---
 
