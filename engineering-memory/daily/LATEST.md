@@ -23,13 +23,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 0b2875c
+- Head SHA: 6b94e8f
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 0b2875c debug(messenger): log realtime subscription lifecycle — Pavan
+- 6b94e8f debug(messenger): trace typing realtime lifecycle — Pavan
 - Changed files:
 - modified: src/features/messenger/MessengerRealtimeClient.ts
+- modified: src/features/messenger/MessengerRealtimeProvider.tsx
+- modified: src/hooks/useThread.js
 
 ---
 
