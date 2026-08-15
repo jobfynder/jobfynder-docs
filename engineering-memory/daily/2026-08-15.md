@@ -8,29 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 3a8e50d
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: dev
+- Head SHA: af1895c
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3a8e50d fix(messenger): reuse existing direct conversations — Pavan
+- af1895c fix(messenger): show participant email in search — Pavan
 - Changed files:
-- modified: src/messenger/messenger.service.spec.ts
-- modified: src/messenger/messenger.service.ts
+- modified: src/components/messenger/NewConversationDialog.jsx
 
 ---
 
