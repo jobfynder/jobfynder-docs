@@ -23,19 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: e05a03b
+- Head SHA: 03a6139
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- e05a03b Add Messenger delete chat UI — Pavan
+- 03a6139 Limit initial Direct Messages display — Pavan
 - Changed files:
-- modified: src/components/messenger/ChatView.jsx
 - modified: src/components/messenger/ConversationSidebar.jsx
-- modified: src/components/messenger/shell/ConversationWorkspaceRegion.jsx
-- modified: src/components/messenger/shell/MessengerDesktopLayout.jsx
-- modified: src/components/messenger/shell/MessengerShell.jsx
-- modified: src/features/messenger/messengerApi.ts
-- modified: src/lib/messengerApi.ts
+- modified: src/components/messenger/NavLeaf.jsx
 
 ---
 
