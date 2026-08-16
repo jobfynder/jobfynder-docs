@@ -23,19 +23,19 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: ad258c9
+- Head SHA: 06b9002
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- ad258c9 Add relationship provenance columns and Company table (NRM Part 2/6) — Pavan
+- 06b9002 Add identity_merge_audit table, snapshot writer, and resolvePerson() — Pavan
 - Changed files:
-- added: prisma/migrations/20260816190000_network_relationship_provenance_and_company/migration.sql
+- added: prisma/migrations/20260816200000_identity_merge_audit/migration.sql
+- added: src/identity/identity-merge-audit.service.ts
+- added: src/identity/identity-merge-audit.types.ts
+- added: src/identity/identity.module.ts
+- added: src/identity/resolve-person.service.ts
 - modified: prisma/schema.prisma
-- modified: src/bench/assignment.service.ts
-- modified: src/bench/submission.service.ts
-- modified: src/messenger/messenger.service.ts
-- modified: src/network/network-relationship.service.ts
-- modified: src/network/network.module.ts
+- modified: src/app.module.ts
 
 ---
 
