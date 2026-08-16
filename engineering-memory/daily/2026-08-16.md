@@ -23,13 +23,19 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 83c5020
+- Head SHA: 44c210e
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 83c5020 fix: use DROP INDEX not DROP CONSTRAINT for users_email_key/users_slug_key — Pavan
+- 44c210e Add employer/employment/seat schema and resolveAccountMode() — Pavan
 - Changed files:
-- modified: prisma/migrations/20260816170232_extend_user_unclaimed_contacts/migration.sql
+- added: prisma/migrations/20260816180000_employment_and_seat_schema/migration.sql
+- added: src/employment/account-mode.service.ts
+- added: src/employment/account-mode.types.ts
+- added: src/employment/employment.module.ts
+- modified: docs/10-reconciliation-decisions.md
+- modified: prisma/schema.prisma
+- modified: src/app.module.ts
 
 ---
 
