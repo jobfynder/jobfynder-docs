@@ -8,29 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: b1b826c
+- Head SHA: e3bbaba
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- b1b826c docs: add Hermes architecture freeze + developer guide — Pavan
+- e3bbaba docs: add CLAUDE.md pointing every session to jobfynder-invariants.md — Pavan
 - Changed files:
-- added: docs/hermes-architecture-frozen-v1.md
-- added: docs/hermes-complete-developer-guide.md
+- added: CLAUDE.md
 
 ---
 
