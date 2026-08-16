@@ -23,19 +23,19 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 44c210e
+- Head SHA: ad258c9
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 44c210e Add employer/employment/seat schema and resolveAccountMode() — Pavan
+- ad258c9 Add relationship provenance columns and Company table (NRM Part 2/6) — Pavan
 - Changed files:
-- added: prisma/migrations/20260816180000_employment_and_seat_schema/migration.sql
-- added: src/employment/account-mode.service.ts
-- added: src/employment/account-mode.types.ts
-- added: src/employment/employment.module.ts
-- modified: docs/10-reconciliation-decisions.md
+- added: prisma/migrations/20260816190000_network_relationship_provenance_and_company/migration.sql
 - modified: prisma/schema.prisma
-- modified: src/app.module.ts
+- modified: src/bench/assignment.service.ts
+- modified: src/bench/submission.service.ts
+- modified: src/messenger/messenger.service.ts
+- modified: src/network/network-relationship.service.ts
+- modified: src/network/network.module.ts
 
 ---
 
