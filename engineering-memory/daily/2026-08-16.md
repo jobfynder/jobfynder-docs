@@ -23,18 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 1173f5c
+- Head SHA: 0326a90
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 1173f5c Add admin unmerge procedure for identity merge audit (spec Part 6) — Pavan
+- 0326a90 Record Decision 4: snapshot writer must cover UserDetails before merge ships — Pavan
 - Changed files:
-- added: prisma/migrations/20260816210000_add_merge_reversed_event_type/migration.sql
-- added: src/identity/identity-unmerge.controller.ts
-- added: src/identity/identity-unmerge.service.spec.ts
-- added: src/identity/identity-unmerge.service.ts
-- modified: prisma/schema.prisma
-- modified: src/identity/identity.module.ts
+- modified: docs/10-reconciliation-decisions.md
 
 ---
 
