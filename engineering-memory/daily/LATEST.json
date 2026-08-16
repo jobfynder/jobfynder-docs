@@ -9,18 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: features",
-    "Head SHA: bf780c9",
+    "Head SHA: dbf85bb",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "bf780c9 extend User model for unclaimed contacts (NRM Part 3) \u2014 Pavan",
+    "dbf85bb docs: add reconciliation decisions file \u2014 Pavan",
     "Changed files:",
-    "added: prisma/migrations/20260816170232_extend_user_unclaimed_contacts/migration.sql",
-    "modified: prisma/schema.prisma",
-    "modified: src/bench/assignment.service.ts",
-    "modified: src/org-team/org-invitation.service.ts",
-    "modified: src/profile/header/header.service.ts",
-    "modified: src/users/users.service.ts"
+    "added: docs/10-reconciliation-decisions.md"
   ],
   "decisions": [
     {
