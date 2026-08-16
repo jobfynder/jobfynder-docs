@@ -8,24 +8,39 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 2776554
-- Commit count: 0
+- Head SHA: 6088408
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- 6088408 docs: add full implementation spec set (NRM, identity, employment, etc.) — Pavan
+- Changed files:
+- added: docs/00-master-build-plan.md
+- added: docs/01-nrm-comprehensive-spec.md
+- added: docs/02-identity-resolution-spec.md
+- added: docs/03-employment-visibility-spec.md
+- added: docs/04-activity-module-spec.md
+- added: docs/05-broadcast-spec.md
+- added: docs/06-subscription-entitlements-spec.md
+- added: docs/07-nl-search-spec.md
+- added: docs/08-frontend-ui-spec.md
+- added: docs/09-design-system-extraction.md
+- added: docs/README.md
+- added: skills/jobfynder-invariants.md
 
 ---
 
