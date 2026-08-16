@@ -23,19 +23,18 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 06b9002
+- Head SHA: 1173f5c
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 06b9002 Add identity_merge_audit table, snapshot writer, and resolvePerson() — Pavan
+- 1173f5c Add admin unmerge procedure for identity merge audit (spec Part 6) — Pavan
 - Changed files:
-- added: prisma/migrations/20260816200000_identity_merge_audit/migration.sql
-- added: src/identity/identity-merge-audit.service.ts
-- added: src/identity/identity-merge-audit.types.ts
-- added: src/identity/identity.module.ts
-- added: src/identity/resolve-person.service.ts
+- added: prisma/migrations/20260816210000_add_merge_reversed_event_type/migration.sql
+- added: src/identity/identity-unmerge.controller.ts
+- added: src/identity/identity-unmerge.service.spec.ts
+- added: src/identity/identity-unmerge.service.ts
 - modified: prisma/schema.prisma
-- modified: src/app.module.ts
+- modified: src/identity/identity.module.ts
 
 ---
 
