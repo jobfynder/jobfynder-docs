@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 2975bc6
+- Head SHA: fcb2385
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 2975bc6 refactor(configuration): simplify configuration structure and remove unused properties — atultiwari
+- fcb2385 refactor(configuration): implement new configuration structure with database URL builder and enhanced type definitions — atultiwari
 - Changed files:
 - modified: src/config/configuration.ts
 
