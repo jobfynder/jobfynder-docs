@@ -23,26 +23,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 0d9f19c
+- Head SHA: ca46b20
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 0d9f19c Build identity resolution merge algorithm (spec Parts 3-4, signup claim) — Pavan
+- ca46b20 Resolve availability_status mapping, add Decision 6 for missing headline column — Pavan
 - Changed files:
-- added: prisma/migrations/20260816220000_add_merge_event_type/migration.sql
-- added: src/identity/identity-email.util.ts
-- added: src/identity/identity-field-reconciliation.spec.ts
-- added: src/identity/identity-field-reconciliation.ts
-- added: src/identity/identity-merge.service.spec.ts
-- added: src/identity/identity-merge.service.ts
 - modified: docs/10-reconciliation-decisions.md
-- modified: prisma/schema.prisma
-- modified: src/identity/identity-merge-audit.service.ts
-- modified: src/identity/identity-merge-audit.types.ts
-- modified: src/identity/identity-unmerge.service.spec.ts
-- modified: src/identity/identity-unmerge.service.ts
-- modified: src/identity/identity.module.ts
-- modified: src/network/network-relationship.service.ts
+- modified: src/identity/identity-field-reconciliation.spec.ts
+- modified: src/identity/identity-field-reconciliation.ts
 
 ---
 
