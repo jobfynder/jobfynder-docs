@@ -23,15 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: ca46b20
+- Head SHA: 959a064
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- ca46b20 Resolve availability_status mapping, add Decision 6 for missing headline column — Pavan
+- 959a064 Wire identity merge engine into email verification (spec Part 1.1, 3.4) — Pavan
 - Changed files:
-- modified: docs/10-reconciliation-decisions.md
-- modified: src/identity/identity-field-reconciliation.spec.ts
-- modified: src/identity/identity-field-reconciliation.ts
+- added: src/auth/auth.service.spec.ts
+- modified: src/auth/auth.service.ts
 
 ---
 

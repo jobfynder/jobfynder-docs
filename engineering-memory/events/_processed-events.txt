@@ -267,3 +267,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|1173f5ca2aa625468314205d
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|0326a90b3a1d09b2bf3f9a8c2b58d6a3050b0fd4
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|0d9f19c06ca3a95085be2fcc22d958ddb7dfd97c
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|ca46b209cc0096b833a942700c826f8d9574269c
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|959a06487a048977190ef43678faf27225aa87a5
