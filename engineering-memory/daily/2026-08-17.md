@@ -23,14 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 959a064
+- Head SHA: 6a6a5b9
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 959a064 Wire identity merge engine into email verification (spec Part 1.1, 3.4) — Pavan
+- 6a6a5b9 Add one-off seed script for a test unclaimed contact — Pavan
 - Changed files:
-- added: src/auth/auth.service.spec.ts
-- modified: src/auth/auth.service.ts
+- added: scripts/seedTestUnclaimedContact.mjs
 
 ---
 
