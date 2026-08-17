@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,17 +22,10 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: features
-- Head SHA: cb7623d
-- Commit count: 1
+- Branch: dev
+- Head SHA: 3ff4f90
+- Commit count: 0
 - Triggered by: jobfynder-admin
-- Commits:
-- cb7623d Add Network relationship list screen — Pavan
-- Changed files:
-- added: src/components/components/private/network/PersonDrawer.tsx
-- added: src/components/ui/relationship-row.tsx
-- added: src/pages/private/NetworkRelationships.tsx
-- modified: src/routes.ts
 
 ---
 
