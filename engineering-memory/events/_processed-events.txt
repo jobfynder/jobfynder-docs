@@ -280,3 +280,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|d67419d28b26da0d1326dd1a
 jobfynder-admin/jobFynder-FE-vite|refs/heads/features|6bf9203a7b3a46a680f54261926a135e1fd09cae
 jobfynder-admin/jobFynder-FE-vite|refs/heads/features|cb7623d60def1cb985a4d9c66431cb2a8e48500d
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|3ff4f90bea7412b105c845910f846cf777fe06ea
+jobfynder-admin/jobFynder-FE-vite|refs/heads/feature/chatwoot-verified-identity-migration|82e3277d042ef023c0665a32815112956d35b58d
