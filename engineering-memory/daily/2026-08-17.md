@@ -8,48 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: features
-- Head SHA: d67419d
+- Head SHA: 6bf9203
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- d67419d Build the three Activity auto-generation rules (spec Part 4) — Pavan
+- 6bf9203 Add detail-view and dark-mode-check decisions to UI conventions — Pavan
 - Changed files:
-- added: prisma/migrations/20260817130000_rule_config_and_submission_dates/migration.sql
-- added: src/cron/no-response-chase.service.ts
-- added: src/tasks/auto-rules/auto-rules.module.ts
-- added: src/tasks/auto-rules/auto-rules.service.spec.ts
-- added: src/tasks/auto-rules/auto-rules.service.ts
-- added: src/tasks/rule-config/dto/rule-config.dto.ts
-- added: src/tasks/rule-config/rule-config.bounds.ts
-- added: src/tasks/rule-config/rule-config.constants.ts
-- added: src/tasks/rule-config/rule-config.controller.ts
-- added: src/tasks/rule-config/rule-config.module.ts
-- added: src/tasks/rule-config/rule-config.service.ts
-- modified: docs/10-reconciliation-decisions.md
-- modified: prisma/schema.prisma
-- modified: skills/jobfynder-invariants.md
-- modified: src/app.module.ts
-- modified: src/bench/bench.module.ts
-- modified: src/bench/dto/submission.dto.ts
-- modified: src/bench/submission.service.ts
-- modified: src/cron/cron.module.ts
-- modified: src/tasks/task.service.spec.ts
-- modified: src/tasks/task.service.ts
+- added: skills/ui-conventions.md
 
 ---
 
