@@ -23,15 +23,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: ba91cb3
+- Head SHA: e2860c7
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- ba91cb3 Wire logProfileView() into ProfileService; test the mutual-exchange rule — Pavan
+- e2860c7 Close unclaimed-person profile leak and harden directory search access control — Pavan
 - Changed files:
-- modified: docs/10-reconciliation-decisions.md
-- modified: src/messenger/messenger.service.spec.ts
-- modified: src/profile/profile.module.ts
+- added: src/network/network-relationship.service.spec.ts
+- added: src/profile/profile.service.spec.ts
+- modified: src/network/network-relationship.service.ts
 - modified: src/profile/profile.service.ts
 
 ---
