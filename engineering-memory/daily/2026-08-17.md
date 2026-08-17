@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 6a6a5b9
+- Head SHA: 6868927
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 6a6a5b9 Add one-off seed script for a test unclaimed contact — Pavan
+- 6868927 Add local signup/email-verification test script — Pavan
 - Changed files:
-- added: scripts/seedTestUnclaimedContact.mjs
+- added: scripts/testSignupVerifyFlow.mjs
 
 ---
 
