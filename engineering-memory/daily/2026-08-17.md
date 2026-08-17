@@ -23,15 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: e2860c7
+- Head SHA: ff67100
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- e2860c7 Close unclaimed-person profile leak and harden directory search access control — Pavan
+- ff67100 Add narrow crm_admin exception to unclaimed-profile visibility — Pavan
 - Changed files:
-- added: src/network/network-relationship.service.spec.ts
-- added: src/profile/profile.service.spec.ts
-- modified: src/network/network-relationship.service.ts
+- modified: docs/10-reconciliation-decisions.md
+- modified: src/profile/profile.service.spec.ts
 - modified: src/profile/profile.service.ts
 
 ---
