@@ -23,13 +23,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 6868927
+- Head SHA: 67e1cfc
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 6868927 Add local signup/email-verification test script — Pavan
+- 67e1cfc Fix email/verify-email crash chain found via signup/verify test script — Pavan
 - Changed files:
-- added: scripts/testSignupVerifyFlow.mjs
+- modified: src/auth/auth.service.spec.ts
+- modified: src/auth/auth.service.ts
+- modified: src/identity/identity-merge.service.spec.ts
+- modified: src/identity/identity-merge.service.ts
 
 ---
 
