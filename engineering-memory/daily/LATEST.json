@@ -9,15 +9,21 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: features",
-    "Head SHA: ff67100",
+    "Head SHA: e75bd8e",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "ff67100 Add narrow crm_admin exception to unclaimed-profile visibility \u2014 Pavan",
+    "e75bd8e Add task schema and owner-scoped CRUD (Activity module, spec Part 6) \u2014 Pavan",
     "Changed files:",
+    "added: prisma/migrations/20260817120000_task_schema/migration.sql",
+    "added: src/tasks/dto/task.dto.ts",
+    "added: src/tasks/task.controller.ts",
+    "added: src/tasks/task.module.ts",
+    "added: src/tasks/task.service.spec.ts",
+    "added: src/tasks/task.service.ts",
     "modified: docs/10-reconciliation-decisions.md",
-    "modified: src/profile/profile.service.spec.ts",
-    "modified: src/profile/profile.service.ts"
+    "modified: prisma/schema.prisma",
+    "modified: src/app.module.ts"
   ],
   "decisions": [
     {
