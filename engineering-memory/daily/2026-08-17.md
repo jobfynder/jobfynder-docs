@@ -23,21 +23,22 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: e75bd8e
+- Head SHA: ea4be3b
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- e75bd8e Add task schema and owner-scoped CRUD (Activity module, spec Part 6) — Pavan
+- ea4be3b Add Activity embed API (spec Part 6.3) — Pavan
 - Changed files:
-- added: prisma/migrations/20260817120000_task_schema/migration.sql
-- added: src/tasks/dto/task.dto.ts
-- added: src/tasks/task.controller.ts
-- added: src/tasks/task.module.ts
-- added: src/tasks/task.service.spec.ts
-- added: src/tasks/task.service.ts
+- added: src/activity/activity.controller.ts
+- added: src/activity/activity.module.ts
+- added: src/activity/activity.service.ts
+- added: src/activity/dto/activity.dto.ts
+- added: src/activity/sources/network-relationship-timeline.source.ts
+- added: src/activity/timeline-source.interface.ts
 - modified: docs/10-reconciliation-decisions.md
-- modified: prisma/schema.prisma
 - modified: src/app.module.ts
+- modified: src/network/network-relationship.service.ts
+- modified: src/tasks/task.service.ts
 
 ---
 
