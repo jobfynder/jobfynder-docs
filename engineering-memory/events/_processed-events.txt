@@ -283,3 +283,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|3ff4f90bea7412b105c845910f846cf
 jobfynder-admin/jobFynder-FE-vite|refs/heads/feature/chatwoot-verified-identity-migration|82e3277d042ef023c0665a32815112956d35b58d
 jobfynder-admin/jobFynder-FE-vite|refs/heads/features|eb27397c37646b5d7cefac01fe4f253157497890
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|0f6f63bf176360a1da2b0d520a75ae97521e7bb1
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feature/hermes-core-integration|2a9b51bfb74da3fab9d231d76ba4a4204cc9720b
