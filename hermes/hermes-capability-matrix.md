@@ -63,7 +63,10 @@ This file was last substantively updated 2026-07-14 and had drifted badly from t
 | HERMES-700 | Multi-Agent Runtime | ✅ | Closed (`feature/hermes-700-multi-agent`, tag `hermes-700-foundation-v1`). Dry-run only by design — agents analyze/recommend/draft, never execute high-risk actions automatically |
 | HERMES-750 | Prompt Runtime Foundation | ✅ | Closed foundation (tag `hermes-750-prompt-runtime-v1`). Dry-run-first, RBAC-protected (`agents:run`), safety-checked before every call. Originally built against Portkey — provider swapped to LiteLLM without changing this module's design; see HERMES-600 rows above |
 | HERMES-800 | Resume Builder Intelligence | ✅ | Closed foundation (tag `hermes-800-resume-builder-foundation-v1`): deterministic analysis, dry-run suggestions, taxonomy normalization, tailoring, quality checks, human review. Feedback analysis (`/resume-builder/feedback/analyze`) and ATS-specific rules added after this closure — not yet reflected in a doc revision |
-| HERMES-850 | Email Parsing | 🚧 | **Active module**, not yet closed. Branch `feature/hermes-850-email-parsing`. Was sitting uncommitted on `jobfynder-intel-01` with no backup until checkpointed to git 2026-08-20 (`checkpoint/2026-08-20-frozen-v1-uncommitted-state`). No official module doc exists yet — needs one before this closes, per the Module Documentation Pattern in `HERMES-documentation-map.md` |
+| HERMES-850 | Email Parsing — deterministic parse + routing | ✅ | Verified: mailbox-based routing (`hotlists@`/`requirements@`), deterministic hotlist and job-requirement parsing with confidence scoring, full email-to-draft integration. 10/10 unit checks + full integration check pass (`scripts/hermes-850-email-parsing-check.py`, `scripts/hermes-850-email-integration-check.py`) |
+| HERMES-850 | Email Parsing — Gmail connector | 🚧 | Normalizer built and tested (7/7 checks, `scripts/hermes-850-gmail-graph-provider-check.py`), registered as a contract provider (`GET /providers/gmail/status`, `POST /providers/gmail/push`). Not live: no Google Cloud OAuth app registered, no credentials, and the authenticated fetch-from-Gmail-API step is not implemented — only acknowledges Pub/Sub push notifications today. Branch `feature/hermes-850-gmail-graph-providers` |
+| HERMES-850 | Email Parsing — Microsoft Graph connector | 🚧 | Same status as Gmail above, for Office 365. Includes the Graph subscription validation-token handshake. Not live: no Azure AD app registered, no credentials, fetch-from-Graph-API step not implemented. Branch `feature/hermes-850-gmail-graph-providers` |
+| HERMES-850 | Email Parsing — generic inbound webhook | ✅ | `POST /providers/email/webhook` — works for any provider that can send Jobfynder's own HMAC-signed payload shape directly (e.g. a custom relay). `email_provider_status().configured` is `false` until a real sender is wired to it |
 
 ---
 
@@ -83,6 +86,12 @@ The following capabilities exist in the running service (verified live 2026-08-1
 **Recommendation:** assign these a module number (e.g. HERMES-825 or similar) and close them out properly, since `hermes-architecture-frozen-v1.md` already documents them in detail — the closure doc would mostly be a matter of extracting and formatting what's already written there.
 
 ---
+
+## 3a. Reconciliation note — 2026-08-20 (later same day)
+
+HERMES-850 rows above updated after building and verifying the Gmail and Microsoft Graph connectors. Parsing itself (the hard, judgment-heavy part — deciding what's a candidate record vs. a job requirement, extracting fields, scoring confidence) was already built, committed, and verified before this update; what was missing was getting real email *into* that parser. Two of three intake paths (Gmail, Graph) are now code-complete and tested but not live — they need OAuth credentials, which is a product/infra decision (which Google Cloud project, which Azure tenant) still pending, not an engineering gap.
+
+**Important limit, not yet resolved:** parsed output currently lands as a draft object inside Hermes's own storage (`/drafts/{draft_id}`), not directly in Jobfynder's production database. Whether/how Core consumes these drafts and turns them into real Candidate/Job records is part of the in-progress Core↔Hermes integration (`feature/hermes-core-integration` on the Core repo) — not confirmed built as of this note. Don't read "HERMES-850 parsing: ✅" as "emails become database records automatically" — that last mile is a separate, currently-open question.
 
 ## 4. Rule
 

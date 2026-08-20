@@ -164,10 +164,11 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 Current active Hermes module: **HERMES-850 — Email Parsing.**
 
-- Code branch: feature/hermes-850-email-parsing
-- Status: Open, in progress
+- Code branches: `feature/hermes-850-email-parsing` (deterministic parsing, verified), `feature/hermes-850-gmail-graph-providers` (Gmail + Microsoft Graph connectors, verified but not live)
+- Status: Open, in progress — parsing itself is solid; getting real email into it is not finished
 - Was sitting uncommitted on jobfynder-intel-01 with no git history or backup until checkpointed 2026-08-20 (branch `checkpoint/2026-08-20-frozen-v1-uncommitted-state`, commit `e28a86e`)
-- No official module doc exists yet in this repo — needs one before this closes, per the Module Documentation Pattern above
+- 2026-08-20 (later): added Gmail and Microsoft Graph provider connectors — see `hermes-capability-matrix.md` §3a for what's done vs. blocked
+- Remaining before this closes: (1) register OAuth apps for Gmail API and Microsoft Graph API and supply credentials — pending a decision on the Google Cloud project / Azure tenant to use; (2) implement the authenticated fetch call once credentials exist (the normalizer functions are ready for it); (3) confirm how Core consumes the drafts this produces — see the open question in `hermes-capability-matrix.md` §3a; (4) write this official module doc, per the Module Documentation Pattern above
 - See `hermes-capability-matrix.md` §3 for other capabilities (Context Cards, Broadcast, Runtime Cache, Submission/Messaging extraction) that are further along than HERMES-850 but also never got an official module number
 
 
