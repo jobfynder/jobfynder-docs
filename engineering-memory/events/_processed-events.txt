@@ -285,3 +285,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/features|eb27397c37646b5d7cefac01fe
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|0f6f63bf176360a1da2b0d520a75ae97521e7bb1
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feature/hermes-core-integration|2a9b51bfb74da3fab9d231d76ba4a4204cc9720b
 jobfynder/hermes|refs/heads/checkpoint/2026-08-20-frozen-v1-uncommitted-state|e28a86e0d8468e6e67a1d47d11e98426174586f2
+jobfynder/hermes|refs/heads/feature/hermes-850-gmail-graph-providers|0dce80399b0fc4a05ff6cf2b8c3512d82a48e184

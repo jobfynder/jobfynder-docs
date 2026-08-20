@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch checkpoint/2026-08-20-frozen-v1-uncommitted-state.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-gmail-graph-providers.
 
 ---
 
@@ -22,58 +22,23 @@ GitHub push event processed for jobfynder/hermes on branch checkpoint/2026-08-20
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: checkpoint/2026-08-20-frozen-v1-uncommitted-state
-- Head SHA: e28a86e
+- Branch: feature/hermes-850-gmail-graph-providers
+- Head SHA: 0dce803
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- e28a86e checkpoint: capture uncommitted frozen-v1 state (Context Cards, broadcast extraction, prompt runtime, cache, resume-builder additions) — Jobfynder Automation
+- 0dce803 feat(hermes-850): add Gmail and Microsoft Graph email provider connectors — Jobfynder Automation
 - Changed files:
-- added: app/channels/broadcast_extraction.py
-- added: app/context/__init__.py
-- added: app/context/candidate_card.py
-- added: app/context/conversation_context.py
-- added: app/context/job_card.py
-- added: app/context/models.py
-- added: app/context/relationship_card.py
-- added: app/contracts/__init__.py
-- added: app/contracts/envelope.py
-- added: app/prompt_runtime/extraction_fallback.py
-- added: app/prompt_runtime/langfuse_prompts.py
-- added: app/resume_builder/ats_rules.py
-- added: app/resume_builder/feedback.py
-- added: app/routers/broadcast.py
-- added: app/routers/context.py
-- added: app/runtime/cache.py
-- added: app/services/messaging_actions.py
-- added: app/submission_intelligence/extraction.py
-- added: app/understanding/llm_fallback.py
+- added: app/providers/gmail/__init__.py
+- added: app/providers/gmail/service.py
+- added: app/providers/microsoft_graph/__init__.py
+- added: app/providers/microsoft_graph/service.py
+- added: app/routers/gmail_provider.py
+- added: app/routers/microsoft_graph_provider.py
+- added: scripts/hermes-850-gmail-graph-provider-check.py
 - modified: .env.example
 - modified: app/main.py
-- modified: app/onboarding/models.py
-- modified: app/onboarding/service.py
-- modified: app/prompt_runtime/models.py
-- modified: app/prompt_runtime/registry.json
-- modified: app/prompt_runtime/registry.py
-- modified: app/prompt_runtime/safety.py
-- modified: app/prompt_runtime/service.py
-- modified: app/resume_builder/adapters.py
-- modified: app/resume_builder/models.py
-- modified: app/resume_builder/service.py
-- modified: app/resume_builder/tailoring.py
-- modified: app/routers/consultants.py
-- modified: app/routers/health.py
-- modified: app/routers/jobs.py
-- modified: app/routers/messages.py
-- modified: app/routers/resume_builder.py
-- modified: app/routers/submissions.py
-- modified: app/services/consultant_service.py
-- modified: app/services/intent_service.py
-- modified: app/submission_intelligence/models.py
-- modified: app/submission_intelligence/service.py
-- modified: app/understanding/service.py
-- modified: docs/hermes-200/tool-stack-decision.md
-- modified: docs/hermes-750/api-fixtures/prompt-runtime-health-response.json
+- modified: app/providers/registry.py
 
 ---
 
