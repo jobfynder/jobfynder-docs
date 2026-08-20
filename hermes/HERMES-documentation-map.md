@@ -56,6 +56,8 @@ Current official Hermes docs include:
 - hermes/hermes-rbac-access-control.md
 - hermes/hermes-smoke-test.md
 - hermes/HERMES-750-portkey-prompt-runtime-foundation.md
+- hermes/hermes-architecture-frozen-v1.md — added 2026-08-20. Reconciled architecture reference (built vs. deferred capability inventory, response contract, cost discipline, RBAC gaps). Was previously living only inside the Core/Frontend repos' `docs/` folders, never in this repo — moved here to comply with the Main Rule above.
+- hermes/hermes-complete-developer-guide.md — added 2026-08-20. Per-endpoint integration guide (99 endpoints), companion to the architecture doc above. Same prior-location issue.
 
 ---
 
@@ -158,13 +160,15 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Module
 
-Current active Hermes module: HERMES-775 — Portkey Production Runtime and Multi-Model Routing.
+**Correction, 2026-08-20:** this section named HERMES-775 (Portkey Production Runtime) as active since 2026-07-14, five weeks with no update. In that time Portkey was removed from the project entirely — LiteLLM + Langfuse is now the sole LLM path (see `hermes-capability-matrix.md` HERMES-600 rows and `hermes-architecture-frozen-v1.md` Addendum §14). HERMES-775 as originally scoped (Portkey-specific multi-model routing) is superseded, not completed — nobody should pick it up as written. Whether a HERMES-775 doc revision or a formal deprecation note is needed is a call for whoever owns that module; not made unilaterally here.
 
-- Code branch: feature/hermes-775-prompt-runtime-production
-- Base code tag: hermes-800-resume-builder-foundation-v1
-- Base code commit: d9196b1
-- Official doc: hermes/HERMES-775-portkey-production-runtime-and-multi-model-routing.md
-- Status: Open
+Current active Hermes module: **HERMES-850 — Email Parsing.**
+
+- Code branch: feature/hermes-850-email-parsing
+- Status: Open, in progress
+- Was sitting uncommitted on jobfynder-intel-01 with no git history or backup until checkpointed 2026-08-20 (branch `checkpoint/2026-08-20-frozen-v1-uncommitted-state`, commit `e28a86e`)
+- No official module doc exists yet in this repo — needs one before this closes, per the Module Documentation Pattern above
+- See `hermes-capability-matrix.md` §3 for other capabilities (Context Cards, Broadcast, Runtime Cache, Submission/Messaging extraction) that are further along than HERMES-850 but also never got an official module number
 
 
 ## HERMES-700 Closed Module
