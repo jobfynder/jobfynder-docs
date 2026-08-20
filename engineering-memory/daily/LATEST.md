@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-gmail-graph-providers.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-400-taxonomy-suggestion-queue.
 
 ---
 
@@ -22,23 +22,21 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-gm
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-850-gmail-graph-providers
-- Head SHA: 0dce803
+- Branch: feature/hermes-400-taxonomy-suggestion-queue
+- Head SHA: e09ec93
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 0dce803 feat(hermes-850): add Gmail and Microsoft Graph email provider connectors — Jobfynder Automation
+- e09ec93 feat(hermes-400): add persisted, deduplicated taxonomy suggestion queue with fuzzy hints — Jobfynder Automation
 - Changed files:
-- added: app/providers/gmail/__init__.py
-- added: app/providers/gmail/service.py
-- added: app/providers/microsoft_graph/__init__.py
-- added: app/providers/microsoft_graph/service.py
-- added: app/routers/gmail_provider.py
-- added: app/routers/microsoft_graph_provider.py
-- added: scripts/hermes-850-gmail-graph-provider-check.py
-- modified: .env.example
-- modified: app/main.py
-- modified: app/providers/registry.py
+- added: app/understanding/taxonomy/fuzzy.py
+- added: app/understanding/taxonomy/overlay.py
+- added: app/understanding/taxonomy/suggestion_models.py
+- added: app/understanding/taxonomy/suggestion_store.py
+- added: scripts/hermes-400-suggestion-queue-persistence-check.py
+- modified: app/routers/understanding.py
+- modified: app/understanding/taxonomy/loader.py
+- modified: app/understanding/taxonomy/suggestions.py
 
 ---
 
