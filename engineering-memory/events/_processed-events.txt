@@ -287,3 +287,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feature/hermes-core-integration|2
 jobfynder/hermes|refs/heads/checkpoint/2026-08-20-frozen-v1-uncommitted-state|e28a86e0d8468e6e67a1d47d11e98426174586f2
 jobfynder/hermes|refs/heads/feature/hermes-850-gmail-graph-providers|0dce80399b0fc4a05ff6cf2b8c3512d82a48e184
 jobfynder/hermes|refs/heads/feature/hermes-400-taxonomy-suggestion-queue|e09ec932d64fdd49b1971a7a12a0e1021be32bec
+jobfynder/hermes|refs/heads/feature/hermes-400-taxonomy-suggestion-queue|f607a3d677cb7c6a6a8d74e27bed645609c388ee
