@@ -55,7 +55,8 @@ Current official Hermes docs include:
 - hermes/hermes-platform-architecture.md
 - hermes/hermes-rbac-access-control.md
 - hermes/hermes-smoke-test.md
-- hermes/HERMES-750-portkey-prompt-runtime-foundation.md
+- hermes/HERMES-750-litellm-prompt-runtime-foundation.md — renamed and rewritten 2026-08-21, was HERMES-750-portkey-prompt-runtime-foundation.md
+- hermes/HERMES-775-litellm-production-runtime-and-multi-model-routing.md — renamed and rewritten 2026-08-21, was HERMES-775-portkey-production-runtime-and-multi-model-routing.md; retired, see the doc for why
 - hermes/hermes-architecture-frozen-v1.md — added 2026-08-20. Reconciled architecture reference (built vs. deferred capability inventory, response contract, cost discipline, RBAC gaps). Was previously living only inside the Core/Frontend repos' `docs/` folders, never in this repo — moved here to comply with the Main Rule above.
 - hermes/hermes-complete-developer-guide.md — added 2026-08-20. Per-endpoint integration guide (99 endpoints), companion to the architecture doc above. Same prior-location issue.
 
@@ -83,11 +84,11 @@ For every Hermes module:
   - Status: Closed
 
 
-- HERMES-750 — Portkey Prompt Runtime Foundation
-  - Final code branch: feature/hermes-750-portkey-prompt-runtime
+- HERMES-750 — LiteLLM Prompt Runtime Foundation (originally Portkey, migrated and doc rewritten 2026-08-21)
+  - Final code branch: feature/hermes-750-portkey-prompt-runtime (name is historical; runtime now runs on LiteLLM)
   - Final code commit: 1869e82
   - Final code tag: hermes-750-prompt-runtime-v1
-  - Official doc: hermes/HERMES-750-portkey-prompt-runtime-foundation.md
+  - Official doc: hermes/HERMES-750-litellm-prompt-runtime-foundation.md
 
 - HERMES-700 — Multi-Agent Foundation
   - Final code branch: `feature/hermes-700-multi-agent`
@@ -160,7 +161,9 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Module
 
-**Correction, 2026-08-20:** this section named HERMES-775 (Portkey Production Runtime) as active since 2026-07-14, five weeks with no update. In that time Portkey was removed from the project entirely — LiteLLM + Langfuse is now the sole LLM path (see `hermes-capability-matrix.md` HERMES-600 rows and `hermes-architecture-frozen-v1.md` Addendum §14). HERMES-775 as originally scoped (Portkey-specific multi-model routing) is superseded, not completed — nobody should pick it up as written. Whether a HERMES-775 doc revision or a formal deprecation note is needed is a call for whoever owns that module; not made unilaterally here.
+**Correction, 2026-08-20:** this section named HERMES-775 (Portkey Production Runtime) as active since 2026-07-14, five weeks with no update. In that time Portkey was removed from the project entirely — LiteLLM + Langfuse is now the sole LLM path (see `hermes-capability-matrix.md` HERMES-600 rows and `hermes-architecture-frozen-v1.md` Addendum §14). HERMES-775 as originally scoped (Portkey-specific multi-model routing) was superseded, not completed.
+
+**Follow-up, 2026-08-21:** HERMES-775 has been formally retired and its doc rewritten — see `hermes/HERMES-775-litellm-production-runtime-and-multi-model-routing.md`. Most of its original scope (per-key budgets, model allowlists, provider routing) turned out to already be built into LiteLLM's own admin proxy, verified directly against the live dashboard. What's still genuinely open is narrower than the original plan — see that doc §3 before anyone picks this stream back up.
 
 Current active Hermes module: **HERMES-850 — Email Parsing.**
 

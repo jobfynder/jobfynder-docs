@@ -19,7 +19,7 @@ HERMES-800 builds on:
 
 - HERMES-200 — Understanding Foundation
 - HERMES-400 — Taxonomy and Signal Intelligence
-- HERMES-750 — Portkey Prompt Runtime Foundation
+- HERMES-750 — LiteLLM Prompt Runtime Foundation (originally built against Portkey; see `hermes/HERMES-750-litellm-prompt-runtime-foundation.md` §6-7 for the migration and a stale-reference issue it created for the prompt IDs below)
 - Existing Jobfynder Resume Builder frontend
 
 ## Delivered Foundation
@@ -64,12 +64,14 @@ HERMES-800 builds on:
 - Automatic rewriting disabled
 - Automatic quality fixes disabled
 - External and paid AI calls disabled
-- Portkey live execution disabled
+- Live LiteLLM execution disabled by default (dry-run first)
 - Prompt-backed suggestions forced to dry-run mode
 
 ## Prompt Runtime Integration
 
-### Resume Summary Improvement
+**2026-08-21 correction:** the prompt IDs below (`resume_builder.summary_improve`, `resume_builder.bullet_rewrite`) were the original static registry entries at HERMES-800's closure. They no longer exist under these names — the prompt runtime now sources 38 prompts live from Langfuse under a different naming convention (`jf.*`). This is why `scripts/hermes-800-foundation-check.py` and `scripts/hermes-800-resume-builder-suggestion-check.py` currently fail (confirmed 2026-08-21): they assert on these retired IDs. Kept below as the historical record of what was originally wired; **do not use these IDs as current** — check `GET /prompts/registry` for the live list.
+
+### Resume Summary Improvement (historical prompt ID)
 
 - Prompt ID: `resume_builder.summary_improve`
 - Version: `v1`
@@ -77,7 +79,7 @@ HERMES-800 builds on:
 - Optional variables: `target_role`, `tone`, `constraints`
 - Safety policy: `hermes_resume_no_fabrication_v1`
 
-### Resume Bullet Rewrite
+### Resume Bullet Rewrite (historical prompt ID)
 
 - Prompt ID: `resume_builder.bullet_rewrite`
 - Version: `v1`
@@ -117,9 +119,9 @@ Both integrations force:
 
 - Hermes health: healthy
 - Deterministic analysis: enabled
-- Prompt runtime: available
+- Prompt runtime: available (LiteLLM-backed as of the Portkey→LiteLLM migration; see HERMES-750)
 - Prompt mode: dry-run
-- Portkey live execution: disabled
+- Live LiteLLM execution: disabled by default
 - External AI calls: disabled
 - Human review: required
 - Automatic publishing: disabled

@@ -139,7 +139,7 @@ External providers and systems.
 Examples:
 
 - GitHub
-- Portkey
+- LiteLLM (originally Portkey, migrated 2026-08-20)
 - PostgreSQL
 - Typesense
 - Crawl4AI
