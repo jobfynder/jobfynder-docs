@@ -8,51 +8,29 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/jobfynder-infra on branch main.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-100-close-rbac-gap.
 
 ---
 
 # Repositories
 
-- jobfynder/jobfynder-infra
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/jobfynder-infra
-- Branch: main
-- Head SHA: 814a8ed
-- Commit count: 5
+- Repository: jobfynder/hermes
+- Branch: fix/hermes-100-close-rbac-gap
+- Head SHA: 9dc69d5
+- Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 26fc1c4 feat(comm): add production Telegram bridge — Pavan Kumar Narra
-- ca8cd0e feat(comm): deliver Telegram onboarding responses — Pavan Kumar Narra
-- 0d7616a fix(comm): split long Telegram responses safely — Pavan Kumar Narra
-- 0c33580 fix(comm): resilient Hermes call, per-IP rate limiting, volume backups — Pavan Kumar Narra
-- 814a8ed merge: bring the deployed COMM Gateway branch into main — Pavan Kumar Narra
+- 9dc69d5 fix(hermes-100): close the RBAC gap on /understanding/* and /submissions/evaluate* — Jobfynder Automation
 - Changed files:
-- added: communication/Dockerfile.comm-gateway
-- added: communication/comm_gateway/__init__.py
-- added: communication/comm_gateway/config.py
-- added: communication/comm_gateway/hermes_client.py
-- added: communication/comm_gateway/main.py
-- added: communication/comm_gateway/ratelimit.py
-- added: communication/comm_gateway/telegram.py
-- added: communication/comm_gateway/telegram_outbound.py
-- added: communication/requirements.txt
-- added: communication/scripts/comm-1-backup-volumes.sh
-- added: communication/scripts/comm-hermes-client-resilience-check.py
-- added: communication/scripts/comm-telegram-message-chunking-check.py
-- added: communication/scripts/comm-telegram-onboarding-check.py
-- added: communication/scripts/comm-telegram-onboarding-route-check.py
-- modified: communication/.env.example
-- modified: communication/comm_gateway/hermes_client.py
-- modified: communication/comm_gateway/main.py
-- modified: communication/comm_gateway/telegram.py
-- modified: communication/comm_gateway/telegram_outbound.py
-- modified: communication/docker-compose.yml
+- modified: app/routers/submissions.py
+- modified: app/routers/understanding.py
 
 ---
 

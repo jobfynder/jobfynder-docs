@@ -294,3 +294,4 @@ jobfynder/hermes|refs/tags/hermes-850-foundation-v1|0000000000000000000000000000
 jobfynder/hermes|refs/heads/perf/hermes-750-langfuse-concurrent-prompt-fetch|3f3de0796c82a5173195af4580a7bf585e0fdfe6
 jobfynder/jobfynder-infra|refs/heads/feature/comm-telegram-message-chunking|0c3358040a4500345cff9c6c7a0c46f5bb99f282
 jobfynder/jobfynder-infra|refs/heads/main|814a8eda3fb1ada7ccc9eb5010a6e874a3cea285
+jobfynder/hermes|refs/heads/fix/hermes-100-close-rbac-gap|9dc69d5ebc1540f06283ae905f2721fff7bffc1c
