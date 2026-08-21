@@ -62,7 +62,7 @@ Jobfynder's backend is split into three cooperating systems, each with one job:
 **What's not yet true, so nobody is surprised by it:**
 
 - Hermes does not write directly into Jobfynder's production database — CORE must consume its structured output/drafts and persist them itself.
-- COMM has no queueing, no retry, and no idempotency of its own on the inbound webhook path (Section 7.4). RabbitMQ runs on COMM-1 today but is not wired into any code path.
+- **Fixed 2026-08-21:** COMM now queues, retries, and dedups on the inbound webhook path (Section 7.4) — RabbitMQ backs the intake/retry/dead-letter pipeline and Redis backs idempotency, both live-verified end to end.
 - Only Telegram is a live COMM channel. Email/WhatsApp/Slack/Teams/Google Chat exist only as Hermes-side normalized contracts, with nothing on COMM-1 to receive them yet.
 - One RBAC gap remains open on two Hermes route groups (Section 9.1), and the deployed COMM code branch has not been merged to `jobfynder-infra`'s `main` (Section 8.1).
 
@@ -503,32 +503,33 @@ Written into the HERMES-500 closure record; treat as hard rules for any CORE cod
 5. Response reaches CORE, but represents a business rejection, not a failure -> not an error path, handle it as data
 ```
 
-**Telegram → COMM → Hermes (the whole chain, including the 2026-08-21 fix):**
+**Telegram → COMM → Hermes (the whole chain, including both 2026-08-21 fixes):**
 ```text
-1. Telegram webhook secret mismatch              -> COMM returns 403, request never reaches Hermes
-2. COMM's normalization step (rare, malformed
+1. Telegram redelivers a webhook (its own timeout) -> FIXED 2026-08-21: a Redis SETNX+EX claim on
+                                                       (channel, source_message_id) rejects the
+                                                       duplicate before it's even normalized --
+                                                       {"status": "duplicate"}, no reprocessing.
+2. Telegram webhook secret mismatch              -> COMM returns 403, request never reaches the queue
+3. COMM's normalization step (rare, malformed
    Telegram payload)                             -> would surface as a 422/500 from COMM itself
-3. COMM -> Hermes call:
-   a. Timeout / connection error (Hermes slow
-      or unreachable)                             -> FIXED 2026-08-21: caught in comm_gateway/
-                                                       hermes_client.py, returns a structured
-                                                       {"status": "error", "reason": "..."} instead
-                                                       of raising. User gets the existing "could not
-                                                       process this message" reply. BEFORE this fix,
-                                                       this path crashed unhandled and the user got
-                                                       no reply at all -- if you ever see silence
-                                                       again on this path, treat it as a regression,
-                                                       not expected behavior.
-   b. Hermes returns non-200                      -> same "could not process" reply
-4. COMM's own reply-delivery step (Telegram
+4. Webhook handler publishes to comm.intake.telegram
+   and returns {"status": "queued"} immediately  -> FIXED 2026-08-21: Telegram is acked before the
+                                                       Hermes round-trip even starts, not after
+5. Worker (comm-worker, separate process) -> Hermes call:
+   a. Timeout / connection error / 5xx           -> retried with exponential backoff (5s/15s/60s/
+                                                       300s/900s) via comm.intake.retry, up to 5
+                                                       attempts, then dead-lettered to comm.intake.dead
+   b. 401/403/404/422 (definitive failure --
+      retrying the same payload won't help)      -> dead-lettered immediately, no retry attempted,
+                                                       user still gets the "could not process" reply
+   c. 200                                         -> reply delivered
+6. COMM's own reply-delivery step (Telegram
    sendMessage) fails                             -> NOT caught with the same rigor -- no retry/
                                                        backoff on this specific call (Section 9.2).
                                                        This is a known, smaller, still-open gap.
-5. No queueing anywhere in this chain             -> a slow Hermes call makes the whole webhook
-                                                       request slow; COMM does not buffer via the
-                                                       RabbitMQ instance running alongside it (it's
-                                                       provisioned, not wired in -- Section 9.2).
 ```
+
+Before 2026-08-21, none of steps 1-5 above existed in this form — the whole chain ran synchronously inline, with no queue, no retry, and no dedup. RabbitMQ and Redis had been running on COMM-1, unused, since the service's first deployment.
 
 Hermes's own internal fallback: if a prompt's primary router alias has no healthy deployment on LiteLLM, it attempts exactly one fallback to `HERMES_PROMPT_DEFAULT_MODEL`. No further retries, no silent escalation — by design, to keep cost and behavior predictable.
 

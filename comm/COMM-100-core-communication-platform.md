@@ -28,10 +28,13 @@ communication/
 ├── docker-compose.yml
 ├── requirements.txt
 ├── comm_gateway/
-│   ├── main.py            — FastAPI app, 3 endpoints (see COMM-500), rate-limit middleware wired in 2026-08-21
+│   ├── main.py            — FastAPI app, 3 endpoints (see COMM-500); rate-limit middleware and the queue/idempotency wiring both added 2026-08-21
 │   ├── config.py           — env var loading, no validation/defaults beyond blank strings
 │   ├── hermes_client.py     — HMAC-SHA256 signing + POST to Hermes /internal/comm/intake; timeout/error handling added 2026-08-21
 │   ├── ratelimit.py         — per-IP, per-path in-memory rate limiter, added 2026-08-21
+│   ├── queue.py             — RabbitMQ topology + publish helpers (intake/retry/dead-letter), added 2026-08-21
+│   ├── idempotency.py       — Redis SETNX-based dedup on (channel, source_message_id), added 2026-08-21
+│   ├── worker.py            — separate consumer process: calls Hermes, delivers the reply, owns retry/dead-letter, added 2026-08-21
 │   ├── telegram.py          — inbound normalization + raw sendMessage call
 │   └── telegram_outbound.py — safe message chunking (3800-char Telegram limit) + reply delivery
 └── scripts/
@@ -39,7 +42,8 @@ communication/
     ├── comm-telegram-onboarding-check.py
     ├── comm-telegram-onboarding-route-check.py
     ├── comm-hermes-client-resilience-check.py  — added 2026-08-21, verifies the timeout/error-handling fix
-    └── comm-1-backup-volumes.sh                 — added 2026-08-21, daily cron target for volume backups
+    ├── comm-1-backup-volumes.sh                 — added 2026-08-21, daily cron target for volume backups
+    └── comm-queue-retry-check.py                 — added 2026-08-21, verifies queue topology, idempotency, and retry/dead-letter classification
 ```
 
 ## 4. Configuration (`comm_gateway/config.py`)
@@ -59,17 +63,18 @@ Five environment variables, all read with `os.getenv`, no startup validation —
 ## 5. Deployment
 
 - `docker-compose.yml` builds `comm-gateway` from `Dockerfile.comm-gateway` in the same directory, `restart: unless-stopped`, port `8080` (not published to the host directly — routed through `jobfynder-npm`).
+- **`comm-worker` (added 2026-08-21):** a second service, same image/Dockerfile, `command: ["python", "-m", "comm_gateway.worker"]` instead of the FastAPI app. Consumes the intake queue — see `COMM-500-ingress-intake.md` §4.
 - Public entry point: **`https://comm.jobfynder.com`**, confirmed from the live Nginx Proxy Manager database (`proxy_host` table, id 2, `forward_host: comm-gateway`, `forward_port: 8080`, `ssl_forced: 1`, `enabled: 1`, created 2026-07-10 23:02). A stale duplicate entry (id 1, same domain, `forward_host: jobfynder-comm-gateway`) is soft-deleted (`is_deleted: 1`) and can be ignored.
 - Live health check (2026-08-21): `GET /health` → `{"status":"healthy","service":"jobfynder-comm-gateway","environment":"production"}`.
 
 ## 6. What is explicitly NOT built
 
 - No database of any kind — the gateway is stateless per-request.
-- No use of RabbitMQ or Redis for messaging/session state, despite both running alongside it (`grep -ril 'rabbitmq\|pika\|amqp' comm_gateway/` returns zero matches). They are provisioned capacity, not active infrastructure. See `COMM-300-900-1000-infrastructure-posture.md`. (The 2026-08-21 rate limiter is in-memory, not Redis-backed — see that file's COMM-900 section for why that's a stated limitation, not an oversight.)
+- **RabbitMQ and Redis: wired in 2026-08-21** (commit `2622899`) — RabbitMQ now backs the intake queue/retry/dead-letter pipeline (`comm_gateway/queue.py`, a new `comm-worker` process), and Redis now backs idempotency (`comm_gateway/idempotency.py`). See `COMM-500-ingress-intake.md` §4 and `COMM-300-900-1000-infrastructure-posture.md`. The rate limiter added earlier the same day is still in-memory, not Redis-backed — that remains a stated limitation for if the service is ever scaled to multiple replicas, unrelated to this fix.
 - No identity/session layer (COMM-200) — the Telegram sender ID is passed straight through in the normalized payload with no persistent mapping to a Jobfynder user.
 - No provider besides Telegram — no Email, WhatsApp, Slack, Teams, or Google Chat code exists on the COMM side (those are Hermes-side *contracts only*, per `HERMES-450-channel-intake.md`; there is nothing on COMM-1 to receive them yet).
 - Request-level auth on `/health` or `/providers/telegram/status` — both remain open reads (rate-limited as of 2026-08-21, but not authenticated). Acceptable for health; the status endpoint still reveals which secrets are configured (booleans only, not values) and is worth eventually gating.
 
 ## 7. Production Ready assessment
 
-**Closer, but still NO.** Foundation is real and live. Fixed 2026-08-21: the Hermes call no longer crashes on timeout (see COMM-500), the app is rate-limited, automated daily backups now run (see COMM-1000), and the deployed branch is now merged into `main` — repo/runtime parity restored. Still open: no restore test has been run against the new backups, and the public `/providers/telegram/status` endpoint is still unauthenticated (though now rate-limited).
+**Meaningfully closer, still NO.** Foundation is real and live. Fixed across three 2026-08-21 passes: the Hermes call no longer crashes on timeout, the app is rate-limited, a host firewall is active, a direct TLS-bypass and a weak default RabbitMQ credential are fixed, automated daily backups now run and have been restore-tested, the deployed branch is merged into `main`, and — the last of the originally-documented gaps — queueing/retry/dead-letter/idempotency are wired in via the RabbitMQ and Redis instances that had been running unused since day one. Still open: the public `/providers/telegram/status` endpoint remains unauthenticated (though now rate-limited), two admin ports (81, 9443) are still open to the whole internet, and the new worker process has no monitoring of its own (queue depth, consumer lag, dead-letter accumulation).
