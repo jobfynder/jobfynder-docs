@@ -8,29 +8,34 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-100-close-rbac-gap.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: fix/hermes-100-close-rbac-gap
-- Head SHA: 9dc69d5
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: main
+- Head SHA: 50eeb30
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- 9dc69d5 fix(hermes-100): close the RBAC gap on /understanding/* and /submissions/evaluate* — Jobfynder Automation
+- 50eeb30 fix(ai): route all AI calls through LiteLLM, remove Portkey and direct OpenAI — root
 - Changed files:
-- modified: app/routers/submissions.py
-- modified: app/routers/understanding.py
+- modified: src/ai/ai.service.ts
+- modified: src/common/utils/resume.util.ts
+- modified: src/config/configuration.ts
+- modified: src/config/env.validation.ts
+- modified: src/content-generation/content-generation.service.ts
+- modified: src/jobs/jobs.service.ts
+- modified: src/resume/resume.controller.ts
 
 ---
 
