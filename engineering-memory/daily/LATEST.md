@@ -8,36 +8,34 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/jobfynder-infra on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder/jobfynder-infra
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/jobfynder-infra
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 2622899
+- Head SHA: a01fc16
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- 2622899 feat(comm): wire the already-running RabbitMQ/Redis into the intake path — Pavan Kumar Narra
+- a01fc16 feat(resume-intelligence): build the real CORE <-> Hermes chain for Resume Builder + Matching — root
 - Changed files:
-- added: communication/comm_gateway/idempotency.py
-- added: communication/comm_gateway/queue.py
-- added: communication/comm_gateway/worker.py
-- added: communication/scripts/comm-queue-retry-check.py
-- modified: communication/.env.example
-- modified: communication/comm_gateway/config.py
-- modified: communication/comm_gateway/main.py
-- modified: communication/docker-compose.yml
-- modified: communication/requirements.txt
+- added: scripts/verifyResumeIntelligence.mjs
+- added: src/resume-intelligence/hermes-client.service.ts
+- added: src/resume-intelligence/resume-intelligence.controller.ts
+- added: src/resume-intelligence/resume-intelligence.module.ts
+- modified: src/app.module.ts
+- modified: src/config/configuration.ts
+- modified: src/config/env.validation.ts
 
 ---
 
