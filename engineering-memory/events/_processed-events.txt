@@ -292,3 +292,4 @@ jobfynder/hermes|refs/heads/fix/hermes-450-telegram-test-regression|0313440f9caa
 jobfynder/hermes|refs/tags/hermes-850-foundation-v1|f607a3d677cb7c6a6a8d74e27bed645609c388ee
 jobfynder/hermes|refs/tags/hermes-850-foundation-v1|0000000000000000000000000000000000000000
 jobfynder/hermes|refs/heads/perf/hermes-750-langfuse-concurrent-prompt-fetch|3f3de0796c82a5173195af4580a7bf585e0fdfe6
+jobfynder/jobfynder-infra|refs/heads/feature/comm-telegram-message-chunking|0c3358040a4500345cff9c6c7a0c46f5bb99f282

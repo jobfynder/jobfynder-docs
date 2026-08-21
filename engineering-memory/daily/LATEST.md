@@ -8,30 +8,32 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch perf/hermes-750-langfuse-concurrent-prompt-fetch.
+GitHub push event processed for jobfynder/jobfynder-infra on branch feature/comm-telegram-message-chunking.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder/jobfynder-infra
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: perf/hermes-750-langfuse-concurrent-prompt-fetch
-- Head SHA: 3f3de07
+- Repository: jobfynder/jobfynder-infra
+- Branch: feature/comm-telegram-message-chunking
+- Head SHA: 0c33580
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 3f3de07 perf(hermes-750): fetch Langfuse prompt details concurrently instead of sequentially — Jobfynder Automation
+- 0c33580 fix(comm): resilient Hermes call, per-IP rate limiting, volume backups — Pavan Kumar Narra
 - Changed files:
-- added: scripts/hermes-750-langfuse-concurrent-fetch-check.py
-- modified: .env.example
-- modified: app/prompt_runtime/langfuse_prompts.py
+- added: communication/comm_gateway/ratelimit.py
+- added: communication/scripts/comm-1-backup-volumes.sh
+- added: communication/scripts/comm-hermes-client-resilience-check.py
+- modified: communication/comm_gateway/hermes_client.py
+- modified: communication/comm_gateway/main.py
 
 ---
 
