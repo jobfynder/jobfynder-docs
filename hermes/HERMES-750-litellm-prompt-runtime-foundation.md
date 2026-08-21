@@ -88,7 +88,9 @@ While verifying this document, the server's configured `LANGFUSE_PUBLIC_KEY`/`LA
 2. Updated `.env` on `jobfynder-intel-01` and recreated the `hermes-api` container (`docker compose up -d --force-recreate hermes-api` — a plain `restart` does **not** reload `.env` for an existing container; this cost real debugging time and is worth remembering).
 3. Verified live: `list_prompts()` now successfully loads all 38 Langfuse prompts.
 
-**A separate, still-open performance issue found in the same investigation:** the registry fetch takes **~33 seconds** on a cache miss, because `_refresh_cache()` in `app/prompt_runtime/langfuse_prompts.py` fetches the prompt list, then fetches each of the 38 prompts individually in a sequential loop (N+1 pattern) — one HTTP round-trip per prompt, no batching or parallelism. The cache lasts 5 minutes, so this only bites once per window, but any caller with a normal HTTP timeout (10–30s) hitting that window will see a failure even though the underlying fetch would have succeeded given more time. **Not fixed as part of this rewrite** — recommended fix: fetch prompt details concurrently (e.g. a small thread pool or `asyncio.gather`), or extend the cache TTL, or warm the cache on container startup instead of on first request.
+**A separate performance issue found in the same investigation, fixed 2026-08-21:** the registry fetch took **~33 seconds** on a cache miss, because `_refresh_cache()` in `app/prompt_runtime/langfuse_prompts.py` fetched the prompt list, then fetched each of the 38 prompts individually in a sequential loop (N+1 pattern) — one HTTP round-trip per prompt, no batching or parallelism. The cache lasts 5 minutes, so this only bit once per window, but any caller with a normal HTTP timeout (10–30s) hitting that window would see a failure even though the underlying fetch would have succeeded given more time.
+
+Fixed on branch `perf/hermes-750-langfuse-concurrent-prompt-fetch`: prompt details now fetch concurrently via a `ThreadPoolExecutor` (stdlib, no new dependency), default concurrency 8, tunable via `HERMES_LANGFUSE_PROMPT_FETCH_CONCURRENCY`. Verified live against the real Langfuse instance: **33.59s → 7.55s** for the same 38 prompts, correct `prompt_count` both times. A single failed detail fetch still only drops that one prompt, same as before — it never aborts the whole refresh (covered by a dedicated test in the new check script, `scripts/hermes-750-langfuse-concurrent-fetch-check.py`).
 
 ---
 
@@ -138,4 +140,4 @@ If evidence is missing, Hermes must ask a question or mark the field as missing.
 
 ## 10. Status
 
-The prompt runtime foundation itself is production-safe: dry-run-first, RBAC-protected, human-review-required. The provider underneath it changed from Portkey to LiteLLM without changing this contract. Two open items carried forward from this rewrite: the N+1 registry-fetch performance issue (§6) and the stale prompt-ID check scripts (§7).
+The prompt runtime foundation itself is production-safe: dry-run-first, RBAC-protected, human-review-required. The provider underneath it changed from Portkey to LiteLLM without changing this contract. The N+1 registry-fetch performance issue (§6) is fixed. One open item remains: the stale prompt-ID check scripts (§7).

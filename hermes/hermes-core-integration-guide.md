@@ -396,7 +396,7 @@ No automated CI/CD pipeline was found wired to this repo as of this document —
 
 ### 8.4 Performance and load considerations
 
-- **Known bottleneck:** the Langfuse prompt-registry fetch (`_refresh_cache()` in `app/prompt_runtime/langfuse_prompts.py`) fetches all prompts sequentially, one HTTP call per prompt. Measured directly: ~33 seconds for 38 prompts on a cold cache. The cache lasts 5 minutes (`HERMES_LANGFUSE_PROMPT_CACHE_SECONDS`), so this only affects the first request after cache expiry, but that request can time out for callers with a typical 10-30s client timeout. Not yet fixed — recommended remediation is concurrent fetching or a background cache-warming job.
+- **Fixed 2026-08-21:** the Langfuse prompt-registry fetch (`_refresh_cache()` in `app/prompt_runtime/langfuse_prompts.py`) used to fetch all prompts sequentially, one HTTP call per prompt — measured at ~33 seconds for 38 prompts on a cold cache. Now fetches concurrently (`ThreadPoolExecutor`, default 8 workers, tunable via `HERMES_LANGFUSE_PROMPT_FETCH_CONCURRENCY`) — verified live at 7.55 seconds for the same 38 prompts. The cache still lasts 5 minutes (`HERMES_LANGFUSE_PROMPT_CACHE_SECONDS`), so only the first request after expiry pays this cost at all.
 - The in-process runtime cache (`GET /runtime/cache/stats`) covers resume/JD/profile-import parse results only, 24h TTL, and does not survive a container restart.
 
 ---
@@ -587,7 +587,7 @@ Your token doesn't carry the permission the specific route requires. Cross-refer
 
 ### 11.3 "A prompt-related call is very slow or times out"
 
-This is the known Langfuse N+1 fetch issue (Section 8.4). It only happens once per 5-minute cache window. If it's happening on *every* call, the cache isn't holding — check that `HERMES_LANGFUSE_PROMPT_CACHE_SECONDS` is set and that the container hasn't been restarted recently (a restart clears the in-process cache).
+This was the Langfuse N+1 fetch issue (Section 8.4), fixed 2026-08-21 — a cold-cache fetch now takes ~7-8s instead of ~33s. If a call is still taking 20s+ after that fix is deployed, the cache likely isn't holding at all — check that `HERMES_LANGFUSE_PROMPT_CACHE_SECONDS` is set and that the container hasn't been restarted recently (a restart clears the in-process cache), or that `HERMES_LANGFUSE_PROMPT_FETCH_CONCURRENCY` hasn't been set too low.
 
 **If it looks like an outright auth failure (HTTP 403 with `error code: 1010` in the body)** — this is Cloudflare's bot-protection layer in front of `langfuse.jobfynder.com`, not a Langfuse credential problem. It gets triggered by requests with no recognizable User-Agent header. The production code already sets one (`User-Agent: Hermes-PromptRuntime/1.0`); this only bites ad-hoc debugging scripts that omit it. If you're writing a diagnostic script against Langfuse directly, set a real User-Agent header or you'll misdiagnose this as a credentials problem (confirmed the hard way — see the HERMES-750 doc's incident record for the full story).
 
