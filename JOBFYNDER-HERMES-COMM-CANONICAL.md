@@ -1,9 +1,9 @@
 # Jobfynder HERMES + COMM Canonical Documentation
 ## The Document of Truth
 
-**Version:** 1.3
+**Version:** 1.4
 **Status:** ACTIVE — this is now the single reference for the entire Jobfynder HERMES + COMM platform
-**Effective date:** 2026-08-21 (v1.1: COMM documentation added after direct inspection of COMM-1. v1.2, same day: three of the gaps that inspection found — the COMM-500 unhandled-exception bug, missing rate limiting, missing backups — were fixed, deployed, and verified live. v1.3, same day: Phase 0 completed — `jobfynder-infra` `main` reconciled with the deployed COMM branch (clean merge, zero conflicts), and four modules (HERMES-450/500/600/850) had their doc files corrected to record git tags that had existed for weeks but were never written down.)
+**Effective date:** 2026-08-21 (v1.1: COMM documentation added after direct inspection of COMM-1. v1.2, same day: three of the gaps that inspection found — the COMM-500 unhandled-exception bug, missing rate limiting, missing backups — were fixed, deployed, and verified live. v1.3, same day: Phase 0 completed — `jobfynder-infra` `main` reconciled with the deployed COMM branch (clean merge, zero conflicts), and four modules (HERMES-450/500/600/850) had their doc files corrected to record git tags that had existed for weeks but were never written down. v1.4, same day: Phase 1 completed — the Hermes RBAC gap closed and deployed, and the HERMES-1000 LiteLLM exit condition fully resolved across CORE, including a real direct-OpenAI-client bypass found during investigation that the original gap description hadn't anticipated.)
 **Owner:** Jobfynder-Infra
 **Companion document:** [HERMES-COMM-CORE-INTEGRATION-GUIDE.md](./HERMES-COMM-CORE-INTEGRATION-GUIDE.md) is the developer-facing counterpart to this doc — auth flows, endpoint samples, error codes, and a testing plan for integrating Jobfynder CORE with both servers. This document (the canonical doc) answers "what's actually production-ready"; that one answers "how do I integrate with it."
 **Supersedes:** `hermes/HERMES-documentation-map.md`, the "Closed Modules" status list inside `hermes/HERMES-000-architecture-governance.md` §4, and every prior informal status summary. Those files are moved to `archive/legacy-module-documentation/` and are historical reference only — see [§10](#10-what-was-retired-and-why).
@@ -126,7 +126,7 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 
 | Module | Canonical Name | Maturity | Arch | Impl | Deploy | Integ | Test | Obs | Sec | Prod Ready |
 |---|---|---|---|---|---|---|---|---|---|---|
-| HERMES-100 | Core Intelligence Platform | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | **NO** |
+| HERMES-100 | Core Intelligence Platform | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟡 | 🟢 | **NO** |
 | HERMES-200 | Understanding Engine | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | **NO** |
 | HERMES-300 | Matching & Decision Intelligence | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 | 🟡 | **NO** |
 | HERMES-400 | Taxonomy & Signal Intelligence | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 | 🟡 | **NO** |
@@ -138,15 +138,13 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 | HERMES-800 | Domain Intelligence — Resume Builder | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🔵 | 🟡 | **NO** |
 | HERMES-850 | Domain Intelligence — Email Parsing | ✅ Foundation Complete | 🟢 | 🟢 | 🟡 | 🟡 | 🟢 | 🔵 | 🟡 | **NO** |
 | HERMES-900 | Role Intelligence Packages | ⬜ Not Started | 🟢 | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | **NO** |
-| HERMES-1000 | AI Runtime & Production Intelligence (gateway-wide) | 🟥 Reconciliation Required | 🟢 | 🟡 | 🟡 | 🔴 | 🟡 | 🟡 | 🟡 | **NO** |
+| HERMES-1000 | AI Runtime & Production Intelligence (gateway-wide) | 🟨 Integration in Progress | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | **NO** |
 
 ## HERMES-100 — Core Intelligence Platform
 
 **Evidence.** `hermes/HERMES-100-core-platform-closure-checklist.md` — status "Production Baseline Complete." Central config, health endpoint on central version, `.env.example`, RBAC foundation + enforcement, protected platform/parser routes, RBAC user-management script, API version consistency, `.dockerignore`, Docker build validated, smoke test added and passing, API route inventory created, deployment runbook created. `hermes/hermes-rbac-access-control.md` confirms baseline users (`pavan-admin` = admin, `n8n-engineering-memory` = automation) and token storage at `/root/hermes-admin-token.txt` / `/root/hermes-n8n-token.txt`.
 
-**Gap.** `hermes/hermes-api-route-inventory.md` states a known, unresolved gap: `/understanding/*` and `/submissions/evaluate*` currently have **no RBAC check at all** — repeated verbatim in `hermes-architecture-frozen-v1.md` §11 and `hermes-core-integration-guide.md` §9.1 as of the 2026-08-21 freeze, i.e. still open. This is why Security is capped at 🟡, not 🟢.
-
-**Next action.** Close the RBAC gap on `/understanding/*` and `/submissions/evaluate*` before claiming Security 🟢.
+**RBAC gap closed 2026-08-21.** `hermes-api-route-inventory.md`, `hermes-architecture-frozen-v1.md` §11, and `hermes-core-integration-guide.md` §9.1 had all independently flagged the same unresolved gap: `/understanding/*` and `/submissions/evaluate*` had no RBAC check at all. Fixed and deployed (commit `9dc69d5` on `jobfynder/hermes`), verified safe first (zero live traffic on either route group, confirmed via logs and a CORE-side grep before enabling), then live-tested (401/403/200 all behaving correctly, including a real end-to-end resume-parse call). A new `jobfynder-core` RBAC token was provisioned for future use. Security bumped to 🟢.
 
 ## HERMES-200 — Understanding Engine
 
@@ -214,7 +212,9 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 4. Circuit breaker beyond a single fallback attempt — adequate at current volume, would need real engineering if volume/provider instability grows.
 5. Stale prompt-ID check scripts (`hermes-750-prompt-runtime-check.py`, parts of `hermes-800-foundation-check.py`) still reference retired prompt IDs (`resume_builder.summary_improve`, `resume_builder.bullet_rewrite`) that no longer exist in the live registry — confirmed failing as of 2026-08-21.
 
-**The one piece of the "zero direct provider calls" mandate that is NOT yet true:** `hermes-architecture-frozen-v1.md` §14 (2026-08-20 addendum) states Jobfynder **CORE's** `src/resume/resume.controller.ts` and `src/ai/ai.service.ts` **still call Portkey directly** as of that addendum. **This means the "all AI calls go through LiteLLM" rule is satisfied on the Hermes side but not yet on the Jobfynder Core backend side.** This is graded 🔴 under Integration above and is the actual remaining HERMES-1000 exit-condition work — not a full re-migration, a scoped one: repoint two Core files.
+**Resolved 2026-08-21.** `hermes-architecture-frozen-v1.md` §14 (2026-08-20 addendum) had flagged that Jobfynder **CORE's** `src/resume/resume.controller.ts` and `src/ai/ai.service.ts` still called Portkey directly. Investigation found the scope was actually larger than "two files, repoint to LiteLLM": four call sites across three files (`ai.service.ts`, `resume.controller.ts`, `jobs.service.ts`, `content-generation.service.ts`), and `resume.controller.ts` additionally held a **second, entirely separate direct OpenAI client** bypassing even Portkey. Fixed in commit `50eeb30` on `jobFynder-BE-nestJS` `main` — both `OpenAI` client instantiations now point at `gateway.jobfynder.com` with a LiteLLM virtual key (LiteLLM exposes an OpenAI-compatible API, so the existing `openai` SDK needed no replacement, just re-pointing), and four hardcoded Portkey-style model-routing strings (`@chatgpt/...`, `@grok/...`) were replaced with the same router aliases (`generate-small`, `extract-fast`) Hermes itself uses. Verified: `npm run build` clean, live end-to-end call through the new config succeeded, repo-wide grep for `portkey`/direct-provider usage across `jobFynder-BE-nestJS` returns clean, and `jobFynder-FE-vite` was confirmed to have zero provider references at all (never a concern, browser apps shouldn't hold model keys).
+
+**What this fix does NOT do — a real, deliberately-deferred gap:** CORE calling LiteLLM directly satisfies the platform's literal, already-adopted rule ("LiteLLM is the sole AI gateway"), but not the *stronger* architectural ideal stated in the companion integration guide ("CORE never talks to an LLM directly, always goes through Hermes"). Two of the four call sites (resume parsing, resume section generation) map closely onto Hermes capabilities that already exist, are tagged, and are now RBAC-protected (HERMES-200, HERMES-800) — routing CORE through Hermes for those would be the architecturally cleaner end-state, but it changes response shapes CORE's frontend contract currently depends on, so it was deliberately not attempted in this pass and is tracked separately (see [§8](#8-priority-matrix)).
 
 **Two stale files remain in the repo and must not be read as current:** `hermes/HERMES-750-portkey-prompt-runtime-foundation.md` and `hermes/HERMES-775-portkey-production-runtime-and-multi-model-routing.md`. Both are moved to archive in this update — see [§10](#10-what-was-retired-and-why).
 
@@ -244,7 +244,7 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 
 **What's proven:** Hermes's own runtime (HERMES-750/775) is fully on LiteLLM, with real spend controls, aliasing, and observability, verified live 2026-08-21.
 
-**What's not proven — the actual exit condition:** Jobfynder Core (`jobFynder-BE-nestJS`) still has at least two files calling Portkey directly (`src/resume/resume.controller.ts`, `src/ai/ai.service.ts`), confirmed as of the 2026-08-20 architecture freeze addendum. Until those are repointed to LiteLLM (or removed), the platform-wide "zero model calls bypass LiteLLM" guarantee is false, even though the Hermes-side guarantee is true. **This is a small, scoped fix, not a large migration** — but it is the literal gate condition and must not be marked done until it's verified with a repo-wide grep across both `jobFynder-BE-nestJS` and `jobFynder-FE-vite` for `portkey`, `openai`, `anthropic` (direct SDK), `google.generativeai`, `groq`, and known provider endpoint URLs, run and recorded here.
+**Resolved 2026-08-21 — the platform-wide "zero model calls bypass LiteLLM" guarantee is now true and verified, not assumed.** A repo-wide grep across `jobFynder-BE-nestJS` for `portkey`, direct `OpenAI(...)` instantiation, `anthropic`, `google.generativeai`, `groq`, and known provider endpoint URLs comes back clean (both `new OpenAI()` call sites confirmed pointed at LiteLLM, not the real OpenAI API); `jobFynder-FE-vite` had zero matches for any of the above, confirmed independently. See the HERMES-1000 section above for what the fix actually involved (it was bigger than "two files, repoint to LiteLLM" — four call sites, one of which bypassed even Portkey) and what it deliberately does not yet do (route CORE through Hermes's existing capabilities, a separate architectural follow-up).
 
 ---
 
@@ -314,8 +314,9 @@ No module in either matrix is marked Production Ready, and none should be until 
 |---|---|---|
 | ~~P0~~ **Done (2026-08-21)** | ~~Document COMM-1 for real~~ | Closed same-day via direct COMM-1 inspection — see [§5](#5-part-b--comm--comm-1-master-status-matrix) and `comm/COMM-documentation-map.md`. |
 | ~~P0~~ **Done (2026-08-21)** | ~~Fix the COMM-500 unhandled-exception gap~~ | Fixed and deployed, commit `0c33580` on `jobfynder-infra`. Verified with a mocked-failure check script, then live on COMM-1 post-redeploy. See `comm/COMM-500-ingress-intake.md`. |
-| **P0** | Finish the HERMES-1000 exit condition | Grep `jobFynder-BE-nestJS` and `jobFynder-FE-vite` for direct Portkey/OpenAI/Anthropic/Gemini/Groq calls; repoint the two known Core files (`resume.controller.ts`, `ai.service.ts`) to LiteLLM; re-run the grep clean; record the result here. |
-| **P0** | Close the RBAC gap | `/understanding/*` and `/submissions/evaluate*` have had no RBAC check since at least 2026-08-15 (repeated as an open item in three separate docs, still open as of 2026-08-21). |
+| ~~P0~~ **Done (2026-08-21)** | ~~Finish the HERMES-1000 exit condition~~ | Fixed, commit `50eeb30` on `jobFynder-BE-nestJS`. Turned out to be 4 call sites across 3 files, not 2 — one bypassed even Portkey with a direct OpenAI client. Grep-clean verified across both CORE repos. See the HERMES-1000 section above. |
+| ~~P0~~ **Done (2026-08-21)** | ~~Close the RBAC gap~~ | Fixed and deployed, commit `9dc69d5` on `jobfynder/hermes`. Verified safe before deploying (zero live traffic on the affected routes), then live-tested post-deploy (401/403/200 all correct). See the HERMES-100 section above. |
+| **P1** | Route CORE's resume-parsing/generation through Hermes instead of LiteLLM directly | Deliberately deferred during the HERMES-1000 fix above — two of the four call sites map closely onto existing, tagged, RBAC-protected Hermes capabilities (HERMES-200, HERMES-800), but changing them risks CORE's frontend response-shape contract. Worth doing properly, not worth rushing. |
 | ~~P0~~ **Done (2026-08-21)** | ~~Resolve the HERMES-600 status conflict~~ | Resolved — it was never actually unclear at the code level. `hermes-600-foundation-v1` tag has existed since 2026-07-07; the doc's header just never got updated. Fixed in place, see the HERMES-600 section above. Same root cause found and fixed on HERMES-450/500/850 the same pass. |
 | ~~P1~~ **Done (2026-08-21)** | ~~Add HTTP-layer protection to COMM-1~~ | App-wide rate limiting added and live-verified (`comm_gateway/ratelimit.py`). `fail2ban`/`ufw`/WAF gaps remain — see COMM-900 in `comm/COMM-300-900-1000-infrastructure-posture.md`. |
 | ~~P1~~ **Done (2026-08-21)** | ~~Set up automated backups for COMM-1~~ | Daily cron backup live, confirmed working, 14-day retention. Restore has not been tested yet — that's a new, smaller open item. See COMM-1000 in the same file. |

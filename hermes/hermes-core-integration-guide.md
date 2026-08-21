@@ -237,7 +237,7 @@ curl -s -H "Authorization: Bearer <YOUR_SCOPED_TOKEN>" \
 ### 6.1 Authentication and Authorization (recap for implementers)
 
 - Every route except `/health` requires `Authorization: Bearer <token>`.
-- **Known exception, not yet resolved:** `/understanding/*` and `/submissions/evaluate*` currently have no RBAC check at all — no permission dependency is wired on these routes. Do not rely on this remaining true; treat it as a gap being tracked, not a feature. See Section 9.1.
+- **Fixed 2026-08-21** (was previously an open gap): `/understanding/*` and `/submissions/evaluate*` now require `Authorization: Bearer <token>` with the appropriate scope, same as every other route. See Section 9.1 for what changed and why it was safe to enable without breaking anything live.
 - Permission strings are checked per-route. A single token can carry multiple permission strings (space- or comma-delimited, depending on how it was issued) or a wildcard.
 
 ### 6.2 Error Handling and Troubleshooting
@@ -403,9 +403,13 @@ No automated CI/CD pipeline was found wired to this repo as of this document —
 
 ## 9. Security and Compliance Notes
 
-### 9.1 Known, open RBAC gap
+### 9.1 RBAC gap — closed 2026-08-21
 
-`/understanding/*` and `/submissions/evaluate*` currently have **no RBAC check at all** — no permission dependency is wired on these routes, confirmed directly against the router source. This is documented, not hidden: either this is intentional (these routes are meant to be called by CORE with implicit network-level trust) or it's an oversight that needs a deliberate fix. As of this document it has not been resolved either way. Do not build new integrations that assume these routes are protected.
+`/understanding/*` and `/submissions/evaluate*` previously had **no RBAC check at all**. Fixed 2026-08-21 (commit `9dc69d5`, branch `fix/hermes-100-close-rbac-gap`, deployed and live-verified): `understanding:parse`/`understanding:read` added to every `/understanding/*` route, `submissions:evaluate` added to `POST /submissions/evaluate` and `/evaluate/from-handoff` specifically (scoped to exactly what was documented as the gap — `/submissions/workflow-policy`, `/tracker-update/extract`, and `/status/extract` are unchanged, not silently swept in).
+
+**Why this was safe to flip on without warning:** verified first, not assumed — live Hermes traffic logs showed zero hits on either route group in the preceding 5000 log lines, and a grep of `jobFynder-BE-nestJS` found no code anywhere calling these Hermes endpoints (the only Hermes↔CORE integration actually built at the time was the reverse direction — CORE's `/hermes/*` controller receiving calls *from* Hermes/agents, not CORE calling out to Hermes). Nothing live was depending on these routes staying open.
+
+A new `jobfynder-core` RBAC user was provisioned (scoped: `understanding:parse`, `understanding:read`, `submissions:evaluate`) via `scripts/hermes-access-control.py`, ready for whenever CORE integration actually starts calling these routes — token stored at `/root/hermes-token-jobfynder-core.txt` on INTEL-1, never printed or committed.
 
 ### 9.2 Data at rest / in transit
 
@@ -442,9 +446,11 @@ Content-Type: application/json
 
 {
   "document_kind": "resume",
-  "text": "Jane Doe\nSenior Backend Engineer\n8 years experience...\nSkills: Python, Django, PostgreSQL, AWS"
+  "content": "Jane Doe\nSenior Backend Engineer\n8 years experience...\nSkills: Python, Django, PostgreSQL, AWS"
 }
 ```
+
+**Field name correction, 2026-08-21:** this sample previously showed `"text"` instead of `"content"` — the actual `RawDocument` model (`app/understanding/models.py`) takes `content`, confirmed against a live call during the RBAC-fix verification pass (§9.1). If you copy-pasted this sample before today, update it.
 
 **Response — 200 OK (deterministic path, no LLM cost):**
 ```json

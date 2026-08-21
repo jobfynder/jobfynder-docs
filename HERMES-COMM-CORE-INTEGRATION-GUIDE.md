@@ -342,7 +342,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -X POST https://comm.jobfynder.com/prov
 
 ### 6.1 Authentication and Authorization (recap for implementers)
 
-- **Hermes:** every route except `/health` requires `Authorization: Bearer <token>`. **Known exception, not yet resolved:** `/understanding/*` and `/submissions/evaluate*` currently have no RBAC check at all — no permission dependency is wired on these routes. Do not rely on this remaining true; treat it as a tracked gap (Section 9.1).
+- **Hermes:** every route requires `Authorization: Bearer <token>` — including `/understanding/*` and `/submissions/evaluate*` as of 2026-08-21 (Section 9.1); only `/health` stays public.
 - **COMM:** `/providers/telegram/webhook` requires the Telegram secret-token header (Section 4.2); `/health` and `/providers/telegram/status` require nothing. There is no permission-string model on COMM at all — it's a single-purpose service, not a multi-tenant API.
 
 ### 6.2 Error Handling and Troubleshooting
@@ -586,9 +586,11 @@ No automated CI/CD pipeline was found wired to either repo as of this document �
 
 ## 9. Security and Compliance Notes
 
-### 9.1 Hermes: known, open RBAC gap
+### 9.1 Hermes: RBAC gap — closed 2026-08-21
 
-`/understanding/*` and `/submissions/evaluate*` currently have **no RBAC check at all** — no permission dependency is wired on these routes, confirmed directly against the router source. This is documented, not hidden: either this is intentional (these routes are meant to be called by CORE with implicit network-level trust) or it's an oversight that needs a deliberate fix. As of this document it has not been resolved either way. Do not build new integrations that assume these routes are protected.
+`/understanding/*` and `/submissions/evaluate*` previously had **no RBAC check at all**. Fixed and deployed 2026-08-21 (commit `9dc69d5` on `jobfynder/hermes`, branch `fix/hermes-100-close-rbac-gap`): `understanding:parse`/`understanding:read` on every `/understanding/*` route, `submissions:evaluate` on `POST /submissions/evaluate` and `/evaluate/from-handoff` — scoped to exactly the documented gap, not expanded to `/submissions/workflow-policy` or the tracker/status extract endpoints.
+
+**Confirmed safe before deploying, not assumed:** live Hermes traffic logs showed zero hits on either route group (5000-line window), and a grep of the entire `jobFynder-BE-nestJS` codebase found no code calling these Hermes endpoints at all — the only Hermes↔CORE integration actually built was the reverse direction (CORE's `/hermes/*` controller, called *by* Hermes/agents). Live-verified post-deploy: `401` with no token, `403` with a token scoped to a different permission, `200` with a new `jobfynder-core` token (permissions: `understanding:parse`, `understanding:read`, `submissions:evaluate`) — including a full resume-parse call that correctly escalated to the LLM via LiteLLM on low-confidence input.
 
 ### 9.2 COMM: security posture, confirmed gaps and fixes
 
@@ -636,9 +638,11 @@ Content-Type: application/json
 
 {
   "document_kind": "resume",
-  "text": "Jane Doe\nSenior Backend Engineer\n8 years experience...\nSkills: Python, Django, PostgreSQL, AWS"
+  "content": "Jane Doe\nSenior Backend Engineer\n8 years experience...\nSkills: Python, Django, PostgreSQL, AWS"
 }
 ```
+
+**Field name correction, 2026-08-21:** the `RawDocument` model takes `content`, not `text` — confirmed with a live call using the new `jobfynder-core` RBAC token during the HERMES-100 RBAC-fix verification.
 
 **Response — 200 OK (deterministic path, no LLM cost):**
 ```json
