@@ -1,34 +1,30 @@
 # COMM-300 / COMM-900 / COMM-1000 — Infrastructure Posture
 
-Status: Two hardening passes complete 2026-08-21 (rate limiting, backups, restore-tested, host firewall, TLS-bypass closed, weak RabbitMQ credential rotated) — RabbitMQ/Redis integration and admin-port IP-restriction still open
+Status: Three hardening/integration passes complete 2026-08-21 (rate limiting, backups + restore test, host firewall, TLS-bypass closed, weak RabbitMQ credential rotated, and — the last of the originally-documented gaps — RabbitMQ/Redis wired into the intake pipeline) — admin-port IP-restriction and worker monitoring still open
 Server: COMM-1 (`152.42.219.165`)
-Live-verified: 2026-08-21 (re-verified after both 2026-08-21 fix passes, commits `0c33580` and `33b6ec4` on `jobfynder-infra`)
+Live-verified: 2026-08-21 (re-verified after all three 2026-08-21 passes, commits `0c33580`, `33b6ec4`, and `2622899` on `jobfynder-infra`)
 
-These three modules are combined into one file because the evidence for all three comes from the same infrastructure inspection, and — unlike COMM-100/410/500 — none of them has real application code to document yet. This file records what's *provisioned* honestly, rather than writing separate stub files that would imply more progress than exists.
+These three modules were originally combined into one file because none of them had real application code to document — COMM-300 does now (see below); COMM-900/1000 still don't, so this file stays combined rather than splitting COMM-300 out for a one-section gain.
 
 ---
 
 ## COMM-300 — Messaging & Event Transport
 
-**Status: ⚪ Provisioned, not integrated.**
+**Status: 🟢 Integrated, live in production (2026-08-21, commit `2622899`).**
 
-`jobfynder-rabbitmq` (`rabbitmq:3-management`) has been running for 6+ weeks. Live inspection (2026-08-21):
+`jobfynder-rabbitmq` (`rabbitmq:3-management`) ran unused for 6+ weeks before this pass — as of 2026-08-21 it backs the Telegram intake pipeline. Full detail in `COMM-500-ingress-intake.md` §4; summarized here since this is where its infrastructure status lives:
 
-```
-rabbitmqctl list_vhosts  → only "/" (default vhost)
-rabbitmqctl list_queues  → empty (zero queues)
-```
-
-`grep -ril 'rabbitmq\|pika\|amqp' comm_gateway/` against the entire COMM Gateway source returns **zero matches**. RabbitMQ is running, has a management UI, has a persistent volume (`communication_rabbitmq_data`), and has never been called by any code in this repo. It is capacity, not infrastructure-in-use.
-
-**Recommendation** (also noted in `COMM-500-ingress-intake.md` §5): the most direct way to close COMM-500's remaining resilience gaps (no retry, no dead-letter, no queueing — the 2026-08-21 fix addressed the crash-on-timeout bug, not these) is to actually start using this RabbitMQ instance for inbound webhook processing, rather than standing up something new. Still not attempted — it's a design change (new worker process, queue schema), not a bug fix.
+- **Topology** (`comm_gateway/queue.py`): `comm.intake` exchange → `comm.intake.telegram` queue (main path, consumed by the new `comm-worker` process). Retry uses a delayed-requeue pattern — `comm.intake.retry` exchange → `comm.intake.telegram.retry` queue, each message carrying a per-message `expiration` for exponential backoff (5s/15s/60s/300s/900s), whose own dead-letter-exchange points back at the main queue so RabbitMQ auto-redelivers once the delay elapses. After 5 attempts, a message goes to `comm.intake.dead` instead.
+- **Live-verified:** a real webhook was sent through the deployed pipeline — queued, consumed by the worker, forwarded to Hermes (`200 OK`), a reply delivery attempted. A duplicate delivery of the identical message correctly returned `{"status": "duplicate"}` without re-processing (this is the Redis-backed idempotency check, COMM-900 below, running just before the queue publish). `scripts/comm-queue-retry-check.py` verifies topology declaration, idempotency, and the retry-vs-dead-letter classification (non-retryable status codes `401/403/404/422` vs. everything else) — all passing against the live containers.
+- **What's still open:** the worker process itself has no monitoring (queue depth, consumer lag, dead-letter accumulation aren't watched by anything) — see COMM-1000 below.
 
 ## COMM-900 — Reliability & Governance
 
 **Status: 🟡 Partial — rate limiting fixed 2026-08-21, other gaps remain.**
 
 - **Rate limiting: fixed 2026-08-21, commit `0c33580`.** `comm_gateway/ratelimit.py` adds an in-memory, per-IP, per-path sliding-window limiter (120 requests/60s default), applied to the whole app via `app.add_middleware(RateLimitMiddleware, ...)` in `main.py`. Live-tested on COMM-1 after redeploy: 125 rapid requests to `/health` produced 114×`200` + 11×`429` at the threshold, exactly as designed, and the service stayed healthy afterward. **Known limitation, stated in the code's own docstring:** this is in-memory and per-instance — fine for the current single-container deployment, but if COMM Gateway is ever scaled to multiple replicas, the counters need to move to the Redis instance already running alongside it (see below) rather than staying in-process.
-- **Redis** (`jobfynder-redis`, `redis:7`, `--appendonly yes`) — running 6+ weeks, `DBSIZE` = 0 live, still not used by any code (the new rate limiter is in-memory, not Redis-backed — see limitation above). Same story otherwise: provisioned, unused.
+- **Redis: wired in 2026-08-21** (`jobfynder-redis`, `redis:7`, `--appendonly yes`) — ran unused for 6+ weeks before this pass; now backs the idempotency claim (`comm_gateway/idempotency.py`, atomic `SETNX`+`EX`) checked on every inbound Telegram webhook before it's queued. The app-level rate limiter added earlier the same day remains in-memory, not Redis-backed — unrelated, still a stated scaling limitation.
+- **Incident, found and fixed during the RabbitMQ/Redis wiring:** the new worker process's initial logging setup caused `httpx` to log full outbound request URLs at INFO level, and Telegram's Bot API embeds the live bot token directly in the URL — this leaked the token into `docker logs jobfynder-comm-worker` once during live testing. Fixed by scoping `httpx`/`httpcore`'s loggers to `WARNING` specifically rather than lowering the root logger. Confirmed via disk check that the one container-log file with the leaked token was gone after the container recreate (no external log shipping configured on this host to have copied it elsewhere first). The bot token itself was not rotated — that requires Telegram/BotFather access outside this session's reach — flagged as a recommendation for whoever owns the bot, not forced through, since the practical exposure was bounded to whoever already has SSH+docker access to this host (the same trust boundary `.env` itself already has).
 - **`fail2ban` is active but scoped to SSH only** (`fail2ban-client status` → one jail, `sshd`). No HTTP-layer fail2ban jail added in this pass — the app-level rate limiter plus the new firewall (below) cover the immediate exposure; an nginx-log-based jail is still a reasonable future addition, not done.
 - **`ufw` (host firewall): enabled 2026-08-21.** Was inactive; now active with an explicit allowlist (SSH 22, HTTP 80, HTTPS 443, NPM admin 81, Portainer 9443) and default-deny on everything else incoming. Staged and verified carefully given the risk of a firewall change locking out SSH permanently: rules confirmed via `ufw show added` *before* enabling, then `ufw --force enable`, then immediately re-verified SSH still connects and `https://comm.jobfynder.com/health` still returns 200. **Known residual risk, not addressed:** ports 81 (NPM admin) and 9443 (Portainer) are left open to the whole internet, same as before — genuinely restricting them to a known IP/VPN would be better, but doing that blind (without knowing the admin's actual source IP) risked locking out legitimate access, so it was left as an explicit follow-up decision rather than guessed at.
 - **Direct bypass of TLS: closed 2026-08-21, found during this hardening pass, not part of the original plan.** `comm-gateway` was published as `8080:8080` in `docker-compose.yml` — reachable directly over plain HTTP, completely bypassing NPM's TLS termination and (before the fix above) the rate limiter's only real gate. Confirmed via `ss -tlnp` that port 8080 was listening on `0.0.0.0`. Fix: removed the port mapping entirely — `comm-gateway` and `npm` share the `communication_default` Docker bridge network, so NPM already resolves `comm-gateway:8080` internally without any host-level publish; the mapping was pure unnecessary exposure. Verified: `curl http://localhost:8080/health` now fails to connect, `https://comm.jobfynder.com/health` still returns 200.
@@ -62,3 +58,6 @@ rabbitmqctl list_queues  → empty (zero queues)
 8. Confirm whether DigitalOcean droplet-level snapshots also cover this box (a control-panel setting, not visible via SSH) — if not, consider it a second, independent backup layer.
 9. IP-restrict the two admin ports (81 NPM, 9443 Portainer) instead of leaving them open to the whole internet — deliberately not done blind (Section COMM-900), needs the actual admin's source IP/VPN range.
 10. Add an HTTP-layer fail2ban jail (nginx access-log-based) as a second line of defense behind the app-level rate limiter.
+11. ~~Wire RabbitMQ/Redis into the intake path (queueing, retry, dead-letter, idempotency)~~ — **done 2026-08-21**, see COMM-300 above.
+12. Add monitoring for the new `comm-worker` process — queue depth, consumer lag, and dead-letter-queue accumulation currently have no alerting; a stuck or crashed worker would only be noticed by manually checking.
+13. Rotate the Telegram bot token — not strictly required (see the logging-leak note under COMM-900), but good hygiene given it briefly appeared in a log file during this session's testing. Requires Telegram/BotFather access this session doesn't have.
