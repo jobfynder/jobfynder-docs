@@ -8,34 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resume-builder/hermes-810-300-frontend-wiring.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: a01fc16
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: resume-builder/hermes-810-300-frontend-wiring
+- Head SHA: a039dc2
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- a01fc16 feat(resume-intelligence): build the real CORE <-> Hermes chain for Resume Builder + Matching — root
+- a039dc2 feat(resume-builder): wire Summary AI Assistant and Align to Role to the real CORE/Hermes chain — Pavan
 - Changed files:
-- added: scripts/verifyResumeIntelligence.mjs
-- added: src/resume-intelligence/hermes-client.service.ts
-- added: src/resume-intelligence/resume-intelligence.controller.ts
-- added: src/resume-intelligence/resume-intelligence.module.ts
-- modified: src/app.module.ts
-- modified: src/config/configuration.ts
-- modified: src/config/env.validation.ts
+- added: src/services/resume-intelligence.ts
+- modified: src/components/components/private/resume-builder/bench-sales/BenchSalesCreateBaseResumeAlignRole.tsx
+- modified: src/components/components/private/resume-builder/bench-sales/BenchSalesCreateBaseResumeModal.tsx
+- modified: src/components/components/private/resume-builder/editors/SummarySectionEditor.tsx
 
 ---
 

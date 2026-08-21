@@ -300,3 +300,4 @@ jobfynder/hermes|refs/heads/fix/hermes-750-800-stale-prompt-id-checks|5344a60777
 jobfynder/jobfynder-infra|refs/heads/main|33b6ec4a0a1654e594765186cc32d5529b5fa750
 jobfynder/jobfynder-infra|refs/heads/main|2622899f76af11f7652e97f7a4b8298b356661a1
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|a01fc16a6b472f1623a72e1dc6dee72276170d7b
+jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-frontend-wiring|a039dc23e9fcbee75d12d399195d89fdfb6452bc
