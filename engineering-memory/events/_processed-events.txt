@@ -289,3 +289,4 @@ jobfynder/hermes|refs/heads/feature/hermes-850-gmail-graph-providers|0dce80399b0
 jobfynder/hermes|refs/heads/feature/hermes-400-taxonomy-suggestion-queue|e09ec932d64fdd49b1971a7a12a0e1021be32bec
 jobfynder/hermes|refs/heads/feature/hermes-400-taxonomy-suggestion-queue|f607a3d677cb7c6a6a8d74e27bed645609c388ee
 jobfynder/hermes|refs/heads/fix/hermes-450-telegram-test-regression|0313440f9caa84397be0ad84af37d758ff20b7c4
+jobfynder/hermes|refs/tags/hermes-850-foundation-v1|f607a3d677cb7c6a6a8d74e27bed645609c388ee

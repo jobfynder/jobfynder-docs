@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-450-telegram-test-regression.
+GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-850-foundation-v1.
 
 ---
 
@@ -22,14 +22,10 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-450-telegr
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/hermes-450-telegram-test-regression
-- Head SHA: 0313440
-- Commit count: 1
+- Branch: refs/tags/hermes-850-foundation-v1
+- Head SHA: f607a3d
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- 0313440 fix(hermes-450): stop stale Telegram webhook test from masking real auth regressions — Jobfynder Automation
-- Changed files:
-- modified: scripts/hermes-450-channel-intake-check.py
 
 ---
 
