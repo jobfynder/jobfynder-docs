@@ -16,6 +16,7 @@ Engineering Operating System, Architecture, Standards, ADRs and Documentation fo
 
 ## Volume 4
 - Hermes
+- COMM (communication plane — see `comm/COMM-documentation-map.md`)
 
 ## Volume 5
 - AI Standards
