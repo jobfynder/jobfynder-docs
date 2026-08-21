@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-400-taxonomy-suggestion-queue.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-450-telegram-test-regression.
 
 ---
 
@@ -22,18 +22,14 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-400-ta
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-400-taxonomy-suggestion-queue
-- Head SHA: f607a3d
+- Branch: fix/hermes-450-telegram-test-regression
+- Head SHA: 0313440
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- f607a3d feat(hermes-400): auto-approve near-duplicate taxonomy terms — Jobfynder Automation
+- 0313440 fix(hermes-450): stop stale Telegram webhook test from masking real auth regressions — Jobfynder Automation
 - Changed files:
-- added: scripts/hermes-400-taxonomy-auto-approve-check.py
-- modified: app/understanding/taxonomy/fuzzy.py
-- modified: app/understanding/taxonomy/suggestion_store.py
-- modified: app/understanding/taxonomy/suggestions.py
-- modified: scripts/hermes-400-suggestion-queue-persistence-check.py
+- modified: scripts/hermes-450-channel-intake-check.py
 
 ---
 
