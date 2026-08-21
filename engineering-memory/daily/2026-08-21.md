@@ -8,34 +8,30 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-750-800-stale-prompt-id-checks.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 50eeb30
+- Repository: jobfynder/hermes
+- Branch: fix/hermes-750-800-stale-prompt-id-checks
+- Head SHA: 5344a60
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: jobfynder
 - Commits:
-- 50eeb30 fix(ai): route all AI calls through LiteLLM, remove Portkey and direct OpenAI — root
+- 5344a60 fix(hermes-750,800): repoint 3 check scripts at the current prompt registry — Jobfynder Automation
 - Changed files:
-- modified: src/ai/ai.service.ts
-- modified: src/common/utils/resume.util.ts
-- modified: src/config/configuration.ts
-- modified: src/config/env.validation.ts
-- modified: src/content-generation/content-generation.service.ts
-- modified: src/jobs/jobs.service.ts
-- modified: src/resume/resume.controller.ts
+- modified: scripts/hermes-750-prompt-runtime-check.py
+- modified: scripts/hermes-800-foundation-check.py
+- modified: scripts/hermes-800-resume-builder-suggestion-check.py
 
 ---
 
