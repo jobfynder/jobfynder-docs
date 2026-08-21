@@ -1,9 +1,10 @@
 # HERMES-600 — Integrations Foundation
 
-Status: Active  
+Status: Closed (corrected 2026-08-21 — this header said "Active" for weeks after the module was actually tagged; see §Final Closure Status below and the Verification note)
 Started from: HERMES-500 closed baseline  
 Baseline code tag: `hermes-500-foundation-v1`  
 Baseline code commit: `2d8c1ab`
+Final code tag: `hermes-600-foundation-v1` @ commit `7c23d1f`, tagged 2026-07-07 by Jobfynder Automation — confirmed live against `/opt/hermes` on 2026-08-21 (`git tag`, `git show hermes-600-foundation-v1`)
 
 ---
 
@@ -567,4 +568,4 @@ HERMES-600 established the integrations foundation for Hermes. It added normaliz
 
 Closure decision:
 
-HERMES-600 is complete and ready for final code tag, push, and post-closure snapshot.
+HERMES-600 is complete. **The final code tag, push, and post-closure snapshot described below as pending were, in fact, already done** — `hermes-600-foundation-v1` exists on `7c23d1f`, tagged 2026-07-07. This document's header simply never got updated to say so, which produced a real, confusing self-contradiction (Active at the top, Closed at the bottom, no tag mentioned either way) that stood unresolved until the 2026-08-21 canonical documentation pass caught it and verified the tag directly against the running repo on INTEL-1. No code work was missing — this was a documentation lag, not an incomplete module.

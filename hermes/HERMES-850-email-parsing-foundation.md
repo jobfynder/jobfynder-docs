@@ -5,6 +5,7 @@ Code Repository: /opt/hermes
 Final Code Branches:
 - `feature/hermes-850-email-parsing` — deterministic parsing and routing (commits `5f08c22`, `fd2f088`)
 - `feature/hermes-850-gmail-graph-providers` — Gmail and Microsoft Graph connectors (commit `0dce803`)
+Final Code Tag: `hermes-850-foundation-v1` @ `0dce803` (tagged 2026-08-20 by Jobfynder Automation — added to this doc 2026-08-21; same undocumented-tag pattern independently found on HERMES-450/500/600 the same day)
 Documentation Repository: /opt/jobfynder-docs
 Closed: 2026-08-21
 
