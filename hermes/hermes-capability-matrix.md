@@ -39,7 +39,7 @@ This file was last substantively updated 2026-07-14 and had drifted badly from t
 | HERMES-100 | Core Platform Review | ✅ | Production baseline complete after final smoke test, repo check, and Engineering Memory update |
 | HERMES-200 | Parse Jobs | ✅ | `/understanding/parse-text`, `/v1/jobs/parse` — deterministic first, confidence-gated LLM fallback |
 | HERMES-200 | Parse Resumes | ✅ | `/understanding/parse-text`, `/understanding/parse-file` — same pattern |
-| HERMES-200 | Parse Recruiter Emails | 🚧 | See HERMES-850 below — active module, not yet closed |
+| HERMES-200 | Parse Recruiter Emails | ✅ | Closed 2026-08-21 — see HERMES-850 rows below and `hermes/HERMES-850-email-parsing-foundation.md` |
 | HERMES-200 | Parse Telegram Messages | ✅ | Only channel with live credentials; webhook receiver live (`/channels/telegram/webhook`) |
 | HERMES-200 | Parse WhatsApp Messages | ⏳ | Contract normalized and ready (`/providers/whatsapp/*`), credentials not yet provisioned |
 | HERMES-300 | Engineering Memory | ✅ | Production baseline complete (this repo's own automation, separate from candidate/company memory below) |
@@ -107,4 +107,4 @@ If a capability changes status, **edit the existing row** and commit it. Do not 
 
 ## 5. Next Target
 
-Current focus: close HERMES-850 (Email Parsing) — write the official module doc, then assign module numbers to the unnumbered capabilities in §3.
+Current focus: assign module numbers and closure docs to the unnumbered capabilities in §3 (Context Cards, Broadcast, Runtime Cache, Submission/Messaging extraction) — HERMES-850 closed 2026-08-21.
