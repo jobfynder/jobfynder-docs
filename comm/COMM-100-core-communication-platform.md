@@ -15,7 +15,7 @@ The COMM Gateway is a small FastAPI service (`comm_gateway/`, 5 Python files, `t
 
 - Repo: `git@github-jobfynder-infra:jobfynder/jobfynder-infra.git`
 - Deployed branch on COMM-1: `feature/comm-telegram-message-chunking`
-- **This branch is 3 commits ahead of `main` and has never been merged** — `main` does not contain the working Telegram bridge. Commits: `b6ab4ca` "communication foundation stack", `26fc1c4` "feat(comm): add production Telegram bridge", `ca8cd0e` "feat(comm): deliver Telegram onboarding responses", `0d7616a` "fix(comm): split long Telegram responses safely". This mirrors the exact same problem found on the Hermes docs side (see canonical doc §9) — production code living ahead of `main` with no merge.
+- **This branch is now 4 commits ahead of `main` and has never been merged** — `main` does not contain the working Telegram bridge. Commits: `b6ab4ca` "communication foundation stack", `26fc1c4` "feat(comm): add production Telegram bridge", `ca8cd0e` "feat(comm): deliver Telegram onboarding responses", `0d7616a` "fix(comm): split long Telegram responses safely", `0c33580` "fix(comm): resilient Hermes call, per-IP rate limiting, volume backups" (2026-08-21). This mirrors the exact same problem found on the Hermes docs side (see canonical doc §9) — production code living ahead of `main` with no merge. **Merging attempted 2026-08-21 and deliberately not forced** — `main` has diverged with unrelated infra restructuring (a different `intelligence/docker-compose.yml`, and two stray SSH public keys committed at the repo root, `jobfynder` / `jobfynder.pub` — public keys only, not private, no secret exposure) that needs a deliberate reconciliation, not an automatic merge.
 - Other branches exist but are not deployed: `feature/comm-telegram-bridge`, `feature/comm-telegram-onboarding-integration`.
 - `README.md` in the `communication/` folder is empty.
 
@@ -28,15 +28,18 @@ communication/
 ├── docker-compose.yml
 ├── requirements.txt
 ├── comm_gateway/
-│   ├── main.py            — FastAPI app, 3 endpoints (see COMM-500)
+│   ├── main.py            — FastAPI app, 3 endpoints (see COMM-500), rate-limit middleware wired in 2026-08-21
 │   ├── config.py           — env var loading, no validation/defaults beyond blank strings
-│   ├── hermes_client.py     — HMAC-SHA256 signing + POST to Hermes /internal/comm/intake
+│   ├── hermes_client.py     — HMAC-SHA256 signing + POST to Hermes /internal/comm/intake; timeout/error handling added 2026-08-21
+│   ├── ratelimit.py         — per-IP, per-path in-memory rate limiter, added 2026-08-21
 │   ├── telegram.py          — inbound normalization + raw sendMessage call
 │   └── telegram_outbound.py — safe message chunking (3800-char Telegram limit) + reply delivery
 └── scripts/
     ├── comm-telegram-message-chunking-check.py
     ├── comm-telegram-onboarding-check.py
-    └── comm-telegram-onboarding-route-check.py
+    ├── comm-telegram-onboarding-route-check.py
+    ├── comm-hermes-client-resilience-check.py  — added 2026-08-21, verifies the timeout/error-handling fix
+    └── comm-1-backup-volumes.sh                 — added 2026-08-21, daily cron target for volume backups
 ```
 
 ## 4. Configuration (`comm_gateway/config.py`)
@@ -62,11 +65,11 @@ Five environment variables, all read with `os.getenv`, no startup validation —
 ## 6. What is explicitly NOT built
 
 - No database of any kind — the gateway is stateless per-request.
-- No use of RabbitMQ or Redis, despite both running alongside it (`grep -ril 'rabbitmq\|pika\|redis\|amqp' comm_gateway/` returns zero matches). They are provisioned capacity, not active infrastructure. See `COMM-300-900-1000-infrastructure-posture.md`.
+- No use of RabbitMQ or Redis for messaging/session state, despite both running alongside it (`grep -ril 'rabbitmq\|pika\|amqp' comm_gateway/` returns zero matches). They are provisioned capacity, not active infrastructure. See `COMM-300-900-1000-infrastructure-posture.md`. (The 2026-08-21 rate limiter is in-memory, not Redis-backed — see that file's COMM-900 section for why that's a stated limitation, not an oversight.)
 - No identity/session layer (COMM-200) — the Telegram sender ID is passed straight through in the normalized payload with no persistent mapping to a Jobfynder user.
 - No provider besides Telegram — no Email, WhatsApp, Slack, Teams, or Google Chat code exists on the COMM side (those are Hermes-side *contracts only*, per `HERMES-450-channel-intake.md`; there is nothing on COMM-1 to receive them yet).
-- No rate limiting, no request-level auth on `/health` or `/providers/telegram/status` (both are open reads — acceptable for health, worth reviewing for the status endpoint since it reveals which secrets are configured, even though it doesn't reveal values).
+- Request-level auth on `/health` or `/providers/telegram/status` — both remain open reads (rate-limited as of 2026-08-21, but not authenticated). Acceptable for health; the status endpoint still reveals which secrets are configured (booleans only, not values) and is worth eventually gating.
 
 ## 7. Production Ready assessment
 
-**NO.** Foundation is real and live, but: the deployed branch was never merged to `main` (repo/runtime parity gap, same class of issue flagged for Hermes), there's no automated backup for the running containers beyond two manual snapshot folders (see COMM-1000), and the public `/providers/telegram/status` endpoint is unauthenticated. None of these are large fixes, but none are done either.
+**Closer, but still NO.** Foundation is real and live. Fixed 2026-08-21: the Hermes call no longer crashes on timeout (see COMM-500), the app is rate-limited, and automated daily backups now run (see COMM-1000). Still open: the deployed branch was never merged to `main` (repo/runtime parity gap, same class of issue flagged for Hermes — merge attempted and deliberately not forced through due to unrelated divergence on `main`), no restore test has been run against the new backups, and the public `/providers/telegram/status` endpoint is still unauthenticated (though now rate-limited).

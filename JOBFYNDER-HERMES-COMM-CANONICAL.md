@@ -1,9 +1,9 @@
 # Jobfynder HERMES + COMM Canonical Documentation
 ## The Document of Truth
 
-**Version:** 1.1
+**Version:** 1.2
 **Status:** ACTIVE — this is now the single reference for the entire Jobfynder HERMES + COMM platform
-**Effective date:** 2026-08-21 (v1.1: COMM documentation added, same day, after direct inspection of the COMM-1 server)
+**Effective date:** 2026-08-21 (v1.1: COMM documentation added after direct inspection of COMM-1. v1.2, same day: three of the gaps that inspection found — the COMM-500 unhandled-exception bug, missing rate limiting, missing backups — were fixed, deployed, and verified live.)
 **Owner:** Jobfynder-Infra
 **Supersedes:** `hermes/HERMES-documentation-map.md`, the "Closed Modules" status list inside `hermes/HERMES-000-architecture-governance.md` §4, and every prior informal status summary. Those files are moved to `archive/legacy-module-documentation/` and are historical reference only — see [§10](#10-what-was-retired-and-why).
 
@@ -82,7 +82,7 @@ Building this document surfaced two real naming collisions inside the existing d
 
 ### 2.3 What this repo documents vs. what actually runs
 
-Every HERMES module below has a real documentation trail — closure checklists, git tags, commit SHAs, live-verified endpoints. **As of v1.0 of this document, COMM had none of this** — confirmed by exhaustive search: no `comm/` folder, no `COMM-nnn`-numbered file, no server inventory entry, anywhere in `jobfynder/jobfynder-docs`. That gap is now closed (v1.1, same day): a direct SSH inspection of COMM-1 (`152.42.219.165`) plus the `jobfynder/jobfynder-infra` repository produced `comm/COMM-000` through `comm/COMM-500` and the infrastructure-posture doc. See [§5](#5-part-b--comm--comm-1-master-status-matrix) for the resulting status matrix, and `comm/COMM-documentation-map.md` for the index. **COMM has now been brought into the same documentation discipline HERMES has had since HERMES-100** — the former P0 item in [§8](#8-priority-matrix) is done; what's left are the concrete gaps that inspection surfaced (unused RabbitMQ/Redis, no HTTP rate limiting, an unhandled-exception path in the intake call, no backup automation).
+Every HERMES module below has a real documentation trail — closure checklists, git tags, commit SHAs, live-verified endpoints. **As of v1.0 of this document, COMM had none of this** — confirmed by exhaustive search: no `comm/` folder, no `COMM-nnn`-numbered file, no server inventory entry, anywhere in `jobfynder/jobfynder-docs`. That gap is now closed (v1.1, same day): a direct SSH inspection of COMM-1 (`152.42.219.165`) plus the `jobfynder/jobfynder-infra` repository produced `comm/COMM-000` through `comm/COMM-500` and the infrastructure-posture doc. See [§5](#5-part-b--comm--comm-1-master-status-matrix) for the resulting status matrix, and `comm/COMM-documentation-map.md` for the index. **COMM has now been brought into the same documentation discipline HERMES has had since HERMES-100** — the former P0 item in [§8](#8-priority-matrix) is done. Of the concrete gaps that inspection surfaced, three are now **fixed** (2026-08-21, commit `0c33580` on `jobfynder-infra`): the unhandled-exception path in the intake call, missing HTTP rate limiting, and no backup automation. RabbitMQ/Redis still sit unused — that one is a design decision, not a bug fix, and remains open on purpose.
 
 ---
 
@@ -245,7 +245,7 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 
 # 5. Part B — COMM / COMM-1 Master Status Matrix
 
-**Updated 2026-08-21 (v1.1).** The gap described below in earlier drafts of this document — zero COMM documentation anywhere — is now closed. `comm/COMM-000` through `comm/COMM-500` and `comm/COMM-300-900-1000-infrastructure-posture.md` were written directly against a live SSH inspection of COMM-1 (`152.42.219.165`) and the `jobfynder/jobfynder-infra` repository. See `comm/COMM-documentation-map.md` for the full index.
+**Updated 2026-08-21 (v1.2).** The gap described below in earlier drafts of this document — zero COMM documentation anywhere — is now closed. `comm/COMM-000` through `comm/COMM-500` and `comm/COMM-300-900-1000-infrastructure-posture.md` were written directly against a live SSH inspection of COMM-1 (`152.42.219.165`) and the `jobfynder/jobfynder-infra` repository. See `comm/COMM-documentation-map.md` for the full index. **Same day, three of the gaps that inspection found were fixed and deployed** (commit `0c33580` on `jobfynder-infra`, rebuilt and restarted on COMM-1, live-verified) — see the COMM-500, COMM-900, and COMM-1000 rows below.
 
 | Module | Canonical Name | Maturity | Evidence |
 |---|---|---|---|
@@ -253,12 +253,12 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 | COMM-200 | Identity & Session Layer | ⬜ Not Started | Confirmed no dedicated code — Telegram sender ID passes through unmapped, no persistent user identity layer exists on COMM-1. |
 | COMM-300 | Messaging & Event Transport | 🔴 Gap — provisioned, unused | `comm/COMM-300-900-1000-infrastructure-posture.md`. RabbitMQ has been running 6+ weeks with **zero queues, default vhost only**. Confirmed via source grep: zero references to RabbitMQ/pika/amqp anywhere in the COMM Gateway code. |
 | COMM-400 | Channel Adapters | 🟨 Integration in Progress | `comm/COMM-410-telegram-channel-adapter.md`. Telegram is live, HMAC-secured, message-chunking-safe (fixed 2026-08-21 per commit `0d7616a`). No other channel has any COMM-side code — Email/WhatsApp/Slack/Teams/Google Chat exist only as Hermes-side contracts with nothing on COMM-1 to receive them. |
-| COMM-500 | Ingress & Intake | 🟨 Integration in Progress | `comm/COMM-500-ingress-intake.md`. The HMAC contract is cross-verified from both sides and matches byte-for-byte. **New finding:** the call to Hermes (`hermes_client.py`) has no timeout/exception handling in the webhook handler — an unhandled exception on a slow/unreachable Hermes means the user gets no reply at all. Not previously known because no COMM-side doc existed to catch it. |
+| COMM-500 | Ingress & Intake | 🟨 Integration in Progress | `comm/COMM-500-ingress-intake.md`. The HMAC contract is cross-verified from both sides and matches byte-for-byte. **Fixed 2026-08-21:** `hermes_client.py` now catches timeout/connection errors and returns a structured error instead of raising — a slow/unreachable Hermes now gets the user an explicit "could not process" reply instead of silence. Verified with a mocked-failure check script and re-verified live post-redeploy. Still open: no retry, no queueing, no idempotency on the COMM side of the boundary. |
 | COMM-600 | External Communication Integrations | ⬜ Not Started | No evidence found beyond Telegram (covered under COMM-400). |
 | COMM-700 | Realtime Communication | ⬜ Not Started | A Centrifugo instance exists platform-wide (`centrifugo.jobfynder.com`) but nothing on COMM-1 calls or manages it — confirmed, not just absent from docs. |
 | COMM-800 | Communication Workflows | ⬜ Not Started | No dedicated code beyond the reply-delivery logic already covered under COMM-410. |
-| COMM-900 | Reliability & Governance | 🔴 Gap — real, previously undocumented | `comm/COMM-300-900-1000-infrastructure-posture.md`. Redis provisioned, 0 keys, unused (same pattern as RabbitMQ). No rate limiting on any endpoint. `fail2ban` guards SSH only, not HTTP. Host firewall (`ufw`) inactive. **Confirmed real exposure:** live logs show scanner probes for `/.env`, `/.git/HEAD`, `/terraform.tfstate` against the public endpoint — correctly 404'd, no secrets leaked, but no rate limiting or WAF sits in front of it either. |
-| COMM-1000 | Production Operations | 🟡 Partial | `comm/COMM-300-900-1000-infrastructure-posture.md`. Deployment is real and stable (containers up 4–6 weeks, `restart: unless-stopped`, healthy disk/memory headroom). **No automated backups** — only two manual snapshot folders exist, no cron job on the host. No monitoring/alerting beyond Portainer's UI. No DR/restore test on record. |
+| COMM-900 | Reliability & Governance | 🟡 Partial | `comm/COMM-300-900-1000-infrastructure-posture.md`. **Fixed 2026-08-21:** app-wide per-IP rate limiting (120 req/min), live-tested (114 pass / 11 blocked at threshold on a 125-request burst). Still open: Redis provisioned but unused (the new rate limiter is in-memory, stated as a scaling limitation, not wired to Redis), `fail2ban` guards SSH only, host firewall (`ufw`) inactive, no WAF. Live scanner traffic against the public endpoint is now rate-bounded but still logged with no alerting. |
+| COMM-1000 | Production Operations | 🟡 Partial | `comm/COMM-300-900-1000-infrastructure-posture.md`. Deployment is real and stable, redeploy of the fix commit verified clean. **Fixed 2026-08-21:** daily cron backup (3am, 14-day retention) of all four Docker volumes — ran and confirmed working before scheduling. Still open: no restore test performed yet, no monitoring/alerting beyond Portainer's UI, and the deployed branch still isn't merged to `main` (attempted, not forced — `main` has unrelated diverged history). |
 
 **What changed the platform-level picture:** HERMES-450 (closed, tagged, verified on the Hermes side) genuinely does depend on COMM-1 behavior that is now, for the first time, actually documented and cross-checked — and that cross-check surfaced one concrete production risk (the unhandled-exception gap in COMM-500 §3) that no one had written down before. This is exactly the kind of gap that documentation-by-evidence is supposed to catch, and it worked on the first pass.
 
@@ -308,13 +308,14 @@ No module in either matrix is marked Production Ready, and none should be until 
 | Priority | Item | Why |
 |---|---|---|
 | ~~P0~~ **Done (2026-08-21)** | ~~Document COMM-1 for real~~ | Closed same-day via direct COMM-1 inspection — see [§5](#5-part-b--comm--comm-1-master-status-matrix) and `comm/COMM-documentation-map.md`. |
-| **P0** | Fix the COMM-500 unhandled-exception gap | A slow/unreachable Hermes call from `comm_gateway/hermes_client.py` has no timeout handling in the webhook path — the user gets no reply at all, and nothing logs it as a distinct failure mode. Found during the COMM-1 inspection; not previously known. |
+| ~~P0~~ **Done (2026-08-21)** | ~~Fix the COMM-500 unhandled-exception gap~~ | Fixed and deployed, commit `0c33580` on `jobfynder-infra`. Verified with a mocked-failure check script, then live on COMM-1 post-redeploy. See `comm/COMM-500-ingress-intake.md`. |
 | **P0** | Finish the HERMES-1000 exit condition | Grep `jobFynder-BE-nestJS` and `jobFynder-FE-vite` for direct Portkey/OpenAI/Anthropic/Gemini/Groq calls; repoint the two known Core files (`resume.controller.ts`, `ai.service.ts`) to LiteLLM; re-run the grep clean; record the result here. |
 | **P0** | Close the RBAC gap | `/understanding/*` and `/submissions/evaluate*` have had no RBAC check since at least 2026-08-15 (repeated as an open item in three separate docs, still open as of 2026-08-21). |
 | **P0** | Resolve the HERMES-600 status conflict | File header says Active, closure section says Closed, no tag is quoted anywhere. Confirm which is true and cut the tag if it's actually done. |
-| **P1** | Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra` | The deployed COMM code is 3 commits ahead of `main` and has never been merged — the same repo/runtime parity issue already flagged on the Hermes docs side, now confirmed on the COMM code side too. |
-| **P1** | Add HTTP-layer protection to COMM-1 | No rate limiting anywhere in `comm_gateway/`, `fail2ban` covers SSH only, `ufw` is inactive, and the public endpoint is already being scanned by bots (confirmed in live logs, no data exposed yet). |
-| **P1** | Set up automated backups for COMM-1 | Only two manual snapshot folders exist; no cron job on the host for RabbitMQ/Redis/NPM volumes. |
+| ~~P1~~ **Done (2026-08-21)** | ~~Add HTTP-layer protection to COMM-1~~ | App-wide rate limiting added and live-verified (`comm_gateway/ratelimit.py`). `fail2ban`/`ufw`/WAF gaps remain — see COMM-900 in `comm/COMM-300-900-1000-infrastructure-posture.md`. |
+| ~~P1~~ **Done (2026-08-21)** | ~~Set up automated backups for COMM-1~~ | Daily cron backup live, confirmed working, 14-day retention. Restore has not been tested yet — that's a new, smaller open item. See COMM-1000 in the same file. |
+| **P1** | Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra` | The deployed COMM code (now including the 2026-08-21 fix commit) is 4 commits ahead of `main` and has never been merged. Attempted 2026-08-21, deliberately not forced — `main` has diverged with unrelated infra restructuring that needs a deliberate reconciliation pass. |
+| **P1** | Run a restore test against a COMM-1 backup | Backups now exist and run daily; none has ever been restored to confirm it actually works. |
 | **P1** | Close HERMES-500 for real | Foundation is extensive and live-verified, but the doc's own closure checklist (tag, docs-map update, final push) was never marked done. |
 | **P1** | Fix the two stale prompt-ID check scripts | `hermes-750-prompt-runtime-check.py` and parts of `hermes-800-foundation-check.py` reference prompt IDs that no longer exist in the live Langfuse registry — confirmed failing. |
 | **P1** | HERMES-810 end-to-end chain test | Resume Builder UI → Backend → HERMES → LiteLLM → response → persistence/UI, with auth, tenant isolation, tracing, and failure handling all exercised together. |
@@ -374,8 +375,25 @@ Carried forward from `HERMES-000` §5–6 and the v3.0 draft, unified into one r
 
 1. ~~Merge `docs/2026-08-21-retire-portkey-litellm-rewrite` to `main`~~ — **done, merged via [PR #3](https://github.com/jobfynder/jobfynder-docs/pull/3), 2026-08-21.**
 2. ~~Start a COMM-1 documentation pass~~ — **done same day**, see `comm/COMM-documentation-map.md` and [§5](#5-part-b--comm--comm-1-master-status-matrix).
-3. Fix the COMM-500 unhandled-exception gap (new P0, found during the COMM-1 pass — see [§8](#8-priority-matrix)).
-4. Assign an owner and timeline to each remaining P0/P1 item in [§8](#8-priority-matrix).
-5. Run and record the HERMES-1000 exit-condition grep across both app repos.
-6. Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra` so the deployed COMM code and its default branch match.
-7. Treat this document, not any chat thread or prior summary, as the reference for all future Jobfynder HERMES/COMM planning.
+3. ~~Fix the COMM-500 unhandled-exception gap~~ — **done same day**, commit `0c33580` on `jobfynder-infra`, deployed and live-verified.
+4. ~~Add HTTP-layer rate limiting and automated backups to COMM-1~~ — **done same day**, same commit. See COMM-900/COMM-1000 in `comm/COMM-300-900-1000-infrastructure-posture.md`.
+5. Run a restore test against a COMM-1 backup — backups exist now, but none has ever been restored to confirm it works.
+6. Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra` — attempted 2026-08-21, deliberately not forced (unrelated divergence on `main`); needs a deliberate reconciliation pass.
+7. Assign an owner and timeline to each remaining P0/P1 item in [§8](#8-priority-matrix).
+8. Run and record the HERMES-1000 exit-condition grep across both app repos.
+9. Treat this document, not any chat thread or prior summary, as the reference for all future Jobfynder HERMES/COMM planning.
+10. Keep this document current automatically — see [§13](#13-keeping-this-document-current-automatically) for the recurring update mechanism now in place.
+
+---
+
+# 13. Keeping this document current automatically
+
+A scheduled cloud agent ("Jobfynder HERMES+COMM docs sync," routine id `trig_01WdMud3w2uv3c74rJN2BX7A`, set up 2026-08-21) now checks `jobfynder/hermes` and `jobfynder/jobfynder-infra` for new commits **every hour** and updates this document and the `hermes/`/`comm/` module docs when a commit actually changes something documented here — a closure, a tag, a new endpoint, a fix. It reads diffs, not commit messages, and is instructed to skip anything that doesn't move a documented claim rather than pad this document with noise.
+
+**How it stays safe:**
+- **Every real content change goes through a PR** against `main` in `jobfynder/jobfynder-docs`, not a direct commit — a human still approves before the document of truth changes. The one exception is its own bookkeeping file (`.doc-sync-state.json`, tracks the last commit SHA it synced from each repo) on a no-op run, which is not a documentation claim.
+- It's instructed to follow the same evidentiary rules used to build this document in the first place: cite real commit SHAs/tags/endpoints, never mark something more done than the evidence supports, and never fabricate a check result.
+- **Live server re-verification (SSH to COMM-1/INTEL-1) is best-effort, not assumed.** The cloud environment this agent runs in does not currently have SSH credentials configured for those servers — it will explicitly say so in its PR description ("Live verification skipped: no SSH credentials configured") rather than pretend to have re-checked live state. If you want it to also re-verify live endpoints the way this session did, that requires deliberately adding SSH credentials to the cloud environment's configuration (at `https://claude.ai/code`) — a real security decision (standing production credentials in an automated environment), not something done automatically here.
+- **Cadence:** hourly (`37 * * * *` UTC), not fully event-driven. A GitHub push-triggered version was attempted first and is the better fit for "update the instant something changes," but registering it failed — the GitHub account connected for this automation doesn't have push access to `jobfynder/hermes`, `jobfynder/jobfynder-infra`, or `jobfynder/jobfynder-docs` (all three tested, all three rejected with the same permission error). To switch to real push-triggering, grant that GitHub App push access to the `jobfynder` org's repos, then attach a `push`-event webhook trigger to the same routine.
+
+**To check on it:** the routine is visible and manageable at `https://claude.ai/code/routines` (or via the `/schedule` skill in a Claude Code session) — its run history shows every sync attempt, what it changed (if anything), and any PR it opened.
