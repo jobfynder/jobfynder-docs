@@ -1,3 +1,7 @@
+> **ARCHIVED — superseded by [JOBFYNDER-HERMES-COMM-CANONICAL.md](../../JOBFYNDER-HERMES-COMM-CANONICAL.md).**
+> This is the original design doc for HERMES-450. hermes/HERMES-450-channel-intake.md is the actual closure record and remains current -- see the canonical doc's HERMES-450 section.
+> Kept for historical reference only — do not treat as current.
+
 # HERMES-450 — Channel Intake & Parser Integration Foundation
 
 Status: Open  

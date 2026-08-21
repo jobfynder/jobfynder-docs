@@ -67,6 +67,8 @@ This layer is not a feature. It is the operating foundation.
 
 ## 4. Hermes Streams
 
+> **Superseded (2026-08-21):** this section's HERMES-300/400 definitions ("Memory" / "Intelligence") were never built out. What actually shipped under those numbers — Matching & Decision Intelligence (300) and Taxonomy & Signal Intelligence (400) — is documented in [JOBFYNDER-HERMES-COMM-CANONICAL.md](../JOBFYNDER-HERMES-COMM-CANONICAL.md) §1 and §2.2, which is the canonical module index going forward. The list below is kept for historical context only.
+
 Hermes work is organized into numbered streams.
 
 ### HERMES-000 — Architecture & Governance
@@ -210,9 +212,11 @@ Baseline checklist:
 
 ---
 
-## 7. COMM-1 Mission
+## 7. Engineering Memory Automation Mission
 
-COMM-1 is the autonomous engineering operator for Jobfynder-Infra.
+> **Naming correction (2026-08-21):** this section previously called the tool described below "COMM-1." That collided with the real COMM-1 — the communication-plane server (`152.42.219.165`, `jobfynder-comm-gateway`) documented in [JOBFYNDER-HERMES-COMM-CANONICAL.md](../JOBFYNDER-HERMES-COMM-CANONICAL.md). The tool below is now called **Engineering Memory Automation**. See the canonical doc §2.1 for the full reconciliation.
+
+Engineering Memory Automation is the autonomous engineering operator for Jobfynder-Infra.
 
 Its mission is:
 

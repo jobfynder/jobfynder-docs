@@ -1,3 +1,7 @@
+> **ARCHIVED — superseded by [JOBFYNDER-HERMES-COMM-CANONICAL.md](../../JOBFYNDER-HERMES-COMM-CANONICAL.md).**
+> The canonical index (Part A) and status matrix (Part B) replace this map entirely.
+> Kept for historical reference only — do not treat as current.
+
 # Hermes Documentation Map
 
 Status: Active rule
