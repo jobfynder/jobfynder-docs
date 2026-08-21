@@ -8,30 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-750-800-stale-prompt-id-checks.
+GitHub push event processed for jobfynder/jobfynder-infra on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder/jobfynder-infra
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: fix/hermes-750-800-stale-prompt-id-checks
-- Head SHA: 5344a60
+- Repository: jobfynder/jobfynder-infra
+- Branch: main
+- Head SHA: 33b6ec4
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 5344a60 fix(hermes-750,800): repoint 3 check scripts at the current prompt registry — Jobfynder Automation
+- 33b6ec4 fix(comm): stop publishing comm-gateway 8080 directly, externalize RabbitMQ credentials — Pavan Kumar Narra
 - Changed files:
-- modified: scripts/hermes-750-prompt-runtime-check.py
-- modified: scripts/hermes-800-foundation-check.py
-- modified: scripts/hermes-800-resume-builder-suggestion-check.py
+- modified: communication/docker-compose.yml
 
 ---
 
