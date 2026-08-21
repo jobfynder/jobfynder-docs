@@ -2,6 +2,9 @@
 Engineering Operating System, Architecture, Standards, ADRs and Documentation for the Jobfynder Platform.
 # Jobfynder Engineering OS
 
+## Volume 0
+- [HERMES + COMM Canonical Documentation](./JOBFYNDER-HERMES-COMM-CANONICAL.md) — the document of truth. Read this first.
+
 ## Volume 1
 - Engineering Philosophy
 

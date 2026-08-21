@@ -1,3 +1,7 @@
+> **ARCHIVED — superseded by [JOBFYNDER-HERMES-COMM-CANONICAL.md](../../JOBFYNDER-HERMES-COMM-CANONICAL.md).**
+> The canonical index (Part A) and status matrix (Part B) replace this map entirely.
+> Kept for historical reference only — do not treat as current.
+
 # Hermes Documentation Map
 
 Status: Active rule
@@ -55,7 +59,11 @@ Current official Hermes docs include:
 - hermes/hermes-platform-architecture.md
 - hermes/hermes-rbac-access-control.md
 - hermes/hermes-smoke-test.md
-- hermes/HERMES-750-portkey-prompt-runtime-foundation.md
+- hermes/HERMES-750-litellm-prompt-runtime-foundation.md — renamed and rewritten 2026-08-21, was HERMES-750-portkey-prompt-runtime-foundation.md
+- hermes/HERMES-775-litellm-production-runtime-and-multi-model-routing.md — renamed and rewritten 2026-08-21, was HERMES-775-portkey-production-runtime-and-multi-model-routing.md; retired, see the doc for why
+- hermes/HERMES-850-email-parsing-foundation.md — added 2026-08-21, closing HERMES-850
+- hermes/hermes-architecture-frozen-v1.md — added 2026-08-20. Reconciled architecture reference (built vs. deferred capability inventory, response contract, cost discipline, RBAC gaps). Was previously living only inside the Core/Frontend repos' `docs/` folders, never in this repo — moved here to comply with the Main Rule above.
+- hermes/hermes-complete-developer-guide.md — added 2026-08-20. Per-endpoint integration guide (99 endpoints), companion to the architecture doc above. Same prior-location issue.
 
 ---
 
@@ -73,6 +81,11 @@ For every Hermes module:
 
 ## Closed Modules
 
+- HERMES-850 — Email Parsing Foundation
+  - Final code branches: feature/hermes-850-email-parsing, feature/hermes-850-gmail-graph-providers
+  - Official doc: hermes/HERMES-850-email-parsing-foundation.md
+  - Status: Closed (foundation) — live provider credentials deliberately deferred, see the doc §7
+
 - HERMES-800 — Resume Builder Intelligence Foundation
   - Final code branch: feature/hermes-800-resume-builder-intelligence
   - Final code commit: d9196b1
@@ -81,11 +94,11 @@ For every Hermes module:
   - Status: Closed
 
 
-- HERMES-750 — Portkey Prompt Runtime Foundation
-  - Final code branch: feature/hermes-750-portkey-prompt-runtime
+- HERMES-750 — LiteLLM Prompt Runtime Foundation (originally Portkey, migrated and doc rewritten 2026-08-21)
+  - Final code branch: feature/hermes-750-portkey-prompt-runtime (name is historical; runtime now runs on LiteLLM)
   - Final code commit: 1869e82
   - Final code tag: hermes-750-prompt-runtime-v1
-  - Official doc: hermes/HERMES-750-portkey-prompt-runtime-foundation.md
+  - Official doc: hermes/HERMES-750-litellm-prompt-runtime-foundation.md
 
 - HERMES-700 — Multi-Agent Foundation
   - Final code branch: `feature/hermes-700-multi-agent`
@@ -158,13 +171,13 @@ HERMES-400 Taxonomy & Signal Intelligence:
 
 ## Active Module
 
-Current active Hermes module: HERMES-775 — Portkey Production Runtime and Multi-Model Routing.
+**Correction, 2026-08-20:** this section named HERMES-775 (Portkey Production Runtime) as active since 2026-07-14, five weeks with no update. In that time Portkey was removed from the project entirely — LiteLLM + Langfuse is now the sole LLM path (see `hermes-capability-matrix.md` HERMES-600 rows and `hermes-architecture-frozen-v1.md` Addendum §14). HERMES-775 as originally scoped (Portkey-specific multi-model routing) was superseded, not completed.
 
-- Code branch: feature/hermes-775-prompt-runtime-production
-- Base code tag: hermes-800-resume-builder-foundation-v1
-- Base code commit: d9196b1
-- Official doc: hermes/HERMES-775-portkey-production-runtime-and-multi-model-routing.md
-- Status: Open
+**Follow-up, 2026-08-21:** HERMES-775 has been formally retired and its doc rewritten — see `hermes/HERMES-775-litellm-production-runtime-and-multi-model-routing.md`. Most of its original scope (per-key budgets, model allowlists, provider routing) turned out to already be built into LiteLLM's own admin proxy, verified directly against the live dashboard. What's still genuinely open is narrower than the original plan — see that doc §3 before anyone picks this stream back up.
+
+**Follow-up, 2026-08-21:** HERMES-850 is now closed as a foundation module — see `hermes/HERMES-850-email-parsing-foundation.md`. Parsing, routing, and both provider connectors (Gmail, Microsoft Graph) are built and verified (13/13 checks). Live provider credentials remain deliberately deferred (§7 of that doc) — a product decision, not an oversight.
+
+No Hermes module is currently marked active. See `hermes-capability-matrix.md` §3 for capabilities (Context Cards, Broadcast, Runtime Cache, Submission/Messaging extraction) that are built and live but never got an official module number — a good candidate for the next module to formally open.
 
 
 ## HERMES-700 Closed Module

@@ -1,3 +1,7 @@
+> **ARCHIVED — superseded by [JOBFYNDER-HERMES-COMM-CANONICAL.md](../../JOBFYNDER-HERMES-COMM-CANONICAL.md).**
+> Fully superseded by hermes/HERMES-775-litellm-production-runtime-and-multi-model-routing.md -- this original scope was retired with zero code ever written under it.
+> Kept for historical reference only — do not treat as current.
+
 # HERMES-775 — Portkey Production Runtime and Multi-Model Routing
 
 Status: Open

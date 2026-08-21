@@ -1,3 +1,7 @@
+> **ARCHIVED — superseded by [JOBFYNDER-HERMES-COMM-CANONICAL.md](../../JOBFYNDER-HERMES-COMM-CANONICAL.md).**
+> Content folded into hermes/HERMES-300-matching-decision-intelligence.md, cited directly in the canonical doc's HERMES-300 section.
+> Kept for historical reference only — do not treat as current.
+
 # HERMES-300 — Closure Checklist
 
 Status: Closed baseline  

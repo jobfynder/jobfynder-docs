@@ -1,3 +1,7 @@
+> **ARCHIVED — superseded by [JOBFYNDER-HERMES-COMM-CANONICAL.md](../../JOBFYNDER-HERMES-COMM-CANONICAL.md).**
+> Fully superseded by hermes/HERMES-750-litellm-prompt-runtime-foundation.md (the runtime migrated from Portkey to LiteLLM on 2026-08-21).
+> Kept for historical reference only — do not treat as current.
+
 # HERMES-750 — Portkey Prompt Runtime Foundation
 
 Status: Closed
