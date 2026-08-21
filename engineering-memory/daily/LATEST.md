@@ -23,13 +23,21 @@ GitHub push event processed for jobfynder/jobfynder-infra on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/jobfynder-infra
 - Branch: main
-- Head SHA: 33b6ec4
+- Head SHA: 2622899
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 33b6ec4 fix(comm): stop publishing comm-gateway 8080 directly, externalize RabbitMQ credentials — Pavan Kumar Narra
+- 2622899 feat(comm): wire the already-running RabbitMQ/Redis into the intake path — Pavan Kumar Narra
 - Changed files:
+- added: communication/comm_gateway/idempotency.py
+- added: communication/comm_gateway/queue.py
+- added: communication/comm_gateway/worker.py
+- added: communication/scripts/comm-queue-retry-check.py
+- modified: communication/.env.example
+- modified: communication/comm_gateway/config.py
+- modified: communication/comm_gateway/main.py
 - modified: communication/docker-compose.yml
+- modified: communication/requirements.txt
 
 ---
 

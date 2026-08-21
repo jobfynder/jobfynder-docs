@@ -298,3 +298,4 @@ jobfynder/hermes|refs/heads/fix/hermes-100-close-rbac-gap|9dc69d5ebc1540f06283ae
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|50eeb30daf105295d5abbc8df25555c0f1fdb540
 jobfynder/hermes|refs/heads/fix/hermes-750-800-stale-prompt-id-checks|5344a60777f63feac84f2b2726838588d49df779
 jobfynder/jobfynder-infra|refs/heads/main|33b6ec4a0a1654e594765186cc32d5529b5fa750
+jobfynder/jobfynder-infra|refs/heads/main|2622899f76af11f7652e97f7a4b8298b356661a1
