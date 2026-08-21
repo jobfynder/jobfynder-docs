@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-850-foundation-v1.
+GitHub push event processed for jobfynder/hermes on branch perf/hermes-750-langfuse-concurrent-prompt-fetch.
 
 ---
 
@@ -22,10 +22,16 @@ GitHub push event processed for jobfynder/hermes on branch refs/tags/hermes-850-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: refs/tags/hermes-850-foundation-v1
-- Head SHA: 0000000
-- Commit count: 0
+- Branch: perf/hermes-750-langfuse-concurrent-prompt-fetch
+- Head SHA: 3f3de07
+- Commit count: 1
 - Triggered by: jobfynder
+- Commits:
+- 3f3de07 perf(hermes-750): fetch Langfuse prompt details concurrently instead of sequentially — Jobfynder Automation
+- Changed files:
+- added: scripts/hermes-750-langfuse-concurrent-fetch-check.py
+- modified: .env.example
+- modified: app/prompt_runtime/langfuse_prompts.py
 
 ---
 
