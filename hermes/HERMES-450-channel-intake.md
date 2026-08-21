@@ -4,6 +4,7 @@ Status: Closed
 Server: INTEL-1  
 Code branch: feature/hermes-450-channel-intake  
 Final code commit: 98b221c
+Final code tag: `hermes-450-foundation-v1` (tagged 2026-07-10 by Jobfynder Automation — added to this doc 2026-08-21; the tag existed all along, it just wasn't recorded here, same pattern independently found on HERMES-500/600 the same day)
 
 ## Scope
 

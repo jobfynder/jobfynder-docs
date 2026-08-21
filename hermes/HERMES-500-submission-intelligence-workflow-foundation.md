@@ -1,6 +1,7 @@
 # HERMES-500 — Submission Intelligence & Workflow Foundation
 
-Status: Active  
+Status: Closed (corrected 2026-08-21 — see §41, the tag existed weeks before this header was updated to say so)
+Final code tag: `hermes-500-foundation-v1` @ commit `2d8c1ab`, tagged 2026-07-07 by Jobfynder Automation
 Module Start Baseline: HERMES-400 closed baseline  
 Code Repo: `/opt/hermes`  
 Code Baseline Commit: `1f21f8a`  
@@ -1206,11 +1207,15 @@ Live checks passed:
 
 ## 41. HERMES-500 Closure Readiness
 
-HERMES-500 is ready for closure.
+**Update, 2026-08-21: HERMES-500 is closed, not merely ready for closure.** The tag described as a "remaining closure action" below was, in fact, already created — `hermes-500-foundation-v1` exists on commit `2d8c1ab`, tagged 2026-07-07 by Jobfynder Automation. Confirmed live against `/opt/hermes` on INTEL-1 during the 2026-08-21 canonical documentation reconciliation pass (`git tag`, `git show hermes-500-foundation-v1`). This document's "Remaining closure actions" list below was simply never updated to reflect that — same documentation-lag pattern independently found on HERMES-600 the same day. No code work was missing.
 
 Final code commit:
 
 - `2d8c1ab`
+
+Final code tag:
+
+- `hermes-500-foundation-v1` (confirmed 2026-08-21)
 
 Final foundation capabilities:
 
@@ -1227,11 +1232,11 @@ Final foundation capabilities:
 - Docker verification
 - Live API verification
 
-Remaining closure actions:
+Remaining closure actions (historical — all confirmed done as of 2026-08-21):
 
-1. Update Hermes documentation map from active to closed.
-2. Commit final docs.
-3. Create code tag `hermes-500-foundation-v1`.
-4. Push code and docs.
-5. Run post-closure verification.
+1. ~~Update Hermes documentation map from active to closed.~~ (the map file itself is now archived — see `JOBFYNDER-HERMES-COMM-CANONICAL.md`, which is the current source of truth)
+2. ~~Commit final docs.~~
+3. ~~Create code tag `hermes-500-foundation-v1`.~~ — confirmed to exist.
+4. ~~Push code and docs.~~
+5. Post-closure verification — not independently re-run on 2026-08-21; the tag's existence and the module's extensive live-verification record earlier in this document are treated as sufficient evidence of closure.
 

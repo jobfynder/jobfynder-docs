@@ -45,12 +45,12 @@ rabbitmqctl list_queues  → empty (zero queues)
 - **Disk/memory headroom:** 71G free of 77G disk, 2.9G available of 3.8G RAM at last check — healthy, no capacity pressure. The daily backup job's own footprint (~2MB/day at current volume sizes) is negligible against this.
 - **Monitoring:** Unchanged — Portainer is installed and running (a Docker management UI) but there is no evidence of alerting, uptime checks, or log aggregation configured for COMM-1 specifically.
 - **DR:** Backups now exist, but **no restore has been tested.** A backup that has never been restored is a hypothesis, not a guarantee — this is still an open gap, just a smaller one than "no backups at all."
-- **Deployed-branch/`main` gap:** Confirmed still open. `feature/comm-telegram-message-chunking` (including the 2026-08-21 fix commit `0c33580`) has not been merged to `main` on `jobfynder-infra` — attempted during this pass and deliberately not forced through, because `main` has diverged with unrelated infra restructuring (a different `intelligence/docker-compose.yml`, and two stray SSH public keys committed at the repo root) that needs a deliberate look, not an automatic merge.
+- **Deployed-branch/`main` gap: closed 2026-08-21.** `feature/comm-telegram-message-chunking` (including the resilience/rate-limit/backup fix `0c33580`) merged into `main` on `jobfynder-infra` via `git merge --no-ff` (merge commit on `814a8ed`), pushed, and the server's working directory switched to `main`. It turned out to be a clean, non-overlapping divergence — `main`'s extra commits only touched `intelligence/`, this branch's only touched `communication/`, confirmed via `git merge-base` before merging. Zero conflicts. `communication/` was byte-identical before/after the merge (only `README.md` differed, which isn't copied into the Docker image), so no rebuild was needed — live health check confirmed the running container was unaffected.
 
 ### Remaining low-effort fixes worth flagging to whoever owns COMM-1 next
 
 1. ~~Add a recurring backup cron for the Docker volumes~~ — **done 2026-08-21.**
 2. ~~Add basic rate limiting to at least the Telegram webhook endpoint~~ — **done 2026-08-21** (applied app-wide, not just the webhook).
-3. Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra` — still open, needs a deliberate reconciliation pass (see above), not a next-pass automatic merge.
+3. ~~Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra`~~ — **done 2026-08-21**, clean merge, no conflicts (see above).
 4. Run a real restore test from one of the new daily backups, at least once, to confirm the backup is actually usable and not just present.
 5. Confirm whether DigitalOcean droplet-level snapshots also cover this box (a control-panel setting, not visible via SSH) — if not, consider it a second, independent backup layer.

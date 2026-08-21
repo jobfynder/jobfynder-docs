@@ -1,9 +1,9 @@
 # Jobfynder HERMES + COMM Canonical Documentation
 ## The Document of Truth
 
-**Version:** 1.2
+**Version:** 1.3
 **Status:** ACTIVE — this is now the single reference for the entire Jobfynder HERMES + COMM platform
-**Effective date:** 2026-08-21 (v1.1: COMM documentation added after direct inspection of COMM-1. v1.2, same day: three of the gaps that inspection found — the COMM-500 unhandled-exception bug, missing rate limiting, missing backups — were fixed, deployed, and verified live.)
+**Effective date:** 2026-08-21 (v1.1: COMM documentation added after direct inspection of COMM-1. v1.2, same day: three of the gaps that inspection found — the COMM-500 unhandled-exception bug, missing rate limiting, missing backups — were fixed, deployed, and verified live. v1.3, same day: Phase 0 completed — `jobfynder-infra` `main` reconciled with the deployed COMM branch (clean merge, zero conflicts), and four modules (HERMES-450/500/600/850) had their doc files corrected to record git tags that had existed for weeks but were never written down.)
 **Owner:** Jobfynder-Infra
 **Companion document:** [HERMES-COMM-CORE-INTEGRATION-GUIDE.md](./HERMES-COMM-CORE-INTEGRATION-GUIDE.md) is the developer-facing counterpart to this doc — auth flows, endpoint samples, error codes, and a testing plan for integrating Jobfynder CORE with both servers. This document (the canonical doc) answers "what's actually production-ready"; that one answers "how do I integrate with it."
 **Supersedes:** `hermes/HERMES-documentation-map.md`, the "Closed Modules" status list inside `hermes/HERMES-000-architecture-governance.md` §4, and every prior informal status summary. Those files are moved to `archive/legacy-module-documentation/` and are historical reference only — see [§10](#10-what-was-retired-and-why).
@@ -131,8 +131,8 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 | HERMES-300 | Matching & Decision Intelligence | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 | 🟡 | **NO** |
 | HERMES-400 | Taxonomy & Signal Intelligence | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 | 🟡 | **NO** |
 | HERMES-450 | Channel Intake & Provider Integration | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🟡 | **NO** |
-| HERMES-500 | Workflow Intelligence (Submission) | 🟨 Integration in Progress | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔵 | 🔵 | **NO** |
-| HERMES-600 | Integration Intelligence | ✅ Foundation Complete | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 | 🔵 | 🟡 | **NO** |
+| HERMES-500 | Workflow Intelligence (Submission) | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟡 | 🔵 | 🔵 | **NO** |
+| HERMES-600 | Integration Intelligence | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟡 | 🔵 | 🟡 | **NO** |
 | HERMES-700 | Orchestration & Agent Runtime | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟡 | 🟡 | **NO** |
 | HERMES-750/775 | AI Execution Runtime (LiteLLM) | 🟨 Integration in Progress | 🟢 | 🟢 | 🟢 | 🔴 | 🟡 | 🟡 | 🟡 | **NO** |
 | HERMES-800 | Domain Intelligence — Resume Builder | ✅ Foundation Complete | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🔵 | 🟡 | **NO** |
@@ -176,15 +176,19 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 
 ## HERMES-500 — Workflow Intelligence (Submission)
 
-**Evidence.** `hermes/HERMES-500-submission-intelligence-workflow-foundation.md` — extensive, 41-section build log, status "Active," last state "ready for closure" (not yet closed). 14-stage submission lifecycle, three live endpoints (`GET /submissions/workflow-policy`, `POST /submissions/evaluate`, `POST /submissions/evaluate/from-handoff`), deterministic event/follow-up/outcome mapping, invalid-transition protection, handoff adapters from HERMES-200/300/400. All Docker + live-API verification steps recorded as "Passed."
+**Resolved 2026-08-21 (Phase 0).** Earlier drafts of this document downgraded HERMES-500 to Integration in Progress because its own doc said "ready for closure" with no tag confirmed. **The tag existed all along.** Direct verification against `/opt/hermes` on INTEL-1: `hermes-500-foundation-v1` exists, tagged 2026-07-07 by Jobfynder Automation, pointing at commit `2d8c1ab` — the exact commit the doc already cited as final. The module doc's "Remaining closure actions" checklist was simply never updated to check its own boxes; this has been corrected in place.
 
-**Gap — this is why it is not Foundation Complete.** The doc's own closure checklist is unfinished at time of writing: documentation map still needs updating from active→closed, no final tag (`hermes-500-foundation-v1`) confirmed created, no persistence layer (Hermes returns structured recommendations only — Jobfynder API/Postgres, not Hermes, must persist), no authentication enforcement confirmed, no webhook delivery. **Downgrade from the earlier informal "substantial progress" framing to explicitly Integration in Progress until the tag exists.**
+**Evidence.** `hermes/HERMES-500-submission-intelligence-workflow-foundation.md` — extensive, 41-section build log. 14-stage submission lifecycle, three live endpoints (`GET /submissions/workflow-policy`, `POST /submissions/evaluate`, `POST /submissions/evaluate/from-handoff`), deterministic event/follow-up/outcome mapping, invalid-transition protection, handoff adapters from HERMES-200/300/400. All Docker + live-API verification steps recorded as "Passed." Final tag: `hermes-500-foundation-v1` @ `2d8c1ab`.
+
+**What's still genuinely open (unaffected by the tag correction):** no persistence layer (Hermes returns structured recommendations only — Jobfynder API/Postgres, not Hermes, must persist), no authentication enforcement confirmed on these routes (this is the same RBAC gap tracked under HERMES-100/§9.1 of the companion integration guide), no webhook delivery.
 
 ## HERMES-600 — Integration Intelligence
 
-**Evidence.** `hermes/HERMES-600-integrations-foundation.md` — header "Active," but a later "Final Closure Status" section says "Closed." 11 commits on `feature/hermes-600-integrations`. Endpoints: `/integrations/health`, `/integrations/events/normalize`, `/integrations/jobfynder/submission-handoff/evaluate`, `/integrations/retry-policy`, `/integrations/retry-decision`, `/integrations/events/identity`. Explicitly out of scope: production auth rollout, external SaaS integrations, paid connectors, background job queue, UI, DB-persistence redesign.
+**Resolved 2026-08-21 (Phase 0).** Same root cause as HERMES-500 above, found independently the same day. Direct verification against `/opt/hermes`: `hermes-600-foundation-v1` exists, tagged 2026-07-07 by Jobfynder Automation, pointing at commit `7c23d1f` — the exact commit the doc's "Final Closure Status" section already cited. The header-vs-closure-section contradiction flagged in earlier drafts of this document was a real, confusing bug in the source doc (fixed in place, 2026-08-21) — but it was a documentation bug, not evidence the module was actually incomplete.
 
-**Gap — flagged inconsistency.** The file's header status ("Active") and closure section ("Closed") disagree, and no final git tag is quoted anywhere in the file (only "ready for final code tag, push, and post-closure snapshot"). Treat as Foundation Complete but **unverified whether the tag was actually cut** — flagged ❓ in the historical mapping table ([§7](#7-historical-to-canonical-mapping)).
+**Evidence.** `hermes/HERMES-600-integrations-foundation.md`. 11 commits on `feature/hermes-600-integrations`. Endpoints: `/integrations/health`, `/integrations/events/normalize`, `/integrations/jobfynder/submission-handoff/evaluate`, `/integrations/retry-policy`, `/integrations/retry-decision`, `/integrations/events/identity`. Explicitly out of scope: production auth rollout, external SaaS integrations, paid connectors, background job queue, UI, DB-persistence redesign. Final tag: `hermes-600-foundation-v1` @ `7c23d1f`.
+
+**Bonus finding from the same verification pass:** `hermes/HERMES-450-channel-intake.md` had the identical gap (said "Closed," never cited a tag) — checked and fixed the same way: `hermes-450-foundation-v1` exists, tagged 2026-07-10, matching its already-cited final commit `98b221c`. Three modules, one root cause: Jobfynder Automation tags modules on closure, but the human-readable doc isn't always updated to record the tag name. Worth building a lightweight check for this going forward (compare `git tag` output against what each module's doc cites) rather than relying on catching it by hand again.
 
 ## HERMES-700 — Orchestration & Agent Runtime
 
@@ -224,7 +228,7 @@ Evidence for every row below was pulled directly from the live `hermes/*.md` fil
 
 ## HERMES-850 — Domain Intelligence — Email Parsing
 
-**Evidence.** `hermes/HERMES-850-email-parsing-foundation.md` — added 2026-08-21, "Closed (foundation) — live provider wiring intentionally deferred." Two branches (`feature/hermes-850-email-parsing`, `feature/hermes-850-gmail-graph-providers`), 3 commits. 6 endpoints incl. generic webhook, Gmail status/push, Microsoft Graph status/webhook, `/channels/intake`. 13/13 verification checks pass across 3 scripts. 103 → 106 OpenAPI paths after this module.
+**Evidence.** `hermes/HERMES-850-email-parsing-foundation.md` — added 2026-08-21, "Closed (foundation) — live provider wiring intentionally deferred." Two branches (`feature/hermes-850-email-parsing`, `feature/hermes-850-gmail-graph-providers`), 3 commits. Final tag `hermes-850-foundation-v1` @ `0dce803` — existed since the module's own closure, confirmed live against `/opt/hermes` and added to the doc 2026-08-21 (same undocumented-tag pattern independently found on HERMES-450/500/600 the same day). 6 endpoints incl. generic webhook, Gmail status/push, Microsoft Graph status/webhook, `/channels/intake`. 13/13 verification checks pass across 3 scripts. 103 → 106 OpenAPI paths after this module.
 
 **Explicit, intentional gap (a product decision, not an oversight).** "No real email flows through this yet." Gmail/Microsoft Graph connectors are contract-ready, not live — blocked on OAuth app registration and credentials (`HERMES_GMAIL_CLIENT_ID/SECRET/REFRESH_TOKEN`, `HERMES_MS_GRAPH_CLIENT_ID/SECRET/TENANT_ID`), which is explicitly called out as gated on a decision outside engineering's control, not a bug.
 
@@ -283,14 +287,14 @@ No module in either matrix is marked Production Ready, and none should be until 
 | Original Understanding Engine | HERMES-200 | "Working foundation completed" (no closure tag quoted) |
 | Original Matching Engine | HERMES-300 | Closed, tag `hermes-300-foundation-v1` |
 | Original Taxonomy | HERMES-400 | Closed, tag `hermes-400-foundation-v1` @ `1f21f8a` |
-| HERMES-450 Channel/Ingress (design doc) | HERMES-450 (superseded by closure doc, see §4) | Closed, final commit `98b221c` |
-| Submission Intelligence | HERMES-500 | Active, "ready for closure" — **no tag confirmed created** |
-| External Intelligence Integrations | HERMES-600 | Header says Active, closure section says Closed — **status conflict, ❓ unresolved**, no tag quoted |
+| HERMES-450 Channel/Ingress (design doc) | HERMES-450 (superseded by closure doc, see §4) | Closed, tag `hermes-450-foundation-v1` @ `98b221c` (tag confirmed 2026-08-21) |
+| Submission Intelligence | HERMES-500 | Closed, tag `hermes-500-foundation-v1` @ `2d8c1ab` (tag existed since 2026-07-07, confirmed 2026-08-21 — doc previously said "ready for closure," was actually already done) |
+| External Intelligence Integrations | HERMES-600 | Closed, tag `hermes-600-foundation-v1` @ `7c23d1f` (tag existed since 2026-07-07, confirmed 2026-08-21 — resolves the header-vs-closure-section conflict flagged in earlier drafts of this document) |
 | HERMES-700 Multi-Agent Foundation | HERMES-700 | Closed, tag `hermes-700-foundation-v1` @ `c2fc718` |
 | HERMES-750 Portkey Prompt Runtime | HERMES-750 (rewritten) | Originally closed `hermes-750-prompt-runtime-v1` (2026-07-10); superseded in place by LiteLLM migration (2026-08-21), same file |
 | HERMES-775 Portkey Production Runtime | HERMES-775 (rewritten) | Originally Open, zero code ever written; formally retired 2026-08-21, superseded by native LiteLLM capability |
 | HERMES-800 Resume Builder | HERMES-800 | Closed, tag `hermes-800-resume-builder-foundation-v1` @ `d9196b1` |
-| HERMES-850 Email Parsing | HERMES-850 | Closed (foundation), no tag quoted, 3 commits |
+| HERMES-850 Email Parsing | HERMES-850 | Closed (foundation), tag `hermes-850-foundation-v1` @ `0dce803` (tag confirmed 2026-08-21) |
 | HERMES-900 Role Packages | HERMES-900 | Not started — no file exists |
 | Telegram Integration | COMM-410 | Live/configured, now fully documented in `comm/COMM-410-telegram-channel-adapter.md`, cross-verified against HERMES-450 |
 | COMM Gateway | COMM-100 | Documented in `comm/COMM-100-core-communication-platform.md` — FastAPI service, 5 source files, live-verified |
@@ -312,12 +316,12 @@ No module in either matrix is marked Production Ready, and none should be until 
 | ~~P0~~ **Done (2026-08-21)** | ~~Fix the COMM-500 unhandled-exception gap~~ | Fixed and deployed, commit `0c33580` on `jobfynder-infra`. Verified with a mocked-failure check script, then live on COMM-1 post-redeploy. See `comm/COMM-500-ingress-intake.md`. |
 | **P0** | Finish the HERMES-1000 exit condition | Grep `jobFynder-BE-nestJS` and `jobFynder-FE-vite` for direct Portkey/OpenAI/Anthropic/Gemini/Groq calls; repoint the two known Core files (`resume.controller.ts`, `ai.service.ts`) to LiteLLM; re-run the grep clean; record the result here. |
 | **P0** | Close the RBAC gap | `/understanding/*` and `/submissions/evaluate*` have had no RBAC check since at least 2026-08-15 (repeated as an open item in three separate docs, still open as of 2026-08-21). |
-| **P0** | Resolve the HERMES-600 status conflict | File header says Active, closure section says Closed, no tag is quoted anywhere. Confirm which is true and cut the tag if it's actually done. |
+| ~~P0~~ **Done (2026-08-21)** | ~~Resolve the HERMES-600 status conflict~~ | Resolved — it was never actually unclear at the code level. `hermes-600-foundation-v1` tag has existed since 2026-07-07; the doc's header just never got updated. Fixed in place, see the HERMES-600 section above. Same root cause found and fixed on HERMES-450/500/850 the same pass. |
 | ~~P1~~ **Done (2026-08-21)** | ~~Add HTTP-layer protection to COMM-1~~ | App-wide rate limiting added and live-verified (`comm_gateway/ratelimit.py`). `fail2ban`/`ufw`/WAF gaps remain — see COMM-900 in `comm/COMM-300-900-1000-infrastructure-posture.md`. |
 | ~~P1~~ **Done (2026-08-21)** | ~~Set up automated backups for COMM-1~~ | Daily cron backup live, confirmed working, 14-day retention. Restore has not been tested yet — that's a new, smaller open item. See COMM-1000 in the same file. |
-| **P1** | Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra` | The deployed COMM code (now including the 2026-08-21 fix commit) is 4 commits ahead of `main` and has never been merged. Attempted 2026-08-21, deliberately not forced — `main` has diverged with unrelated infra restructuring that needs a deliberate reconciliation pass. |
+| ~~P1~~ **Done (2026-08-21)** | ~~Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra`~~ | Merged (`git merge --no-ff`, merge commit on `814a8ed`, pushed). Turned out to be a clean, non-overlapping divergence — zero conflicts. Server working directory switched to `main`; no rebuild needed, `communication/` was byte-identical. |
 | **P1** | Run a restore test against a COMM-1 backup | Backups now exist and run daily; none has ever been restored to confirm it actually works. |
-| **P1** | Close HERMES-500 for real | Foundation is extensive and live-verified, but the doc's own closure checklist (tag, docs-map update, final push) was never marked done. |
+| ~~P1~~ **Done (2026-08-21)** | ~~Close HERMES-500 for real~~ | It was already closed — `hermes-500-foundation-v1` tag has existed since 2026-07-07; the doc's closure checklist just never got its boxes checked. Fixed in place, see the HERMES-500 section above. |
 | **P1** | Fix the two stale prompt-ID check scripts | `hermes-750-prompt-runtime-check.py` and parts of `hermes-800-foundation-check.py` reference prompt IDs that no longer exist in the live Langfuse registry — confirmed failing. |
 | **P1** | HERMES-810 end-to-end chain test | Resume Builder UI → Backend → HERMES → LiteLLM → response → persistence/UI, with auth, tenant isolation, tracing, and failure handling all exercised together. |
 | **P2** | HERMES-300 evaluation benchmark | A deterministic matcher exists; a benchmark set of known good/weak matches with recruiter-judgment ground truth does not. |
@@ -379,11 +383,12 @@ Carried forward from `HERMES-000` §5–6 and the v3.0 draft, unified into one r
 3. ~~Fix the COMM-500 unhandled-exception gap~~ — **done same day**, commit `0c33580` on `jobfynder-infra`, deployed and live-verified.
 4. ~~Add HTTP-layer rate limiting and automated backups to COMM-1~~ — **done same day**, same commit. See COMM-900/COMM-1000 in `comm/COMM-300-900-1000-infrastructure-posture.md`.
 5. Run a restore test against a COMM-1 backup — backups exist now, but none has ever been restored to confirm it works.
-6. Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra` — attempted 2026-08-21, deliberately not forced (unrelated divergence on `main`); needs a deliberate reconciliation pass.
-7. Assign an owner and timeline to each remaining P0/P1 item in [§8](#8-priority-matrix).
-8. Run and record the HERMES-1000 exit-condition grep across both app repos.
-9. Treat this document, not any chat thread or prior summary, as the reference for all future Jobfynder HERMES/COMM planning.
-10. Keep this document current automatically — see [§13](#13-keeping-this-document-current-automatically) for the recurring update mechanism now in place.
+6. ~~Merge `feature/comm-telegram-message-chunking` to `main` on `jobfynder-infra`~~ — **done same day**, clean merge, zero conflicts, server switched to `main`.
+7. ~~Resolve the HERMES-600 status conflict~~ / ~~Close HERMES-500 for real~~ — **done same day**: both modules were already tagged (`hermes-600-foundation-v1`, `hermes-500-foundation-v1`, both dated 2026-07-07); their doc files just never recorded it. Same pattern found and fixed on HERMES-450 and HERMES-850 too — four undocumented tags corrected in one pass. **Phase 0 (repo/doc hygiene) is now fully complete.**
+8. Assign an owner and timeline to each remaining P0/P1 item in [§8](#8-priority-matrix) — this is now Phase 1 (the RBAC gap and the HERMES-1000 exit condition).
+9. Run and record the HERMES-1000 exit-condition grep across both app repos.
+10. Treat this document, not any chat thread or prior summary, as the reference for all future Jobfynder HERMES/COMM planning.
+11. Keep this document current automatically — see [§13](#13-keeping-this-document-current-automatically) for the recurring update mechanism now in place.
 
 ---
 
