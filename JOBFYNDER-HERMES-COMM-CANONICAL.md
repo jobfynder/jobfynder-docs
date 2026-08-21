@@ -5,6 +5,7 @@
 **Status:** ACTIVE — this is now the single reference for the entire Jobfynder HERMES + COMM platform
 **Effective date:** 2026-08-21 (v1.1: COMM documentation added after direct inspection of COMM-1. v1.2, same day: three of the gaps that inspection found — the COMM-500 unhandled-exception bug, missing rate limiting, missing backups — were fixed, deployed, and verified live.)
 **Owner:** Jobfynder-Infra
+**Companion document:** [HERMES-COMM-CORE-INTEGRATION-GUIDE.md](./HERMES-COMM-CORE-INTEGRATION-GUIDE.md) is the developer-facing counterpart to this doc — auth flows, endpoint samples, error codes, and a testing plan for integrating Jobfynder CORE with both servers. This document (the canonical doc) answers "what's actually production-ready"; that one answers "how do I integrate with it."
 **Supersedes:** `hermes/HERMES-documentation-map.md`, the "Closed Modules" status list inside `hermes/HERMES-000-architecture-governance.md` §4, and every prior informal status summary. Those files are moved to `archive/legacy-module-documentation/` and are historical reference only — see [§10](#10-what-was-retired-and-why).
 
 ---

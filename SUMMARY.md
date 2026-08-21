@@ -4,6 +4,7 @@ Engineering Operating System, Architecture, Standards, ADRs and Documentation fo
 
 ## Volume 0
 - [HERMES + COMM Canonical Documentation](./JOBFYNDER-HERMES-COMM-CANONICAL.md) — the document of truth. Read this first.
+- [HERMES + COMM Core Integration Guide](./HERMES-COMM-CORE-INTEGRATION-GUIDE.md) — developer-facing: auth, endpoints, samples, error codes, troubleshooting, testing plan for integrating CORE with both servers.
 
 ## Volume 1
 - Engineering Philosophy
