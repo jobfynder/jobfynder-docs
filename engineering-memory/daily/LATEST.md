@@ -23,19 +23,18 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resu
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: resume-builder/hermes-810-300-frontend-wiring
-- Head SHA: d0c4e15
+- Head SHA: 24cabf4
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- d0c4e15 feat(resume-builder): wire Tier 1 -- Job Match, Skills validation, Experience bullets — Pavan
+- 24cabf4 feat(resume-builder): wire Tailor to Job (2 of its 3 screens) to real HERMES-300 tailoring — Pavan
 - Changed files:
-- added: src/utils/resume-builder-document.ts
-- modified: src/components/components/private/resume-builder/ResumeBuilderPreviewPane.tsx
-- modified: src/components/components/private/resume-builder/ResumeGenerateWithAi.tsx
-- modified: src/components/components/private/resume-builder/ResumeJobMatchPanel.tsx
-- modified: src/components/components/private/resume-builder/editors/ExperienceSectionEditor.tsx
-- modified: src/components/components/private/resume-builder/editors/SkillsSectionEditor.tsx
-- modified: src/services/resume-intelligence.ts
+- added: src/utils/resume-builder-bench-sales-review.ts
+- modified: src/components/components/private/resume-builder/ConsultantResumeBuilder.tsx
+- modified: src/components/components/private/resume-builder/bench-sales/BenchSalesCreateBaseResumeModal.tsx
+- modified: src/components/components/private/resume-builder/bench-sales/BenchSalesTailorResumeToJobModal.tsx
+- modified: src/components/components/private/resume-builder/consultant/ConsultantTailorToJobView.tsx
+- modified: src/components/components/private/resume-builder/consultant/tailor-to-job/ConsultantTailorToJobSession.tsx
 
 ---
 
