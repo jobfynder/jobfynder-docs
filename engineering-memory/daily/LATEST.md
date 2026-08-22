@@ -23,18 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resu
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: resume-builder/hermes-810-300-frontend-wiring
-- Head SHA: 24cabf4
+- Head SHA: 1b51d16
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 24cabf4 feat(resume-builder): wire Tailor to Job (2 of its 3 screens) to real HERMES-300 tailoring — Pavan
+- 1b51d16 feat(resume-builder): redesign ATS Check around what quality/analyze can actually measure — Pavan
 - Changed files:
-- added: src/utils/resume-builder-bench-sales-review.ts
-- modified: src/components/components/private/resume-builder/ConsultantResumeBuilder.tsx
-- modified: src/components/components/private/resume-builder/bench-sales/BenchSalesCreateBaseResumeModal.tsx
-- modified: src/components/components/private/resume-builder/bench-sales/BenchSalesTailorResumeToJobModal.tsx
-- modified: src/components/components/private/resume-builder/consultant/ConsultantTailorToJobView.tsx
-- modified: src/components/components/private/resume-builder/consultant/tailor-to-job/ConsultantTailorToJobSession.tsx
+- modified: src/components/components/private/resume-builder/ResumeATSCheckPanel.tsx
 
 ---
 
