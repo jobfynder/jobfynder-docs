@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feature/profile-missing-data.
 
 ---
 
@@ -22,57 +22,17 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 3d46a54
-- Commit count: 3
+- Branch: feature/profile-missing-data
+- Head SHA: ac8a90a
+- Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 2a9b51b feat(hermes): route resume, job, and content AI paths through Hermes — atultiwari
-- e7870aa feat(hermes): add resume-intelligence BFF over existing Hermes client — atultiwari
-- 3d46a54 Merge branch 'feature/hermes-core-integration' — atultiwari
+- ac8a90a feat(profile): implement static placeholders for missing profile data — atultiwari
 - Changed files:
-- added: .cursor/plans/hermes_core_integration_65d4c002.plan.md
-- added: hermes-complete-developer-guide.md
-- added: scripts/hermes-smoke.ts
-- added: src/common/utils/json.util.ts
-- added: src/common/utils/prisma-error.util.ts
-- added: src/constants/us-states.ts
-- added: src/hermes/dto/resume-intelligence.dto.ts
-- added: src/hermes/hermes-client.types.ts
-- added: src/hermes/hermes-intelligence.service.spec.ts
-- added: src/hermes/hermes-intelligence.service.ts
-- added: src/hermes/hermes-mappers.spec.ts
-- added: src/hermes/hermes-mappers.ts
-- added: src/hermes/hermes.client.spec.ts
-- added: src/hermes/hermes.client.ts
-- added: src/hermes/resume-intelligence.controller.spec.ts
-- added: src/hermes/resume-intelligence.controller.ts
-- added: src/resume-intelligence/resume-intelligence.controller.spec.ts
-- modified: .env.example
-- modified: .gitignore
-- modified: CONVERSION-CONVENTIONS.md
-- modified: package.json
-- modified: src/auth/auth.controller.ts
-- modified: src/auth/auth.service.ts
-- modified: src/common/filters/all-exceptions.filter.ts
-- modified: src/common/utils/resume.util.ts
-- modified: src/config/configuration.ts
-- modified: src/config/env.validation.ts
-- modified: src/content-generation/content-generation.module.ts
-- modified: src/content-generation/content-generation.service.ts
-- modified: src/health/health.controller.ts
-- modified: src/hermes/hermes-client.types.ts
-- modified: src/hermes/hermes-intelligence.service.ts
-- modified: src/hermes/hermes.client.ts
-- modified: src/hermes/hermes.module.ts
-- modified: src/jobs/jobs.module.ts
-- modified: src/jobs/jobs.service.ts
-- modified: src/prisma/prisma.service.ts
-- modified: src/resume-intelligence/hermes-client.service.ts
-- modified: src/resume-intelligence/resume-intelligence.controller.ts
-- modified: src/resume-intelligence/resume-intelligence.module.ts
-- modified: src/resume/resume.controller.ts
-- modified: src/resume/resume.module.ts
+- added: .cursor/plans/profile_missing_data_d9c581a7.plan.md
+- added: src/profile/profile-static-values.ts
+- modified: src/profile/profile-transformers.service.ts
+- modified: src/profile/profile.service.ts
 
 ---
 
