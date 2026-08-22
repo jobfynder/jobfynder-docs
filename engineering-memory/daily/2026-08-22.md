@@ -8,32 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fix/resume-crud-auth-guard-and-create-endpoint.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resume-builder/hermes-810-300-frontend-wiring.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: fix/resume-crud-auth-guard-and-create-endpoint
-- Head SHA: d4a3144
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: resume-builder/hermes-810-300-frontend-wiring
+- Head SHA: 514a45c
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- d4a3144 feat(resume): add resume variants (label, variantType, parentResumeId) — Pavan
+- 514a45c feat(resume-builder): wire Resume Variants to real create/list/duplicate — Pavan
 - Changed files:
-- added: prisma/migrations/20260822010000_add_resume_variants/migration.sql
-- modified: prisma/schema.prisma
-- modified: src/resume/dto/create-resume.dto.ts
-- modified: src/resume/resume.controller.spec.ts
-- modified: src/resume/resume.controller.ts
+- modified: src/components/components/private/resume-builder/ConsultantResumeBuilder.tsx
+- modified: src/components/components/private/resume-builder/consultant/ConsultantCreateResumeVariantModal.tsx
+- modified: src/components/components/private/resume-builder/consultant/ConsultantResumeVariantsView.tsx
+- modified: src/services/resume.ts
 
 ---
 
