@@ -8,30 +8,30 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resume-builder/hermes-810-300-frontend-wiring.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fix/resume-crud-auth-guard-and-create-endpoint.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: resume-builder/hermes-810-300-frontend-wiring
-- Head SHA: 3be4a5a
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: fix/resume-crud-auth-guard-and-create-endpoint
+- Head SHA: de192b9
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3be4a5a feat(resume-builder): wire Feedback's AI Analysis to real feedback/analyze — Pavan
+- de192b9 feat(bench): add GET /bench/submissions/mine (consultant reads own submission history) — Pavan
 - Changed files:
-- modified: src/components/components/private/resume-builder/ConsultantResumeBuilder.tsx
-- modified: src/components/components/private/resume-builder/consultant/ConsultantFeedbackView.tsx
-- modified: src/services/resume-intelligence.ts
+- added: src/bench/bench.controller.spec.ts
+- modified: src/bench/bench.controller.ts
+- modified: src/bench/submission.service.ts
 
 ---
 
