@@ -23,16 +23,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resu
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: resume-builder/hermes-810-300-frontend-wiring
-- Head SHA: 514a45c
+- Head SHA: 3be4a5a
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 514a45c feat(resume-builder): wire Resume Variants to real create/list/duplicate — Pavan
+- 3be4a5a feat(resume-builder): wire Feedback's AI Analysis to real feedback/analyze — Pavan
 - Changed files:
 - modified: src/components/components/private/resume-builder/ConsultantResumeBuilder.tsx
-- modified: src/components/components/private/resume-builder/consultant/ConsultantCreateResumeVariantModal.tsx
-- modified: src/components/components/private/resume-builder/consultant/ConsultantResumeVariantsView.tsx
-- modified: src/services/resume.ts
+- modified: src/components/components/private/resume-builder/consultant/ConsultantFeedbackView.tsx
+- modified: src/services/resume-intelligence.ts
 
 ---
 
