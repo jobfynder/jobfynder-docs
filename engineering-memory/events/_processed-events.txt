@@ -308,3 +308,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|ac8a90a8163fbb9a4cd8e630be0c
 jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-frontend-wiring|d0c4e150bbf4c95dffa1e880e986332b2a76bdab
 jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-frontend-wiring|24cabf4d8355520bd1e6011dfb8a6ff30b4bbc7f
 jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-frontend-wiring|1b51d1619ce2176b5b12d3c3751b75401ba550b9
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/fix/resume-crud-auth-guard-and-create-endpoint|b1df7ad3bc40655904e1f28112cd3f4f7dee046a

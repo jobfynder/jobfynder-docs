@@ -1,21 +1,25 @@
 {
   "date": "2026-08-22",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resume-builder/hermes-810-300-frontend-wiring.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fix/resume-crud-auth-guard-and-create-endpoint.",
   "repositories": [
-    "jobfynder-admin/jobFynder-FE-vite"
+    "jobfynder-admin/jobFynder-BE-nestJS"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-FE-vite",
-    "Branch: resume-builder/hermes-810-300-frontend-wiring",
-    "Head SHA: 1b51d16",
+    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
+    "Branch: fix/resume-crud-auth-guard-and-create-endpoint",
+    "Head SHA: b1df7ad",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "1b51d16 feat(resume-builder): redesign ATS Check around what quality/analyze can actually measure \u2014 Pavan",
+    "b1df7ad fix(resume): guard the resume CRUD routes and add a JSON create endpoint \u2014 Pavan",
     "Changed files:",
-    "modified: src/components/components/private/resume-builder/ResumeATSCheckPanel.tsx"
+    "added: prisma/migrations/20260822000000_add_resume_builder_metadata/migration.sql",
+    "added: src/resume/dto/create-resume.dto.ts",
+    "added: src/resume/resume.controller.spec.ts",
+    "modified: prisma/schema.prisma",
+    "modified: src/resume/resume.controller.ts"
   ],
   "decisions": [
     {

@@ -8,28 +8,32 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resume-builder/hermes-810-300-frontend-wiring.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fix/resume-crud-auth-guard-and-create-endpoint.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: resume-builder/hermes-810-300-frontend-wiring
-- Head SHA: 1b51d16
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: fix/resume-crud-auth-guard-and-create-endpoint
+- Head SHA: b1df7ad
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 1b51d16 feat(resume-builder): redesign ATS Check around what quality/analyze can actually measure — Pavan
+- b1df7ad fix(resume): guard the resume CRUD routes and add a JSON create endpoint — Pavan
 - Changed files:
-- modified: src/components/components/private/resume-builder/ResumeATSCheckPanel.tsx
+- added: prisma/migrations/20260822000000_add_resume_builder_metadata/migration.sql
+- added: src/resume/dto/create-resume.dto.ts
+- added: src/resume/resume.controller.spec.ts
+- modified: prisma/schema.prisma
+- modified: src/resume/resume.controller.ts
 
 ---
 
