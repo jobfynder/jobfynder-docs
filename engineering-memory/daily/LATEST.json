@@ -1,24 +1,27 @@
 {
   "date": "2026-08-22",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resume-builder/hermes-810-300-frontend-wiring.",
   "repositories": [
-    "jobfynder-admin/jobFynder-BE-nestJS"
+    "jobfynder-admin/jobFynder-FE-vite"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
-    "Branch: main",
-    "Head SHA: ac8a90a",
+    "Repository: jobfynder-admin/jobFynder-FE-vite",
+    "Branch: resume-builder/hermes-810-300-frontend-wiring",
+    "Head SHA: d0c4e15",
     "Commit count: 1",
-    "Triggered by: atult120",
+    "Triggered by: jobfynder-admin",
     "Commits:",
-    "ac8a90a feat(profile): implement static placeholders for missing profile data \u2014 atultiwari",
+    "d0c4e15 feat(resume-builder): wire Tier 1 -- Job Match, Skills validation, Experience bullets \u2014 Pavan",
     "Changed files:",
-    "added: .cursor/plans/profile_missing_data_d9c581a7.plan.md",
-    "added: src/profile/profile-static-values.ts",
-    "modified: src/profile/profile-transformers.service.ts",
-    "modified: src/profile/profile.service.ts"
+    "added: src/utils/resume-builder-document.ts",
+    "modified: src/components/components/private/resume-builder/ResumeBuilderPreviewPane.tsx",
+    "modified: src/components/components/private/resume-builder/ResumeGenerateWithAi.tsx",
+    "modified: src/components/components/private/resume-builder/ResumeJobMatchPanel.tsx",
+    "modified: src/components/components/private/resume-builder/editors/ExperienceSectionEditor.tsx",
+    "modified: src/components/components/private/resume-builder/editors/SkillsSectionEditor.tsx",
+    "modified: src/services/resume-intelligence.ts"
   ],
   "decisions": [
     {
