@@ -1,14 +1,14 @@
 {
   "date": "2026-08-22",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feature/profile-missing-data.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.",
   "repositories": [
     "jobfynder-admin/jobFynder-BE-nestJS"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
-    "Branch: feature/profile-missing-data",
+    "Branch: main",
     "Head SHA: ac8a90a",
     "Commit count: 1",
     "Triggered by: atult120",

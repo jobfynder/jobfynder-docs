@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feature/profile-missing-data.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
@@ -22,7 +22,7 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feature/profile-missing-data
+- Branch: main
 - Head SHA: ac8a90a
 - Commit count: 1
 - Triggered by: atult120
