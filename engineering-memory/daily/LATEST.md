@@ -8,35 +8,37 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-live-provider-fetch.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/hermes-draft-intake.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: feature/hermes-850-live-provider-fetch
-- Head SHA: 4b7d0a5
-- Commit count: 2
-- Triggered by: jobfynder
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feat/hermes-draft-intake
+- Head SHA: 90ee8f5
+- Commit count: 1
+- Triggered by: jobfynder-admin
 - Commits:
-- 2154e93 feat(hermes-850): implement the fetch-from-provider step for Gmail/Graph — Pavan
-- 4b7d0a5 feat(drafts): add reject_draft_object, mirroring publish — Pavan
+- 90ee8f5 feat(hermes-drafts): review queue for Hermes email-parsed drafts — Pavan
 - Changed files:
-- added: scripts/hermes-850-live-fetch-check.py
-- modified: app/drafts/service.py
-- modified: app/providers/gmail/service.py
-- modified: app/providers/microsoft_graph/service.py
-- modified: app/routers/drafts.py
-- modified: app/routers/gmail_provider.py
-- modified: app/routers/microsoft_graph_provider.py
+- added: src/hermes-drafts/dto/approve-job-draft.dto.ts
+- added: src/hermes-drafts/dto/dismiss-draft.dto.ts
+- added: src/hermes-drafts/hermes-drafts.controller.spec.ts
+- added: src/hermes-drafts/hermes-drafts.controller.ts
+- added: src/hermes-drafts/hermes-drafts.module.ts
+- added: src/hermes-drafts/hermes-drafts.service.spec.ts
+- added: src/hermes-drafts/hermes-drafts.service.ts
+- modified: src/app.module.ts
+- modified: src/hermes/hermes-client.types.ts
+- modified: src/hermes/hermes.client.ts
 
 ---
 
