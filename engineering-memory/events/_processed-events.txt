@@ -317,3 +317,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/fix/resume-crud-auth-guard-and-cr
 jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-frontend-wiring|3e36c0610e9b7f662275452b545cc8f23f20ffae
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/subscription-billing-module|8a39713625d1b493994a2256951b69dc8860ad64
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/credits-module|3e8d37eb824eca868af258bde6a93933d0865233
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/resume-collaboration|5e07fd9745acc780a2ef769891da0e1ed7b8eb89
