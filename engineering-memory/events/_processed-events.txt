@@ -318,3 +318,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-front
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/subscription-billing-module|8a39713625d1b493994a2256951b69dc8860ad64
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/credits-module|3e8d37eb824eca868af258bde6a93933d0865233
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/resume-collaboration|5e07fd9745acc780a2ef769891da0e1ed7b8eb89
+jobfynder/hermes|refs/heads/feature/hermes-850-live-provider-fetch|4b7d0a59e72b3621dfc5abe4d8b04a73432a851b
