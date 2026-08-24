@@ -8,32 +8,47 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-live-provider-fetch.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: feature/hermes-850-live-provider-fetch
-- Head SHA: fc81032
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: main
+- Head SHA: e74b2db
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: atult120
 - Commits:
-- fc81032 feat(hermes-850): confidence-based hotlist/requirement classification for a shared mailbox — Pavan
+- e74b2db Switch browser auth from CSRF cookies to bearer tokens. — atultiwari
 - Changed files:
 - modified: .env.example
-- modified: app/channels/service.py
-- modified: app/email_parsing/parsers.py
-- modified: scripts/hermes-850-email-integration-check.py
-- modified: scripts/hermes-850-email-parsing-check.py
+- modified: scripts/verifyResumeIntelligence.mjs
+- modified: src/app.module.ts
+- modified: src/auth-core/auth-core.module.ts
+- modified: src/auth-core/auth-session.service.spec.ts
+- modified: src/auth-core/auth-session.service.ts
+- modified: src/auth-core/guards/jwt-auth.guard.ts
+- modified: src/auth/auth.controller.ts
+- modified: src/auth/auth.service.ts
+- modified: src/auth/dto/auth.dto.ts
+- modified: src/config/configuration.ts
+- modified: src/config/env.validation.spec.ts
+- modified: src/config/env.validation.ts
+- modified: src/main.ts
+- modified: src/oauth/oauth.controller.ts
+- removed: src/auth-core/csrf-exempt.decorator.ts
+- removed: src/auth-core/csrf.service.spec.ts
+- removed: src/auth-core/csrf.service.ts
+- removed: src/auth-core/guards/csrf.guard.spec.ts
+- removed: src/auth-core/guards/csrf.guard.ts
 
 ---
 
