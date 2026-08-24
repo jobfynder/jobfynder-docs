@@ -1,26 +1,37 @@
 {
   "date": "2026-08-24",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-sender-resolution.",
   "repositories": [
-    "jobfynder-admin/jobFynder-BE-nestJS"
+    "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
-    "Branch: main",
-    "Head SHA: 3a905be",
-    "Commit count: 1",
-    "Triggered by: atult120",
+    "Repository: jobfynder/hermes",
+    "Branch: feature/hermes-850-sender-resolution",
+    "Head SHA: 0116b78",
+    "Commit count: 2",
+    "Triggered by: jobfynder",
     "Commits:",
-    "3a905be Allow cookie auth on the OAuth session hop. \u2014 atultiwari",
+    "786c99c feat(hermes-850): resolve original sender for forwarded email (spec 4.1) \u2014 Jobfynder Automation",
+    "0116b78 feat(hermes-850): exact-content dedupe, field provenance, claim-and-verify loop \u2014 Jobfynder Automation",
     "Changed files:",
-    "modified: src/auth-core/auth-session.service.ts",
-    "modified: src/auth-core/guards/jwt-auth.guard.ts",
-    "modified: src/auth/auth.controller.ts",
-    "modified: src/auth/auth.service.ts",
-    "modified: src/auth/dto/auth.dto.ts",
-    "modified: src/oauth/oauth.controller.ts"
+    "added: app/claim/__init__.py",
+    "added: app/claim/models.py",
+    "added: app/claim/service.py",
+    "added: app/email_parsing/dedupe.py",
+    "added: app/email_parsing/provenance.py",
+    "added: app/email_parsing/sender_resolver.py",
+    "added: app/routers/claim.py",
+    "added: scripts/hermes-850-claim-check.py",
+    "added: scripts/hermes-850-dedupe-check.py",
+    "added: scripts/hermes-850-provenance-check.py",
+    "added: scripts/hermes-850-sender-resolution-check.py",
+    "modified: app/channels/service.py",
+    "modified: app/drafts/service.py",
+    "modified: app/email_parsing/sender_resolver.py",
+    "modified: app/main.py",
+    "modified: app/providers/email/service.py"
   ],
   "decisions": [
     {
