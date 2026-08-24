@@ -8,34 +8,33 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
-- Head SHA: 0ee50a3
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: main
+- Head SHA: 3a905be
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: atult120
 - Commits:
-- 0ee50a3 Refactor profile data handling and introduce coerceToTrimmedString utility — Nishant Arora
+- 3a905be Allow cookie auth on the OAuth session hop. — atultiwari
 - Changed files:
-- added: src/components/components/private/profile/helpers/coerceDisplayValue.ts
-- modified: src/components/components/private/profile/components/EmployerCompanyDetailsSection.tsx
-- modified: src/components/components/private/profile/components/EmployerLocationsSection.tsx
-- modified: src/components/components/private/profile/components/ServiceProviderEditCompanyProfileModal.tsx
-- modified: src/components/components/private/profile/components/serviceProviderOverviewHelpers.ts
-- modified: src/components/components/private/profile/modals/EditEmployerLocationsModal.tsx
-- modified: src/types/auth.ts
+- modified: src/auth-core/auth-session.service.ts
+- modified: src/auth-core/guards/jwt-auth.guard.ts
+- modified: src/auth/auth.controller.ts
+- modified: src/auth/auth.service.ts
+- modified: src/auth/dto/auth.dto.ts
+- modified: src/oauth/oauth.controller.ts
 
 ---
 
