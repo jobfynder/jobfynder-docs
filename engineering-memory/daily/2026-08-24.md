@@ -8,31 +8,32 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/hermes-drafts-review-queue.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-live-provider-fetch.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: feat/hermes-drafts-review-queue
-- Head SHA: a1b9cfb
+- Repository: jobfynder/hermes
+- Branch: feature/hermes-850-live-provider-fetch
+- Head SHA: fc81032
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: jobfynder
 - Commits:
-- a1b9cfb feat(hermes-drafts): review queue UI for Hermes email-parsed drafts — Pavan
+- fc81032 feat(hermes-850): confidence-based hotlist/requirement classification for a shared mailbox — Pavan
 - Changed files:
-- added: src/pages/private/HermesDraftsReview.tsx
-- added: src/services/hermes-drafts.ts
-- modified: src/constants/navigation.ts
-- modified: src/routes/index.tsx
+- modified: .env.example
+- modified: app/channels/service.py
+- modified: app/email_parsing/parsers.py
+- modified: scripts/hermes-850-email-integration-check.py
+- modified: scripts/hermes-850-email-parsing-check.py
 
 ---
 

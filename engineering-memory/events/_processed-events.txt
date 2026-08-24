@@ -322,3 +322,4 @@ jobfynder/hermes|refs/heads/feature/hermes-850-live-provider-fetch|4b7d0a59e72b3
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/hermes-draft-intake|90ee8f5ce98b9279a56a8d64dbed735543b9e4dc
 jobfynder/hermes|refs/heads/feature/hermes-850-live-provider-fetch|8a5c90489338d935294320d0b73ae1ecfb529dc4
 jobfynder-admin/jobFynder-FE-vite|refs/heads/feat/hermes-drafts-review-queue|a1b9cfb3a2bd876ae7cb2fc5d246541e426c8047
+jobfynder/hermes|refs/heads/feature/hermes-850-live-provider-fetch|fc81032eb334e960e87365801d9568f8d7e008d8
