@@ -327,3 +327,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|e74b2db045684d056e84be1cd047
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|0ee50a31384e507e738e6773005bd06858c6b2d5
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|3a905bede857205b479078e9cd252058015998b8
 jobfynder/hermes|refs/heads/feature/hermes-850-sender-resolution|0116b78accfbb8fb9a9455c9732106ee89973896
+jobfynder/hermes|refs/heads/main|77f1f0575b9737d2f993e096adfce0afb6512456
