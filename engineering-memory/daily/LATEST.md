@@ -8,32 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-850-live-provider-fetch.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/hermes-drafts-review-queue.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: feature/hermes-850-live-provider-fetch
-- Head SHA: 8a5c904
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: feat/hermes-drafts-review-queue
+- Head SHA: a1b9cfb
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- 8a5c904 feat(hermes-850): Graph subscription lifecycle + clientState verification — Pavan
+- a1b9cfb feat(hermes-drafts): review queue UI for Hermes email-parsed drafts — Pavan
 - Changed files:
-- added: scripts/hermes-850-graph-subscription-renew.py
-- modified: .env.example
-- modified: app/providers/microsoft_graph/service.py
-- modified: app/routers/microsoft_graph_provider.py
-- modified: scripts/hermes-850-live-fetch-check.py
+- added: src/pages/private/HermesDraftsReview.tsx
+- added: src/services/hermes-drafts.ts
+- modified: src/constants/navigation.ts
+- modified: src/routes/index.tsx
 
 ---
 
