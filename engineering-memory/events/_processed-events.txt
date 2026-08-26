@@ -329,3 +329,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|3a905bede857205b479078e9cd25
 jobfynder/hermes|refs/heads/feature/hermes-850-sender-resolution|0116b78accfbb8fb9a9455c9732106ee89973896
 jobfynder/hermes|refs/heads/main|77f1f0575b9737d2f993e096adfce0afb6512456
 jobfynder/hermes|refs/heads/feat/hermes-850-graph-notification-consumer|2188443b2708b54b872ffdba3b3a453154846ab8
+jobfynder/hermes|refs/heads/feat/hermes-850-graph-notification-consumer|b81a7e9663509b4361e45687c1ce484a75e6e606

@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch feat/hermes-850-graph
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: feat/hermes-850-graph-notification-consumer
-- Head SHA: 2188443
+- Head SHA: b81a7e9
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 2188443 Create hermes-850-graph-notification-consumer.py — Jobfynder
+- b81a7e9 feat(hermes-850): add legacy webhook kill switch — Jobfynder
 - Changed files:
-- added: scripts/hermes-850-graph-notification-consumer.py
+- modified: app/routers/microsoft_graph_provider.py
 
 ---
 
