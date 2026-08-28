@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch integrate/hermes-graph-and-claim.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,11 +22,20 @@ GitHub push event processed for jobfynder/hermes on branch integrate/hermes-grap
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: integrate/hermes-graph-and-claim
+- Branch: main
 - Head SHA: 54c2704
-- Commit count: 2
+- Commit count: 11
 - Triggered by: jobfynder
 - Commits:
+- 3f3de07 perf(hermes-750): fetch Langfuse prompt details concurrently instead of sequentially — Jobfynder Automation
+- 9dc69d5 fix(hermes-100): close the RBAC gap on /understanding/* and /submissions/evaluate* — Jobfynder Automation
+- 5344a60 fix(hermes-750,800): repoint 3 check scripts at the current prompt registry — Jobfynder Automation
+- 56ef6b3 Create hermes-850-graph-notification-consumer.py — Jobfynder
+- 1a39907 feat(hermes-850): add pika dep and graph-consumer service — Jobfynder
+- 2cd62a8 fix(graph): make queue delivery loss-resistant — Pavan
+- 4d57171 fix(graph): make app imports stable in service containers — Pavan
+- 6512aa0 fix(graph): honor tenant subscription lifetime limit — Pavan
+- f606f66 feat: add read-only draft review UI — Pavan
 - 895bc6f merge: integrate claim-and-verify/dedupe/provenance work into the live Graph pipeline branch — Jobfynder Automation
 - 54c2704 fix(hermes-850): use constant-time comparison for Graph clientState check — Jobfynder Automation
 - Changed files:
@@ -39,25 +48,42 @@ GitHub push event processed for jobfynder/hermes on branch integrate/hermes-grap
 - added: app/providers/gmail/__init__.py
 - added: app/providers/gmail/service.py
 - added: app/providers/microsoft_graph/__init__.py
+- added: app/providers/microsoft_graph/service.py
 - added: app/routers/claim.py
+- added: app/routers/draft_review.py
 - added: app/routers/gmail_provider.py
+- added: app/static/draft-review.html
+- added: scripts/check-rabbitmq-connectivity.py
+- added: scripts/hermes-750-langfuse-concurrent-fetch-check.py
 - added: scripts/hermes-850-claim-check.py
 - added: scripts/hermes-850-dedupe-check.py
 - added: scripts/hermes-850-gmail-graph-provider-check.py
+- added: scripts/hermes-850-graph-notification-consumer.py
+- added: scripts/hermes-850-graph-subscription-renew.py
 - added: scripts/hermes-850-live-fetch-check.py
 - added: scripts/hermes-850-provenance-check.py
 - added: scripts/hermes-850-sender-resolution-check.py
+- added: scripts/hermes-draft-review-check.py
 - modified: .env.example
 - modified: app/channels/service.py
 - modified: app/drafts/service.py
 - modified: app/email_parsing/parsers.py
 - modified: app/main.py
+- modified: app/prompt_runtime/langfuse_prompts.py
 - modified: app/providers/email/service.py
 - modified: app/providers/microsoft_graph/service.py
 - modified: app/providers/registry.py
 - modified: app/routers/drafts.py
+- modified: app/routers/submissions.py
+- modified: app/routers/understanding.py
+- modified: docker-compose.yml
+- modified: requirements.txt
+- modified: scripts/hermes-750-prompt-runtime-check.py
+- modified: scripts/hermes-800-foundation-check.py
+- modified: scripts/hermes-800-resume-builder-suggestion-check.py
 - modified: scripts/hermes-850-email-integration-check.py
 - modified: scripts/hermes-850-email-parsing-check.py
+- modified: scripts/hermes-850-graph-notification-consumer.py
 
 ---
 
