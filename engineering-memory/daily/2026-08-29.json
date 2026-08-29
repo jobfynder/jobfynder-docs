@@ -1,14 +1,14 @@
 {
   "date": "2026-08-29",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch fix/hermes-core-push-user-agent.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: fix/hermes-core-push-user-agent",
+    "Branch: main",
     "Head SHA: 58c86d0",
     "Commit count: 1",
     "Triggered by: jobfynder",
