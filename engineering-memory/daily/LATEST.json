@@ -1,36 +1,26 @@
 {
   "date": "2026-08-29",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-signature-ner-20260829114521.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: main",
-    "Head SHA: 5a2fa1f",
-    "Commit count: 1",
+    "Branch: backup/hermes-850-signature-ner-20260829114521",
+    "Head SHA: 272a1e5",
+    "Commit count: 2",
     "Triggered by: jobfynder",
     "Commits:",
-    "5a2fa1f feat(email-parsing): expand skills taxonomy, fix skill/work-auth/LinkedIn/signature extraction gaps \u2014 Jobfynder Automation",
+    "7c5a631 feat(email-parsing): add NER fallback for fragmented signature blocks \u2014 Jobfynder Automation",
+    "272a1e5 chore: remove stray commit-msg.txt accidentally staged by the previous commit \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: scripts/hermes-850-email-signature-check.py",
-    "modified: app/email_parsing/llm_fallback.py",
-    "modified: app/email_parsing/parsers.py",
-    "modified: app/email_parsing/provenance.py",
+    "added: commit-msg.txt",
     "modified: app/email_parsing/signature.py",
-    "modified: app/understanding/parsers/basic.py",
-    "modified: app/understanding/parsers/contact.py",
-    "modified: app/understanding/parsers/job_description_fields.py",
-    "modified: app/understanding/structured.py",
-    "modified: app/understanding/taxonomy/canonical_skills.json",
-    "modified: app/understanding/taxonomy/job_titles.json",
-    "modified: app/understanding/taxonomy/loader.py",
-    "modified: frontend/src/pages/DraftDetailPage.tsx",
-    "modified: frontend/src/types.ts",
-    "modified: scripts/hermes-850-email-parsing-check.py",
-    "removed: app/understanding/taxonomy/skills.json"
+    "modified: requirements.txt",
+    "modified: scripts/hermes-850-email-signature-check.py",
+    "removed: commit-msg.txt"
   ],
   "decisions": [
     {

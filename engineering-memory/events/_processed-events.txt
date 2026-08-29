@@ -366,3 +366,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/integration/staged-merge-2026-08-
 jobfynder-admin/jobFynder-FE-vite|refs/heads/integration/staged-merge-2026-08-29|92f4cbce096066269ee3213e9c31a644ada37b6b
 jobfynder/hermes|refs/heads/backup/hermes-850-extraction-quality-20260829105319|5a2fa1fb4767ec7d93fe15d9d7d9fe3f3e9b59bc
 jobfynder/hermes|refs/heads/main|5a2fa1fb4767ec7d93fe15d9d7d9fe3f3e9b59bc
+jobfynder/hermes|refs/heads/backup/hermes-850-signature-ner-20260829114521|272a1e5a62bd879845d23bf55b7d571c3203f240
