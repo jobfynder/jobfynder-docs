@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-core-job-push.
 
 ---
 
@@ -22,18 +22,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 84731b9
+- Branch: feature/hermes-core-job-push
+- Head SHA: 9e0c087
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 84731b9 feat(email-parsing): self-learning hotlist vs. job-requirement classification — Jobfynder Automation
+- 9e0c087 feat(email-parsing): push published job requirements to Jobfynder Core — Jobfynder Automation
 - Changed files:
-- added: app/email_parsing/classification_learning.py
-- added: scripts/hermes-850-self-learning-classification-check.py
-- modified: app/channels/service.py
+- added: app/integrations/core_job_push.py
+- added: scripts/hermes-850-core-job-push-check.py
+- modified: .env.example
 - modified: app/drafts/service.py
-- modified: app/routers/drafts.py
 
 ---
 
