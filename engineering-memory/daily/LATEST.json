@@ -1,33 +1,24 @@
 {
   "date": "2026-08-29",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch feature/hermes-email-llm-fallback.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: main",
-    "Head SHA: 15f16f5",
+    "Branch: feature/hermes-email-llm-fallback",
+    "Head SHA: a6ef534",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "15f16f5 feat(email-parsing): landing database for parsed emails \u2014 Jobfynder Automation",
+    "a6ef534 feat(email-parsing): wire the LLM extraction fallback for ambiguous emails \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: app/runtime/db.py",
-    "added: scripts/hermes-landing-db-import-jsonl.py",
-    "modified: .env.example",
+    "added: app/email_parsing/llm_fallback.py",
+    "added: scripts/hermes-850-email-llm-fallback-check.py",
     "modified: app/channels/service.py",
-    "modified: app/claim/service.py",
-    "modified: app/drafts/service.py",
-    "modified: app/email_parsing/dedupe.py",
-    "modified: app/email_parsing/provenance.py",
-    "modified: app/main.py",
-    "modified: app/runtime/intake_log.py",
-    "modified: docker-compose.yml",
-    "modified: requirements.txt",
-    "modified: scripts/hermes-850-graph-notification-consumer.py"
+    "modified: app/email_parsing/provenance.py"
   ],
   "decisions": [
     {

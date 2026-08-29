@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-email-llm-fallback.
 
 ---
 
@@ -22,26 +22,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 15f16f5
+- Branch: feature/hermes-email-llm-fallback
+- Head SHA: a6ef534
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 15f16f5 feat(email-parsing): landing database for parsed emails — Jobfynder Automation
+- a6ef534 feat(email-parsing): wire the LLM extraction fallback for ambiguous emails — Jobfynder Automation
 - Changed files:
-- added: app/runtime/db.py
-- added: scripts/hermes-landing-db-import-jsonl.py
-- modified: .env.example
+- added: app/email_parsing/llm_fallback.py
+- added: scripts/hermes-850-email-llm-fallback-check.py
 - modified: app/channels/service.py
-- modified: app/claim/service.py
-- modified: app/drafts/service.py
-- modified: app/email_parsing/dedupe.py
 - modified: app/email_parsing/provenance.py
-- modified: app/main.py
-- modified: app/runtime/intake_log.py
-- modified: docker-compose.yml
-- modified: requirements.txt
-- modified: scripts/hermes-850-graph-notification-consumer.py
 
 ---
 
