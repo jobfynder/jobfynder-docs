@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-jd-quality-20260829074808.
 
 ---
 
@@ -22,14 +22,28 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 10ef279
-- Commit count: 1
+- Branch: backup/hermes-850-jd-quality-20260829074808
+- Head SHA: 67ca4b6
+- Commit count: 2
 - Triggered by: jobfynder
 - Commits:
-- 10ef279 fix(review): stop browsers from caching a stale index.html after deploy — Jobfynder Automation
+- 9809bd0 fix(email-parsing): extract company/end-client, clean job description, preserve HTML line structure — Jobfynder Automation
+- 67ca4b6 chore: remove stray commit-msg.txt accidentally staged by the previous commit — Jobfynder Automation
 - Changed files:
-- modified: app/routers/draft_review.py
+- added: commit-msg.txt
+- modified: app/email_parsing/llm_fallback.py
+- modified: app/email_parsing/parsers.py
+- modified: app/email_parsing/provenance.py
+- modified: app/integrations/core_job_push.py
+- modified: app/providers/microsoft_graph/service.py
+- modified: app/understanding/parsers/basic.py
+- modified: app/understanding/parsers/job_description_fields.py
+- modified: app/understanding/structured.py
+- modified: frontend/src/pages/DraftDetailPage.tsx
+- modified: frontend/src/types.ts
+- modified: scripts/hermes-850-email-parsing-check.py
+- modified: scripts/hermes-850-gmail-graph-provider-check.py
+- removed: commit-msg.txt
 
 ---
 
