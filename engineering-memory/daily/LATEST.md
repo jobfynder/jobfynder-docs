@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch backup/hermes-review-ctas-20260829061409.
 
 ---
 
@@ -22,14 +22,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: ee2614a
+- Branch: backup/hermes-review-ctas-20260829061409
+- Head SHA: 636e8a8
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- ee2614a docs(hermes-850): consolidated checkpoint for landing DB, LLM fallback, self-learning, Core push, review frontend — Jobfynder Automation
+- 636e8a8 feat(review): wire claim-and-verify and add real-time review CTAs — Jobfynder Automation
 - Changed files:
-- added: docs/hermes-850/consolidated-checkpoint.md
+- modified: frontend/src/api/client.ts
+- modified: frontend/src/pages/DraftDetailPage.tsx
+- modified: frontend/src/pages/DraftListPage.tsx
+- modified: frontend/src/types.ts
 
 ---
 
