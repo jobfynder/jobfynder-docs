@@ -8,33 +8,40 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-landing-database.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: features
-- Head SHA: ed0b5be
+- Repository: jobfynder/hermes
+- Branch: feature/hermes-landing-database
+- Head SHA: 15f16f5
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: jobfynder
 - Commits:
-- ed0b5be feat(hermes): accept full parsed job payload on POST /hermes/job/create — Pavan
+- 15f16f5 feat(email-parsing): landing database for parsed emails — Jobfynder Automation
 - Changed files:
-- added: prisma/migrations/20260829010000_add_email_job_source_and_hermes_system_user/migration.sql
-- modified: prisma/schema.prisma
-- modified: src/hermes/hermes.controller.ts
-- modified: src/hermes/hermes.module.ts
-- modified: src/hermes/hermes.service.ts
-- modified: src/jobs/dto/create-parsed-job.dto.ts
+- added: app/runtime/db.py
+- added: scripts/hermes-landing-db-import-jsonl.py
+- modified: .env.example
+- modified: app/channels/service.py
+- modified: app/claim/service.py
+- modified: app/drafts/service.py
+- modified: app/email_parsing/dedupe.py
+- modified: app/email_parsing/provenance.py
+- modified: app/main.py
+- modified: app/runtime/intake_log.py
+- modified: docker-compose.yml
+- modified: requirements.txt
+- modified: scripts/hermes-850-graph-notification-consumer.py
 
 ---
 
