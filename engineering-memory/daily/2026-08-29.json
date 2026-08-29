@@ -1,14 +1,14 @@
 {
   "date": "2026-08-29",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch feature/hermes-email-signature-parser.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: feature/hermes-email-signature-parser",
+    "Branch: main",
     "Head SHA: 7ed7353",
     "Commit count: 2",
     "Triggered by: jobfynder",

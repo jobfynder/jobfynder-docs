@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-email-signature-parser.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,7 +22,7 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-email-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-email-signature-parser
+- Branch: main
 - Head SHA: 7ed7353
 - Commit count: 2
 - Triggered by: jobfynder
