@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-subfolder-20260829123258.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,7 +22,7 @@ GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-sub
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: backup/hermes-850-subfolder-20260829123258
+- Branch: main
 - Head SHA: 9ce054c
 - Commit count: 1
 - Triggered by: jobfynder
