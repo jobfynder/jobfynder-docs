@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-routing-fix-20260829070145.
 
 ---
 
@@ -22,17 +22,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 636e8a8
+- Branch: backup/hermes-850-routing-fix-20260829070145
+- Head SHA: edc6563
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 636e8a8 feat(review): wire claim-and-verify and add real-time review CTAs — Jobfynder Automation
+- edc6563 fix(email-routing): point HERMES_REQUIREMENTS_MAILBOX at the real jobs@ inbox — Jobfynder Automation
 - Changed files:
-- modified: frontend/src/api/client.ts
-- modified: frontend/src/pages/DraftDetailPage.tsx
-- modified: frontend/src/pages/DraftListPage.tsx
-- modified: frontend/src/types.ts
+- modified: .env.example
+- modified: scripts/hermes-850-email-integration-check.py
+- modified: scripts/hermes-850-email-parsing-check.py
+- modified: scripts/hermes-850-gmail-graph-provider-check.py
 
 ---
 
