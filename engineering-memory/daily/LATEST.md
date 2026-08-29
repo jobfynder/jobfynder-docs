@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-self-learning-classification.
 
 ---
 
@@ -22,17 +22,18 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: a6ef534
+- Branch: feature/hermes-self-learning-classification
+- Head SHA: 84731b9
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- a6ef534 feat(email-parsing): wire the LLM extraction fallback for ambiguous emails — Jobfynder Automation
+- 84731b9 feat(email-parsing): self-learning hotlist vs. job-requirement classification — Jobfynder Automation
 - Changed files:
-- added: app/email_parsing/llm_fallback.py
-- added: scripts/hermes-850-email-llm-fallback-check.py
+- added: app/email_parsing/classification_learning.py
+- added: scripts/hermes-850-self-learning-classification-check.py
 - modified: app/channels/service.py
-- modified: app/email_parsing/provenance.py
+- modified: app/drafts/service.py
+- modified: app/routers/drafts.py
 
 ---
 
