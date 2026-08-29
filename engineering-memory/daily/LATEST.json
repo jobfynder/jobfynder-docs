@@ -1,14 +1,14 @@
 {
   "date": "2026-08-29",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch feature/hermes-self-learning-classification.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: feature/hermes-self-learning-classification",
+    "Branch: main",
     "Head SHA: 84731b9",
     "Commit count: 1",
     "Triggered by: jobfynder",
