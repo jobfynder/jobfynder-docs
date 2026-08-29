@@ -8,24 +8,29 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch integration/staged-merge-2026-08-29.
+GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-llm-company-20260829075645.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: integration/staged-merge-2026-08-29
-- Head SHA: 3e36c06
-- Commit count: 0
-- Triggered by: jobfynder-admin
+- Repository: jobfynder/hermes
+- Branch: backup/hermes-850-llm-company-20260829075645
+- Head SHA: 8cb5234
+- Commit count: 1
+- Triggered by: jobfynder
+- Commits:
+- 8cb5234 fix(email-parsing): ask the LLM fallback to extract company too — Jobfynder Automation
+- Changed files:
+- modified: app/email_parsing/llm_fallback.py
+- modified: scripts/hermes-850-email-llm-fallback-check.py
 
 ---
 
