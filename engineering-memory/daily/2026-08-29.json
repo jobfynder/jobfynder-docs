@@ -1,35 +1,17 @@
 {
   "date": "2026-08-29",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch integration/staged-merge-2026-08-29.",
   "repositories": [
-    "jobfynder/hermes"
+    "jobfynder-admin/jobFynder-FE-vite"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder/hermes",
-    "Branch: main",
-    "Head SHA: 67ca4b6",
-    "Commit count: 2",
-    "Triggered by: jobfynder",
-    "Commits:",
-    "9809bd0 fix(email-parsing): extract company/end-client, clean job description, preserve HTML line structure \u2014 Jobfynder Automation",
-    "67ca4b6 chore: remove stray commit-msg.txt accidentally staged by the previous commit \u2014 Jobfynder Automation",
-    "Changed files:",
-    "added: commit-msg.txt",
-    "modified: app/email_parsing/llm_fallback.py",
-    "modified: app/email_parsing/parsers.py",
-    "modified: app/email_parsing/provenance.py",
-    "modified: app/integrations/core_job_push.py",
-    "modified: app/providers/microsoft_graph/service.py",
-    "modified: app/understanding/parsers/basic.py",
-    "modified: app/understanding/parsers/job_description_fields.py",
-    "modified: app/understanding/structured.py",
-    "modified: frontend/src/pages/DraftDetailPage.tsx",
-    "modified: frontend/src/types.ts",
-    "modified: scripts/hermes-850-email-parsing-check.py",
-    "modified: scripts/hermes-850-gmail-graph-provider-check.py",
-    "removed: commit-msg.txt"
+    "Repository: jobfynder-admin/jobFynder-FE-vite",
+    "Branch: integration/staged-merge-2026-08-29",
+    "Head SHA: 3e36c06",
+    "Commit count: 0",
+    "Triggered by: jobfynder-admin"
   ],
   "decisions": [
     {
