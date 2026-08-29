@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch backup/hermes-review-frontend-20260829045233.
 
 ---
 
@@ -22,14 +22,46 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 58c86d0
+- Branch: backup/hermes-review-frontend-20260829045233
+- Head SHA: 5a7c25d
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 58c86d0 fix(core-job-push): set a real User-Agent, Cloudflare blocks the urllib default — Jobfynder Automation
+- 5a7c25d feat(review): replace static review page with React SPA — Jobfynder Automation
 - Changed files:
-- modified: app/integrations/core_job_push.py
+- added: frontend/.gitignore
+- added: frontend/.oxlintrc.json
+- added: frontend/README.md
+- added: frontend/index.html
+- added: frontend/package-lock.json
+- added: frontend/package.json
+- added: frontend/public/favicon.svg
+- added: frontend/public/icons.svg
+- added: frontend/src/App.tsx
+- added: frontend/src/api/client.ts
+- added: frontend/src/components/ConfidenceMeter.tsx
+- added: frontend/src/components/DraftTypeLabel.tsx
+- added: frontend/src/components/FieldRow.tsx
+- added: frontend/src/components/ProvenanceChip.tsx
+- added: frontend/src/components/StatusBadge.tsx
+- added: frontend/src/components/TokenGate.tsx
+- added: frontend/src/index.css
+- added: frontend/src/main.tsx
+- added: frontend/src/pages/DraftDetailPage.tsx
+- added: frontend/src/pages/DraftListPage.tsx
+- added: frontend/src/types.ts
+- added: frontend/tsconfig.app.json
+- added: frontend/tsconfig.json
+- added: frontend/tsconfig.node.json
+- added: frontend/vite.config.ts
+- added: scripts/hermes-850-review-endpoints-check.py
+- modified: .dockerignore
+- modified: Dockerfile
+- modified: app/drafts/models.py
+- modified: app/drafts/service.py
+- modified: app/routers/draft_review.py
+- modified: app/routers/drafts.py
+- removed: app/static/draft-review.html
 
 ---
 
