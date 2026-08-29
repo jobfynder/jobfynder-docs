@@ -1,26 +1,36 @@
 {
   "date": "2026-08-29",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch integration/staged-merge-2026-08-29.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-extraction-quality-20260829105319.",
   "repositories": [
-    "jobfynder-admin/jobFynder-FE-vite"
+    "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-FE-vite",
-    "Branch: integration/staged-merge-2026-08-29",
-    "Head SHA: 92f4cbc",
-    "Commit count: 2",
-    "Triggered by: jobfynder-admin",
+    "Repository: jobfynder/hermes",
+    "Branch: backup/hermes-850-extraction-quality-20260829105319",
+    "Head SHA: 5a2fa1f",
+    "Commit count: 1",
+    "Triggered by: jobfynder",
     "Commits:",
-    "90610da feat(hermes-drafts): review queue UI for Hermes email-parsed drafts \u2014 Pavan",
-    "92f4cbc fix(hermes-drafts): apiRequest moved from @/lib/apiClient to @/api/apiClient on features \u2014 Pavan",
+    "5a2fa1f feat(email-parsing): expand skills taxonomy, fix skill/work-auth/LinkedIn/signature extraction gaps \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: src/pages/private/HermesDraftsReview.tsx",
-    "added: src/services/hermes-drafts.ts",
-    "modified: src/constants/navigation.ts",
-    "modified: src/routes/index.tsx",
-    "modified: src/services/hermes-drafts.ts"
+    "added: scripts/hermes-850-email-signature-check.py",
+    "modified: app/email_parsing/llm_fallback.py",
+    "modified: app/email_parsing/parsers.py",
+    "modified: app/email_parsing/provenance.py",
+    "modified: app/email_parsing/signature.py",
+    "modified: app/understanding/parsers/basic.py",
+    "modified: app/understanding/parsers/contact.py",
+    "modified: app/understanding/parsers/job_description_fields.py",
+    "modified: app/understanding/structured.py",
+    "modified: app/understanding/taxonomy/canonical_skills.json",
+    "modified: app/understanding/taxonomy/job_titles.json",
+    "modified: app/understanding/taxonomy/loader.py",
+    "modified: frontend/src/pages/DraftDetailPage.tsx",
+    "modified: frontend/src/types.ts",
+    "modified: scripts/hermes-850-email-parsing-check.py",
+    "removed: app/understanding/taxonomy/skills.json"
   ],
   "decisions": [
     {

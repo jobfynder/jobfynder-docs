@@ -364,3 +364,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/integration/staged-merge-2026-08-29
 jobfynder/hermes|refs/heads/backup/hermes-850-llm-company-20260829075645|8cb523473bca588afd2d08df9d237b9b49975edf
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/integration/staged-merge-2026-08-29|efe56de440afe3f9fc252dcfbe433860030a1fb1
 jobfynder-admin/jobFynder-FE-vite|refs/heads/integration/staged-merge-2026-08-29|92f4cbce096066269ee3213e9c31a644ada37b6b
+jobfynder/hermes|refs/heads/backup/hermes-850-extraction-quality-20260829105319|5a2fa1fb4767ec7d93fe15d9d7d9fe3f3e9b59bc
