@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch backup/hermes-review-default-filter-20260829072202.
+GitHub push event processed for jobfynder/hermes on branch backup/hermes-review-cache-fix-20260829072546.
 
 ---
 
@@ -22,14 +22,14 @@ GitHub push event processed for jobfynder/hermes on branch backup/hermes-review-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: backup/hermes-review-default-filter-20260829072202
-- Head SHA: 62e2f9b
+- Branch: backup/hermes-review-cache-fix-20260829072546
+- Head SHA: 10ef279
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 62e2f9b fix(review): default the drafts list to All statuses, not Needs review — Jobfynder Automation
+- 10ef279 fix(review): stop browsers from caching a stale index.html after deploy — Jobfynder Automation
 - Changed files:
-- modified: frontend/src/pages/DraftListPage.tsx
+- modified: app/routers/draft_review.py
 
 ---
 
