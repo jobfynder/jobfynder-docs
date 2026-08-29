@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch backup/hermes-850-subfolder-20260829123258.
 
 ---
 
@@ -22,19 +22,16 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 272a1e5
-- Commit count: 2
+- Branch: backup/hermes-850-subfolder-20260829123258
+- Head SHA: 9ce054c
+- Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 7c5a631 feat(email-parsing): add NER fallback for fragmented signature blocks — Jobfynder Automation
-- 272a1e5 chore: remove stray commit-msg.txt accidentally staged by the previous commit — Jobfynder Automation
+- 9ce054c feat(microsoft-graph): support watching a specific mail folder, not just Inbox — Jobfynder Automation
 - Changed files:
-- added: commit-msg.txt
-- modified: app/email_parsing/signature.py
-- modified: requirements.txt
-- modified: scripts/hermes-850-email-signature-check.py
-- removed: commit-msg.txt
+- modified: .env.example
+- modified: app/providers/microsoft_graph/service.py
+- modified: scripts/hermes-850-live-fetch-check.py
 
 ---
 
