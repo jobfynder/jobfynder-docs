@@ -345,3 +345,4 @@ jobfynder/hermes|refs/heads/feature/hermes-self-learning-classification|84731b9e
 jobfynder/hermes|refs/heads/main|84731b9e6a35fe46b93e739b75a4297307737f49
 jobfynder/hermes|refs/heads/feature/hermes-core-job-push|9e0c087dd722550a9f73136a057fd570345ae9e8
 jobfynder/hermes|refs/heads/main|9e0c087dd722550a9f73136a057fd570345ae9e8
+jobfynder/hermes|refs/heads/fix/hermes-core-push-user-agent|58c86d02dac3383298526b8037b9064e2fa0ca89

@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-core-push-user-agent.
 
 ---
 
@@ -22,17 +22,14 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 9e0c087
+- Branch: fix/hermes-core-push-user-agent
+- Head SHA: 58c86d0
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 9e0c087 feat(email-parsing): push published job requirements to Jobfynder Core — Jobfynder Automation
+- 58c86d0 fix(core-job-push): set a real User-Agent, Cloudflare blocks the urllib default — Jobfynder Automation
 - Changed files:
-- added: app/integrations/core_job_push.py
-- added: scripts/hermes-850-core-job-push-check.py
-- modified: .env.example
-- modified: app/drafts/service.py
+- modified: app/integrations/core_job_push.py
 
 ---
 
