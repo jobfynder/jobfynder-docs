@@ -8,28 +8,35 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 3320794
+- Head SHA: de394e2
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3320794 Update Integration Studio connector icon map for split Custom API/Webhook connectors — Pavan
+- de394e2 Add read-only COMM-1 communication status bridge (Telegram, verified live) — Pavan
 - Changed files:
-- modified: src/constants/settings/integration-studio.ts
+- added: src/integration-studio/comm-bridge/comm-gateway-client.service.spec.ts
+- added: src/integration-studio/comm-bridge/comm-gateway-client.service.ts
+- modified: .env.example
+- modified: docs/integration-studio/CORE-600-integration-studio.md
+- modified: docs/integration-studio/user-guide.md
+- modified: src/integration-studio/integration-studio.controller.ts
+- modified: src/integration-studio/integration-studio.module.ts
+- modified: src/integration-studio/integration-studio.service.ts
 
 ---
 
