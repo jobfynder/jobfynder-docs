@@ -8,42 +8,40 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: 8c74f57
+- Head SHA: 8a05ce7
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 8c74f57 Wire Integration Studio settings page to the real CORE-600 API, remove mock data — Pavan
+- 8a05ce7 Add Oorwin, Bullhorn, JobDiva, Avionté connectors; split Custom API/Webhook — Pavan
 - Changed files:
-- added: src/components/components/private/settings/components/integration-studio/AutomationsSection.tsx
-- added: src/components/components/private/settings/components/integration-studio/ConnectCredentialsDialog.tsx
-- added: src/components/components/private/settings/components/integration-studio/ConnectedAppsSection.tsx
-- added: src/components/components/private/settings/components/integration-studio/ConnectionStatusBadge.tsx
-- added: src/components/components/private/settings/components/integration-studio/DataSyncSection.tsx
-- added: src/components/components/private/settings/components/integration-studio/IntegrationHealthSection.tsx
-- added: src/components/components/private/settings/components/integration-studio/index.ts
-- added: src/components/components/private/settings/components/integration-studio/useIntegrationStudio.ts
-- added: src/components/components/private/settings/sections/IntegrationStudio.tsx
-- added: src/constants/settings/integration-studio.ts
-- added: src/features/integration-studio/integrationStudioApi.ts
-- modified: src/components/components/private/settings/index.tsx
-- modified: src/components/components/public/talent-network-marketplace/settings/SettingsTab.tsx
-- modified: src/constants/settings/communication.ts
-- removed: src/components/components/public/talent-network-marketplace/settings/ApiIntegrationsSection.tsx
+- added: src/integration-studio/connectors/avionte.connector.ts
+- added: src/integration-studio/connectors/bullhorn.connector.ts
+- added: src/integration-studio/connectors/custom-api.connector.ts
+- added: src/integration-studio/connectors/jobdiva.connector.ts
+- added: src/integration-studio/connectors/oorwin.connector.ts
+- added: src/integration-studio/connectors/webhook.connector.ts
+- modified: docs/integration-studio/CORE-600-integration-studio.md
+- modified: docs/integration-studio/user-guide.md
+- modified: scripts/generate-integration-studio-docs.ts
+- modified: src/integration-studio/connectors/connector-registry.service.spec.ts
+- modified: src/integration-studio/connectors/connector-registry.service.ts
+- modified: src/integration-studio/integration-studio.module.ts
+- removed: src/integration-studio/connectors/generic-rest.connector.ts
 
 ---
 

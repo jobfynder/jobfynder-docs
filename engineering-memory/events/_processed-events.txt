@@ -374,3 +374,4 @@ jobfynder/hermes|refs/heads/main|4aeb62fd5602a7a6bffb67f6c5cbac7f7b52616d
 jobfynder/hermes|refs/heads/main|25853deffe7426cea05535914b56c8a9a2dda1c7
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|3bfa6e40655442148e49efc2014eb8d369933998
 jobfynder-admin/jobFynder-FE-vite|refs/heads/features|8c74f5769b7c8c7b85ffb4b148eefa88b468f325
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/features|8a05ce7cdfbeec7cf9c7f0ccdf6aa398c80652a4
