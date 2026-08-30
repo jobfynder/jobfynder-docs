@@ -23,14 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 4aeb62f
+- Head SHA: 25853de
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 4aeb62f fix(taxonomy): writes to canonical_skills.json/job_titles.json were never durable — Jobfynder Automation
+- 25853de feat(review): show the actual job title/candidate name in the drafts list, not "Draft Job Requirement" — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/taxonomy/loader.py
-- modified: scripts/hermes-900-spam-taxonomy-check.py
+- modified: frontend/src/components/DraftTypeLabel.tsx
+- modified: frontend/src/pages/DraftDetailPage.tsx
+- modified: frontend/src/pages/DraftListPage.tsx
 
 ---
 
