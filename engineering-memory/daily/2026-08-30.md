@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,17 +22,33 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: features
-- Head SHA: 9bdc712
+- Branch: dev
+- Head SHA: 691268d
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 9bdc712 Add Sync now action to Integration Studio Health tab — Pavan
+- 691268d Add onboarding documentation and update import profile functionality — Nishant Arora
 - Changed files:
-- modified: src/components/components/private/settings/components/integration-studio/IntegrationHealthSection.tsx
-- modified: src/components/components/private/settings/components/integration-studio/useIntegrationStudio.ts
-- modified: src/components/components/private/settings/sections/IntegrationStudio.tsx
-- modified: src/features/integration-studio/integrationStudioApi.ts
+- added: docs/onboarding-fields.md
+- added: docs/onboarding-redesign-backend-spec.md
+- modified: src/components/components/auth/onboarding/ImportProfileOnboarding.tsx
+- modified: src/components/components/auth/onboarding/LinkedInProfileImportDialog.tsx
+- modified: src/components/components/auth/onboarding/bench-sales/bench-sales.tsx
+- modified: src/components/components/auth/onboarding/bench-sales/personal-information.tsx
+- modified: src/components/components/auth/onboarding/consultant/consultant-form.tsx
+- modified: src/components/components/auth/onboarding/consultant/personal-information.tsx
+- modified: src/components/components/auth/onboarding/employer/employer.tsx
+- modified: src/components/components/auth/onboarding/employer/personal-information.tsx
+- modified: src/components/components/auth/onboarding/recruiter/personal-information.tsx
+- modified: src/components/components/auth/onboarding/recruiter/recruiter.tsx
+- modified: src/components/components/auth/onboarding/service-provider/personal-information.tsx
+- modified: src/components/components/auth/onboarding/service-provider/service-provider.tsx
+- modified: src/pages/auth/RoleUpdate.tsx
+- modified: src/pages/auth/callback.tsx
+- modified: src/types/linkedin-brightdata.ts
+- modified: src/utils/mapBrightDataLinkedInToResume.ts
+- modified: src/utils/onboardingOAuthContext.ts
+- modified: src/utils/onboardingTransform.ts
 
 ---
 
