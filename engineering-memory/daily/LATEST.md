@@ -8,40 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: features
-- Head SHA: 8a05ce7
+- Head SHA: 3320794
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 8a05ce7 Add Oorwin, Bullhorn, JobDiva, Avionté connectors; split Custom API/Webhook — Pavan
+- 3320794 Update Integration Studio connector icon map for split Custom API/Webhook connectors — Pavan
 - Changed files:
-- added: src/integration-studio/connectors/avionte.connector.ts
-- added: src/integration-studio/connectors/bullhorn.connector.ts
-- added: src/integration-studio/connectors/custom-api.connector.ts
-- added: src/integration-studio/connectors/jobdiva.connector.ts
-- added: src/integration-studio/connectors/oorwin.connector.ts
-- added: src/integration-studio/connectors/webhook.connector.ts
-- modified: docs/integration-studio/CORE-600-integration-studio.md
-- modified: docs/integration-studio/user-guide.md
-- modified: scripts/generate-integration-studio-docs.ts
-- modified: src/integration-studio/connectors/connector-registry.service.spec.ts
-- modified: src/integration-studio/connectors/connector-registry.service.ts
-- modified: src/integration-studio/integration-studio.module.ts
-- removed: src/integration-studio/connectors/generic-rest.connector.ts
+- modified: src/constants/settings/integration-studio.ts
 
 ---
 
