@@ -8,30 +8,46 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 25853de
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: features
+- Head SHA: 3bfa6e4
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- 25853de feat(review): show the actual job title/candidate name in the drafts list, not "Draft Job Requirement" — Jobfynder Automation
+- 3bfa6e4 Add Integration Studio (CORE-600) foundation: connector framework, CEIPAL connector, encrypted credential storage — Pavan
 - Changed files:
-- modified: frontend/src/components/DraftTypeLabel.tsx
-- modified: frontend/src/pages/DraftDetailPage.tsx
-- modified: frontend/src/pages/DraftListPage.tsx
+- added: .github/workflows/integration-studio-docs-check.yml
+- added: docs/integration-studio/CORE-600-integration-studio.md
+- added: docs/integration-studio/user-guide.md
+- added: scripts/generate-integration-studio-docs.ts
+- added: src/integration-studio/connectors/ceipal.connector.ts
+- added: src/integration-studio/connectors/connector-registry.service.spec.ts
+- added: src/integration-studio/connectors/connector-registry.service.ts
+- added: src/integration-studio/connectors/connector.types.ts
+- added: src/integration-studio/connectors/generic-rest.connector.ts
+- added: src/integration-studio/credential-store.service.ts
+- added: src/integration-studio/dto/integration-studio.dto.ts
+- added: src/integration-studio/integration-studio.controller.ts
+- added: src/integration-studio/integration-studio.module.ts
+- added: src/integration-studio/integration-studio.service.ts
+- modified: .env.example
+- modified: docs/00-master-build-plan.md
+- modified: package.json
+- modified: prisma/schema.prisma
+- modified: src/app.module.ts
 
 ---
 
