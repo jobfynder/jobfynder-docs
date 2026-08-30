@@ -8,46 +8,42 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: features
-- Head SHA: 3bfa6e4
+- Head SHA: 8c74f57
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3bfa6e4 Add Integration Studio (CORE-600) foundation: connector framework, CEIPAL connector, encrypted credential storage — Pavan
+- 8c74f57 Wire Integration Studio settings page to the real CORE-600 API, remove mock data — Pavan
 - Changed files:
-- added: .github/workflows/integration-studio-docs-check.yml
-- added: docs/integration-studio/CORE-600-integration-studio.md
-- added: docs/integration-studio/user-guide.md
-- added: scripts/generate-integration-studio-docs.ts
-- added: src/integration-studio/connectors/ceipal.connector.ts
-- added: src/integration-studio/connectors/connector-registry.service.spec.ts
-- added: src/integration-studio/connectors/connector-registry.service.ts
-- added: src/integration-studio/connectors/connector.types.ts
-- added: src/integration-studio/connectors/generic-rest.connector.ts
-- added: src/integration-studio/credential-store.service.ts
-- added: src/integration-studio/dto/integration-studio.dto.ts
-- added: src/integration-studio/integration-studio.controller.ts
-- added: src/integration-studio/integration-studio.module.ts
-- added: src/integration-studio/integration-studio.service.ts
-- modified: .env.example
-- modified: docs/00-master-build-plan.md
-- modified: package.json
-- modified: prisma/schema.prisma
-- modified: src/app.module.ts
+- added: src/components/components/private/settings/components/integration-studio/AutomationsSection.tsx
+- added: src/components/components/private/settings/components/integration-studio/ConnectCredentialsDialog.tsx
+- added: src/components/components/private/settings/components/integration-studio/ConnectedAppsSection.tsx
+- added: src/components/components/private/settings/components/integration-studio/ConnectionStatusBadge.tsx
+- added: src/components/components/private/settings/components/integration-studio/DataSyncSection.tsx
+- added: src/components/components/private/settings/components/integration-studio/IntegrationHealthSection.tsx
+- added: src/components/components/private/settings/components/integration-studio/index.ts
+- added: src/components/components/private/settings/components/integration-studio/useIntegrationStudio.ts
+- added: src/components/components/private/settings/sections/IntegrationStudio.tsx
+- added: src/constants/settings/integration-studio.ts
+- added: src/features/integration-studio/integrationStudioApi.ts
+- modified: src/components/components/private/settings/index.tsx
+- modified: src/components/components/public/talent-network-marketplace/settings/SettingsTab.tsx
+- modified: src/constants/settings/communication.ts
+- removed: src/components/components/public/talent-network-marketplace/settings/ApiIntegrationsSection.tsx
 
 ---
 
