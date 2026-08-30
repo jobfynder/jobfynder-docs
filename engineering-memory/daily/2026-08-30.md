@@ -8,35 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: features
-- Head SHA: de394e2
+- Head SHA: e727c3d
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- de394e2 Add read-only COMM-1 communication status bridge (Telegram, verified live) — Pavan
+- e727c3d Show COMM-1 communication status (Telegram) read-only in Connected Apps — Pavan
 - Changed files:
-- added: src/integration-studio/comm-bridge/comm-gateway-client.service.spec.ts
-- added: src/integration-studio/comm-bridge/comm-gateway-client.service.ts
-- modified: .env.example
-- modified: docs/integration-studio/CORE-600-integration-studio.md
-- modified: docs/integration-studio/user-guide.md
-- modified: src/integration-studio/integration-studio.controller.ts
-- modified: src/integration-studio/integration-studio.module.ts
-- modified: src/integration-studio/integration-studio.service.ts
+- modified: src/components/components/private/settings/components/integration-studio/ConnectedAppsSection.tsx
+- modified: src/components/components/private/settings/components/integration-studio/useIntegrationStudio.ts
+- modified: src/components/components/private/settings/sections/IntegrationStudio.tsx
+- modified: src/features/integration-studio/integrationStudioApi.ts
 
 ---
 
