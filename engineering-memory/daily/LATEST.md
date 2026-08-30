@@ -8,31 +8,37 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch features.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: features
-- Head SHA: e727c3d
+- Head SHA: 116cd58
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- e727c3d Show COMM-1 communication status (Telegram) read-only in Connected Apps — Pavan
+- 116cd58 Add sync execution and rate limiting, closing two named gaps honestly — Pavan
 - Changed files:
-- modified: src/components/components/private/settings/components/integration-studio/ConnectedAppsSection.tsx
-- modified: src/components/components/private/settings/components/integration-studio/useIntegrationStudio.ts
-- modified: src/components/components/private/settings/sections/IntegrationStudio.tsx
-- modified: src/features/integration-studio/integrationStudioApi.ts
+- added: src/integration-studio/rate-limiter.service.ts
+- added: src/integration-studio/sync-runner.service.spec.ts
+- added: src/integration-studio/sync-runner.service.ts
+- modified: docs/integration-studio/CORE-600-integration-studio.md
+- modified: docs/integration-studio/user-guide.md
+- modified: src/integration-studio/connectors/connector.types.ts
+- modified: src/integration-studio/connectors/custom-api.connector.ts
+- modified: src/integration-studio/integration-studio.controller.ts
+- modified: src/integration-studio/integration-studio.module.ts
+- modified: src/integration-studio/integration-studio.service.ts
 
 ---
 
