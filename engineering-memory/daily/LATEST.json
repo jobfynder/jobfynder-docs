@@ -9,17 +9,23 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: main",
-    "Head SHA: ed154a9",
+    "Head SHA: 9c95b75",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "ed154a9 fix: signature website field, job_description cleanliness for Core-ready postings \u2014 Jobfynder Automation",
+    "9c95b75 feat(taxonomy): fix job-title extraction bug, dedupe near-duplicate candidates, add boilerplate-pattern learning + Job Titles page \u2014 Jobfynder Automation",
     "Changed files:",
+    "added: frontend/src/pages/JobTitlesTaxonomyPage.tsx",
+    "modified: app/channels/service.py",
     "modified: app/email_parsing/parsers.py",
-    "modified: app/email_parsing/signature.py",
-    "modified: app/email_parsing/signature_learning.py",
+    "modified: app/runtime/db.py",
+    "modified: app/understanding/taxonomy/candidates.py",
+    "modified: frontend/src/App.tsx",
+    "modified: frontend/src/api/client.ts",
+    "modified: frontend/src/pages/ModerationPage.tsx",
+    "modified: frontend/src/types.ts",
     "modified: scripts/hermes-850-email-parsing-check.py",
-    "modified: scripts/hermes-850-email-signature-check.py"
+    "modified: scripts/hermes-900-spam-taxonomy-check.py"
   ],
   "decisions": [
     {
