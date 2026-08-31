@@ -9,18 +9,20 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: main",
-    "Head SHA: 6fa1e08",
+    "Head SHA: e4cf432",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "6fa1e08 feat(taxonomy): edit a candidate's term before approval, deterministic-first descriptions \u2014 Jobfynder Automation",
+    "e4cf432 feat(review): signature field CRUD, per-domain pattern learning, and a publish gate \u2014 Jobfynder Automation",
     "Changed files:",
-    "modified: app/routers/moderation.py",
-    "modified: app/understanding/taxonomy/candidates.py",
-    "modified: app/understanding/taxonomy/descriptions.py",
+    "added: app/email_parsing/signature_learning.py",
+    "modified: app/channels/service.py",
+    "modified: app/drafts/service.py",
+    "modified: app/runtime/db.py",
     "modified: frontend/src/api/client.ts",
-    "modified: frontend/src/pages/ModerationPage.tsx",
-    "modified: scripts/hermes-900-spam-taxonomy-check.py"
+    "modified: frontend/src/pages/DraftDetailPage.tsx",
+    "modified: scripts/hermes-850-core-job-push-check.py",
+    "modified: scripts/hermes-950-review-accuracy-check.py"
   ],
   "decisions": [
     {
