@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 7927423
+- Head SHA: 5c586cf
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 7927423 feat(parsing): split a numbered multi-position email into separate job requirement records — Jobfynder Automation
+- 5c586cf docs: SOP for multi-position emails and freemail-sender data handling — Jobfynder Automation
 - Changed files:
-- modified: app/email_parsing/llm_fallback.py
-- modified: app/email_parsing/parsers.py
-- modified: scripts/hermes-850-email-parsing-check.py
+- added: docs/SOP-recruiter-email-data-quality.md
 
 ---
 
