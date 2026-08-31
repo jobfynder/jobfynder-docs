@@ -23,13 +23,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 5c586cf
+- Head SHA: ed154a9
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 5c586cf docs: SOP for multi-position emails and freemail-sender data handling — Jobfynder Automation
+- ed154a9 fix: signature website field, job_description cleanliness for Core-ready postings — Jobfynder Automation
 - Changed files:
-- added: docs/SOP-recruiter-email-data-quality.md
+- modified: app/email_parsing/parsers.py
+- modified: app/email_parsing/signature.py
+- modified: app/email_parsing/signature_learning.py
+- modified: scripts/hermes-850-email-parsing-check.py
+- modified: scripts/hermes-850-email-signature-check.py
 
 ---
 
