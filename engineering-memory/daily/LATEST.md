@@ -23,20 +23,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: e4cf432
+- Head SHA: c531825
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- e4cf432 feat(review): signature field CRUD, per-domain pattern learning, and a publish gate — Jobfynder Automation
+- c531825 feat(taxonomy): bulk approve/reject for the taxonomy candidate queue — Jobfynder Automation
 - Changed files:
-- added: app/email_parsing/signature_learning.py
-- modified: app/channels/service.py
-- modified: app/drafts/service.py
-- modified: app/runtime/db.py
+- modified: app/routers/moderation.py
+- modified: app/understanding/taxonomy/candidates.py
 - modified: frontend/src/api/client.ts
-- modified: frontend/src/pages/DraftDetailPage.tsx
-- modified: scripts/hermes-850-core-job-push-check.py
-- modified: scripts/hermes-950-review-accuracy-check.py
+- modified: frontend/src/pages/ModerationPage.tsx
+- modified: scripts/hermes-900-spam-taxonomy-check.py
 
 ---
 
