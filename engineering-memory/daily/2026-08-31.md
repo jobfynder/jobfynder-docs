@@ -23,22 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 68f21af
+- Head SHA: 7927423
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 68f21af fix: freemail signature-learning contamination, boilerplate company capture, duplicate requirement clutter — Jobfynder Automation
+- 7927423 feat(parsing): split a numbered multi-position email into separate job requirement records — Jobfynder Automation
 - Changed files:
-- modified: app/drafts/service.py
-- modified: app/email_parsing/signature.py
-- modified: app/email_parsing/signature_learning.py
-- modified: app/routers/drafts.py
-- modified: frontend/src/api/client.ts
-- modified: frontend/src/pages/DraftListPage.tsx
-- modified: frontend/src/types.ts
-- modified: scripts/hermes-850-email-signature-check.py
-- modified: scripts/hermes-850-review-endpoints-check.py
-- modified: scripts/hermes-950-review-accuracy-check.py
+- modified: app/email_parsing/llm_fallback.py
+- modified: app/email_parsing/parsers.py
+- modified: scripts/hermes-850-email-parsing-check.py
 
 ---
 
