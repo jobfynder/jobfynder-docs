@@ -9,18 +9,22 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: main",
-    "Head SHA: 28a56e2",
+    "Head SHA: 68f21af",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "28a56e2 perf(review): stop shipping the full payload to load the drafts list \u2014 Jobfynder Automation",
+    "68f21af fix: freemail signature-learning contamination, boilerplate company capture, duplicate requirement clutter \u2014 Jobfynder Automation",
     "Changed files:",
     "modified: app/drafts/service.py",
+    "modified: app/email_parsing/signature.py",
+    "modified: app/email_parsing/signature_learning.py",
     "modified: app/routers/drafts.py",
     "modified: frontend/src/api/client.ts",
     "modified: frontend/src/pages/DraftListPage.tsx",
     "modified: frontend/src/types.ts",
-    "modified: scripts/hermes-850-review-endpoints-check.py"
+    "modified: scripts/hermes-850-email-signature-check.py",
+    "modified: scripts/hermes-850-review-endpoints-check.py",
+    "modified: scripts/hermes-950-review-accuracy-check.py"
   ],
   "decisions": [
     {
