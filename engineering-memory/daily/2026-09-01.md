@@ -23,13 +23,16 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 3500280
+- Head SHA: 72fb813
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 3500280 fix(taxonomy): cross-process cache staleness was silently re-queuing already-approved terms — Jobfynder Automation
+- 72fb813 feat(taxonomy): editable job titles, with duplicate-rename protection and bulk reclassification — Jobfynder Automation
 - Changed files:
+- modified: app/routers/moderation.py
 - modified: app/understanding/taxonomy/loader.py
+- modified: frontend/src/api/client.ts
+- modified: frontend/src/pages/JobTitlesTaxonomyPage.tsx
 - modified: scripts/hermes-900-spam-taxonomy-check.py
 
 ---
