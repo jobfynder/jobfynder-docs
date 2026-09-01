@@ -8,34 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch features.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: features
-- Head SHA: 7733a59
+- Repository: jobfynder/hermes
+- Branch: main
+- Head SHA: a774d01
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: jobfynder
 - Commits:
-- 7733a59 Add Core -> n8n webhook trigger, closing the loop with a live workflow — Pavan
+- a774d01 feat(review): search, filters, sorting, and A-Z grouping for the taxonomy candidate queue — Jobfynder Automation
 - Changed files:
-- added: src/integration-studio/n8n-bridge/n8n-webhook-notifier.service.spec.ts
-- added: src/integration-studio/n8n-bridge/n8n-webhook-notifier.service.ts
-- modified: .env.example
-- modified: docs/integration-studio/CORE-600-integration-studio.md
-- modified: src/integration-studio/integration-studio.module.ts
-- modified: src/integration-studio/sync-runner.service.spec.ts
-- modified: src/integration-studio/sync-runner.service.ts
+- modified: frontend/src/pages/ModerationPage.tsx
 
 ---
 
