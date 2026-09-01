@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: e6e22b7
+- Head SHA: 3500280
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- e6e22b7 fix: boilerplate-line detector was flooding the queue, not reducing it — Jobfynder Automation
+- 3500280 fix(taxonomy): cross-process cache staleness was silently re-queuing already-approved terms — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/taxonomy/candidates.py
+- modified: app/understanding/taxonomy/loader.py
 - modified: scripts/hermes-900-spam-taxonomy-check.py
 
 ---
