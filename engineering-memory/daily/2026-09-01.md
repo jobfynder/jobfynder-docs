@@ -23,13 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: a774d01
+- Head SHA: e6e22b7
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- a774d01 feat(review): search, filters, sorting, and A-Z grouping for the taxonomy candidate queue — Jobfynder Automation
+- e6e22b7 fix: boilerplate-line detector was flooding the queue, not reducing it — Jobfynder Automation
 - Changed files:
-- modified: frontend/src/pages/ModerationPage.tsx
+- modified: app/understanding/taxonomy/candidates.py
+- modified: scripts/hermes-900-spam-taxonomy-check.py
 
 ---
 
