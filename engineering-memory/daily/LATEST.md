@@ -23,16 +23,19 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 5591d08
+- Head SHA: 1e0e291
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 5591d08 fix(parsing): stop truncating job descriptions and misclassifying postings as resumes — Jobfynder Automation
+- 1e0e291 feat(observability): migrate Langfuse tracing to v4 OTEL — Pavan
 - Changed files:
-- modified: app/channels/service.py
-- modified: app/email_parsing/parsers.py
-- modified: scripts/hermes-850-email-parsing-check.py
-- modified: scripts/hermes-850-self-learning-classification-check.py
+- added: tests/prompt_runtime/__init__.py
+- added: tests/prompt_runtime/test_langfuse_tracing.py
+- modified: .env.example
+- modified: app/email_parsing/signature.py
+- modified: app/prompt_runtime/service.py
+- modified: requirements.txt
+- modified: tests/email_parsing/test_signature_regression.py
 
 ---
 
