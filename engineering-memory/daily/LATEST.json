@@ -9,19 +9,15 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: main",
-    "Head SHA: 1e0e291",
-    "Commit count: 1",
+    "Head SHA: fdec02b",
+    "Commit count: 2",
     "Triggered by: jobfynder",
     "Commits:",
-    "1e0e291 feat(observability): migrate Langfuse tracing to v4 OTEL \u2014 Pavan",
+    "77c9603 fix(taxonomy): stop plain English words from being queued as skill candidates \u2014 Jobfynder Automation",
+    "fdec02b Merge fix/skills-taxonomy-stopword-cleanup into main \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: tests/prompt_runtime/__init__.py",
-    "added: tests/prompt_runtime/test_langfuse_tracing.py",
-    "modified: .env.example",
-    "modified: app/email_parsing/signature.py",
-    "modified: app/prompt_runtime/service.py",
-    "modified: requirements.txt",
-    "modified: tests/email_parsing/test_signature_regression.py"
+    "modified: app/understanding/taxonomy/candidates.py",
+    "modified: scripts/hermes-900-spam-taxonomy-check.py"
   ],
   "decisions": [
     {
