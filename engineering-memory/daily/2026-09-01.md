@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feature/profile-data-model.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feature/profile-data-model
-- Head SHA: 7d945b9
+- Branch: main
+- Head SHA: f66c221
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 7d945b9 feat(profile): store taxonomy IDs, compute metrics, and structure locations — atultiwari
+- f66c221 feat(profile): store taxonomy IDs, compute metrics, and structure locations (#11) — Atul Tiwari
 - Changed files:
 - added: prisma/migrations/20260831210000_profile_data_model/migration.sql
 - added: profile-data-model-backend-changes.md
