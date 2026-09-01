@@ -1,27 +1,24 @@
 {
   "date": "2026-09-01",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.",
   "repositories": [
-    "jobfynder/hermes"
+    "jobfynder-admin/jobFynder-BE-nestJS"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder/hermes",
+    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: main",
-    "Head SHA: b6c2601",
+    "Head SHA: 8b7c8c5",
     "Commit count: 1",
-    "Triggered by: jobfynder",
+    "Triggered by: atult120",
     "Commits:",
-    "b6c2601 fix(taxonomy): fix silent no-op renames, dedupe against aliases, add deterministic related titles \u2014 Jobfynder Automation",
+    "8b7c8c5 fix(content): unwrap Hermes JSON into display text for generate \u2014 atultiwari",
     "Changed files:",
-    "modified: app/routers/moderation.py",
-    "modified: app/understanding/taxonomy/candidates.py",
-    "modified: app/understanding/taxonomy/loader.py",
-    "modified: app/understanding/taxonomy/title_family_classifier.py",
-    "modified: frontend/src/api/client.ts",
-    "modified: frontend/src/pages/JobTitlesTaxonomyPage.tsx",
-    "modified: scripts/hermes-900-spam-taxonomy-check.py"
+    "added: src/content-generation/content-generation.service.spec.ts",
+    "added: src/content-generation/normalize-generated-content.spec.ts",
+    "added: src/content-generation/normalize-generated-content.ts",
+    "modified: src/content-generation/content-generation.service.ts"
   ],
   "decisions": [
     {
