@@ -23,17 +23,18 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 1b910ca
+- Head SHA: b6c2601
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 1b910ca fix(taxonomy): fix broken job-title edit layout, add edit/delete for skills and job titles — Jobfynder Automation
+- b6c2601 fix(taxonomy): fix silent no-op renames, dedupe against aliases, add deterministic related titles — Jobfynder Automation
 - Changed files:
 - modified: app/routers/moderation.py
+- modified: app/understanding/taxonomy/candidates.py
 - modified: app/understanding/taxonomy/loader.py
+- modified: app/understanding/taxonomy/title_family_classifier.py
 - modified: frontend/src/api/client.ts
 - modified: frontend/src/pages/JobTitlesTaxonomyPage.tsx
-- modified: frontend/src/pages/SkillsTaxonomyPage.tsx
 - modified: scripts/hermes-900-spam-taxonomy-check.py
 
 ---
