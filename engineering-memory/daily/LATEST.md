@@ -8,31 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 8b7c8c5
+- Head SHA: 5591d08
 - Commit count: 1
-- Triggered by: atult120
+- Triggered by: jobfynder
 - Commits:
-- 8b7c8c5 fix(content): unwrap Hermes JSON into display text for generate — atultiwari
+- 5591d08 fix(parsing): stop truncating job descriptions and misclassifying postings as resumes — Jobfynder Automation
 - Changed files:
-- added: src/content-generation/content-generation.service.spec.ts
-- added: src/content-generation/normalize-generated-content.spec.ts
-- added: src/content-generation/normalize-generated-content.ts
-- modified: src/content-generation/content-generation.service.ts
+- modified: app/channels/service.py
+- modified: app/email_parsing/parsers.py
+- modified: scripts/hermes-850-email-parsing-check.py
+- modified: scripts/hermes-850-self-learning-classification-check.py
 
 ---
 
