@@ -8,32 +8,65 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feature/profile-data-model.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 2185e53
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feature/profile-data-model
+- Head SHA: 7d945b9
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: atult120
 - Commits:
-- 2185e53 feat(frontend): add pagination to every high-volume review page — Jobfynder Automation
+- 7d945b9 feat(profile): store taxonomy IDs, compute metrics, and structure locations — atultiwari
 - Changed files:
-- added: frontend/src/components/Pagination.tsx
-- modified: frontend/src/pages/DraftListPage.tsx
-- modified: frontend/src/pages/JobTitlesTaxonomyPage.tsx
-- modified: frontend/src/pages/ModerationPage.tsx
-- modified: frontend/src/pages/SkillsTaxonomyPage.tsx
+- added: prisma/migrations/20260831210000_profile_data_model/migration.sql
+- added: profile-data-model-backend-changes.md
+- added: scripts/backfill-profile-data-model.ts
+- added: src/jobs/jobs.service.spec.ts
+- added: src/profile/common/location.util.spec.ts
+- added: src/profile/common/location.util.ts
+- added: src/profile/common/master-data.service.spec.ts
+- added: src/profile/common/structured-location.dto.ts
+- added: src/profile/common/taxonomy.util.spec.ts
+- added: src/profile/common/taxonomy.util.ts
+- added: src/profile/consultant-sections/consultant-sections.service.spec.ts
+- added: src/profile/header/dto/header-dto.spec.ts
+- added: src/profile/header/header.service.spec.ts
+- added: src/profile/metrics/profile-metrics.service.spec.ts
+- added: src/profile/metrics/profile-metrics.service.ts
+- modified: package.json
+- modified: prisma/schema.prisma
+- modified: src/hermes/hermes-mappers.spec.ts
+- modified: src/hermes/hermes-mappers.ts
+- modified: src/jobs/dto/create-job.dto.ts
+- modified: src/jobs/jobs.service.ts
+- modified: src/profile/common/master-data.service.ts
+- modified: src/profile/completeness/completeness-config.ts
+- modified: src/profile/completeness/profile-completeness.service.spec.ts
+- modified: src/profile/completeness/profile-completeness.service.ts
+- modified: src/profile/consultant-sections/consultant-crud.service.ts
+- modified: src/profile/consultant-sections/consultant-sections.service.ts
+- modified: src/profile/consultant-sections/dto/sections.dto.ts
+- modified: src/profile/header/dto/bench-sales-header.dto.ts
+- modified: src/profile/header/dto/employer-header.dto.ts
+- modified: src/profile/header/dto/recruiter-header.dto.ts
+- modified: src/profile/header/dto/service-provider-header.dto.ts
+- modified: src/profile/header/header.controller.ts
+- modified: src/profile/header/header.service.ts
+- modified: src/profile/profile-static-values.ts
+- modified: src/profile/profile-transformers.service.ts
+- modified: src/profile/profile.module.ts
+- modified: src/profile/service-provider-ops/service-provider-ops.service.ts
 
 ---
 
