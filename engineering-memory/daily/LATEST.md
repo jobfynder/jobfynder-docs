@@ -23,19 +23,17 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 22aca93
+- Head SHA: 2185e53
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 22aca93 feat(taxonomy): auto-classify job title families, deterministic-first with LLM fallback — Jobfynder Automation
+- 2185e53 feat(frontend): add pagination to every high-volume review page — Jobfynder Automation
 - Changed files:
-- added: app/understanding/taxonomy/title_family_classifier.py
-- modified: app/routers/moderation.py
-- modified: app/understanding/taxonomy/candidates.py
-- modified: app/understanding/taxonomy/loader.py
-- modified: frontend/src/api/client.ts
+- added: frontend/src/components/Pagination.tsx
+- modified: frontend/src/pages/DraftListPage.tsx
 - modified: frontend/src/pages/JobTitlesTaxonomyPage.tsx
-- modified: scripts/hermes-900-spam-taxonomy-check.py
+- modified: frontend/src/pages/ModerationPage.tsx
+- modified: frontend/src/pages/SkillsTaxonomyPage.tsx
 
 ---
 
