@@ -23,15 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: fdec02b
-- Commit count: 2
+- Head SHA: 6680271
+- Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 77c9603 fix(taxonomy): stop plain English words from being queued as skill candidates — Jobfynder Automation
-- fdec02b Merge fix/skills-taxonomy-stopword-cleanup into main — Jobfynder Automation
+- 6680271 fix(parsing): recognize a restated job title label when its value sits on the next line — Jobfynder Automation
 - Changed files:
-- modified: app/understanding/taxonomy/candidates.py
-- modified: scripts/hermes-900-spam-taxonomy-check.py
+- modified: app/email_parsing/parsers.py
+- modified: scripts/hermes-850-email-parsing-check.py
 
 ---
 
