@@ -23,18 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 6b7319a
+- Head SHA: a837505
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 6b7319a feat(reporting): add Recruitment and Sender Intelligence reports (P1) — Jobfynder Automation
+- a837505 docs(reporting): record the DATA/Contract/AI job-title root cause — Jobfynder Automation
 - Changed files:
-- modified: app/assistant/service.py
 - modified: app/reporting/service.py
-- modified: app/routers/reporting.py
-- modified: frontend/src/pages/ReportsPage.tsx
-- modified: frontend/src/types.ts
-- modified: scripts/hermes-950-reporting-assistant-check.py
 
 ---
 
