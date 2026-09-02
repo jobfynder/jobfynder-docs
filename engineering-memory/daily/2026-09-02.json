@@ -9,13 +9,18 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: main",
-    "Head SHA: b3cfa71",
+    "Head SHA: 6b7319a",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "b3cfa71 fix(ui): correct stale boilerplate sender-threshold text, mention daily automation \u2014 Jobfynder Automation",
+    "6b7319a feat(reporting): add Recruitment and Sender Intelligence reports (P1) \u2014 Jobfynder Automation",
     "Changed files:",
-    "modified: frontend/src/pages/ModerationPage.tsx"
+    "modified: app/assistant/service.py",
+    "modified: app/reporting/service.py",
+    "modified: app/routers/reporting.py",
+    "modified: frontend/src/pages/ReportsPage.tsx",
+    "modified: frontend/src/types.ts",
+    "modified: scripts/hermes-950-reporting-assistant-check.py"
   ],
   "decisions": [
     {
