@@ -23,26 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: fa22d9b
+- Head SHA: b3cfa71
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- fa22d9b feat(reporting): add admin dashboard, natural-language assistant, and daily digest — Jobfynder Automation
+- b3cfa71 fix(ui): correct stale boilerplate sender-threshold text, mention daily automation — Jobfynder Automation
 - Changed files:
-- added: app/assistant/__init__.py
-- added: app/assistant/service.py
-- added: app/reporting/__init__.py
-- added: app/reporting/service.py
-- added: app/routers/assistant.py
-- added: app/routers/reporting.py
-- added: frontend/src/pages/AssistantPage.tsx
-- added: frontend/src/pages/ReportsPage.tsx
-- added: scripts/hermes-950-daily-telegram-digest.py
-- added: scripts/hermes-950-reporting-assistant-check.py
-- modified: app/main.py
-- modified: frontend/src/App.tsx
-- modified: frontend/src/api/client.ts
-- modified: frontend/src/types.ts
+- modified: frontend/src/pages/ModerationPage.tsx
 
 ---
 
