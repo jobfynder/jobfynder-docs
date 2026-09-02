@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: b314051
+- Head SHA: 45ad13b
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- b314051 feat(taxonomy): permanent noise filter + automated daily candidate triage — Jobfynder Automation
+- 45ad13b fix(taxonomy): sanitize embedded newlines before LLM batch triage prompt — Jobfynder Automation
 - Changed files:
-- added: scripts/hermes-900-daily-taxonomy-triage.py
-- modified: app/understanding/taxonomy/candidates.py
-- modified: scripts/hermes-900-spam-taxonomy-check.py
+- modified: scripts/hermes-900-daily-taxonomy-triage.py
 
 ---
 
