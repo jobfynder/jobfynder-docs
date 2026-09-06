@@ -5,7 +5,7 @@
 Per `ADR-0002` (Two-Server Architecture):
 
 - **COMM-1** — `152.42.219.165` — runs the `jobfynder-comm-gateway` Docker container. Provider-facing ingress, HMAC-signed calls to Hermes, retries, attachments, outbound communication. Port 8080 is **not** exposed directly (fixed in commit `33b6ec4`).
-- **Hermes admin/sourcing gateway server** — `167.71.217.230` — runs `hermes-gateway.service`, `hermes-admin-gateway`, `hermes-sourcing-gateway`, `hermes-dashboard`, and the cron scheduler. This is very likely what `ADR-0002` calls INTEL-1, though nothing in this repo states that label-to-IP mapping explicitly — treat the mapping as probable, not confirmed.
+- **INTEL-1** — `167.71.217.230` (DigitalOcean) — runs `hermes-gateway.service`, `hermes-admin-gateway`, `hermes-sourcing-gateway`, `hermes-dashboard`, and the cron scheduler. **Confirmed by the founder 2026-09-07** (previously only inferred as probable).
 
 ## AI infrastructure (Elestio, separate VMs from the two servers above)
 
@@ -30,9 +30,17 @@ RabbitMQ handles durable background tasks and the COMM intake pipeline (see `ADR
 - `langfuse.jobfynder.com` — Langfuse
 - `redisgateway.jobfynder.com` — **known issue:** currently resolves to Cloudflare anycast, not the actual Elestio Redis VM. Open item; fix if this friendly name is actually needed anywhere.
 
+## Hosting providers, plural
+
+The platform spans **three** hosting providers, not the two DigitalOcean servers `ADR-0004` describes:
+
+- **DigitalOcean** — COMM-1 and INTEL-1 (above).
+- **Hostinger** — confirmed by the founder 2026-09-07 as the platform's core server hosting provider. Two servers: **"core"** (very likely runs Jobfynder Core — `jobFynder-BE-nestJS` / `jobFynder-FE-vite` — not yet confirmed which) and **"n8n"** (runs n8n automation — note this means n8n may run on Hostinger, not Elestio as listed above; not yet reconciled). Actual IPs not yet documented anywhere in this repo.
+- **Elestio** — LiteLLM Gateway, Redis cache, Langfuse, and the broader self-hosted stack.
+
 ## Deployment stage
 
-Stage 1 (MVP) per `ADR-0004`: Docker Compose across two DigitalOcean servers, manual deployments.
+Stage 1 (MVP) per `ADR-0004`: Docker Compose, manual deployments. `ADR-0004`'s "two DigitalOcean servers" description is now known to be incomplete — see the note added to that ADR.
 
 ## What's not documented here yet
 
