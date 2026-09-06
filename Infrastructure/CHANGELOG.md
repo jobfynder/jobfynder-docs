@@ -19,3 +19,12 @@ Transcribed from the version history in `JOBFYNDER-HERMES-COMM-CANONICAL.md` —
 ## 2026-08-08
 
 Hermes runtime sweep (`Infrastructure/RUNTIME-SWEEP-2026-08-08.md`): found the platform's self-learning memory tool was disabled at the config level (`memory` listed under `agent.disabled_toolsets`), fixed and verified. Documented the two parallel Hermes home directories (`/root/.hermes` vs `/root/.hermes-admin`) that had been causing silent script failures. Built a durable memory-write path (`memory-append.py`) that commits to the git-tracked vault. One stray 0-byte script (`daily-hermes-tips.sh`) was flagged but not yet repaired as of that sweep — check whether it still is.
+
+## 2026-08-02
+
+AI infrastructure build-out: LiteLLM Gateway, Redis caching, Langfuse, and DeepInfra embeddings stood up, replacing an earlier Portkey-based path (rolled back). Full detail in `docs/AI-INFRA-SUMMARY-2026-08-02.md`. Key real incidents from that pass, worth knowing even in summary:
+
+- Redis passwords are case-sensitive in a way that isn't obvious from the dashboard — a screenshot showed uppercase, only lowercase actually authenticated. Verify with a live AUTH test, not the dashboard.
+- LiteLLM's cache does not activate from environment variables alone — it requires a `config.yaml` block, and Elestio's plain "Restart" button doesn't reload it; "Update & Restart" (full recreate) does.
+- A shared password was found reused across multiple services (LiteLLM admin, Postgres, AWS, Langfuse) — flagged as a real security priority, not yet confirmed rotated as of this writing.
+- Elestio's Redis defaults to public exposure; locking it down requires both a UFW rule and the Docker `DOCKER-USER` chain — removing only one leaves it open.
