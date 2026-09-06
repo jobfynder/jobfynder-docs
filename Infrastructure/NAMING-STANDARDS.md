@@ -1,11 +1,12 @@
 # Naming Standards
 
-**No real content exists anywhere in this repo to fill this from.** This is a template, not a policy — filling it with plausible-sounding conventions would be worse than leaving it blank, since someone could follow a rule that was never actually agreed on.
+## Confirmed, real conventions in use
 
-To fill this in for real, document the *actual* conventions already in use:
+- **LiteLLM model aliases** use a `jf-` prefix: `jf-fast`, `jf-structured`, `jf-reasoning`, `jf-writing`, `jf-embedding`.
+- **LiteLLM virtual keys** follow `jf-<purpose>-<environment>`: `jf-hermes-production`, `jf-core-production`, `jf-n8n-production`, `jf-evaluation-production`, `jf-development`.
+- **Langfuse prompts** use dot notation for hierarchy: `jf.admin.ai-anomaly.explain`, `jf.screening.questions.generate`, `jf.job-tracker.interview.prep`. Folders within Langfuse's own UI are indicated with `/` in the name (e.g. `extraction/job-description`) — dot notation and slash notation serve different purposes here, don't conflate them.
+- **Server naming**: `COMM-1` for the communication-plane server. No evidence of a numbered convention beyond that one instance (`INTEL-1` is referenced in architecture docs but its actual server hasn't been confirmed against a real IP — see `SERVER-INVENTORY.md`).
 
-- Server naming (e.g., is `COMM-1`/`INTEL-1` the real pattern for anything beyond these two?)
-- Docker container/service naming
-- Environment variable naming
-- Git branch naming (a real pattern already exists — see the branches used for the PRs in this session, e.g. `docs/...` prefixes)
-- Database/schema naming conventions
+## Still unknown
+
+Docker container/stack naming conventions, database/schema naming, environment variable naming beyond what's visible in the AI infra summary.
