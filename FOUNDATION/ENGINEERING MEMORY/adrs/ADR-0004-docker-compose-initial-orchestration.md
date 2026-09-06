@@ -38,3 +38,7 @@ confidence: proven
 # ADR-0004: Docker Compose as Initial Orchestration
 
 Referenced by `Architecture/01-platform-architecture.md` §2.8 (Scalability Strategy).
+
+---
+
+*Note (2026-09-07): the founder has since confirmed the platform's actual hosting footprint is broader than "two DigitalOcean servers" — Hostinger hosts two additional servers ("core" and "n8n"), and Elestio hosts the AI infrastructure stack separately. This ADR's original decision record is left as written (per the never-rewrite-history rule); see `Infrastructure/NETWORK-ARCHITECTURE.md` and `Infrastructure/SERVER-INVENTORY.md` for the current ground truth.*
