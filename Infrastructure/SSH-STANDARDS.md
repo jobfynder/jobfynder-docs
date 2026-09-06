@@ -1,7 +1,10 @@
 # SSH Standards
 
-**No real content exists anywhere in this repo to fill this from.** Template only.
+## Confirmed
 
-Known, but not a documented standard: `jobfynder/jobfynder-infra` has ed25519 public keys committed under `pavan@jobfynder.com`. That confirms a key exists — it says nothing about rotation policy, who else has access, or bastion/jump-host setup.
+- `jobfynder/jobfynder-infra` has ed25519 public keys committed under `pavan@jobfynder.com` — confirms a key exists, says nothing about rotation policy or who else has access.
+- Hermes WebUI is accessed via **Tailscale**, not direct public SSH/HTTP exposure — this is the one confirmed access-control pattern in this repo.
 
-To fill this in for real: key rotation policy, who has access to which servers, whether a bastion host is used, and where private keys are actually stored (should never be in a git repo — worth double-checking `jobfynder-infra` doesn't have one, since it did have public keys sitting in it under a confusing filename).
+## Unknown — needs someone with live access to fill in
+
+Key rotation policy, who has access to which servers, whether a bastion host is used beyond the Tailscale pattern above, and where private keys are actually stored (should never be in a git repo — worth double-checking `jobfynder-infra` doesn't have one, since it did have public keys sitting in it under a confusing filename).
