@@ -48,7 +48,7 @@ You asked for a direct confirmation. Here it is, with current verified pricing (
 You asked to bring in interactive demos (Supademo and/or Storylane). Here's the call, based on independent comparisons, not vendor marketing:
 
 - **Storylane is built for enterprise sales-led motions** — its Growth tier starts at $500/month with a 5-seat minimum, its Starter tier has a 2-seat minimum at $40/month, and reviewers report average customer spend around $11,500/year once add-ons (sandboxes, AI features) get layered on. That pricing shape assumes a sales team running dozens of live deal-specific demos — not where Jobfynder is.
-- **Supademo fits a small/solo team's actual need.** Free tier gives 5 published demos with unlimited views — enough to cover a full product walkthrough plus a couple of role-specific cuts (e.g. one for BSRs, one for Corporate Recruiters) without paying anything. If you outgrow that, Pro/Scale runs roughly $27-38/creator/month, still far below Storylane's entry point. Multiple independent comparisons explicitly call out solo founders and 2-3 person teams as Supademo's better fit for exactly this reason.
+- **Supademo fits a small/solo team's actual need.** Free tier gives 5 published demos with unlimited views — enough to cover a full product walkthrough plus a couple of role-specific cuts (e.g. one for BSRs, one for Recruiters) without paying anything. If you outgrow that, Pro/Scale runs roughly $27-38/creator/month, still far below Storylane's entry point. Multiple independent comparisons explicitly call out solo founders and 2-3 person teams as Supademo's better fit for exactly this reason.
 - **Revisit Storylane later, not now** — specifically if Jobfynder moves toward enterprise-side selling (e.g. selling to large staffing agencies or corporate accounts that require SSO, Salesforce integration, or a dedicated CSM). That's a Phase 4+/post-launch consideration, not a prelaunch one.
 
 **Where the demo actually plugs into the plan (not a new channel — it strengthens existing ones):**
@@ -188,7 +188,7 @@ This is no longer optional in 2026 — a large and growing share of searches now
 
 Covered operationally in Section 4 and Section 5. Two additions:
 
-- **Segment from day one in Obsidian**, not just a flat list: BSRs, Corporate Recruiters, Employers, Service Providers each get slightly different messaging — same waitlist mechanic, different value prop line.
+- **Segment from day one in Obsidian**, not just a flat list: BSRs, Recruiters, Employers, Service Providers each get slightly different messaging — same waitlist mechanic, different value prop line.
 - **Weekly nurture, not just the initial invite.** Waitlist members who don't convert to "claimed/confirmed" in week 1 get a short, valuable nurture sequence (industry insight, not "please sign up again") over the following weeks — this is what keeps the waitlist warm for 2-3 months instead of going cold.
 
 ### 6.4 Social (via Radaar — no new tool needed)
