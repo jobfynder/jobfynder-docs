@@ -40,7 +40,7 @@ Fields the worker needs to read/write, wherever it's stored (Notion primarily, m
 |---|---|---|---|
 | `linkedin_url` | string | AI Ark | Primary dedup key |
 | `name`, `current_title`, `current_company` | string | AI Ark | |
-| `role_segment` | enum: BSR / Corporate Recruiter / Employer / Service Provider | Founder-set targeting criteria | Drives which message template is used |
+| `role_segment` | enum: BSR / Recruiter / Employer / Service Provider | Founder-set targeting criteria | Drives which message template is used |
 | `email` (verified) | string | AI Ark | Only populated if verification succeeded |
 | `outreach_status` | enum: not_contacted / invited / opened / replied / claimed / unsubscribed | Worker-updated | Core pipeline state |
 | `last_contacted_at` | datetime | Worker-updated | Drives follow-up sequence timing |
