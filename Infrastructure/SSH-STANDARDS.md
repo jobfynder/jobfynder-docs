@@ -1,6 +1,6 @@
 # SSH Access Standards
 
-**Status:** Established 2026-09-07 while setting up server access on a new laptop. Follow this for any new server or new machine going forward.
+**Status:** Established 2026-09-07 while setting up server access on a new laptop (live SSH/API probe — see `SERVER-INVENTORY.md`). Merged with independent findings from the same day's doc-sync pass on `jobfynder-infra`. Follow this for any new server or new machine going forward.
 
 ## Key policy
 
@@ -11,6 +11,7 @@
   ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH3TjqKpwTe+E8FFUyyWKFL6Ci3FdEUtiYcmB6MPVBK+ claude-code-monitoring@jobfynder
   ```
 - Same public key is also registered on the `jobfynder-admin` GitHub account (`gh ssh-key list`) — this lets any server pull it via `ssh-import-id gh:jobfynder-admin` instead of pasting the raw key string into a console (avoids error-prone manual typing when clipboard paste isn't available).
+- **Flagged, needs follow-up:** `jobfynder/jobfynder-infra` has ed25519 public keys committed under `pavan@jobfynder.com`, sitting under a confusing filename. Public keys are fine to commit, but this should be double-checked to confirm it's genuinely the *public* half and not a private key accidentally committed — a git-repo is never the right place for a private key.
 
 ## `~/.ssh/config` convention
 
@@ -41,9 +42,13 @@ DO does **not** support adding a key to an already-running droplet via the API/d
 - It does **not** currently permit the local Windows account name (e.g. `DELL`) — only `root` is allowed by policy.
 - This is a *better* pattern than public-IP key auth where available (no public-facing SSH needed at all) — consider enabling Tailscale SSH on other droplets/servers instead of managing keys, once each one's tailnet ACL is reviewed.
 - `jobfynder-comm1` is on the same tailnet but does **not** have Tailscale SSH enabled — it uses normal key-based auth on its public IP instead.
+- This matches the platform's one other confirmed access-control pattern: the **Hermes WebUI is accessed via Tailscale**, not direct public SSH/HTTP exposure.
 
 ## Verifying access after any change
 ```
 ssh <alias> "hostname && uptime"
 ```
 Run this for every server touched in a session before considering the task done — do not report "access set up" without a live probe.
+
+## Unknown — needs someone with live access to fill in
+Key rotation policy, who has access to which servers besides what's listed above, whether a bastion host is used beyond the Tailscale pattern, and SSH access details for the Hostinger servers (see `SERVER-INVENTORY.md`) — not yet probed.

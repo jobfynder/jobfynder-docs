@@ -36,6 +36,7 @@
 | Date | Change |
 |---|---|
 | 2026-08-21 | First edition. Consolidates the verified state of Hermes (HERMES-000 through HERMES-850) and, for the first time, the COMM Gateway (COMM-100/410/500/900/1000) into a single integration reference covering both servers. Built directly from `hermes-core-integration-guide.md`, the `comm/` module docs, and a live inspection of both INTEL-1 and COMM-1. No Portkey references — LiteLLM only. |
+| 2026-08-21 | Added Section 7.6 documenting `HermesClientService` (CORE) and `resume-intelligence.ts` (frontend) as the reusable client pattern for any future Hermes integration — built alongside the first real CORE↔Hermes chain for Resume Builder (HERMES-800) and Matching (HERMES-300). |
 
 Update this table whenever this document changes materially. This file lives in `jobfynder/jobfynder-docs`, not inside either code repo — that is the enforced rule for all Hermes and COMM documentation (`hermes/HERMES-documentation-map.md`, `comm/COMM-documentation-map.md`).
 
@@ -542,6 +543,46 @@ Not live yet (Section 7.2, Case 4), documented here so whoever activates it has 
 **Microsoft Graph:** register an app in Microsoft Entra/Azure AD, grant `Mail.Read` permission, create a Graph subscription pointed at `POST /providers/microsoft-graph/webhook` (on Hermes) — that endpoint already implements the required `validationToken` handshake Graph performs at subscription creation. Set `HERMES_MS_GRAPH_CLIENT_ID`, `HERMES_MS_GRAPH_CLIENT_SECRET`, `HERMES_MS_GRAPH_TENANT_ID`.
 
 Both connectors' message-normalization code is built and unit-tested against realistic sample payloads; only the authenticated fetch-from-provider-API step remains to be implemented once real credentials exist.
+
+### 7.6 CORE's reusable Hermes client — `HermesClientService`
+
+Added 2026-08-21 alongside the Resume Builder (HERMES-800) and Matching (HERMES-300) integration. Lives at `src/resume-intelligence/hermes-client.service.ts` in `jobFynder-BE-nestJS`. **Use this instead of writing a new HTTP client every time CORE needs to call a Hermes endpoint.**
+
+**What it already gives you, with zero setup:**
+- Bearer-token auth attached to every request (`HERMES_API_TOKEN` from CORE's env — never touches the frontend).
+- A 30-second timeout on every call (`AbortSignal.timeout(30_000)`).
+- Consistent error mapping: Hermes's own 401/403/404/422 pass through with the same status code; anything else (5xx, network failure, unreachable host) collapses to a CORE `502` so a Hermes-side outage never gets misread as a CORE bug by the caller. Every thrown `HttpException` carries `{ error, hermesStatus?, detail }` for debugging.
+- A clear 503 (`hermes_not_configured`) if `HERMES_API_TOKEN` isn't set in this environment at all, instead of a confusing downstream failure.
+
+**What it does NOT give you:** a generic "call any Hermes path" method. It exposes one typed method per Hermes capability it currently wraps (`parseText`, `suggestSummary`, `suggestBullet`, `tailorResume`, `analyzeQuality`, `normalizeSkills`, `matchResumeToJob`) — each is a thin one-line wrapper around a private `call(method, path, body)` helper that does the auth/timeout/error-mapping work above.
+
+**To integrate a new Hermes capability (e.g., HERMES-400 Taxonomy, HERMES-500 Submission Workflow, HERMES-700 Multi-Agent), do not build a new HTTP client.** Add one method to `HermesClientService`, following the existing pattern exactly:
+
+```typescript
+// inside HermesClientService
+evaluateSubmission(payload: { event: Record<string, unknown> }) {
+  return this.call('POST', '/submissions/evaluate', payload);
+}
+```
+
+That's the entire integration on CORE's transport side — auth, timeout, and error normalization are inherited for free. From there:
+1. Add a controller endpoint that calls it (see `resume-intelligence.controller.ts` for the pattern — one `@Controller` method per Hermes capability, behind `JwtAuthGuard`).
+2. Confirm the exact request/response shape from Hermes's own `GET /openapi.json` before writing any DTO — don't guess field names (Section 10 has worked examples; a prior doc mismatch on a field name is exactly the kind of bug this avoids).
+3. **Check RBAC scope before assuming it'll work.** CORE's Hermes token (the `jobfynder-core` user in Hermes's `/opt/hermes-runtime/access-control/users.json`) is scoped to specific permissions — currently `understanding:parse`, `understanding:read`, `submissions:evaluate`, `resume_builder:read`, `resume_builder:analyze`, `resume_builder:suggest`, `matching:evaluate`. A new capability outside this list (e.g., `taxonomy:*`, `agents:*`) will 403 until Jobfynder-Infra adds the matching permission to that user — this is an infra-side change, not something fixable from CORE's code. See Section 4.1 for how Hermes's RBAC is structured, and Section 11.2 for what a scope-related 403 looks like in practice.
+
+**Frontend side has the same pattern, one layer up.** `src/services/resume-intelligence.ts` in `jobFynder-FE-vite` is the equivalent reusable wrapper for the browser: typed functions over CORE's `apiRequest()` client (which already handles CSRF and Bearer auth), unwrapping CORE's `{success, data, message}` envelope so callers get the typed payload directly. Adding a new frontend capability once the CORE endpoint exists (from the step above) is the same shape:
+
+```typescript
+export async function evaluateSubmission(payload: { event: Record<string, unknown> }) {
+  const response = await apiRequest<Envelope<SubmissionEvaluationResult>>(
+    "/api/resume-intelligence/submissions/evaluate",
+    { method: "POST", body: JSON.stringify(payload) },
+  );
+  return response.data;
+}
+```
+
+Neither layer needs a new HTTP client, a new auth mechanism, or a new error-handling strategy — that's the point of both files existing. What a developer does need to check per new capability: the Hermes RBAC scope (above) and the exact request/response DTO from Hermes's live OpenAPI schema, not assumptions carried over from a different endpoint.
 
 ---
 

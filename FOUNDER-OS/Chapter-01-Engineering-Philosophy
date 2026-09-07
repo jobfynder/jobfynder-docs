@@ -196,10 +196,6 @@ User Productivity
 
 If a decision improves none of these, it should be questioned.
 
-🌟 A small refinement before we commit this
-
-I want to add a section that I think will become one of the most important in JEOS:
-
 1.11 Decision-Making Framework
 
 Instead of making technology choices based on trends, we'll evaluate them consistently. For every significant decision, we'll ask:
@@ -214,3 +210,7 @@ Observability – Can we monitor and troubleshoot it effectively?
 Exit Strategy – If we need to replace it later, how difficult will that be?
 
 This framework will help us evaluate everything from AI models to databases to third-party services.
+
+---
+
+*Note (2026-09-07): a second, differently-worded decision framework exists in `FOUNDER-OS/04-FOCUS-FRAMEWORK/PRIORITIZATION.md`, built for a different context (general task prioritization vs. this section's technology-choice framework). Not yet reconciled — see `90-REFERENCE/QUARTERLY.md`.*
