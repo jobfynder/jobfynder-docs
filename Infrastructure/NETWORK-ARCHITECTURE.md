@@ -16,7 +16,7 @@ Per `ADR-0002` (Two-Server Architecture):
 
 ## Self-hosted stack (Elestio, broader platform)
 
-PostgreSQL (source of truth), Centrifugo (real-time transport), n8n (automation), Resend (email), Dittofeed (notification orchestration).
+PostgreSQL (source of truth), Centrifugo (real-time transport), Resend (email), Dittofeed (notification orchestration). (n8n runs on Hostinger, not here — see below; this list previously included it incorrectly.)
 
 ## Message backbone
 
@@ -35,7 +35,7 @@ RabbitMQ handles durable background tasks and the COMM intake pipeline (see `ADR
 The platform spans **three** hosting providers, not the two DigitalOcean servers `ADR-0004` describes:
 
 - **DigitalOcean** — COMM-1 and INTEL-1 (above).
-- **Hostinger** — confirmed by the founder 2026-09-07 as the platform's core server hosting provider. Two servers: **"core"** (very likely runs Jobfynder Core — `jobFynder-BE-nestJS` / `jobFynder-FE-vite` — not yet confirmed which) and **"n8n"** (runs n8n automation — note this means n8n may run on Hostinger, not Elestio as listed above; not yet reconciled). Actual IPs not yet documented anywhere in this repo.
+- **Hostinger** — confirmed by the founder 2026-09-07 as the platform's core server hosting provider. Two servers: **"core"** (very likely runs Jobfynder Core — `jobFynder-BE-nestJS` / `jobFynder-FE-vite` — not yet confirmed which) and **"n8n"** (**confirmed real and live**, 2026-09-07 — runs n8n automation). Actual IPs not yet documented anywhere in this repo.
 - **Elestio** — LiteLLM Gateway, Redis cache, Langfuse, and the broader self-hosted stack.
 
 ## Deployment stage
