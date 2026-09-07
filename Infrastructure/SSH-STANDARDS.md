@@ -36,6 +36,9 @@ DO does **not** support adding a key to an already-running droplet via the API/d
 3. The **Recovery ISO** route (Settings → Recovery mode → Boot from Recovery ISO → power-cycle → Recovery Console → mount + chroot) was attempted first and technically avoids ever touching the root password, but the chroot environment has no working DNS/network, so `ssh-import-id` fails silently there. Not recommended unless the Web Console route is unavailable for some reason.
 4. Always revert **Recovery mode** back to "Boot from Hard Drive" and power-cycle back if you used the Recovery ISO route, or the droplet will keep booting into rescue mode.
 
+### Hostinger
+hPanel → VPS → select server → scroll to **SSH key** → **Manage** → **+ SSH key** → paste the full public key (comment suffix is fine here, unlike Elest.io). Takes effect immediately, no reboot. **Important: this is per-VPS, not account-wide** — despite the panel text saying "associated with your account," a key added to one Hostinger VPS does not appear on another; it must be added separately to each server.
+
 ### Tailscale SSH (exception: `jobfynder-intel-01`)
 `jobfynder-intel-01` already has Tailscale SSH enabled (`tailscale up --ssh` was run on it previously) and the tailnet ACL permits `root`. This means:
 - `ssh root@intel` (or its Tailscale IP) works with **zero keys** — auth is via Tailscale's own identity, gated by tailnet policy, not `authorized_keys`.
@@ -51,4 +54,4 @@ ssh <alias> "hostname && uptime"
 Run this for every server touched in a session before considering the task done — do not report "access set up" without a live probe.
 
 ## Unknown — needs someone with live access to fill in
-Key rotation policy, who has access to which servers besides what's listed above, whether a bastion host is used beyond the Tailscale pattern, and SSH access details for the Hostinger servers (see `SERVER-INVENTORY.md`) — not yet probed.
+Key rotation policy, who has access to which servers besides what's listed above, and whether a bastion host is used beyond the Tailscale pattern.

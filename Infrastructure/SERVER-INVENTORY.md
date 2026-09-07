@@ -1,6 +1,6 @@
 # Server Inventory
 
-**Status:** Merged from two independent same-day passes (2026-09-07): a live SSH/API probe of Elest.io + DigitalOcean, and a doc-sync pass that captured founder-confirmed facts about Hostinger. This is the source of truth for what servers exist, where, and how to reach them. Update this file the same day any server is added, removed, moved, or re-keyed — do not let it drift from reality.
+**Status:** Live SSH/API probe of all three providers, 2026-09-07 (Elest.io + DigitalOcean same day as an independent doc-sync pass that first flagged Hostinger; Hostinger itself confirmed by direct SSH shortly after). This is the source of truth for what servers exist, where, and how to reach them. Update this file the same day any server is added, removed, moved, or re-keyed — do not let it drift from reality.
 
 **Important:** the platform spans at least **three** hosting providers (DigitalOcean, Hostinger, Elest.io) — `ADR-0004` (two-server architecture) predates this fuller picture; see the note added to that ADR.
 
@@ -15,14 +15,16 @@
 
 **Important:** `jobfynder-intel-01` only accepts SSH via **Tailscale SSH** (tailnet-identity auth, not a key in `authorized_keys`) — it has no key-based access on its public IP. `jobfynder-comm1` has normal key-based SSH on its public IP. See `SSH-STANDARDS.md` for why and how each was set up. Both are on the `pavan@` tailnet.
 
-## Hostinger — **confirmed by founder 2026-09-07 as a real, core hosting provider**
+## Hostinger — confirmed by founder 2026-09-07 as a real, core hosting provider
 
-| Server | IP | Role |
-|---|---|---|
-| "core" server | Unknown — not yet probed | Very likely runs Jobfynder Core (`jobFynder-BE-nestJS` / `jobFynder-FE-vite`) — not confirmed which |
-| "n8n" server | Unknown — not yet probed | Runs n8n automation |
+Both confirmed live via SSH 2026-09-07. Server-level SSH keys (per-VPS in hPanel, not account-wide — see `SSH-STANDARDS.md`).
 
-SSH access to either has not been set up or documented yet. See `DISASTER-RECOVERY/Rebuild Hostinger Server.md`.
+| Server (hPanel hostname) | Role | Public IPv4 | SSH alias | Plan | Location |
+|---|---|---|---|---|---|
+| `srv1250194.hstgr.cloud` | **Jobfynder Core** — confirmed by live probe: runs nginx, PostgreSQL 16, PM2 (Node process manager), and Typesense (search) — matches `jobFynder-BE-nestJS`'s stack exactly (Prisma/Postgres, Typesense integration, an `integration-studio-migration-temp` folder in `/root` matching that repo's `integration-studio` module) | 72.62.194.11 | `jobfynder-core` | KVM 2 (2 vCPU / 8 GB / 100 GB) | Malaysia, Kuala Lumpur |
+| `srv1237404.hstgr.cloud` | n8n automation — confirmed live: `n8n-n8n-1` + `n8n-traefik-1` Docker containers running (Hostinger's n8n app catalog install, "+100 workflows") | 72.62.78.39 | `jobfynder-n8n` | KVM 1 (1 vCPU / 4 GB / 50 GB) | Malaysia, Kuala Lumpur |
+
+See `DISASTER-RECOVERY/Rebuild Hostinger Server.md` for rebuild steps.
 
 ## Elest.io — `dash.elest.io/16075/default-project`
 
@@ -51,9 +53,8 @@ These local project folders are **not** documented here because their hosting/re
 - `blog-automation`
 - `jobfynder-demo-tool`
 - `jobfynder-mcp`
-- `n8n workflows` (local folder — likely relates to the Hostinger n8n server above, not yet confirmed as the same thing)
+- `n8n workflows` (local folder — likely a local export/backup of workflows from the Hostinger n8n server above; not yet confirmed as the same instance)
 
 ## Unknown — needs someone with live access to fill in
 - Whether Langfuse runs on `jobfynder-intel-01` or a separate Elest.io instance
-- The actual IPs of the two Hostinger servers, and SSH access to them
-- Which of "core" vs "n8n" (or a third Hostinger server) actually hosts the production backend/frontend
+- Whether there's a third Hostinger server beyond the two confirmed above
