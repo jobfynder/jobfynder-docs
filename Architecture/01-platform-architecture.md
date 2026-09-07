@@ -243,11 +243,11 @@ RabbitMQ
 
 Files
 
-Cloudinary
+Cloudflare R2 (S3-compatible; via `@aws-sdk/client-s3` in `jobFynder-BE-nestJS/src/storage`)
 
 AI Layer
 
-Portkey
+LiteLLM (self-hosted on Elest.io — service `litellm-gateway`)
 
 ↓
 
@@ -255,17 +255,11 @@ Model Routing
 
 ↓
 
-Gemini
+Gemini / DeepSeek / other providers
 
-↓
+Langfuse (self-hosted on Elest.io — service `langfuse-tnnaf`) continuously observes quality, latency, cost, and traces.
 
-DeepSeek
-
-↓
-
-Future Models
-
-Langfuse continuously observes quality, latency, cost, and traces.
+**Verified 2026-09-07** against live infrastructure (see `Infrastructure/SERVER-INVENTORY.md`). This section previously named Portkey and Cloudinary — both superseded; LiteLLM and Cloudflare R2 are what's actually running. If reintroducing either previous choice, update this doc in the same change.
 
 2.4 Platform Diagram
 
@@ -309,18 +303,21 @@ This diagram should be included in JEOS (we'll later turn it into a polished Mer
                            │
                      PostgreSQL
                            │
-                      Cloudinary
+                     Cloudflare R2
+
+**Note (2026-09-07):** this diagram is conceptual and predates the confirmed hosting topology in `Infrastructure/SERVER-INVENTORY.md` — it shows only COMM-1/INTEL-1 (the original two-server plan, `ADR-0002`) and doesn't depict Jobfynder Core's actual host (Hostinger, not co-located with INTEL-1) or the separate Elest.io services (LiteLLM, Langfuse, Redis-for-AI, Dittofeed, Centrifugo, EspoCRM+Metabase, Ghost, Chatwoot). Treat the logical service relationships here as still accurate; treat physical placement as superseded by the inventory doc. Redrawing this as the planned Mermaid diagram, with real topology, is still open.
+
 2.5 Service Boundaries
 Service	Owns
 Hermes	AI reasoning, parsing, orchestration
-ERS	Real-time communication and message delivery
+ERS	Real-time communication and message delivery (**status: not yet built as a distinct service** — `jobfynder-comm-gateway`/`jobfynder-comm-worker` currently fill this role on COMM-1)
 Jobfynder Core	Business rules and workflows
 RabbitMQ	Event transport
 Redis	Cache and temporary state
 Typesense	Search index
 PostgreSQL	Persistent system of record
-Cloudinary	File and media storage
-Portkey	AI gateway and routing
+Cloudflare R2	File and media storage
+LiteLLM	AI gateway and routing
 Langfuse	AI observability and evaluation
 
 Rule: A service must never "reach inside" another service's database or internal implementation. Communication happens through APIs or events.

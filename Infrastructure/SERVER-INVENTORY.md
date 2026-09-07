@@ -50,12 +50,14 @@ Each service also has Elest.io's built-in per-service monitoring (uptime %, resp
 - Older/secondary: `/root/.hermes`
 - Canonical, git-tracked engineering memory: `/root/vault/work/meta/engineering-memory.md`
 
+## Not a separate server
+`blog-automation` (local folder name) is **not** a distinct server or service — **confirmed by founder 2026-09-07: it refers to the `blog` Ghost service on Elest.io above.** No separate automation infrastructure exists for it.
+
 ## Not yet inventoried
-These local project folders are **not** documented here as servers — checked against Elest.io (confirmed only one project, `default-project`, with exactly the 8 services above; no other projects, no restorable/deleted services) and DigitalOcean/Hostinger (confirmed exhaustive lists above). They're most likely local tooling/scripts rather than separately hosted servers, but that's not yet confirmed either — treat as open, not resolved:
-- `blog-automation`
+Checked against Elest.io (confirmed only one project, `default-project`, exactly the 8 services above — no other projects, no restorable/deleted services) and DigitalOcean/Hostinger (confirmed exhaustive lists above). These remaining local project folders are most likely local tooling/scripts rather than separately hosted servers, but that's not yet confirmed — treat as open:
 - `jobfynder-demo-tool`
 - `jobfynder-mcp`
-- `n8n workflows` (local folder — likely a local export/backup of workflows from the Hostinger n8n server above; not yet confirmed as the same instance)
+- `n8n workflows` (local folder — likely a local export/backup of workflows from the Hostinger `jobfynder-n8n` server above; not yet confirmed as the same instance)
 
 ## Unknown — needs someone with live access to fill in
 - Whether Langfuse runs on `jobfynder-intel-01` or a separate Elest.io instance

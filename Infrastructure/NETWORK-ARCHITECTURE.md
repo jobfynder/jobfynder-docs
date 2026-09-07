@@ -16,7 +16,16 @@ Per `ADR-0002` (Two-Server Architecture):
 
 ## Self-hosted stack (Elestio, broader platform)
 
-PostgreSQL (source of truth), Centrifugo (real-time transport), Resend (email), Dittofeed (notification orchestration). (n8n runs on Hostinger, not here — see below; this list previously included it incorrectly.)
+Full list, confirmed via live `docker ps` 2026-09-07 (see `Infrastructure/SERVER-INVENTORY.md` for per-service container detail — the previous version of this list was incomplete):
+- PostgreSQL (source of truth, run per-service — Dittofeed, LiteLLM, and Langfuse each have their own instance, not shared)
+- Centrifugo (real-time transport)
+- Dittofeed (notification orchestration, with its own Temporal + ClickHouse)
+- EspoCRM (also runs Metabase for BI/analytics on the same box — not previously documented)
+- Ghost (blog — this is the entirety of what "blog-automation" as a local folder name refers to; there is no separate automation server, just the Ghost service itself)
+- Chatwoot (support/chat — runs a **custom Jobfynder fork**, `ghcr.io/jobfynder/chatwoot:v4.16.2-jobfynder.1`, not stock Chatwoot)
+- Resend (email — application-level transactional email API; separate from the `elestio-postfix` container every Elest.io box also runs for system-level outbound mail)
+
+(n8n runs on Hostinger, not here — see below.)
 
 ## Message backbone
 
@@ -25,17 +34,20 @@ RabbitMQ handles durable background tasks and the COMM intake pipeline (see `ADR
 ## Public domains
 
 - `testing.jobfynder.com` — test environment
+- `uat.jobfynder.com` — **confirmed 2026-09-07**, proxies to `jobfynder-core` (Hostinger, `72.62.194.11:3000`) via nginx + Certbot. This is `jobFynder-BE-nestJS`'s UAT deployment specifically.
 - `feedback.jobfynder.com` — feedback board
 - `gateway.jobfynder.com` — LiteLLM Gateway (Cloudflare-proxied)
 - `langfuse.jobfynder.com` — Langfuse
-- `redisgateway.jobfynder.com` — **known issue:** currently resolves to Cloudflare anycast, not the actual Elestio Redis VM. Open item; fix if this friendly name is actually needed anywhere.
+- `redisgateway.jobfynder.com` — **known issue, re-confirmed still broken via `nslookup` 2026-09-07:** resolves to the same Cloudflare anycast range as the domains above, not the actual Elestio Redis VM. This has now failed two separate verification passes — worth actually fixing, not just re-noting.
+
+Where is production `jobfynder.com` (not `uat.` or `testing.`)? **Not resolved by this pass** — `jobfynder.com` and `www.jobfynder.com` both return `HTTP 200` behind Cloudflare with no distinguishing headers; the real origin is fully masked and not determinable without Cloudflare dashboard/API access (not available during this pass). It is not any of the 12 servers inventoried in `Infrastructure/SERVER-INVENTORY.md`. See the open question in `DISASTER-RECOVERY/Rebuild Hostinger Server.md` — needs a direct answer, not a guess.
 
 ## Hosting providers, plural
 
 The platform spans **three** hosting providers, not the two DigitalOcean servers `ADR-0004` describes:
 
 - **DigitalOcean** — COMM-1 and INTEL-1 (above).
-- **Hostinger** — confirmed by the founder 2026-09-07 as the platform's core server hosting provider. Two servers: **"core"** (very likely runs Jobfynder Core — `jobFynder-BE-nestJS` / `jobFynder-FE-vite` — not yet confirmed which) and **"n8n"** (**confirmed real and live**, 2026-09-07 — runs n8n automation). Actual IPs not yet documented anywhere in this repo.
+- **Hostinger** — confirmed by the founder 2026-09-07 as the platform's core server hosting provider. Two servers, both confirmed live via SSH: **`jobfynder-core`** (`srv1250194.hstgr.cloud`, `72.62.194.11`) — confirmed running `jobFynder-BE-nestJS` only (PM2 + nginx proxying `uat.jobfynder.com`, no frontend deployed there — **this is the UAT/staging backend specifically, not confirmed as production**; see the open question in `DISASTER-RECOVERY/Rebuild Hostinger Server.md`) and **`jobfynder-n8n`** (`srv1237404.hstgr.cloud`, `72.62.78.39`) — confirmed running n8n via Docker.
 - **Elestio** — LiteLLM Gateway, Redis cache, Langfuse, and the broader self-hosted stack.
 
 ## Deployment stage
