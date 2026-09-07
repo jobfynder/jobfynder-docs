@@ -5,6 +5,8 @@ Status: Active — companion to `hermes-complete-developer-guide.md` (referenced
 Server: jobfynder-intel-01, `GET /prompts/registry` (bearer token required — see `hermes-rbac-access-control.md`)
 Source: live registry pull, 2026-09-07. `registry_version: hermes_langfuse_prompt_registry_v1`, `prompt_count: 38` — matches the count both companion docs and `JOBFYNDER-HERMES-COMM-CANONICAL.md` §7 have independently cited since 2026-08-21, confirming stability over three weeks.
 
+**Code change since the pull above, not yet re-verified live (commit `8319c43f9fdd17b1f46937e64d458cc9a6dc3c13`, same day):** `app/prompt_runtime/langfuse_prompts.py`'s `list_prompts()` now returns `registry_version: hermes_prompt_registry_v1` (renamed from `hermes_langfuse_prompt_registry_v1`) and merges in a new local prompt file, `app/prompt_runtime/registry.json` (read via the new `app/prompt_runtime/local_prompts.py`). That local file currently holds exactly two entries, both already-existing prompt IDs from the table below — `jf.resume.parse` and `jf.onboarding.profile-import.extract` — tagged `metadata.source: "local"` and pointed at `anthropic/claude-haiku-4-5` directly rather than a router alias. `get_prompt()` still checks the live Langfuse cache first when Langfuse is configured; the local copy is only served if Langfuse is unconfigured or its cache doesn't have that ID. Net effect: these two prompts no longer disappear (0 results) when Langfuse is unreachable, but the live catalog is still meant to be 38 Langfuse-hosted prompts — the two local entries are a fallback copy, not new prompt IDs. Not re-pulled live for this update — no SSH/API credentials for `jobfynder-intel-01` were available in the environment that made this edit; re-run `GET /prompts/registry` to confirm the deployed `registry_version` and count before relying on this note.
+
 ---
 
 ## 1. How this catalog works
@@ -35,6 +37,8 @@ Hermes tries a deterministic parser first for every one of these; the LLM only r
 | `jf.broadcast.hotlist.extract` | broadcast | extract-fast | `hotlist_schema`, `message` |
 
 That's 8 — matches `Jobfynder_AI_Architecture_v3.md`'s original count of "8 conditional fallbacks" exactly, even though the total catalog has grown from that document's 35 to today's 38 (3 genuine-generation prompts were added since: `jf.resume.section.polish`, `jf.job-tracker.interview.prep`, `jf.job-tracker.offer.analyze` — see §3).
+
+**Note:** `jf.resume.parse` and `jf.onboarding.profile-import.extract` (first two rows above) are also, as of commit `8319c43f`, defined in a local fallback registry inside the `hermes` repo — see the note at the top of this file. This does not add to the 38-prompt Langfuse count; it only changes what Hermes falls back to if Langfuse can't serve those two IDs.
 
 ## 3. Genuine-generation prompts (HERMES_LLM)
 
