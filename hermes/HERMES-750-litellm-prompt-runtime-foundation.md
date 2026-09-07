@@ -27,7 +27,8 @@ The runtime's job is unchanged from its original design: render a prompt, decide
 
 ```text
 Hermes prompt_runtime
-  -> fetches prompt definitions from Langfuse (live, not hardcoded)
+  -> fetches prompt definitions from Langfuse (live), merged with a small
+     local fallback registry for two prompts since 2026-09-07 (see §11)
       GET https://langfuse.jobfynder.com/api/public/v2/prompts
       Auth: Basic (LANGFUSE_PUBLIC_KEY : LANGFUSE_SECRET_KEY)
       Cached in-process, default TTL 300s (HERMES_LANGFUSE_PROMPT_CACHE_SECONDS)
@@ -99,7 +100,7 @@ Fixed on branch `perf/hermes-750-langfuse-concurrent-prompt-fetch`: prompt detai
 Kept for the record — this is what HERMES-750 looked like when it first closed, before the Portkey→LiteLLM migration and the Langfuse dynamic-registry work layered on top of it.
 
 - runtime_version: `hermes_prompt_runtime_v1`
-- registry_version: `hermes_prompt_registry_v1` (static, 4 hardcoded prompts — since replaced by `hermes_langfuse_prompt_registry_v1`, 38 prompts, fetched live)
+- registry_version: `hermes_prompt_registry_v1` (static, 4 hardcoded prompts — replaced 2026-08-21 by `hermes_langfuse_prompt_registry_v1`, 38 prompts, fetched live; the string `hermes_prompt_registry_v1` was reused 2026-09-07 for an unrelated, non-static merged registry — see §11, don't confuse the two)
 - dry_run_default: true
 - external_llm_call: false at close
 
@@ -122,7 +123,7 @@ The original prompt IDs from this closure (`resume_builder.summary_improve`, `re
 ## 8. Current API surface (unchanged shape, different backing provider)
 
 - `GET /prompts/health` — requires `agents:read`. Reports `provider: "litellm"`, `litellm_configured`, `langfuse_configured`, `dry_run_default`.
-- `GET /prompts/registry` — requires `agents:read`. Lists all prompts currently cached from Langfuse.
+- `GET /prompts/registry` — requires `agents:read`. Lists all prompts currently cached from Langfuse, merged with the local fallback registry (see §11).
 - `GET /prompts/{prompt_id}` — requires `agents:read`.
 - `POST /prompts/run` — requires `agents:run`. `mode: "dry_run"` (default) renders without calling LiteLLM. `mode: "live"` executes for real if the server-wide dry-run default allows it.
 
@@ -140,4 +141,18 @@ If evidence is missing, Hermes must ask a question or mark the field as missing.
 
 ## 10. Status
 
-The prompt runtime foundation itself is production-safe: dry-run-first, RBAC-protected, human-review-required. The provider underneath it changed from Portkey to LiteLLM without changing this contract. The N+1 registry-fetch performance issue (§6) is fixed. One open item remains: the stale prompt-ID check scripts (§7).
+The prompt runtime foundation itself is production-safe: dry-run-first, RBAC-protected, human-review-required. The provider underneath it changed from Portkey to LiteLLM without changing this contract. The N+1 registry-fetch performance issue (§6) is fixed. Two open items remain: the stale prompt-ID check scripts (§7), and confirming the local fallback registry (§11) doesn't drift from its Langfuse-hosted counterparts over time.
+
+---
+
+## 11. Update 2026-09-07 — local fallback prompt registry
+
+Commit `8319c43` on `jobfynder/hermes` `main` (`feat(understanding): extract resume sections and international phones without an LLM`) adds a small local prompt registry alongside the Langfuse one, so two fallback-extraction prompts stay available even when Langfuse is unreachable:
+
+- New file `app/prompt_runtime/local_prompts.py` — loads `app/prompt_runtime/registry.json`'s `prompts` array into `PromptDefinition` objects (`get_local_prompt()`, `list_local_prompts()`).
+- `registry.json` gains two entries: `jf.onboarding.profile-import.extract` (v2) and `jf.resume.parse` (v2), both `default_model: anthropic/claude-haiku-4-5`, both `metadata.source: "local"`, both carrying `safety_policy: hermes_resume_no_fabrication_v1` and `human_review_required: true` (same safety posture as every other fallback-extraction prompt — see §9).
+- `app/prompt_runtime/langfuse_prompts.py`: `list_prompts()` and `get_prompt()` now merge sources — when Langfuse is not configured, only the local registry is returned; when it is, Langfuse's cached entries take precedence over local ones with the same `prompt_id` (`{**local, **cache}`). `list_prompts()`'s `registry_version` field changed from `hermes_langfuse_prompt_registry_v1` to `hermes_prompt_registry_v1`.
+
+**What this does not change:** both prompts already existed in the live Langfuse-hosted 38-prompt catalog (`hermes-parsing-and-prompts-api-guide.md` §2 already lists `jf.resume.parse` and `jf.onboarding.profile-import.extract` as fallback-extraction prompts) — this commit adds a local, hardcoded copy for resilience, it does not add new prompts to the catalog count. `hermes-parsing-and-prompts-api-guide.md` has been updated to reflect the new `registry_version` string.
+
+**No live verification performed for this update** — based on the commit diff and its accompanying tests (`tests/prompt_runtime/test_local_resume_extract.py`) only; no SSH/API check was run against INTEL-1 to confirm the deployed registry_version live.

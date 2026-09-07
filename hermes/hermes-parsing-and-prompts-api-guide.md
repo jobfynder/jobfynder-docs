@@ -5,11 +5,13 @@ Status: Active — companion to `hermes-complete-developer-guide.md` (referenced
 Server: jobfynder-intel-01, `GET /prompts/registry` (bearer token required — see `hermes-rbac-access-control.md`)
 Source: live registry pull, 2026-09-07. `registry_version: hermes_langfuse_prompt_registry_v1`, `prompt_count: 38` — matches the count both companion docs and `JOBFYNDER-HERMES-COMM-CANONICAL.md` §7 have independently cited since 2026-08-21, confirming stability over three weeks.
 
+**Note (2026-09-07, later same day).** Commit `8319c43` on `jobfynder/hermes` `main` renamed `list_prompts()`'s `registry_version` field from `hermes_langfuse_prompt_registry_v1` to `hermes_prompt_registry_v1`, and made `list_prompts()`/`get_prompt()` merge a new local fallback registry (`app/prompt_runtime/local_prompts.py`) with the Langfuse-hosted one — see `HERMES-750-litellm-prompt-runtime-foundation.md` §11. The prompt count and the two prompts below are unaffected (both already existed live); only the `registry_version` string value has changed since the pull this file is sourced from. Not re-pulled live for this note — no SSH/API credentials were available in this run to re-verify against INTEL-1.
+
 ---
 
 ## 1. How this catalog works
 
-Every prompt here is fetched live by Hermes from Langfuse (project `jobfynder-ai`), not hardcoded — this file is a point-in-time snapshot for discoverability, not the runtime source. For the always-current version, call `GET /prompts/registry` yourself or `GET /prompts/{prompt_id}` for one prompt's full detail (includes the actual `system_template`/`user_template` text, omitted below for brevity — see `hermes-complete-developer-guide.md` §11 for the `/prompts/run` execution contract).
+Every prompt here is fetched live by Hermes from Langfuse (project `jobfynder-ai`) — this file is a point-in-time snapshot for discoverability, not the runtime source. As of 2026-09-07, two of the fallback-extraction prompts below (`jf.resume.parse`, `jf.onboarding.profile-import.extract`) also have a hardcoded local copy that Hermes falls back to only when Langfuse is unreachable — see `HERMES-750-litellm-prompt-runtime-foundation.md` §11. For the always-current version, call `GET /prompts/registry` yourself or `GET /prompts/{prompt_id}` for one prompt's full detail (includes the actual `system_template`/`user_template` text, omitted below for brevity — see `hermes-complete-developer-guide.md` §11 for the `/prompts/run` execution contract).
 
 Each prompt's `metadata.execution_class` matches the classes defined in `hermes-architecture-frozen-v1.md` §3:
 - **HERMES_FALLBACK_LLM** — Hermes attempts deterministic extraction first; this prompt only fires below a confidence threshold.
