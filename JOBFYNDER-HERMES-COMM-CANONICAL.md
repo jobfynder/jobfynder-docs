@@ -369,7 +369,7 @@ Moved to `archive/legacy-module-documentation/` (files, not deleted — history 
 
 - `hermes/HERMES-000-architecture-governance.md` (with the correction noted in [§2.2](#22-hermes-300400-have-two-different-definitions-on-record) — its §4 module list is superseded, the rest of the file is still valid governance)
 - `hermes/hermes-capability-matrix.md`, `hermes/hermes-api-route-inventory.md`, `hermes/hermes-deployment-runbook.md`, `hermes/hermes-engineering-playbook.md`, `hermes/hermes-platform-architecture.md`, `hermes/hermes-rbac-access-control.md`, `hermes/hermes-smoke-test.md`
-- `hermes/hermes-architecture-frozen-v1.md`, `hermes/hermes-complete-developer-guide.md`, `hermes/hermes-core-integration-guide.md`
+- `hermes/hermes-architecture-frozen-v1.md`, `hermes/hermes-complete-developer-guide.md`, `hermes/hermes-core-integration-guide.md`, `hermes/hermes-parsing-and-prompts-api-guide.md` (added 2026-09-07 — the full 38-prompt catalog; referenced by name in the developer guide and the frozen architecture doc since their creation but did not exist as an actual file until this date, sourced live from `GET /prompts/registry`)
 - Every remaining `hermes/HERMES-nnn-*.md` closure/foundation file — these are the Work-Item-level detail this document's Evidence sections cite; this document is the index and status layer above them, not a replacement for them.
 
 ---
