@@ -40,14 +40,14 @@ RabbitMQ handles durable background tasks and the COMM intake pipeline (see `ADR
 - `langfuse.jobfynder.com` — Langfuse
 - `redisgateway.jobfynder.com` — **known issue, re-confirmed still broken via `nslookup` 2026-09-07:** resolves to the same Cloudflare anycast range as the domains above, not the actual Elestio Redis VM. This has now failed two separate verification passes — worth actually fixing, not just re-noting.
 
-Where is production `jobfynder.com` (not `uat.` or `testing.`)? **Not resolved by this pass** — `jobfynder.com` and `www.jobfynder.com` both return `HTTP 200` behind Cloudflare with no distinguishing headers; the real origin is fully masked and not determinable without Cloudflare dashboard/API access (not available during this pass). It is not any of the 12 servers inventoried in `Infrastructure/SERVER-INVENTORY.md`. See the open question in `DISASTER-RECOVERY/Rebuild Hostinger Server.md` — needs a direct answer, not a guess.
+`jobfynder-core` is confirmed by the founder (2026-09-07) to be a testing/UAT server, not production — `jobfynder.com`/`www.jobfynder.com` return `HTTP 200` behind Cloudflare with the real origin fully masked (no Cloudflare dashboard/API access during this pass to trace further); this is expected for the current stage rather than a discovered gap.
 
 ## Hosting providers, plural
 
 The platform spans **three** hosting providers, not the two DigitalOcean servers `ADR-0004` describes:
 
 - **DigitalOcean** — COMM-1 and INTEL-1 (above).
-- **Hostinger** — confirmed by the founder 2026-09-07 as the platform's core server hosting provider. Two servers, both confirmed live via SSH: **`jobfynder-core`** (`srv1250194.hstgr.cloud`, `72.62.194.11`) — confirmed running `jobFynder-BE-nestJS` only (PM2 + nginx proxying `uat.jobfynder.com`, no frontend deployed there — **this is the UAT/staging backend specifically, not confirmed as production**; see the open question in `DISASTER-RECOVERY/Rebuild Hostinger Server.md`) and **`jobfynder-n8n`** (`srv1237404.hstgr.cloud`, `72.62.78.39`) — confirmed running n8n via Docker.
+- **Hostinger** — confirmed by the founder 2026-09-07 as the platform's core server hosting provider. Two servers, both confirmed live via SSH: **`jobfynder-core`** (`srv1250194.hstgr.cloud`, `72.62.194.11`) — confirmed running `jobFynder-BE-nestJS` only (PM2 + nginx proxying `uat.jobfynder.com`, no frontend deployed there). **Confirmed by founder: this is a testing/UAT server.** And **`jobfynder-n8n`** (`srv1237404.hstgr.cloud`, `72.62.78.39`) — confirmed running n8n via Docker.
 - **Elestio** — LiteLLM Gateway, Redis cache, Langfuse, and the broader self-hosted stack.
 
 ## Deployment stage

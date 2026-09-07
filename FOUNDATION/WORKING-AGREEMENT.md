@@ -1,0 +1,3 @@
+# Working Agreement
+
+**No real content exists anywhere in this repo or the vault to fill this from.** Template only — unlike `ENGINEERING-OPERATING-SYSTEM.md` and `EXECUTION-FRAMEWORK.md`, no equivalent document was found elsewhere to point to instead. This is meant to cover how the team (human and AI) actually agrees to work together day to day — communication norms, code review expectations, decision-escalation rules, on-call/response expectations. Needs the founder to actually write or dictate this; it shouldn't be inferred or fabricated from infrastructure facts the way `Infrastructure/` and `DISASTER-RECOVERY/` could be.

@@ -21,7 +21,7 @@ Both confirmed live via SSH 2026-09-07. Server-level SSH keys (per-VPS in hPanel
 
 | Server (hPanel hostname) | Role | Public IPv4 | SSH alias | Plan | Location |
 |---|---|---|---|---|---|
-| `srv1250194.hstgr.cloud` | **Jobfynder Core** — confirmed by live probe: runs nginx, PostgreSQL 16, PM2 (Node process manager), and Typesense (search) — matches `jobFynder-BE-nestJS`'s stack exactly (Prisma/Postgres, Typesense integration, an `integration-studio-migration-temp` folder in `/root` matching that repo's `integration-studio` module) | 72.62.194.11 | `jobfynder-core` | KVM 2 (2 vCPU / 8 GB / 100 GB) | Malaysia, Kuala Lumpur |
+| `srv1250194.hstgr.cloud` | **Jobfynder Core (testing/UAT — confirmed by founder 2026-09-07)** — confirmed by live probe: runs nginx, PostgreSQL 16, PM2 (Node process manager), and Typesense (search) — matches `jobFynder-BE-nestJS`'s stack exactly (Prisma/Postgres, Typesense integration, an `integration-studio-migration-temp` folder in `/root` matching that repo's `integration-studio` module). Proxies `uat.jobfynder.com` only; no frontend deployed on this box. | 72.62.194.11 | `jobfynder-core` | KVM 2 (2 vCPU / 8 GB / 100 GB) | Malaysia, Kuala Lumpur |
 | `srv1237404.hstgr.cloud` | n8n automation — confirmed live: `n8n-n8n-1` + `n8n-traefik-1` Docker containers running (Hostinger's n8n app catalog install, "+100 workflows") | 72.62.78.39 | `jobfynder-n8n` | KVM 1 (1 vCPU / 4 GB / 50 GB) | Malaysia, Kuala Lumpur |
 
 See `DISASTER-RECOVERY/Rebuild Hostinger Server.md` for rebuild steps.
