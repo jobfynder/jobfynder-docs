@@ -172,6 +172,8 @@ No dedicated Redis exists for Hermes. The only Redis instance in the infrastruct
 
 38 prompts live in Langfuse (project `jobfynder-ai`), fetched dynamically by Hermes (5-minute in-memory cache), not hardcoded. Full catalog with use cases: `hermes-parsing-and-prompts-api-guide.md` §6.
 
+**Footnote, 2026-09-07 (commit `8319c43f9fdd17b1f46937e64d458cc9a6dc3c13` on `jobfynder/hermes`):** "not hardcoded" now has a narrow, deliberate exception. Two of the 38 IDs — `jf.resume.parse` and `jf.onboarding.profile-import.extract` — are also defined in a new local file, `app/prompt_runtime/registry.json`, and are served from there when the Langfuse cache doesn't have them (Langfuse unconfigured, or the ID missing from its cache). Langfuse is still checked first and still wins when it has the ID; this only changes what happens on a miss. See `hermes-parsing-and-prompts-api-guide.md` for the full note. Not live-re-verified as part of this update.
+
 **Known drift from the original blueprint**: roughly 20 prompt names referenced in blueprint §6 do not exist in Langfuse. Most correspond to `HERMES_ONLY` capabilities in §4 above marked "not yet built" — the absence of the prompt isn't the gap, the absence of the underlying deterministic capability is.
 
 All prompts route through LiteLLM via router aliases (`generate-small`, `extract-fast`, `reasoning-small`), currently all backed by `anthropic/claude-haiku-4-5`. Automatic one-time fallback to a configured default model if a router alias has no healthy deployment.
