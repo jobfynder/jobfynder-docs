@@ -28,18 +28,20 @@ See `DISASTER-RECOVERY/Rebuild Hostinger Server.md` for rebuild steps.
 
 ## Elest.io — `dash.elest.io/16075/default-project`
 
-All on Netcup, Germany (Nuremberg), plan `MEDIUM-2C-4G` (2 vCPUs / 4 GB RAM / 60 GB disk) unless noted. Confirmed live via SSH 2026-09-07 (all 8 accessible, all healthy).
+The **only** project on the Elest.io account is `default-project`, containing exactly these 8 services (verified: no other projects, no restorable/deleted services). All on Netcup, Germany (Nuremberg), plan `MEDIUM-2C-4G` (2 vCPUs / 4 GB RAM / 58 GB disk on `/`) unless noted. Confirmed live via SSH 2026-09-07 — all 8 accessible, all healthy, all ~1 day 2h uptime at check time (suggests a synchronized platform-level restart, not a per-service issue).
 
-| Service (dashboard name) | Software | Public IPv4 | SSH alias | Notes |
+Each box runs `elestio-nginx` (SSL-terminating reverse proxy) and `elestio-postfix` (outbound mail) in addition to the app containers listed below — omitted from the table as boilerplate.
+
+| Service (dashboard name) | Public IPv4 | SSH alias | App containers (docker ps) | Notes |
 |---|---|---|---|---|
-| `ditto-jobfynder` | Dittofeed | 159.195.122.150 | `ditto-jobfynder` | |
-| `litellm-gateway` | LiteLLM | 159.195.1.254 | `litellm-gateway` | AI/model routing gateway |
-| `redis-ai-gateway` | Redis | 152.53.202.147 (public) / 10.30.71.5 (private) | `redis-ai-gateway` | Caching only for LiteLLM — never durable storage, never Langfuse-accessible. Had pre-existing key `jonathan-support@elestio` (Elest.io support access) — left untouched |
-| `langfuse-tnnaf` | Langfuse | 152.53.61.104 | `langfuse-tnnaf` | LLM observability. Described elsewhere as "self-hosted on INTEL" — **not confirmed** whether that means this Elest.io instance or a separate one on `jobfynder-intel-01`; don't assume |
-| `centrifugo-rtms` | Centrifugo | 159.195.1.43 | `centrifugo-rtms` | Realtime messaging |
-| `espocrm-wsnus` | EspoCRM | 159.195.122.45 | `espocrm-wsnus` | Had pre-existing keys `github-actions-benchteq-espocrm`, `my-laptop` — left untouched |
-| `blog` | Ghost | 159.195.122.74 | `blog` | |
-| `chatwoot-wnttb` | Chatwoot | 159.195.1.202 | `chatwoot-wnttb` | Support/chat |
+| `ditto-jobfynder` | 159.195.122.150 | `ditto-jobfynder` | Dittofeed (`dashboard`), Temporal, Postgres 15, pgAdmin, ClickHouse | |
+| `litellm-gateway` | 159.195.1.254 | `litellm-gateway` | LiteLLM, Postgres 17, pgAdmin, MinIO | AI/model routing gateway |
+| `redis-ai-gateway` | 152.53.202.147 (public) / 10.30.71.5 (private) | `redis-ai-gateway` | Redis, RedisInsight | Caching only for LiteLLM — never durable storage, never Langfuse-accessible. Had pre-existing key `jonathan-support@elestio` (Elest.io support access) — left untouched |
+| `langfuse-tnnaf` | 152.53.61.104 | `langfuse-tnnaf` | Langfuse web + worker, Postgres 16, pgAdmin, ClickHouse, MinIO, Redis 7 | LLM observability — fully self-contained stack (own Postgres/ClickHouse/Redis, not shared with `redis-ai-gateway`). Described elsewhere as "self-hosted on INTEL" — **not confirmed** whether that means this instance or a separate one on `jobfynder-intel-01`; don't assume |
+| `centrifugo-rtms` | 159.195.1.43 | `centrifugo-rtms` | Centrifugo | Realtime messaging |
+| `espocrm-wsnus` | 159.195.122.45 | `espocrm-wsnus` | EspoCRM (app + daemon + websocket), **Metabase**, MySQL 8 | Also runs Metabase (BI/analytics) — not on the dashboard's headline label. Had pre-existing keys `github-actions-benchteq-espocrm`, `my-laptop` — left untouched |
+| `blog` | 159.195.122.74 | `blog` | Ghost, MySQL 8 | |
+| `chatwoot-wnttb` | 159.195.1.202 | `chatwoot-wnttb` | Chatwoot rails + sidekiq (`ghcr.io/jobfynder/chatwoot:v4.16.2-jobfynder.1` — **custom Jobfynder fork**, not stock Chatwoot), Postgres 16 w/ pgvector, Redis | Support/chat. Note the custom fork image — check `jobfynder` org's `chatwoot` repo (cloned to `C:\Dev\Jobfynder\chatwoot`) before assuming upstream behavior |
 
 Each service also has Elest.io's built-in per-service monitoring (uptime %, response time, CPU/disk/network metrics) under the **Monitoring** and **Metrics** tabs in the dashboard — check there before SSH-ing in for routine health checks.
 
@@ -49,7 +51,7 @@ Each service also has Elest.io's built-in per-service monitoring (uptime %, resp
 - Canonical, git-tracked engineering memory: `/root/vault/work/meta/engineering-memory.md`
 
 ## Not yet inventoried
-These local project folders are **not** documented here because their hosting/repo location wasn't confirmed as of 2026-09-07 — do not assume they don't exist, just that this file has no verified entry for them yet:
+These local project folders are **not** documented here as servers — checked against Elest.io (confirmed only one project, `default-project`, with exactly the 8 services above; no other projects, no restorable/deleted services) and DigitalOcean/Hostinger (confirmed exhaustive lists above). They're most likely local tooling/scripts rather than separately hosted servers, but that's not yet confirmed either — treat as open, not resolved:
 - `blog-automation`
 - `jobfynder-demo-tool`
 - `jobfynder-mcp`
