@@ -23,18 +23,27 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 00e40f9
+- Head SHA: a756a7e
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 00e40f9 feat(profile): map Hermes resume sections and Bright Data LinkedIn aliases — atultiwari
+- a756a7e chore: ignore Graphify output and sync Cursor plans and specs — atultiwari
 - Changed files:
-- modified: src/hermes/hermes-intelligence.service.ts
-- modified: src/hermes/hermes-mappers.spec.ts
-- modified: src/hermes/hermes-mappers.ts
-- modified: src/profile/import/import-normalize.util.ts
-- modified: src/profile/import/linkedin-import.mapper.spec.ts
-- modified: src/profile/import/linkedin-import.mapper.ts
+- added: .cursor/agents/code-reviewer.md
+- added: .cursor/plans/import_profile_field_mapping_b8d848f7.plan.md
+- added: .cursor/plans/onboarding_redesign_backend_34b5010f.plan.md
+- added: .cursor/rules/graphify.mdc
+- added: .graphifyignore
+- added: jobfynder-relationship-engine-and-search.md
+- added: onboarding-redesign-backend-spec.md
+- modified: .gitignore
+- removed: .cursor/plans/fetch_all_hiring_companies_e6763e0e.plan.md
+- removed: .cursor/plans/hermes_core_integration_65d4c002.plan.md
+- removed: .cursor/plans/hiring_companies_db_mapping_7e6b320b.plan.md
+- removed: .cursor/plans/linkedin_scrape_import_78ad7905.plan.md
+- removed: .cursor/plans/profile_api_gaps_a9a15d04.plan.md
+- removed: .cursor/plans/profile_granular_apis_5fba32ad.plan.md
+- removed: .cursor/plans/profile_missing_data_d9c581a7.plan.md
 
 ---
 
