@@ -988,6 +988,7 @@ Current scripts: `comm-telegram-message-chunking-check.py`, `comm-telegram-onboa
 **Hermes:**
 - `hermes/hermes-architecture-frozen-v1.md` — architectural decisions and reasoning behind the current Hermes design.
 - `hermes/hermes-complete-developer-guide.md` — per-endpoint use-case guide.
+- `hermes/hermes-parsing-and-prompts-api-guide.md` — the full 38-prompt Langfuse catalog with variables and use cases (added 2026-09-07 — referenced by the developer guide and the frozen architecture doc since 2026-08-15/08-20 but did not exist as a file until this date; sourced live from `GET /prompts/registry`).
 - `hermes/hermes-capability-matrix.md` — current build status of every Hermes capability.
 - `hermes/hermes-api-route-inventory.md` — the full Hermes route table.
 - `hermes/HERMES-documentation-map.md` (archived — see `JOBFYNDER-HERMES-COMM-CANONICAL.md`) — historical module closure list.
