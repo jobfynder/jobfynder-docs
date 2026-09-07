@@ -11,6 +11,8 @@ Source: live registry pull, 2026-09-07. `registry_version: hermes_langfuse_promp
 
 Every prompt here is fetched live by Hermes from Langfuse (project `jobfynder-ai`), not hardcoded — this file is a point-in-time snapshot for discoverability, not the runtime source. For the always-current version, call `GET /prompts/registry` yourself or `GET /prompts/{prompt_id}` for one prompt's full detail (includes the actual `system_template`/`user_template` text, omitted below for brevity — see `hermes-complete-developer-guide.md` §11 for the `/prompts/run` execution contract).
 
+**Caveat added 2026-09-07 (`jobfynder/hermes` commit `8319c43f9fdd17b1f46937e64d458cc9a6dc3c13`):** two of the prompt IDs below — `jf.resume.parse` and `jf.onboarding.profile-import.extract`, both in §2 — now also have a hardcoded local definition in `app/prompt_runtime/registry.json` (loaded by the new `app/prompt_runtime/local_prompts.py`), served when Langfuse is unreachable or doesn't have that ID cached. `list_prompts()`'s `registry_version` field changed from `hermes_langfuse_prompt_registry_v1` to `hermes_prompt_registry_v1` to reflect the merge. The "fetched live, not hardcoded" framing above still holds for the other 36 prompts and for these two whenever Langfuse is configured and reachable. See `hermes/HERMES-750-litellm-prompt-runtime-foundation.md` §11 for the full detail.
+
 Each prompt's `metadata.execution_class` matches the classes defined in `hermes-architecture-frozen-v1.md` §3:
 - **HERMES_FALLBACK_LLM** — Hermes attempts deterministic extraction first; this prompt only fires below a confidence threshold.
 - **HERMES_LLM** — genuinely generative; no deterministic path exists for this task.
@@ -87,4 +89,5 @@ Every prompt carries `safety_policy: hermes_prompt_safety_v1` and every `/prompt
 
 - `hermes-complete-developer-guide.md` — per-endpoint integration guide; §11 covers the `/prompts/run` execution contract this catalog feeds into.
 - `hermes-architecture-frozen-v1.md` — §9 is the architectural context for this catalog (why 38, not the original 35 or 92).
+- `hermes/HERMES-750-litellm-prompt-runtime-foundation.md` §11 — the 2026-09-07 local fallback registry for `jf.resume.parse` and `jf.onboarding.profile-import.extract` (see the §1 caveat above).
 - `Jobfynder_AI_Architecture_v3.md` (2026-08-04, historical/superseded) — the original 35-prompt design intent and the full disposition table (§21) explaining what was cut and why. Superseded in full by `hermes-architecture-frozen-v1.md` (2026-08-15) as the operative reference; kept only as background for why specific prompts were deliberately not built.
