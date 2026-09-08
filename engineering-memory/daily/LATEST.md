@@ -23,14 +23,12 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-full-r
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: fix/hermes-850-full-reparse-backfill
-- Head SHA: 1c6174d
+- Head SHA: 16145e5
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 1c6174d feat(drafts): full-reparse backfill so a parser improvement reaches the existing backlog — Jobfynder
+- 16145e5 test: stop asserting membership in the capped backfill result lists — Jobfynder
 - Changed files:
-- modified: app/drafts/service.py
-- modified: app/routers/drafts.py
 - modified: scripts/hermes-850-signature-company-fill-check.py
 
 ---
