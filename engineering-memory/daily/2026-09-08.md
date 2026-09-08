@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch perf/hermes-850-full-reparse-single-transaction.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder/hermes on branch perf/hermes-850-full-
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: perf/hermes-850-full-reparse-single-transaction
-- Head SHA: 5283b4b
+- Branch: main
+- Head SHA: 2d7c24c
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 5283b4b perf(drafts): batch full-reparse writes into one transaction instead of one per row — Jobfynder
+- 2d7c24c perf(drafts): batch full-reparse writes into one transaction instead of one per row — Jobfynder
 - Changed files:
 - modified: app/drafts/service.py
 - modified: app/email_parsing/provenance.py
