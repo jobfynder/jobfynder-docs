@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feat/hermes-850-signature-company-fill-backfill.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder/hermes on branch feat/hermes-850-signa
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feat/hermes-850-signature-company-fill-backfill
-- Head SHA: 1bd0e52
+- Branch: main
+- Head SHA: ce489a3
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 1bd0e52 feat(drafts): backfill signature-company-fill onto the pre-fix review backlog — Jobfynder
+- ce489a3 feat(drafts): backfill signature-company-fill onto the pre-fix review backlog — Jobfynder
 - Changed files:
 - modified: app/drafts/service.py
 - modified: app/routers/drafts.py
