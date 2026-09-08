@@ -23,14 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-signat
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: fix/hermes-850-signature-company-fill-review-queue
-- Head SHA: d56a705
+- Head SHA: 1013d8b
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- d56a705 fix(ci): make hermes-runtime storage root env-configurable so CI can actually run — Jobfynder
+- 1013d8b fix(ci): use a literal temp path, not the unavailable runner context — Jobfynder
 - Changed files:
 - modified: .github/workflows/hermes-regression.yml
-- modified: app/runtime/jsonl_store.py
 
 ---
 
