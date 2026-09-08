@@ -5,6 +5,8 @@ Status: Active — companion to `hermes-complete-developer-guide.md` (referenced
 Server: jobfynder-intel-01, `GET /prompts/registry` (bearer token required — see `hermes-rbac-access-control.md`)
 Source: live registry pull, 2026-09-07. `registry_version: hermes_langfuse_prompt_registry_v1`, `prompt_count: 38` — matches the count both companion docs and `JOBFYNDER-HERMES-COMM-CANONICAL.md` §7 have independently cited since 2026-08-21, confirming stability over three weeks.
 
+**⚠️ 2026-09-07 note (added during doc sync, not yet live-reconciled):** `jobfynder/hermes` commit `8319c43f9fdd17b1f46937e64d458cc9a6dc3c13`, also dated 2026-09-07, changes `list_prompts()` in `app/prompt_runtime/langfuse_prompts.py` so the `registry_version` it returns is the literal string `"hermes_prompt_registry_v1"`, not `"hermes_langfuse_prompt_registry_v1"` as stated above — confirmed by reading the source diff directly, not by re-querying the live endpoint (no SSH credentials configured in this environment to do so). The same commit merges a local static registry (`app/prompt_runtime/registry.json`) into this endpoint's response as a Langfuse-unavailable fallback, which may also change `prompt_count` from 38 depending on whether its two new local-only prompt IDs (`jf.resume.parse`, `jf.onboarding.profile-import.extract` — both already listed in §2 below) were already present in Langfuse. See `HERMES-750-litellm-prompt-runtime-foundation.md` §6.1 for what's confirmed from the diff vs. what still needs a live check. Whoever next has live/SSH access to INTEL-1 should re-pull `GET /prompts/registry` and correct the `registry_version` and `prompt_count` values above accordingly.
+
 ---
 
 ## 1. How this catalog works
@@ -35,6 +37,8 @@ Hermes tries a deterministic parser first for every one of these; the LLM only r
 | `jf.broadcast.hotlist.extract` | broadcast | extract-fast | `hotlist_schema`, `message` |
 
 That's 8 — matches `Jobfynder_AI_Architecture_v3.md`'s original count of "8 conditional fallbacks" exactly, even though the total catalog has grown from that document's 35 to today's 38 (3 genuine-generation prompts were added since: `jf.resume.section.polish`, `jf.job-tracker.interview.prep`, `jf.job-tracker.offer.analyze` — see §3).
+
+**Note:** `jf.resume.parse` and `jf.onboarding.profile-import.extract` also now have local, static fallback definitions in Hermes's own `app/prompt_runtime/registry.json` (`jobfynder/hermes` commit `8319c43`, 2026-09-07) so they keep working if Langfuse is unreachable — see the ⚠️ note at the top of this file and `HERMES-750-litellm-prompt-runtime-foundation.md` §6.1.
 
 ## 3. Genuine-generation prompts (HERMES_LLM)
 
@@ -73,7 +77,7 @@ No deterministic path exists for these — Hermes builds a Context Card (never r
 | `jf.support.reply.draft` | support | generate-small | `issue`, `safe_account_context`, `verified_steps` | Support reply drafting |
 | `jf.support.ticket.summarize` | support | generate-small | `messages`, `safe_logs` | Support ticket summary |
 
-That's 30 genuine-generation prompts, bringing the total to **38** (8 fallback + 30 generation) — matching the live registry count exactly.
+That's 30 genuine-generation prompts, bringing the total to **38** (8 fallback + 30 generation) — matching the live registry count exactly as of the 2026-09-07 pull cited above. See the ⚠️ note at the top of this file for a code change, same day, that may affect this count going forward.
 
 ## 4. Prompts named in other docs but not present in the live registry
 
@@ -87,4 +91,5 @@ Every prompt carries `safety_policy: hermes_prompt_safety_v1` and every `/prompt
 
 - `hermes-complete-developer-guide.md` — per-endpoint integration guide; §11 covers the `/prompts/run` execution contract this catalog feeds into.
 - `hermes-architecture-frozen-v1.md` — §9 is the architectural context for this catalog (why 38, not the original 35 or 92).
+- `HERMES-750-litellm-prompt-runtime-foundation.md` §6.1 — the local-registry merge behavior change (commit `8319c43`, 2026-09-07) that this file's ⚠️ note above refers to.
 - `Jobfynder_AI_Architecture_v3.md` (2026-08-04, historical/superseded) — the original 35-prompt design intent and the full disposition table (§21) explaining what was cut and why. Superseded in full by `hermes-architecture-frozen-v1.md` (2026-08-15) as the operative reference; kept only as background for why specific prompts were deliberately not built.
