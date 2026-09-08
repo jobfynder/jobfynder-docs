@@ -51,9 +51,17 @@ Resume parser:
 - Years of experience
 - Current title
 - Email
-- Phone
+- Phone (now including international/non-US formats, e.g. `+91 89101 45846`)
 - LinkedIn URL
 - Work authorization
+- Full name (2026-09-07, commit `8319c43` on `jobfynder/hermes`)
+- Location (2026-09-07, commit `8319c43`)
+- Summary (2026-09-07, commit `8319c43`)
+- Structured work experience — company, title, start/end date, location, description per entry (2026-09-07, commit `8319c43`)
+- Structured education — institution, degree, field, year (2026-09-07, commit `8319c43`)
+- Certifications (2026-09-07, commit `8319c43`)
+
+**2026-09-07 addition.** `app/understanding/parsers/resume_sections.py` (new file, 316 lines, `extract_resume_sections()`) deterministically splits "Jake-style" resumes into sections (header/education/skills/experience/achievements) and parses name, location, structured experience/education entries, and certifications without an LLM. `app/understanding/parsers/contact.py`'s `extract_phone()` was extended to check labeled phone fields (`mobile:`/`phone:`/`tel:`/`cell:`/`whatsapp:`) and the `phonenumbers` library before falling back to the original US-only regex, so international numbers like `+91 89101 45846` are no longer mis-sliced. `ResumeStructuredData` (`app/understanding/structured.py`) gains `name`, `summary`, `experience`, `education`, `certifications` fields. `app/understanding/llm_fallback.py` adds `merge_llm_extracted()`, which fills only the deterministic fields that came back empty from an LLM fallback extraction via a per-field alias map — it never overwrites a value the deterministic parser already found. Commit message: "Jake-style resumes were returning empty name, phone, experience, education, and certs because Understanding only kept email and keyword skills." Evidence: 3 new test files (`tests/understanding/test_resume_sections.py`, `tests/understanding/test_basic_resume_parse.py`, `tests/prompt_runtime/test_local_resume_extract.py`), all passing (verified by this sync run: `pytest tests/understanding/ tests/prompt_runtime/` → 10 passed). No git tag, no live-endpoint re-verification on INTEL-1 (no SSH credentials configured in this environment) — this is code+test evidence only, not a closure claim.
 
 Job description parser:
 
@@ -142,7 +150,7 @@ Before closing HERMES-200 foundation:
 Future improvements:
 
 - Better PDF testing
-- More resume fields
+- ~~More resume fields~~ — name/location/experience/education/certifications added 2026-09-07, commit `8319c43` (see Resume parser section above); JD fields still open
 - More JD fields
 - Bigger taxonomy
 - Real Unstructured.io integration
