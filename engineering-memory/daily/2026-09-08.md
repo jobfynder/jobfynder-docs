@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-full-reparse-backfill.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,13 +22,18 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-full-r
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/hermes-850-full-reparse-backfill
-- Head SHA: 70901fd
-- Commit count: 1
+- Branch: main
+- Head SHA: 5f239f7
+- Commit count: 4
 - Triggered by: jobfynder
 - Commits:
-- 70901fd test: give the full-reparse fixture an explicit Required Skills: label — Jobfynder
+- f1dd1ce feat(drafts): full-reparse backfill so a parser improvement reaches the existing backlog — Jobfynder
+- c1a0fa0 test: stop asserting membership in the capped backfill result lists — Jobfynder
+- 1df1c62 test: make the full-reparse test diagnostic instead of guessing further — Jobfynder
+- 5f239f7 test: give the full-reparse fixture an explicit Required Skills: label — Jobfynder
 - Changed files:
+- modified: app/drafts/service.py
+- modified: app/routers/drafts.py
 - modified: scripts/hermes-850-signature-company-fill-check.py
 
 ---
