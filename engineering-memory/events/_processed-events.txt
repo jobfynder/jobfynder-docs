@@ -420,3 +420,6 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|00e40f909aaea02a1e63d97a61c6
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|a756a7e483820fe8b65eb97cedff356f5afc29a6
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|2879d4daad86cacc10015dd8da61fed77e6c5985
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|50abd99698dcd7570e1f02f1a59902ffdacc3f55
+jobfynder/hermes|refs/heads/fix/remove-legacy-prompt-registry-entries|63100747796700803986eae2346e23647fadcffa
+jobfynder/hermes|refs/heads/main|a745fedce09314db126e6fbe8ed8f125aeab0ee6
+jobfynder/hermes|refs/heads/feature/hermes-800-resume-builder-intelligence|1d1731bdf81c527efb540b0588cf43f8ba0898f6

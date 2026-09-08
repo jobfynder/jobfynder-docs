@@ -3,7 +3,9 @@
 Status: Active — companion to `hermes-complete-developer-guide.md` (referenced from there and from `hermes-architecture-frozen-v1.md` §9 as the full prompt catalog; this file did not exist until 2026-09-07 despite being referenced by both since at least 2026-08-15 — created here to close that gap, sourced from the live running service rather than reconstructed from memory).
 
 Server: jobfynder-intel-01, `GET /prompts/registry` (bearer token required — see `hermes-rbac-access-control.md`)
-Source: live registry pull, 2026-09-07. `registry_version: hermes_langfuse_prompt_registry_v1`, `prompt_count: 38` — matches the count both companion docs and `JOBFYNDER-HERMES-COMM-CANONICAL.md` §7 have independently cited since 2026-08-21, confirming stability over three weeks.
+Source: live registry pull, 2026-09-07. At that time: `registry_version: hermes_langfuse_prompt_registry_v1`, `prompt_count: 38` — matched the count both companion docs and `JOBFYNDER-HERMES-COMM-CANONICAL.md` §7 had independently cited since 2026-08-21.
+
+**Superseded the next day — re-verify before trusting "38" anywhere.** Re-checked live 2026-09-08: `registry_version` is now `hermes_prompt_registry_v1` (reused from the original 2026-07-10 static registry — see `hermes/HERMES-750-litellm-prompt-runtime-foundation.md` §11) and `prompt_count` is **42**, not 38. Cause: commit `8319c43` on `jobfynder/hermes` (2026-09-07, primarily a resume-parsing improvement — see `hermes/HERMES-200-understanding-foundation.md`) added a local fallback prompt registry for resilience against a Langfuse outage, but merges it into `list_prompts()` as a **union**, not a fallback used only when Langfuse is unreachable — so the 4 old, already-retired prompt IDs it contains resurface in the live registry unconditionally. **The 4 sections below are §§1-38, current as of 2026-09-07; the 4 resurrected legacy prompts (`resume_builder.summary_improve`, `resume_builder.bullet_rewrite`, `matching.fit_explanation`, `agents.support_reply_draft`) are listed separately in §3a — do not treat them as genuine new capability, each duplicates an existing jf.* prompt below.** Full analysis: PR #19 on `jobfynder/jobfynder-docs` (open as of 2026-09-08) and its update to `JOBFYNDER-HERMES-COMM-CANONICAL.md` §4 (HERMES-750/775 section).
 
 **Note (2026-09-07, later same day; corrected 2026-09-08).** Commit `8319c43` on `jobfynder/hermes` `main` renamed `list_prompts()`'s `registry_version` field from `hermes_langfuse_prompt_registry_v1` to `hermes_prompt_registry_v1`, and made `list_prompts()`/`get_prompt()` merge a local fallback registry (`app/prompt_runtime/local_prompts.py`, `app/prompt_runtime/registry.json`) with the Langfuse-hosted one — see `HERMES-750-litellm-prompt-runtime-foundation.md` §11 for the full trail. **This note originally said the prompt count was unaffected — that turned out to be wrong.** `registry.json` carries six prompts, not two: the two new fallback copies (`jf.resume.parse`, `jf.onboarding.profile-import.extract`, both already in the 38 below) plus four prompt IDs left over from the original 2026-07-10 static registry that §7 of the HERMES-750 doc already documents as retired from Langfuse. Because `list_prompts()`'s merge is a union (local ∪ Langfuse-cache), those four are not overridden and can resurface in `GET /prompts/registry` whenever this code runs, including with Langfuse healthy — so `prompt_count` may read up to 42, not 38, once this deploys. Not re-pulled live for this note — no SSH/API credentials were available in this environment to re-verify against INTEL-1; re-pull `GET /prompts/registry` and update the header line above once it does.
 
@@ -75,7 +77,20 @@ No deterministic path exists for these — Hermes builds a Context Card (never r
 | `jf.support.reply.draft` | support | generate-small | `issue`, `safe_account_context`, `verified_steps` | Support reply drafting |
 | `jf.support.ticket.summarize` | support | generate-small | `messages`, `safe_logs` | Support ticket summary |
 
-That's 30 genuine-generation prompts, bringing the total to **38** (8 fallback + 30 generation) — matching the live registry count exactly.
+That's 30 genuine-generation prompts, bringing the total to **38** (8 fallback + 30 generation) — the count as of 2026-09-07. See §3a for the 4 that have since resurfaced.
+
+## 3a. Resurrected legacy prompts (live as of 2026-09-08 — not genuine new capability)
+
+Re-verified live 2026-09-08: these 4 now appear in `GET /prompts/registry` alongside the 38 above, bringing the reported count to 42. Each is the original 2026-07-10 static-registry entry (`default_model` is a literal provider string, `anthropic/claude-haiku-4-5`, not a LiteLLM router alias — structurally different from every prompt in §2/§3, which carry `metadata.execution_class`/`litellm_router_alias`). They were retired from active use when Langfuse replaced the static registry (2026-08-21) but resurfaced as a side effect of commit `8319c43`'s local-fallback-registry merge (see the status note at the top of this file). **Each duplicates an existing `jf.*` prompt — treat the `jf.*` version as authoritative, not these:**
+
+| Legacy prompt ID | Required variables | Duplicates |
+|---|---|---|
+| `resume_builder.summary_improve` | `source_text` | `jf.resume.summary.generate` |
+| `resume_builder.bullet_rewrite` | `source_text` | `jf.resume.experience.rewrite` |
+| `matching.fit_explanation` | `match_result` | `jf.jobs.fit.explain` |
+| `agents.support_reply_draft` | `issue_summary` | `jf.support.reply.draft` |
+
+**Not decided as of this writing:** whether `list_prompts()`'s merge behavior should change to fallback-only (only surface these when Langfuse is genuinely unreachable), or whether these 4 IDs should simply be deleted from `registry.json` now that the modern `jf.*` equivalents exist. Follow PR #19 on `jobfynder/jobfynder-docs` and `hermes/HERMES-750-litellm-prompt-runtime-foundation.md` §11 for resolution.
 
 ## 4. Prompts named in other docs but not present in the live registry
 
