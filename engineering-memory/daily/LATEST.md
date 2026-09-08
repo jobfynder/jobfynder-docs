@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/remove-legacy-prompt-registry-entries.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder/hermes on branch fix/remove-legacy-pro
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/remove-legacy-prompt-registry-entries
-- Head SHA: 6310074
+- Branch: main
+- Head SHA: a745fed
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 6310074 fix(prompt-runtime): remove 4 dead legacy prompts leaking into every registry listing — Jobfynder
+- a745fed fix(prompt-runtime): remove 4 dead legacy prompts leaking into every registry listing — Jobfynder
 - Changed files:
 - modified: app/prompt_runtime/registry.json
 - modified: docs/hermes-750/api-fixtures/prompt-run-dry-run-request.json
