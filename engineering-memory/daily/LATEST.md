@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-job-requirement-parsing-gaps.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-job-re
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/hermes-850-job-requirement-parsing-gaps
-- Head SHA: 399dfdd
+- Branch: main
+- Head SHA: 144e02d
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 399dfdd fix(email-parsing): stop a responsibilities list from splitting one posting into five — Jobfynder
+- 144e02d fix(email-parsing): stop a responsibilities list from splitting one posting into five — Jobfynder
 - Changed files:
 - modified: app/email_parsing/parsers.py
 - modified: app/understanding/parsers/basic.py
