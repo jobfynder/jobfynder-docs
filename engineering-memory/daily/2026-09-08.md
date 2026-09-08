@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-warm-ner-pipeline-at-startup.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-warm-n
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/hermes-850-warm-ner-pipeline-at-startup
-- Head SHA: cf3f841
+- Branch: main
+- Head SHA: 8917a37
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- cf3f841 fix(startup): load the NER model at app startup, not on the first request that needs it — Jobfynder
+- 8917a37 fix(startup): load the NER model at app startup, not on the first request that needs it — Jobfynder
 - Changed files:
 - modified: app/email_parsing/signature.py
 - modified: app/main.py
