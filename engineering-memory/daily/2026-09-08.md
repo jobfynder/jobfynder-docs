@@ -23,15 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 144e02d
+- Head SHA: 284b3bc
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 144e02d fix(email-parsing): stop a responsibilities list from splitting one posting into five — Jobfynder
+- 284b3bc fix(signature): recognize a relay's rigid From: block, exclude prohirespowerhouse.com — Jobfynder
 - Changed files:
-- modified: app/email_parsing/parsers.py
-- modified: app/understanding/parsers/basic.py
-- modified: scripts/hermes-850-email-parsing-check.py
+- modified: app/email_parsing/signature.py
+- modified: scripts/hermes-850-email-signature-check.py
 
 ---
 
