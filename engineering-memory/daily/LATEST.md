@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch feat/hermes-850-signature-company-fill-backfill.
 
 ---
 
@@ -22,21 +22,16 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: d4670bc
-- Commit count: 3
+- Branch: feat/hermes-850-signature-company-fill-backfill
+- Head SHA: 1bd0e52
+- Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 4402a23 fix(email-parsing): fill job-requirement company from the signature parser before LLM fallback — Jobfynder
-- f4ae54c fix(ci): make hermes-runtime storage root env-configurable so CI can actually run — Jobfynder
-- d4670bc fix(ci): use a literal temp path, not the unavailable runner context — Jobfynder
+- 1bd0e52 feat(drafts): backfill signature-company-fill onto the pre-fix review backlog — Jobfynder
 - Changed files:
-- added: scripts/hermes-850-signature-company-fill-check.py
-- modified: .github/workflows/hermes-regression.yml
-- modified: app/channels/service.py
-- modified: app/email_parsing/parsers.py
-- modified: app/email_parsing/provenance.py
-- modified: app/runtime/jsonl_store.py
+- modified: app/drafts/service.py
+- modified: app/routers/drafts.py
+- modified: scripts/hermes-850-signature-company-fill-check.py
 
 ---
 
