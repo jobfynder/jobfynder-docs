@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch feature/hermes-800-resume-builder-intelligence.
 
 ---
 
@@ -22,16 +22,25 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: a745fed
-- Commit count: 1
+- Branch: feature/hermes-800-resume-builder-intelligence
+- Head SHA: 1d1731b
+- Commit count: 2
 - Triggered by: jobfynder
 - Commits:
-- a745fed fix(prompt-runtime): remove 4 dead legacy prompts leaking into every registry listing — Jobfynder
+- 62554ad feat(hermes-850): add deterministic email parsing foundation — Jobfynder Automation
+- 1d1731b fix(hermes-850): enforce email parser guardrails — Jobfynder Automation
 - Changed files:
-- modified: app/prompt_runtime/registry.json
-- modified: docs/hermes-750/api-fixtures/prompt-run-dry-run-request.json
-- modified: scripts/hermes-750-prompt-runtime-api-check.py
+- added: app/email_parsing/__init__.py
+- added: app/email_parsing/parsers.py
+- added: app/email_parsing/routing.py
+- added: scripts/hermes-850-email-integration-check.py
+- added: scripts/hermes-850-email-parsing-check.py
+- modified: app/channels/service.py
+- modified: app/email_parsing/parsers.py
+- modified: app/email_parsing/routing.py
+- modified: app/providers/email/service.py
+- modified: scripts/hermes-450-channel-intake-check.py
+- modified: scripts/hermes-850-email-parsing-check.py
 
 ---
 
