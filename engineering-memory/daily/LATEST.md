@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-full-reparse-backfill.
 
 ---
 
@@ -22,15 +22,16 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 284b3bc
+- Branch: fix/hermes-850-full-reparse-backfill
+- Head SHA: 1c6174d
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 284b3bc fix(signature): recognize a relay's rigid From: block, exclude prohirespowerhouse.com — Jobfynder
+- 1c6174d feat(drafts): full-reparse backfill so a parser improvement reaches the existing backlog — Jobfynder
 - Changed files:
-- modified: app/email_parsing/signature.py
-- modified: scripts/hermes-850-email-signature-check.py
+- modified: app/drafts/service.py
+- modified: app/routers/drafts.py
+- modified: scripts/hermes-850-signature-company-fill-check.py
 
 ---
 
