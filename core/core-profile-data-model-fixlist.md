@@ -9,7 +9,7 @@ Added to jobfynder-docs: 2026-09-07 (content from a live review conducted prior 
 
 All five roles (Consultant, Bench Sales Recruiter, Recruiter, Employer, Service Provider) were reviewed directly on `testing.jobfynder.com` — every field, every edit modal, every tab. This document is the complete fix list from that review, ready to hand to the dev team.
 
-Companion document: `onboarding-redesign-spec.md` (registration field tiering — keep signup to 5 fields, everything else moves here, to profile completion). **Not yet added to this repo — referenced here but not confirmed to exist; do not assume its content without locating it first.**
+Companion document: `core-onboarding-redesign-spec.md` (registration field tiering — keep signup to 5 fields, everything else moves here, to profile completion). Added 2026-09-08.
 
 ---
 
