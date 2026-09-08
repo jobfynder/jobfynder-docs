@@ -23,17 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-signat
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: fix/hermes-850-signature-company-fill-review-queue
-- Head SHA: f52665a
+- Head SHA: d56a705
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- f52665a fix(email-parsing): fill job-requirement company from the signature parser before LLM fallback — Jobfynder
+- d56a705 fix(ci): make hermes-runtime storage root env-configurable so CI can actually run — Jobfynder
 - Changed files:
-- added: scripts/hermes-850-signature-company-fill-check.py
 - modified: .github/workflows/hermes-regression.yml
-- modified: app/channels/service.py
-- modified: app/email_parsing/parsers.py
-- modified: app/email_parsing/provenance.py
+- modified: app/runtime/jsonl_store.py
 
 ---
 
