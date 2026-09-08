@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-full-reparse-batch-progress.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,12 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-full-r
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/hermes-850-full-reparse-batch-progress
-- Head SHA: ba7ef0c
+- Branch: main
+- Head SHA: e4071bf
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- ba7ef0c fix(drafts): make bounded full-reparse batches actually advance through the backlog — Jobfynder
+- e4071bf fix(drafts): make bounded full-reparse batches actually advance through the backlog — Jobfynder
 - Changed files:
 - modified: app/drafts/service.py
 - modified: scripts/hermes-850-signature-company-fill-check.py
