@@ -423,3 +423,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|50abd99698dcd7570e1f02f1a59902f
 jobfynder/hermes|refs/heads/fix/remove-legacy-prompt-registry-entries|63100747796700803986eae2346e23647fadcffa
 jobfynder/hermes|refs/heads/main|a745fedce09314db126e6fbe8ed8f125aeab0ee6
 jobfynder/hermes|refs/heads/feature/hermes-800-resume-builder-intelligence|1d1731bdf81c527efb540b0588cf43f8ba0898f6
+jobfynder/hermes|refs/heads/fix/hermes-850-signature-company-fill-review-queue|f52665a3f0f1cff27616551ca9f44ef7b787026b

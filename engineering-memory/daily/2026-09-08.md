@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feature/hermes-800-resume-builder-intelligence.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-signature-company-fill-review-queue.
 
 ---
 
@@ -22,25 +22,18 @@ GitHub push event processed for jobfynder/hermes on branch feature/hermes-800-re
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feature/hermes-800-resume-builder-intelligence
-- Head SHA: 1d1731b
-- Commit count: 2
+- Branch: fix/hermes-850-signature-company-fill-review-queue
+- Head SHA: f52665a
+- Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 62554ad feat(hermes-850): add deterministic email parsing foundation — Jobfynder Automation
-- 1d1731b fix(hermes-850): enforce email parser guardrails — Jobfynder Automation
+- f52665a fix(email-parsing): fill job-requirement company from the signature parser before LLM fallback — Jobfynder
 - Changed files:
-- added: app/email_parsing/__init__.py
-- added: app/email_parsing/parsers.py
-- added: app/email_parsing/routing.py
-- added: scripts/hermes-850-email-integration-check.py
-- added: scripts/hermes-850-email-parsing-check.py
+- added: scripts/hermes-850-signature-company-fill-check.py
+- modified: .github/workflows/hermes-regression.yml
 - modified: app/channels/service.py
 - modified: app/email_parsing/parsers.py
-- modified: app/email_parsing/routing.py
-- modified: app/providers/email/service.py
-- modified: scripts/hermes-450-channel-intake-check.py
-- modified: scripts/hermes-850-email-parsing-check.py
+- modified: app/email_parsing/provenance.py
 
 ---
 
