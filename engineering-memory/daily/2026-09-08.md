@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-signature-relay-parsing.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-job-requirement-parsing-gaps.
 
 ---
 
@@ -22,15 +22,16 @@ GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-signat
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/hermes-850-signature-relay-parsing
-- Head SHA: bee8b53
+- Branch: fix/hermes-850-job-requirement-parsing-gaps
+- Head SHA: 399dfdd
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- bee8b53 fix(signature): recognize a relay's rigid From: block, exclude prohirespowerhouse.com — Jobfynder
+- 399dfdd fix(email-parsing): stop a responsibilities list from splitting one posting into five — Jobfynder
 - Changed files:
-- modified: app/email_parsing/signature.py
-- modified: scripts/hermes-850-email-signature-check.py
+- modified: app/email_parsing/parsers.py
+- modified: app/understanding/parsers/basic.py
+- modified: scripts/hermes-850-email-parsing-check.py
 
 ---
 
