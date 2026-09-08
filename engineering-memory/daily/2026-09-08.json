@@ -1,21 +1,28 @@
 {
   "date": "2026-09-08",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-signature-company-fill-review-queue.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: fix/hermes-850-signature-company-fill-review-queue",
-    "Head SHA: 1013d8b",
-    "Commit count: 1",
+    "Branch: main",
+    "Head SHA: d4670bc",
+    "Commit count: 3",
     "Triggered by: jobfynder",
     "Commits:",
-    "1013d8b fix(ci): use a literal temp path, not the unavailable runner context \u2014 Jobfynder",
+    "4402a23 fix(email-parsing): fill job-requirement company from the signature parser before LLM fallback \u2014 Jobfynder",
+    "f4ae54c fix(ci): make hermes-runtime storage root env-configurable so CI can actually run \u2014 Jobfynder",
+    "d4670bc fix(ci): use a literal temp path, not the unavailable runner context \u2014 Jobfynder",
     "Changed files:",
-    "modified: .github/workflows/hermes-regression.yml"
+    "added: scripts/hermes-850-signature-company-fill-check.py",
+    "modified: .github/workflows/hermes-regression.yml",
+    "modified: app/channels/service.py",
+    "modified: app/email_parsing/parsers.py",
+    "modified: app/email_parsing/provenance.py",
+    "modified: app/runtime/jsonl_store.py"
   ],
   "decisions": [
     {
