@@ -41,6 +41,8 @@ Hermes prompt_runtime
 
 Provider name reported by the runtime: `litellm` (`app/prompt_runtime/service.py`, `PROVIDER_NAME = "litellm"`). There is no Portkey code path left in this module — `_call_litellm()` talks to LiteLLM's OpenAI-compatible `/v1/chat/completions` endpoint directly.
 
+**Update 2026-09-07 (see §11): Langfuse is no longer the only source of prompt definitions** — a local on-disk registry now backs `list_prompts()`/`get_prompt()` as well, so the diagram above is accurate for how live prompts are *sourced* but no longer complete for what the registry can *return*.
+
 ---
 
 ## 4. Required environment variables (current)
@@ -141,3 +143,18 @@ If evidence is missing, Hermes must ask a question or mark the field as missing.
 ## 10. Status
 
 The prompt runtime foundation itself is production-safe: dry-run-first, RBAC-protected, human-review-required. The provider underneath it changed from Portkey to LiteLLM without changing this contract. The N+1 registry-fetch performance issue (§6) is fixed. One open item remains: the stale prompt-ID check scripts (§7).
+
+---
+
+## 11. Update 2026-09-07 — local prompt-registry fallback
+
+Commit `8319c43f` on `jobfynder/hermes` `main` (`feat(understanding): extract resume sections and international phones without an LLM`) added a **local, on-disk prompt registry** that backs the Langfuse-fetched one rather than replacing it:
+
+- New module `app/prompt_runtime/local_prompts.py` loads `app/prompt_runtime/registry.json` (`get_local_prompt()`, `list_local_prompts()`, `local_registry()`).
+- Two prompts now defined in `registry.json`: `jf.onboarding.profile-import.extract` (`domain: "onboarding"`) and `jf.resume.parse` (`domain: "understanding"`) — both `status: "active"`, `default_model: "anthropic/claude-haiku-4-5"`, `safety_policy: "hermes_resume_no_fabrication_v1"`, and `metadata: {"human_review_required": true, "no_fabrication": true, "source": "local"}`.
+- `list_prompts()` (`app/prompt_runtime/langfuse_prompts.py`) previously returned an empty registry when `langfuse_configured()` was false. It now always merges in the local prompts (`{**local, **(_cache.get("prompts") or {})}` — a Langfuse-hosted prompt sharing the same ID would win), so `prompt_count` is never 0 even with Langfuse unreachable or unconfigured.
+- `get_prompt(prompt_id)` previously returned `None` outright when Langfuse wasn't configured. It now checks the Langfuse cache first (only if configured) and falls back to `get_local_prompt(prompt_id)`.
+- `registry_version` reported by `list_prompts()` is now `hermes_prompt_registry_v1` — reusing the name from the original 2026-07-10 closure quoted in §7 — rather than `hermes_langfuse_prompt_registry_v1`; it now labels the merged local+Langfuse registry, not the retired static 4-prompt one.
+- New test: `tests/prompt_runtime/test_local_resume_extract.py` (asserts `jf.onboarding.profile-import.extract` is registered and renders `clean_text`/`profile_schema` correctly via `run_prompt(..., mode="dry_run")`).
+
+This does not change the production dry-run/RBAC contract in §8–9 — it means Hermes always has *some* prompt definition for onboarding-profile-import and resume-parse even when Langfuse is unreachable or misconfigured, instead of depending entirely on Langfuse for those two prompt IDs. The open item from §7/§10 (stale prompt-ID check scripts) is unaffected by this change.
