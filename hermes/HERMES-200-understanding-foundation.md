@@ -50,10 +50,16 @@ Resume parser:
 - Skills
 - Years of experience
 - Current title
+- Name
 - Email
-- Phone
+- Phone (US and international)
 - LinkedIn URL
+- Location
+- Summary
 - Work authorization
+- Experience (structured: company, title, location, start/end date, description)
+- Education (structured: institution, degree, field, year)
+- Certifications
 
 Job description parser:
 
@@ -74,6 +80,20 @@ Taxonomy:
 - Taxonomy version
 - Taxonomy endpoint
 - Short alias false-positive protection
+
+---
+
+## 2026-09-07 update — deterministic resume-section extraction (commit `8319c43`)
+
+**Evidence.** `jobfynder/hermes` commit `8319c43f9fdd17b1f46937e64d458cc9a6dc3c13` ("feat(understanding): extract resume sections and international phones without an LLM"). Commit message states the concrete bug this fixes: "Jake-style resumes were returning empty name, phone, experience, education, and certs because Understanding only kept email and keyword skills."
+
+- New `app/understanding/parsers/resume_sections.py` (316 lines): splits a resume into sections (header/education/skills/experience/projects/achievements/certifications/summary) by header-line matching, then deterministically parses each — name/location from the header line, `experience[]` and `education[]` as structured objects (company/title/dates/location and institution/degree/field/year respectively), and certifications from a cert-keyword match over the certifications/achievements sections.
+- `app/understanding/parsers/contact.py`'s `PHONE_PATTERN` was US-only (3-3-4 digit groups); now tries a labeled pattern (`Mobile:`/`Phone:`/etc.) first, then falls back to the `phonenumbers` library's `PhoneNumberMatcher` for international numbers, before the original US pattern.
+- `app/understanding/parsers/basic.py`'s `parse_basic_structured_data` now calls `extract_resume_sections()` for `document_kind == "resume"` and fills `name`, `location`, `summary`, `experience`, `education`, `certifications` on `ResumeStructuredData` (new fields added in `app/understanding/structured.py`).
+- New `app/understanding/llm_fallback.py::merge_llm_extracted()` backfills any of those fields that are still empty from the LLM-fallback extraction, without overwriting a deterministic value already found — the LLM fallback is additive, not primary.
+- Regression tests added: `tests/understanding/test_resume_sections.py`, `tests/understanding/test_basic_resume_parse.py` — both assert against a real Jake-style resume fixture (name, phone `+91 89101 45846`, 3 experience entries, education year, and an `AZ-900` certification all extracted correctly).
+
+This closes the "More resume fields" item that was listed under Future improvements below (for resumes; JD fields are unaffected and still open).
 
 ---
 
@@ -142,7 +162,7 @@ Before closing HERMES-200 foundation:
 Future improvements:
 
 - Better PDF testing
-- More resume fields
+- ~~More resume fields~~ — done 2026-09-07, commit `8319c43` (see above)
 - More JD fields
 - Bigger taxonomy
 - Real Unstructured.io integration
