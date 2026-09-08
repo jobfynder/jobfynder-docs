@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder/hermes on branch fix/hermes-850-signature-relay-parsing.
 
 ---
 
@@ -22,16 +22,15 @@ GitHub push event processed for jobfynder/hermes on branch main.
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: ce489a3
+- Branch: fix/hermes-850-signature-relay-parsing
+- Head SHA: bee8b53
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- ce489a3 feat(drafts): backfill signature-company-fill onto the pre-fix review backlog — Jobfynder
+- bee8b53 fix(signature): recognize a relay's rigid From: block, exclude prohirespowerhouse.com — Jobfynder
 - Changed files:
-- modified: app/drafts/service.py
-- modified: app/routers/drafts.py
-- modified: scripts/hermes-850-signature-company-fill-check.py
+- modified: app/email_parsing/signature.py
+- modified: scripts/hermes-850-email-signature-check.py
 
 ---
 
