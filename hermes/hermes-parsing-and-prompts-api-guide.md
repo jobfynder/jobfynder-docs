@@ -5,6 +5,8 @@ Status: Active — companion to `hermes-complete-developer-guide.md` (referenced
 Server: jobfynder-intel-01, `GET /prompts/registry` (bearer token required — see `hermes-rbac-access-control.md`)
 Source: live registry pull, 2026-09-07. `registry_version: hermes_langfuse_prompt_registry_v1`, `prompt_count: 38` — matches the count both companion docs and `JOBFYNDER-HERMES-COMM-CANONICAL.md` §7 have independently cited since 2026-08-21, confirming stability over three weeks.
 
+**Note, 2026-09-07 (commit `8319c43f` on `jobfynder/hermes`, same day as the pull above but not confirmed before or after it):** `GET /prompts/registry`'s `registry_version` field is no longer guaranteed to read `hermes_langfuse_prompt_registry_v1` — the endpoint now merges a small local static fallback catalog (`app/prompt_runtime/registry.json`, two entries: `jf.resume.parse`, `jf.onboarding.profile-import.extract`, both already present in the 38 below) with the live Langfuse cache, and the merged response's `registry_version` literal changed in code to `hermes_prompt_registry_v1`. `prompt_count` is unaffected — both local entries duplicate existing Langfuse-hosted IDs rather than adding new ones. See `HERMES-750-litellm-prompt-runtime-foundation.md` §3/§7/§8 for the full evidence trail. Re-pull `GET /prompts/registry` yourself if you need the current exact field value.
+
 ---
 
 ## 1. How this catalog works
@@ -87,4 +89,5 @@ Every prompt carries `safety_policy: hermes_prompt_safety_v1` and every `/prompt
 
 - `hermes-complete-developer-guide.md` — per-endpoint integration guide; §11 covers the `/prompts/run` execution contract this catalog feeds into.
 - `hermes-architecture-frozen-v1.md` — §9 is the architectural context for this catalog (why 38, not the original 35 or 92).
+- `HERMES-750-litellm-prompt-runtime-foundation.md` — §3/§7/§8 cover the 2026-09-07 local-fallback-catalog change and the `registry_version` field rename noted above.
 - `Jobfynder_AI_Architecture_v3.md` (2026-08-04, historical/superseded) — the original 35-prompt design intent and the full disposition table (§21) explaining what was cut and why. Superseded in full by `hermes-architecture-frozen-v1.md` (2026-08-15) as the operative reference; kept only as background for why specific prompts were deliberately not built.
