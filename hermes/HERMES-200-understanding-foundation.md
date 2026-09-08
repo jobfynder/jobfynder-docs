@@ -49,11 +49,19 @@ Resume parser:
 
 - Skills
 - Years of experience
-- Current title
+- Current title (falls back to the most recent parsed experience entry's title when no probable-title match exists — commit `8319c43f`, `jobfynder/hermes`)
+- Name — parsed from the resume header line, commit `8319c43f`
 - Email
-- Phone
+- Phone — US pattern; plus labeled values (`mobile:`/`phone:`/`tel:`/`cell:`/`whatsapp:`) and any number recognized by the `phonenumbers` library, formatted international-style, so non-US numbers (e.g. `+91 89101 45846`) are no longer dropped — commit `8319c43f`
 - LinkedIn URL
+- Location — parsed from the resume header line, commit `8319c43f`
+- Summary — parsed from a "Summary"/"Objective"/"Profile" section, commit `8319c43f`
 - Work authorization
+- Structured experience (company, title, start/end date, location, description) — parsed from "Experience"/"Work Experience"/"Professional Experience" sections, commit `8319c43f`
+- Structured education (institution, degree, field, year) — parsed from an "Education" section, commit `8319c43f`
+- Certifications — parsed from "Certifications"/"Achievements" sections, commit `8319c43f`
+
+When the LLM fallback fires, its extracted values now fill only the fields the deterministic parser left empty (`merge_llm_extracted`, `app/understanding/llm_fallback.py`) instead of only being stored in the raw `llm_fallback_extracted` side-channel — commit `8319c43f`.
 
 Job description parser:
 
