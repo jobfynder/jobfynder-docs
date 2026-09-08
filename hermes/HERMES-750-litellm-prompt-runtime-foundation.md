@@ -41,6 +41,8 @@ Hermes prompt_runtime
 
 Provider name reported by the runtime: `litellm` (`app/prompt_runtime/service.py`, `PROVIDER_NAME = "litellm"`). There is no Portkey code path left in this module — `_call_litellm()` talks to LiteLLM's OpenAI-compatible `/v1/chat/completions` endpoint directly.
 
+**Update, 2026-09-07 (commit `8319c43f`) — a local static fallback layer was reintroduced on top of this.** `app/prompt_runtime/local_prompts.py` (new) reads a small static `app/prompt_runtime/registry.json` catalog; `langfuse_prompts.list_prompts()`/`get_prompt()` now merge this local catalog with whatever is in the Langfuse cache (Langfuse wins on a shared prompt ID) instead of returning only the Langfuse cache, and fall back to the local copy for `get_prompt()` when Langfuse has no matching entry. The stated purpose (commit message: "keep a local extract-prompt fallback when Langfuse is unavailable") is resilience, not a registry redesign — Langfuse is still the primary, live-fetched source. As of this commit, `registry.json` carries two local prompts, both marked `"source": "local"` in their metadata: `jf.onboarding.profile-import.extract` and `jf.resume.parse` — both IDs already existed in the live Langfuse-hosted 38-prompt catalog per `hermes-parsing-and-prompts-api-guide.md` §2, so this did not add new prompts to the catalog, only a fallback path for two that already existed.
+
 ---
 
 ## 4. Required environment variables (current)
@@ -99,7 +101,7 @@ Fixed on branch `perf/hermes-750-langfuse-concurrent-prompt-fetch`: prompt detai
 Kept for the record — this is what HERMES-750 looked like when it first closed, before the Portkey→LiteLLM migration and the Langfuse dynamic-registry work layered on top of it.
 
 - runtime_version: `hermes_prompt_runtime_v1`
-- registry_version: `hermes_prompt_registry_v1` (static, 4 hardcoded prompts — since replaced by `hermes_langfuse_prompt_registry_v1`, 38 prompts, fetched live)
+- registry_version: `hermes_prompt_registry_v1` (static, 4 hardcoded prompts — replaced 2026-08-21 by `hermes_langfuse_prompt_registry_v1`, 38 prompts, fetched live; **note the literal string `hermes_prompt_registry_v1` came back into live use 2026-09-07, commit `8319c43f`, for an unrelated reason — see §3's update and §8 below. It is not a reversion to the 2026-07-10 static 4-prompt registry.**)
 - dry_run_default: true
 - external_llm_call: false at close
 
@@ -122,7 +124,7 @@ The original prompt IDs from this closure (`resume_builder.summary_improve`, `re
 ## 8. Current API surface (unchanged shape, different backing provider)
 
 - `GET /prompts/health` — requires `agents:read`. Reports `provider: "litellm"`, `litellm_configured`, `langfuse_configured`, `dry_run_default`.
-- `GET /prompts/registry` — requires `agents:read`. Lists all prompts currently cached from Langfuse.
+- `GET /prompts/registry` — requires `agents:read`. Lists all prompts currently cached from Langfuse, merged with the local static fallback catalog (`app/prompt_runtime/registry.json`) as of 2026-09-07 (commit `8319c43f`) — Langfuse's copy of a prompt ID wins when both exist. As of that commit the `registry_version` field this endpoint returns is the literal string `hermes_prompt_registry_v1` (changed in code from `hermes_langfuse_prompt_registry_v1`; see §7). `prompt_count` is unaffected (still 38) because the two local entries duplicate IDs already in the live Langfuse catalog rather than adding new ones.
 - `GET /prompts/{prompt_id}` — requires `agents:read`.
 - `POST /prompts/run` — requires `agents:run`. `mode: "dry_run"` (default) renders without calling LiteLLM. `mode: "live"` executes for real if the server-wide dry-run default allows it.
 
@@ -140,4 +142,4 @@ If evidence is missing, Hermes must ask a question or mark the field as missing.
 
 ## 10. Status
 
-The prompt runtime foundation itself is production-safe: dry-run-first, RBAC-protected, human-review-required. The provider underneath it changed from Portkey to LiteLLM without changing this contract. The N+1 registry-fetch performance issue (§6) is fixed. One open item remains: the stale prompt-ID check scripts (§7).
+The prompt runtime foundation itself is production-safe: dry-run-first, RBAC-protected, human-review-required. The provider underneath it changed from Portkey to LiteLLM without changing this contract. The N+1 registry-fetch performance issue (§6) is fixed. A local static fallback for two prompts was reintroduced 2026-09-07 for Langfuse-outage resilience (§3, §8) — no live re-verification was performed for that change; based on the commit diff only. One open item remains unchanged: the stale prompt-ID check scripts (§7).
