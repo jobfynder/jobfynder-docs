@@ -9,22 +9,17 @@
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
     "Branch: main",
-    "Head SHA: b63bdd7",
+    "Head SHA: b5a245c",
     "Commit count: 1",
     "Triggered by: jobfynder",
     "Commits:",
-    "b63bdd7 Recover spaced relay companies and prevent taxonomy noise promotion \u2014 Jobfynder Automation",
+    "b5a245c Keep deterministic email parsing model-free and preserve fallback input text \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: app/understanding/taxonomy/skill_quality.py",
-    "added: tests/test_relay_spacing.py",
-    "added: tests/test_skill_quality.py",
+    "added: tests/test_email_fallback_boundary.py",
     "modified: .github/workflows/hermes-regression.yml",
-    "modified: app/email_parsing/signature.py",
-    "modified: app/understanding/parsers/skills.py",
-    "modified: app/understanding/service.py",
-    "modified: app/understanding/taxonomy/candidates.py",
-    "modified: app/understanding/taxonomy/loader.py",
-    "modified: scripts/hermes-900-daily-taxonomy-triage.py"
+    "modified: app/channels/service.py",
+    "modified: app/email_parsing/parsers.py",
+    "modified: app/understanding/service.py"
   ],
   "decisions": [
     {
