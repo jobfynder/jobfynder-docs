@@ -23,18 +23,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: aaba63d
+- Head SHA: b5b803e
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- aaba63d fix(bench-sales): accept { label } items, normalise section-array shape, persist client-types to userVendorType, purge stale JSON blob — atultiwari
+- b5b803e fix(profile): restore original specializationAreaSections titles on GET — atultiwari
 - Changed files:
-- modified: src/profile/common/taxonomy.util.ts
-- modified: src/profile/header/dto/bench-sales-header.dto.ts
-- modified: src/profile/header/dto/header-dto.spec.ts
-- modified: src/profile/header/header.controller.ts
-- modified: src/profile/header/header.service.spec.ts
-- modified: src/profile/header/header.service.ts
 - modified: src/profile/profile-transformers.service.ts
 
 ---
