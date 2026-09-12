@@ -23,12 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: b74ec88
+- Head SHA: 1ef0d05
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- b74ec88 fix(profile): keep specializationAreaSections an array on GET after PATCH purge — atultiwari
+- 1ef0d05 fix(profile): default missing trustScore to 0 on profile details GET — atultiwari
 - Changed files:
+- modified: src/profile/metrics/profile-metrics.service.ts
 - modified: src/profile/profile-transformers.service.ts
 
 ---
