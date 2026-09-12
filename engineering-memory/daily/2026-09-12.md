@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: b5b803e
+- Head SHA: b74ec88
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- b5b803e fix(profile): restore original specializationAreaSections titles on GET — atultiwari
+- b74ec88 fix(profile): keep specializationAreaSections an array on GET after PATCH purge — atultiwari
 - Changed files:
 - modified: src/profile/profile-transformers.service.ts
 
