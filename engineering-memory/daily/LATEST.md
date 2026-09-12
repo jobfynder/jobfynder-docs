@@ -23,14 +23,19 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: c06129f
+- Head SHA: aaba63d
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- c06129f fix(profile): persist and update consultant skills strictly in user_skills — atultiwari
+- aaba63d fix(bench-sales): accept { label } items, normalise section-array shape, persist client-types to userVendorType, purge stale JSON blob — atultiwari
 - Changed files:
-- added: src/profile/consultant-sections/consultant-crud.service.spec.ts
-- modified: src/profile/consultant-sections/consultant-crud.service.ts
+- modified: src/profile/common/taxonomy.util.ts
+- modified: src/profile/header/dto/bench-sales-header.dto.ts
+- modified: src/profile/header/dto/header-dto.spec.ts
+- modified: src/profile/header/header.controller.ts
+- modified: src/profile/header/header.service.spec.ts
+- modified: src/profile/header/header.service.ts
+- modified: src/profile/profile-transformers.service.ts
 
 ---
 
