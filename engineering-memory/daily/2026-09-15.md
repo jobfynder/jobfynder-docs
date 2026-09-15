@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/jobfynder-extension-cors
-- Head SHA: 4332636
+- Head SHA: 8fa73d9
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 4332636 docs(cors): configure Jobfynder extension origin — JobFynder
+- 8fa73d9 config(cors): allow the packaged extension by default — JobFynder
 - Changed files:
-- modified: .env.example
+- modified: src/config/configuration.ts
 
 ---
 
