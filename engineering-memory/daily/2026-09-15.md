@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/jobfynder-extension-cors
-- Head SHA: aa69774
+- Head SHA: f73db23
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- aa69774 config(cors): add Chrome extension ID allowlist — JobFynder
+- f73db23 config(cors): validate extension IDs — JobFynder
 - Changed files:
-- modified: src/config/configuration.ts
+- modified: src/config/env.validation.ts
 
 ---
 
