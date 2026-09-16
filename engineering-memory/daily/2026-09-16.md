@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch docs/agents-md-cross-tool-instructions.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-duplicate.
 
 ---
 
@@ -22,13 +22,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch docs
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: docs/agents-md-cross-tool-instructions
-- Head SHA: 0c1ebcc
-- Commit count: 2
+- Branch: dev-duplicate
+- Head SHA: b63d381
+- Commit count: 3
 - Triggered by: jobfynder-admin
 - Commits:
 - 85537cd docs: add AGENTS.md (shared instructions for Claude Code, Cursor, Codex) — JobFynder
 - 0c1ebcc docs: add CLAUDE.md pointer to AGENTS.md — JobFynder
+- b63d381 Merge pull request #16 from jobfynder-admin/docs/agents-md-cross-tool-instructions — JobFynder
 - Changed files:
 - added: AGENTS.md
 - added: CLAUDE.md
