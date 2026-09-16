@@ -23,22 +23,30 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: eb0902d
-- Commit count: 6
+- Head SHA: 91c7849
+- Commit count: 5
 - Triggered by: atult120
 - Commits:
-- bb3d43f Add src/extension/extension.module.ts — JobFynder
-- 4072d5b Add src/extension/extension.controller.ts — JobFynder
-- e018c72 Add src/extension/extension.service.ts — JobFynder
-- d33195a Add src/extension/extension.service.spec.ts — JobFynder
-- ee70193 Register extension v2 bootstrap module — JobFynder
-- eb0902d Merge pull request #15 from jobfynder-admin/codex/extension-v2-bootstrap — Atul Tiwari
+- 1606646 fix(profile): persist recruiter contact prefs and hours via response-behavior endpoint — atultiwari
+- 647a1be feat(cursor-rules): add NestJS + TypeScript conventions for JobFynder backend — atultiwari
+- 7ac0929 refactor(tsconfig): update baseUrl path and remove unnecessary baseUrl entry; delete unused Postman collection — atultiwari
+- 1ba45f3 Merge branch 'main' of https://github.com/jobfynder-admin/jobFynder-BE-nestJS — atultiwari
+- 91c7849 Merge branch 'main' of https://github.com/jobfynder-admin/jobFynder-BE-nestJS — atultiwari
 - Changed files:
+- added: .cursor/rules/clean-nestjs-typescript-cursor-rules.mdc
 - added: src/extension/extension.controller.ts
 - added: src/extension/extension.module.ts
 - added: src/extension/extension.service.spec.ts
 - added: src/extension/extension.service.ts
+- modified: .env.example
 - modified: src/app.module.ts
+- modified: src/config/configuration.ts
+- modified: src/config/env.validation.ts
+- modified: src/main.ts
+- modified: src/profile/header/dto/recruiter-header.dto.ts
+- modified: src/profile/header/header.service.ts
+- modified: tsconfig.json
+- removed: postman/linkedin-scrape-import.postman_collection.json
 
 ---
 
