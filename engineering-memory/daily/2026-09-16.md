@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 9bcd305
+- Head SHA: 4d7c132
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 9bcd305 Implement private BSR Job Post capture through Core and Hermes — JobFynder
+- 4d7c132 Deduplicate pasted requirements by content hash — JobFynder
 - Changed files:
 - modified: src/extension/extension.service.ts
 
