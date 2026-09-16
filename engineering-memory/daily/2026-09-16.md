@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/extension-v2-bootstrap.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
@@ -22,13 +22,22 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: codex/extension-v2-bootstrap
-- Head SHA: ee70193
-- Commit count: 1
-- Triggered by: jobfynder-admin
+- Branch: main
+- Head SHA: eb0902d
+- Commit count: 6
+- Triggered by: atult120
 - Commits:
+- bb3d43f Add src/extension/extension.module.ts — JobFynder
+- 4072d5b Add src/extension/extension.controller.ts — JobFynder
+- e018c72 Add src/extension/extension.service.ts — JobFynder
+- d33195a Add src/extension/extension.service.spec.ts — JobFynder
 - ee70193 Register extension v2 bootstrap module — JobFynder
+- eb0902d Merge pull request #15 from jobfynder-admin/codex/extension-v2-bootstrap — Atul Tiwari
 - Changed files:
+- added: src/extension/extension.controller.ts
+- added: src/extension/extension.module.ts
+- added: src/extension/extension.service.spec.ts
+- added: src/extension/extension.service.ts
 - modified: src/app.module.ts
 
 ---
