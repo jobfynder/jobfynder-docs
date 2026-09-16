@@ -458,3 +458,11 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/jobfynder-extension-cors|aa
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/jobfynder-extension-cors|f73db236e70b07565428ac8216021ed7496e42bd
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/jobfynder-extension-cors|433263677fb3b18f4f5407e202c6ac37e6fd0cb8
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/jobfynder-extension-cors|8fa73d946ce242878ee990f27601b4cff2137d6c
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-copy|50abd99698dcd7570e1f02f1a59902ffdacc3f55
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-copy|0000000000000000000000000000000000000000
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|bd34406acd8ff805f16fa4798b7b5161188abe97
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|bd34406acd8ff805f16fa4798b7b5161188abe97
+jobfynder-admin/jobFynder-FE-vite|refs/heads/docs/agents-md-cross-tool-instructions|0c1ebcc1275499bee7ba91535c2ce20dc29e8f4f
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|b63d3819eab0c76965e0d3d766d492bb8cb208f3
+jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-frontend-wiring|4f00b42f4770a154d9251145f6cd38b6266bc677
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|f13a390fb045b56edc2e2d70d48177c42e504bc3
