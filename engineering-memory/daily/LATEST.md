@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 9529ea5
+- Head SHA: 97ba141
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 9529ea5 Add BSR extension capture routes — JobFynder
+- 97ba141 Add BSR extension capture routes — JobFynder
 - Changed files:
-- modified: src/extension/extension.controller.ts
+- modified: src/extension/extension.module.ts
 
 ---
 
