@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-copy.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,10 +22,52 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev-copy
-- Head SHA: 0000000
-- Commit count: 0
+- Branch: dev
+- Head SHA: bd34406
+- Commit count: 1
 - Triggered by: jobfynder-admin
+- Commits:
+- bd34406 Fix profile rendering crashes and broaden profile data sources — Nishant Arora
+- Changed files:
+- modified: .DS_Store
+- modified: src/components/components/private/profile/ProfileContent.tsx
+- modified: src/components/components/private/profile/components/BackgroundIdentityVerification.tsx
+- modified: src/components/components/private/profile/components/EducationSection.tsx
+- modified: src/components/components/private/profile/components/EmployerHiringMetricsStrip.tsx
+- modified: src/components/components/private/profile/components/EmployerHiringPreferencesSection.tsx
+- modified: src/components/components/private/profile/components/EmployerIndustryVerticalsSection.tsx
+- modified: src/components/components/private/profile/components/EmployerInternalJobPostingsSection.tsx
+- modified: src/components/components/private/profile/components/ProfileHeader.tsx
+- modified: src/components/components/private/profile/components/RecruiterActivityTimelineCard.tsx
+- modified: src/components/components/private/profile/components/RecruiterConversionMetricsCard.tsx
+- modified: src/components/components/private/profile/components/RecruiterTrustVerificationCard.tsx
+- modified: src/components/components/private/profile/components/ServiceProviderEditCompanyProfileModal.tsx
+- modified: src/components/components/private/profile/components/ServiceProviderInviteTeamMemberModal.tsx
+- modified: src/components/components/private/profile/components/ServiceProviderTeamTab.tsx
+- modified: src/components/components/private/profile/components/SkillAssessments.tsx
+- modified: src/components/components/private/profile/components/serviceProviderOverviewHelpers.ts
+- modified: src/components/components/private/profile/helpers/educationHelpers.ts
+- modified: src/components/components/private/profile/helpers/employerHiringPreferencesHelpers.ts
+- modified: src/components/components/private/profile/helpers/internalJobPostingsHelpers.ts
+- modified: src/components/components/private/profile/helpers/profileHeaderHelpers.ts
+- modified: src/components/components/private/profile/helpers/responseBehaviorHelpers.ts
+- modified: src/components/components/private/profile/helpers/submissionPreferencesHelpers.ts
+- modified: src/components/components/private/profile/helpers/talentNetworkHelpers.ts
+- modified: src/components/components/private/profile/helpers/workAuthorizationDetailsHelpers.ts
+- modified: src/components/components/private/profile/modals/EditEmployerHiringPreferencesModal.tsx
+- modified: src/components/components/private/profile/modals/EditSubmissionPreferencesModal.tsx
+- modified: src/components/components/private/profile/tabs/benchSalesTabItems.tsx
+- modified: src/components/components/private/profile/tabs/consultantTabItems.tsx
+- modified: src/components/components/private/profile/tabs/employerTabItems.tsx
+- modified: src/components/components/private/profile/tabs/profileTabsForRole.ts
+- modified: src/components/components/private/profile/tabs/recruiterTabItems.tsx
+- modified: src/components/components/private/profile/tabs/serviceProviderTabItems.tsx
+- modified: src/components/ui/time-range-picker.tsx
+- modified: src/components/ui/timezone-select.tsx
+- modified: src/hooks/useProfileMutations.ts
+- modified: src/pages/private/Profile.tsx
+- modified: src/services/profileApi.ts
+- modified: src/types/auth.ts
 
 ---
 
