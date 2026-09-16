@@ -8,28 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/bsr-extension-private-job-capture.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: e5f182c
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: codex/bsr-extension-private-job-capture
+- Head SHA: 997cda6
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- e5f182c Align signature regression with deterministic spaced relay extraction — Jobfynder Automation
+- 997cda6 Implement Hermes bench matching and governed submission flow — JobFynder
 - Changed files:
-- modified: scripts/hermes-850-email-signature-check.py
+- modified: src/extension/extension.service.ts
 
 ---
 
