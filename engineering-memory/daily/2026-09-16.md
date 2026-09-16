@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/extension-v2-bootstrap
-- Head SHA: d33195a
+- Head SHA: ee70193
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- d33195a Add src/extension/extension.service.spec.ts — JobFynder
+- ee70193 Register extension v2 bootstrap module — JobFynder
 - Changed files:
-- added: src/extension/extension.service.spec.ts
+- modified: src/app.module.ts
 
 ---
 
