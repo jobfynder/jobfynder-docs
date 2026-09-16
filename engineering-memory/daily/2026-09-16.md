@@ -23,7 +23,7 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev-copy
-- Head SHA: 50abd99
+- Head SHA: 0000000
 - Commit count: 0
 - Triggered by: jobfynder-admin
 

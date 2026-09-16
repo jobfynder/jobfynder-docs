@@ -459,3 +459,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/jobfynder-extension-cors|f7
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/jobfynder-extension-cors|433263677fb3b18f4f5407e202c6ac37e6fd0cb8
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/jobfynder-extension-cors|8fa73d946ce242878ee990f27601b4cff2137d6c
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-copy|50abd99698dcd7570e1f02f1a59902ffdacc3f55
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-copy|0000000000000000000000000000000000000000
