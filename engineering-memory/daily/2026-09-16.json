@@ -9,11 +9,11 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: codex/bsr-extension-private-job-capture",
-    "Head SHA: 3d0c640",
+    "Head SHA: bc83e20",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "3d0c640 Reuse existing Jobs defaults and NRM service \u2014 JobFynder",
+    "bc83e20 Derive NRM metrics from existing submissions \u2014 JobFynder",
     "Changed files:",
     "modified: src/extension/extension.service.ts"
   ],

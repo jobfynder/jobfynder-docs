@@ -498,3 +498,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/bsr-extension-private-job-c
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/bsr-extension-private-job-capture|ae486b69e19d7914ae5f31e59a21be1c1fad34b1
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/bsr-extension-private-job-capture|21f998bb5f46ff942b3e283d28d93490b8d06159
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/bsr-extension-private-job-capture|3d0c640e1fa71dca4534b119930b0fcfc1346acb
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/bsr-extension-private-job-capture|bc83e201de23715fc3735e3a06d7411cf2f8a2de
