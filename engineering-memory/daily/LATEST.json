@@ -1,38 +1,24 @@
 {
   "date": "2026-09-16",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
   "repositories": [
-    "jobfynder-admin/jobFynder-BE-nestJS"
+    "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
+    "Repository: jobfynder/hermes",
     "Branch: main",
-    "Head SHA: 91c7849",
-    "Commit count: 5",
-    "Triggered by: atult120",
+    "Head SHA: 8155d35",
+    "Commit count: 1",
+    "Triggered by: jobfynder",
     "Commits:",
-    "1606646 fix(profile): persist recruiter contact prefs and hours via response-behavior endpoint \u2014 atultiwari",
-    "647a1be feat(cursor-rules): add NestJS + TypeScript conventions for JobFynder backend \u2014 atultiwari",
-    "7ac0929 refactor(tsconfig): update baseUrl path and remove unnecessary baseUrl entry; delete unused Postman collection \u2014 atultiwari",
-    "1ba45f3 Merge branch 'main' of https://github.com/jobfynder-admin/jobFynder-BE-nestJS \u2014 atultiwari",
-    "91c7849 Merge branch 'main' of https://github.com/jobfynder-admin/jobFynder-BE-nestJS \u2014 atultiwari",
+    "8155d35 Invalidate parsed documents after mutable taxonomy changes \u2014 Jobfynder Automation",
     "Changed files:",
-    "added: .cursor/rules/clean-nestjs-typescript-cursor-rules.mdc",
-    "added: src/extension/extension.controller.ts",
-    "added: src/extension/extension.module.ts",
-    "added: src/extension/extension.service.spec.ts",
-    "added: src/extension/extension.service.ts",
-    "modified: .env.example",
-    "modified: src/app.module.ts",
-    "modified: src/config/configuration.ts",
-    "modified: src/config/env.validation.ts",
-    "modified: src/main.ts",
-    "modified: src/profile/header/dto/recruiter-header.dto.ts",
-    "modified: src/profile/header/header.service.ts",
-    "modified: tsconfig.json",
-    "removed: postman/linkedin-scrape-import.postman_collection.json"
+    "added: tests/test_taxonomy_parse_cache.py",
+    "modified: .github/workflows/hermes-regression.yml",
+    "modified: app/understanding/service.py",
+    "modified: app/understanding/taxonomy/loader.py"
   ],
   "decisions": [
     {

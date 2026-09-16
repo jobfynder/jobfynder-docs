@@ -8,45 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 91c7849
-- Commit count: 5
-- Triggered by: atult120
+- Head SHA: 8155d35
+- Commit count: 1
+- Triggered by: jobfynder
 - Commits:
-- 1606646 fix(profile): persist recruiter contact prefs and hours via response-behavior endpoint — atultiwari
-- 647a1be feat(cursor-rules): add NestJS + TypeScript conventions for JobFynder backend — atultiwari
-- 7ac0929 refactor(tsconfig): update baseUrl path and remove unnecessary baseUrl entry; delete unused Postman collection — atultiwari
-- 1ba45f3 Merge branch 'main' of https://github.com/jobfynder-admin/jobFynder-BE-nestJS — atultiwari
-- 91c7849 Merge branch 'main' of https://github.com/jobfynder-admin/jobFynder-BE-nestJS — atultiwari
+- 8155d35 Invalidate parsed documents after mutable taxonomy changes — Jobfynder Automation
 - Changed files:
-- added: .cursor/rules/clean-nestjs-typescript-cursor-rules.mdc
-- added: src/extension/extension.controller.ts
-- added: src/extension/extension.module.ts
-- added: src/extension/extension.service.spec.ts
-- added: src/extension/extension.service.ts
-- modified: .env.example
-- modified: src/app.module.ts
-- modified: src/config/configuration.ts
-- modified: src/config/env.validation.ts
-- modified: src/main.ts
-- modified: src/profile/header/dto/recruiter-header.dto.ts
-- modified: src/profile/header/header.service.ts
-- modified: tsconfig.json
-- removed: postman/linkedin-scrape-import.postman_collection.json
+- added: tests/test_taxonomy_parse_cache.py
+- modified: .github/workflows/hermes-regression.yml
+- modified: app/understanding/service.py
+- modified: app/understanding/taxonomy/loader.py
 
 ---
 
