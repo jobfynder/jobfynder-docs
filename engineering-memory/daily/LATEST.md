@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 1291b64
+- Head SHA: ef10712
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 1291b64 Expose relationship context and governed activity logging — JobFynder
+- ef10712 Connect company, recruiter, activity, Messenger, and NRM context — JobFynder
 - Changed files:
-- modified: src/extension/extension.controller.ts
+- modified: src/extension/extension.service.ts
 
 ---
 
