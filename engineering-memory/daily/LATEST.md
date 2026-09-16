@@ -8,28 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/bsr-extension-private-job-capture.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 4d7c132
+- Repository: jobfynder/hermes
+- Branch: main
+- Head SHA: 96db42f
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: jobfynder
 - Commits:
-- 4d7c132 Deduplicate pasted requirements by content hash — JobFynder
+- 96db42f Publish taxonomy updates atomically and split explicit job titles — Jobfynder Automation
 - Changed files:
-- modified: src/extension/extension.service.ts
+- added: tests/test_atomic_taxonomy.py
+- modified: .github/workflows/hermes-regression.yml
+- modified: app/email_parsing/parsers.py
+- modified: app/understanding/taxonomy/loader.py
 
 ---
 
