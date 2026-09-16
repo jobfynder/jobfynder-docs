@@ -164,6 +164,8 @@ No dedicated Redis exists for Hermes. The only Redis instance in the infrastruct
 
 **Interim decision (2026-08-15)**: in-process TTL cache (`app/runtime/cache.py`), matching the blueprint's `jf:hermes:*` key-pattern intent without Redis as the backend. Scope: resume/JD/profile-import parse results (including any LLM fallback outcome) cached 24h by content hash. Tracker/submission/messaging/broadcast extraction results are **not** cached (each input is a unique event — caching would never hit and isn't in the YAML's own `cache_ttl` scope for those capabilities anyway). Does not survive a container restart. `GET /runtime/cache/stats` for visibility.
 
+**Amendment (2026-09-16).** Commit `8155d358` on `jobfynder/hermes` (`app/understanding/service.py`, `app/understanding/taxonomy/loader.py`) fixes a gap in the "cached 24h by content hash" scope described above: the cache key was content-hash-only and never accounted for taxonomy state, so a resume/JD parse cached before a taxonomy candidate was approved (or a skill/title renamed) kept serving its pre-change `normalized_skills`/`normalized_job_titles` for up to the full 24h TTL. The cache key now also incorporates `get_taxonomy_cache_revision()` (new — each of `canonical_skills.json`/`job_titles.json`'s mtime+size), so a taxonomy write invalidates any already-cached parse immediately. New `tests/test_taxonomy_parse_cache.py` confirms this; the docs-sync run that recorded this amendment confirmed the test passing live via the GitHub Actions API (run 74, `conclusion: success` for the step containing it). See `JOBFYNDER-HERMES-COMM-CANONICAL.md`'s HERMES-200 section (v1.12) for the full evidence trail.
+
 **Follow-up decision needed**: whether to provision a dedicated Redis for Hermes. Not decided as of this freeze.
 
 ---
@@ -184,7 +186,7 @@ This isn't a principle on paper. Verified behaviors as of this freeze:
 
 - Deterministic parsing is genuinely zero-cost: strong/well-formed input never reaches an LLM (confirmed across resume, JD, job-tracker, submission-status, messaging-actions, and broadcast extraction — each has a real deterministic first pass, not a stub).
 - Weak/ambiguous input escalates automatically and only once (confidence-gated, single fallback attempt, no retry loops).
-- Identical repeat input is cache-hit, not re-computed or re-billed (24h, resume/JD/profile-import scope).
+- Identical repeat input is cache-hit, not re-computed or re-billed (24h, resume/JD/profile-import scope). **See §8's 2026-09-16 amendment**: a taxonomy change occurring inside that window now busts the cache rather than waiting out the TTL.
 - A cost bug was found and fixed during this work: onboarding profile-import was firing two separate paid LLM calls per request (the generic resume-fallback plus its own specialized fallback) — now exactly one.
 
 ---
