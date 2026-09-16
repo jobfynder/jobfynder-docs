@@ -466,3 +466,5 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/docs/agents-md-cross-tool-instructi
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|b63d3819eab0c76965e0d3d766d492bb8cb208f3
 jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-frontend-wiring|4f00b42f4770a154d9251145f6cd38b6266bc677
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|f13a390fb045b56edc2e2d70d48177c42e504bc3
+jobfynder-admin/jobFynder-FE-vite|refs/heads/integration/staged-merge-2026-08-29|a6bbcf6a42e58958129220e88102e9e6c6655289
+jobfynder-admin/jobFynder-FE-vite|refs/heads/integration/staged-merge-2026-08-29|90e67af3bbea9b2db0a22311e417f1887eaea393
