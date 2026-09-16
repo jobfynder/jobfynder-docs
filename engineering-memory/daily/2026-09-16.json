@@ -9,13 +9,13 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: codex/bsr-extension-private-job-capture",
-    "Head SHA: ef668d4",
+    "Head SHA: 5ff7a93",
     "Commit count: 1",
     "Triggered by: jobfynder-admin",
     "Commits:",
-    "ef668d4 Expose authorized consultant context for reverse matching \u2014 JobFynder",
+    "5ff7a93 Implement privacy-filtered reverse matching from bench consultants \u2014 JobFynder",
     "Changed files:",
-    "modified: src/extension/extension.controller.ts"
+    "modified: src/extension/extension.service.ts"
   ],
   "decisions": [
     {

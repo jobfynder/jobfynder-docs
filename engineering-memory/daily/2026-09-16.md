@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: ef668d4
+- Head SHA: 5ff7a93
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- ef668d4 Expose authorized consultant context for reverse matching — JobFynder
+- 5ff7a93 Implement privacy-filtered reverse matching from bench consultants — JobFynder
 - Changed files:
-- modified: src/extension/extension.controller.ts
+- modified: src/extension/extension.service.ts
 
 ---
 
