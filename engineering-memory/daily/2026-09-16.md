@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 997cda6
+- Head SHA: 8eec0c5
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 997cda6 Implement Hermes bench matching and governed submission flow — JobFynder
+- 8eec0c5 Return the authoritative submission on safe retries — JobFynder
 - Changed files:
 - modified: src/extension/extension.service.ts
 
