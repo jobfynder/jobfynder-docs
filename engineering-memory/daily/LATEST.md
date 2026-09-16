@@ -8,30 +8,24 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/bsr-extension-private-job-capture.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 567609a
-- Commit count: 1
-- Triggered by: jobfynder
-- Commits:
-- 567609a Validate fallback completeness and cache repeated email extraction — Jobfynder Automation
-- Changed files:
-- added: tests/test_fallback_completion.py
-- modified: .github/workflows/hermes-regression.yml
-- modified: app/email_parsing/llm_fallback.py
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: codex/bsr-extension-private-job-capture
+- Head SHA: 91c7849
+- Commit count: 0
+- Triggered by: jobfynder-admin
 
 ---
 
