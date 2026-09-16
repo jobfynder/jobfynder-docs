@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resume-builder/hermes-810-300-frontend-wiring.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-duplicate.
 
 ---
 
@@ -22,9 +22,9 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resu
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: resume-builder/hermes-810-300-frontend-wiring
-- Head SHA: 4f00b42
-- Commit count: 8
+- Branch: dev-duplicate
+- Head SHA: f13a390
+- Commit count: 9
 - Triggered by: jobfynder-admin
 - Commits:
 - 346f7ae feat(resume-builder): wire Summary AI Assistant and Align to Role to the real CORE/Hermes chain — Pavan
@@ -35,6 +35,7 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch resu
 - 1b23fab feat(resume-builder): wire Resume Variants to real create/list/duplicate — Pavan
 - 341e714 feat(resume-builder): wire Feedback's AI Analysis to real feedback/analyze — Pavan
 - 4f00b42 feat(resume-builder): wire Performance Insights to real submission history — Pavan
+- f13a390 Merge pull request #13 from jobfynder-admin/resume-builder/hermes-810-300-frontend-wiring — JobFynder
 - Changed files:
 - added: src/services/bench-submissions.ts
 - added: src/services/resume-intelligence.ts
