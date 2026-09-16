@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 8eec0c5
+- Head SHA: ef668d4
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 8eec0c5 Return the authoritative submission on safe retries — JobFynder
+- ef668d4 Expose authorized consultant context for reverse matching — JobFynder
 - Changed files:
-- modified: src/extension/extension.service.ts
+- modified: src/extension/extension.controller.ts
 
 ---
 
