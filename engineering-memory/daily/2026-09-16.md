@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 21f998b
+- Head SHA: 3d0c640
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 21f998b Export existing vendor service for extension orchestration — JobFynder
+- 3d0c640 Reuse existing Jobs defaults and NRM service — JobFynder
 - Changed files:
-- modified: src/bench/bench.module.ts
+- modified: src/extension/extension.service.ts
 
 ---
 
