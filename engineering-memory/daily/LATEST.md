@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/extension-v2-bootstrap.
 
 ---
 
@@ -22,22 +22,10 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
+- Branch: codex/extension-v2-bootstrap
 - Head SHA: 614bc27
-- Commit count: 6
-- Triggered by: atult120
-- Commits:
-- 3dca4e4 fix(cors): allow configured Chrome extension origins — JobFynder
-- aa69774 config(cors): add Chrome extension ID allowlist — JobFynder
-- f73db23 config(cors): validate extension IDs — JobFynder
-- 4332636 docs(cors): configure Jobfynder extension origin — JobFynder
-- 8fa73d9 config(cors): allow the packaged extension by default — JobFynder
-- 614bc27 Merge pull request #14 from jobfynder-admin/codex/jobfynder-extension-cors — Atul Tiwari
-- Changed files:
-- modified: .env.example
-- modified: src/config/configuration.ts
-- modified: src/config/env.validation.ts
-- modified: src/main.ts
+- Commit count: 0
+- Triggered by: jobfynder-admin
 
 ---
 
