@@ -23,16 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 8155d35
+- Head SHA: 567609a
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 8155d35 Invalidate parsed documents after mutable taxonomy changes — Jobfynder Automation
+- 567609a Validate fallback completeness and cache repeated email extraction — Jobfynder Automation
 - Changed files:
-- added: tests/test_taxonomy_parse_cache.py
+- added: tests/test_fallback_completion.py
 - modified: .github/workflows/hermes-regression.yml
-- modified: app/understanding/service.py
-- modified: app/understanding/taxonomy/loader.py
+- modified: app/email_parsing/llm_fallback.py
 
 ---
 
