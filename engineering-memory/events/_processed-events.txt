@@ -468,3 +468,11 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/resume-builder/hermes-810-300-front
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|f13a390fb045b56edc2e2d70d48177c42e504bc3
 jobfynder-admin/jobFynder-FE-vite|refs/heads/integration/staged-merge-2026-08-29|a6bbcf6a42e58958129220e88102e9e6c6655289
 jobfynder-admin/jobFynder-FE-vite|refs/heads/integration/staged-merge-2026-08-29|90e67af3bbea9b2db0a22311e417f1887eaea393
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|614bc27c399fc877c83a26175bd15ef49b15c870
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/extension-v2-bootstrap|614bc27c399fc877c83a26175bd15ef49b15c870
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/extension-v2-bootstrap|4072d5bcb35ff4ad3dde935d396bf819b25b1540
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/extension-v2-bootstrap|e018c72896708f5f08a562a30b471babae660e74
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/extension-v2-bootstrap|d33195a8ae818cb63e3424bd2e0c92de5d974f90
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/extension-v2-bootstrap|ee701934538d2bdc2496a7f73038236fc2648cef
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|eb0902d66794d282a1bc802c4719f4bd823e96a4
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|91c7849ba451e9bb58b0bdd30660991599f58263
