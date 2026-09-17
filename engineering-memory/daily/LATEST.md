@@ -8,28 +8,41 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/bsr-extension-private-job-capture.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: codex/bsr-extension-private-job-capture
-- Head SHA: cced73d
+- Repository: jobfynder/hermes
+- Branch: main
+- Head SHA: 97bd56d
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: jobfynder
 - Commits:
-- cced73d Update extension governance contract tests — JobFynder
+- 97bd56d Accelerate reports and consolidate taxonomy review identities safely — Jobfynder Automation
 - Changed files:
-- modified: src/extension/extension.service.spec.ts
+- added: docs/company-acquisition-engine.md
+- added: scripts/hermes-taxonomy-deduplicate.py
+- added: tests/test_candidate_concurrency.py
+- added: tests/test_report_cache.py
+- added: tests/test_taxonomy_cleanup.py
+- modified: .github/workflows/hermes-regression.yml
+- modified: app/drafts/accuracy.py
+- modified: app/reporting/service.py
+- modified: app/routers/reporting.py
+- modified: app/runtime/db.py
+- modified: app/understanding/taxonomy/candidates.py
+- modified: app/understanding/taxonomy/loader.py
+- modified: frontend/src/pages/ModerationPage.tsx
+- modified: tests/test_candidate_lookup.py
 
 ---
 
