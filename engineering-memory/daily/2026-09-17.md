@@ -23,26 +23,26 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 97bd56d
-- Commit count: 1
+- Head SHA: c5356e7
+- Commit count: 2
 - Triggered by: jobfynder
 - Commits:
-- 97bd56d Accelerate reports and consolidate taxonomy review identities safely — Jobfynder Automation
+- 6e15b78 Build source-backed company directory with deterministic continuous discovery — Jobfynder Automation
+- c5356e7 Type company source navigation as explicit view variants — Jobfynder Automation
 - Changed files:
-- added: docs/company-acquisition-engine.md
-- added: scripts/hermes-taxonomy-deduplicate.py
-- added: tests/test_candidate_concurrency.py
-- added: tests/test_report_cache.py
-- added: tests/test_taxonomy_cleanup.py
+- added: app/companies/__init__.py
+- added: app/companies/service.py
+- added: app/routers/companies.py
+- added: frontend/src/companyTypes.ts
+- added: frontend/src/pages/CompaniesPage.tsx
+- added: tests/test_companies.py
 - modified: .github/workflows/hermes-regression.yml
-- modified: app/drafts/accuracy.py
-- modified: app/reporting/service.py
-- modified: app/routers/reporting.py
+- modified: app/main.py
 - modified: app/runtime/db.py
-- modified: app/understanding/taxonomy/candidates.py
-- modified: app/understanding/taxonomy/loader.py
-- modified: frontend/src/pages/ModerationPage.tsx
-- modified: tests/test_candidate_lookup.py
+- modified: docs/company-acquisition-engine.md
+- modified: frontend/src/App.tsx
+- modified: frontend/src/api/client.ts
+- modified: scripts/hermes-backfill-worker.py
 
 ---
 
