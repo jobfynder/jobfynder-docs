@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 38f9c3d
+- Head SHA: 581c8af
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 38f9c3d Add governed Core Skill Intelligence facade — JobFynder
+- 581c8af Register extension Skill Intelligence facade — JobFynder
 - Changed files:
-- added: src/extension/extension-skill-intelligence.service.ts
+- modified: src/extension/extension.module.ts
 
 ---
 
