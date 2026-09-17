@@ -23,15 +23,14 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 80fc912
+- Head SHA: fb081af
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 80fc912 Reject signature boilerplate and refresh company names from source evidence — Jobfynder Automation
+- fb081af Show current discovery progress and reset directory heading on return — Jobfynder Automation
 - Changed files:
 - modified: app/companies/service.py
-- modified: app/runtime/db.py
-- modified: tests/test_companies.py
+- modified: frontend/src/pages/CompaniesPage.tsx
 
 ---
 

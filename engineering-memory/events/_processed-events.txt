@@ -508,3 +508,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/codex/bsr-extension-private-job-c
 jobfynder/hermes|refs/heads/main|97bd56da12d9b17bf4e7ed8ad0ce658665cf91ec
 jobfynder/hermes|refs/heads/main|c5356e7b18008fcc647eff3e2e03f13dcd52f6cd
 jobfynder/hermes|refs/heads/main|80fc9125bc288e152f74eb7f689d04539911d827
+jobfynder/hermes|refs/heads/main|fb081af44dce8402958f81dcfe606ad2a6cd1749
