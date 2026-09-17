@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 33f0f7f
+- Head SHA: a0a2f33
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 33f0f7f Filter review queue by deterministic warning — Jobfynder Automation
+- a0a2f33 Add direct and boundary page navigation — Jobfynder Automation
 - Changed files:
-- modified: app/drafts/listing.py
-- modified: app/routers/drafts.py
-- modified: frontend/src/pages/DraftListPage.tsx
+- modified: frontend/src/components/Pagination.tsx
 
 ---
 
