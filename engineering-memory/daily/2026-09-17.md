@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 5aa9921
+- Head SHA: 8014d53
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 5aa9921 Add Hermes Skill Intelligence contracts — JobFynder
+- 8014d53 Connect Core Hermes client to Skill Intelligence — JobFynder
 - Changed files:
-- modified: src/hermes/hermes-client.types.ts
+- modified: src/hermes/hermes.client.ts
 
 ---
 
