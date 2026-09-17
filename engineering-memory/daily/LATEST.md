@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 3cec4d9
+- Head SHA: dfaa587
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 3cec4d9 Expose Hermes skill identity backfill command — JobFynder
+- dfaa587 Test Core Skill Intelligence governance boundary — JobFynder
 - Changed files:
-- modified: package.json
+- added: src/extension/extension-skill-intelligence.service.spec.ts
 
 ---
 
