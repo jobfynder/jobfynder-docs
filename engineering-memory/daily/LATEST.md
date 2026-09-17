@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 1664f48
+- Head SHA: 4f1304b
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 1664f48 Map Core skills to immutable Hermes identities — JobFynder
+- 4f1304b Add nullable Hermes skill identity mapping — JobFynder
 - Changed files:
-- modified: prisma/schema.prisma
+- added: prisma/migrations/20260917190000_add_hermes_skill_identity/migration.sql
 
 ---
 
