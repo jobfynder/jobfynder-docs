@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 4bf308b
+- Head SHA: 3cec4d9
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 4bf308b Add idempotent Hermes skill identity backfill — JobFynder
+- 3cec4d9 Expose Hermes skill identity backfill command — JobFynder
 - Changed files:
-- added: scripts/backfill-hermes-skill-identities.ts
+- modified: package.json
 
 ---
 
