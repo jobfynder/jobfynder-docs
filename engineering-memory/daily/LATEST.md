@@ -8,29 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-duplicate.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: fb081af
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: dev-duplicate
+- Head SHA: 8da6066
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- fb081af Show current discovery progress and reset directory heading on return — Jobfynder Automation
+- 8da6066 fix(auth): update service provider role ID to use underscore instead of hyphen — Nishant Arora
 - Changed files:
-- modified: app/companies/service.py
-- modified: frontend/src/pages/CompaniesPage.tsx
+- modified: src/constants/auth/role.ts
 
 ---
 
