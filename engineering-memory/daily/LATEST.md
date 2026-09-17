@@ -23,30 +23,15 @@ GitHub push event processed for jobfynder/hermes on branch main.
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 17fe75a
+- Head SHA: 33f0f7f
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 17fe75a Add company operations and deterministic review controls — Jobfynder Automation
+- 33f0f7f Filter review queue by deterministic warning — Jobfynder Automation
 - Changed files:
-- added: app/companies/imports.py
-- modified: app/companies/service.py
-- modified: app/config.py
-- modified: app/drafts/review_rules.py
-- modified: app/email_parsing/llm_fallback.py
-- modified: app/routers/companies.py
+- modified: app/drafts/listing.py
 - modified: app/routers/drafts.py
-- modified: app/runtime/db.py
-- modified: app/understanding/taxonomy/loader.py
-- modified: app/understanding/taxonomy/skill_quality.py
-- modified: frontend/src/api/client.ts
-- modified: frontend/src/companyTypes.ts
-- modified: frontend/src/pages/CompaniesPage.tsx
 - modified: frontend/src/pages/DraftListPage.tsx
-- modified: tests/test_companies.py
-- modified: tests/test_email_fallback_boundary.py
-- modified: tests/test_fallback_completion.py
-- modified: tests/test_skill_quality.py
 
 ---
 
