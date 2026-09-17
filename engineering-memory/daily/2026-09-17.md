@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: 581c8af
+- Head SHA: 1664f48
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 581c8af Register extension Skill Intelligence facade — JobFynder
+- 1664f48 Map Core skills to immutable Hermes identities — JobFynder
 - Changed files:
-- modified: src/extension/extension.module.ts
+- modified: prisma/schema.prisma
 
 ---
 
