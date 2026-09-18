@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch codex/skill-intelligence-v1.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,13 @@ GitHub push event processed for jobfynder/hermes on branch codex/skill-intellige
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: codex/skill-intelligence-v1
-- Head SHA: 06fa9c4
-- Commit count: 1
+- Branch: main
+- Head SHA: 5dec01f
+- Commit count: 2
 - Triggered by: jobfynder
 - Commits:
 - 06fa9c4 feat: add governed skill intelligence API — OpenAI Codex
+- 5dec01f Merge pull request #14 from jobfynder/codex/skill-intelligence-v1 — Jobfynder
 - Changed files:
 - added: app/routers/skill_intelligence.py
 - added: app/skill_intelligence/__init__.py
