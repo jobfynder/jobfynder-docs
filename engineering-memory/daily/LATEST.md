@@ -8,34 +8,28 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/bsr-extension-private-job-capture.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 6c51a87
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: codex/bsr-extension-private-job-capture
+- Head SHA: cde3ce9
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- 6c51a87 Scale taxonomy browsing and limit selection scope — Jobfynder Automation
+- cde3ce9 feat(extension): expose skill capabilities — JobFynder
 - Changed files:
-- added: tests/test_taxonomy_pagination.py
-- modified: .github/workflows/hermes-regression.yml
-- modified: app/routers/moderation.py
-- modified: app/routers/understanding.py
-- modified: frontend/src/api/client.ts
-- modified: frontend/src/pages/SkillsTaxonomyPage.tsx
-- modified: frontend/src/types.ts
+- modified: src/extension/extension-skill-intelligence.controller.ts
 
 ---
 
