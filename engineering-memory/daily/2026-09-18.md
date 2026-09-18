@@ -8,40 +8,47 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/bsr-extension-private-job-capture.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 5dec01f
-- Commit count: 2
-- Triggered by: jobfynder
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: codex/bsr-extension-private-job-capture
+- Head SHA: 877e643
+- Commit count: 1
+- Triggered by: jobfynder-admin
 - Commits:
-- 06fa9c4 feat: add governed skill intelligence API — OpenAI Codex
-- 5dec01f Merge pull request #14 from jobfynder/codex/skill-intelligence-v1 — Jobfynder
+- 877e643 feat(extension): add governed BSR Core facade — Jobfynder
 - Changed files:
-- added: app/routers/skill_intelligence.py
-- added: app/skill_intelligence/__init__.py
-- added: app/skill_intelligence/models.py
-- added: app/skill_intelligence/service.py
-- added: app/understanding/taxonomy/identity.py
-- added: scripts/hermes-skill-intelligence-backfill.py
-- added: tests/test_skill_intelligence.py
-- modified: .github/workflows/hermes-regression.yml
-- modified: app/main.py
-- modified: app/understanding/taxonomy/canonical_skills.json
-- modified: app/understanding/taxonomy/loader.py
-- modified: app/understanding/taxonomy/models.py
+- added: .github/workflows/ci.yml
+- added: prisma/migrations/20260917190000_add_hermes_skill_identity/migration.sql
+- added: prisma/migrations/20260918120000_add_extension_capture_lifecycle/migration.sql
+- added: scripts/backfill-hermes-skill-identities.ts
+- added: src/extension/extension-skill-intelligence.controller.ts
+- added: src/extension/extension-skill-intelligence.service.spec.ts
+- added: src/extension/extension-skill-intelligence.service.ts
+- modified: package.json
+- modified: prisma/schema.prisma
+- modified: src/bench/bench.module.ts
+- modified: src/extension/extension.controller.ts
+- modified: src/extension/extension.module.ts
+- modified: src/extension/extension.service.spec.ts
+- modified: src/extension/extension.service.ts
+- modified: src/hermes/hermes-client.types.ts
+- modified: src/hermes/hermes-intelligence.service.ts
+- modified: src/hermes/hermes.client.ts
+- modified: src/jobs/jobs.controller.ts
+- modified: src/jobs/jobs.service.spec.ts
+- modified: src/jobs/jobs.service.ts
 
 ---
 
