@@ -25,6 +25,7 @@ Engineering Operating System, Architecture, Standards, ADRs and Documentation fo
 
 ## Volume 6 — Jobfynder Core
 - [Architecture/03-jobfynder-core-modules.md](./Architecture/03-jobfynder-core-modules.md)
+- [Jobfynder Chrome Extension — Source of Truth](./core/jobfynder-chrome-extension.md)
 
 ## Volume 7 — Runbooks & Disaster Recovery
 - [DISASTER-RECOVERY/](./DISASTER-RECOVERY/)
