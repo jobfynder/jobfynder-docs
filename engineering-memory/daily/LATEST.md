@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch co
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: codex/bsr-extension-private-job-capture
-- Head SHA: cde3ce9
+- Head SHA: d338f45
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- cde3ce9 feat(extension): expose skill capabilities — JobFynder
+- d338f45 test(extension): cover skill capability roles — JobFynder
 - Changed files:
-- modified: src/extension/extension-skill-intelligence.controller.ts
+- modified: src/extension/extension-skill-intelligence.service.spec.ts
 
 ---
 
