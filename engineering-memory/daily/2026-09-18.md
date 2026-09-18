@@ -8,28 +8,38 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch codex/bsr-extension-private-job-capture.
+GitHub push event processed for jobfynder/hermes on branch codex/skill-intelligence-v1.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: codex/bsr-extension-private-job-capture
-- Head SHA: d338f45
+- Repository: jobfynder/hermes
+- Branch: codex/skill-intelligence-v1
+- Head SHA: 0c57d53
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: jobfynder
 - Commits:
-- d338f45 test(extension): cover skill capability roles — JobFynder
+- 0c57d53 feat: add governed skill intelligence API — OpenAI Codex
 - Changed files:
-- modified: src/extension/extension-skill-intelligence.service.spec.ts
+- added: app/routers/skill_intelligence.py
+- added: app/skill_intelligence/__init__.py
+- added: app/skill_intelligence/models.py
+- added: app/skill_intelligence/service.py
+- added: app/understanding/taxonomy/identity.py
+- added: scripts/hermes-skill-intelligence-backfill.py
+- added: tests/test_skill_intelligence.py
+- modified: app/main.py
+- modified: app/understanding/taxonomy/canonical_skills.json
+- modified: app/understanding/taxonomy/loader.py
+- modified: app/understanding/taxonomy/models.py
 
 ---
 
