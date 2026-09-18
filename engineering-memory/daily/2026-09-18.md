@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder/hermes on branch codex/skill-intellige
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: codex/skill-intelligence-v1
-- Head SHA: 0c57d53
+- Head SHA: 06fa9c4
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 0c57d53 feat: add governed skill intelligence API — OpenAI Codex
+- 06fa9c4 feat: add governed skill intelligence API — OpenAI Codex
 - Changed files:
 - added: app/routers/skill_intelligence.py
 - added: app/skill_intelligence/__init__.py
@@ -36,6 +36,7 @@ GitHub push event processed for jobfynder/hermes on branch codex/skill-intellige
 - added: app/understanding/taxonomy/identity.py
 - added: scripts/hermes-skill-intelligence-backfill.py
 - added: tests/test_skill_intelligence.py
+- modified: .github/workflows/hermes-regression.yml
 - modified: app/main.py
 - modified: app/understanding/taxonomy/canonical_skills.json
 - modified: app/understanding/taxonomy/loader.py
