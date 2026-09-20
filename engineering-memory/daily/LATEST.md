@@ -23,16 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: feat/extension-match-evidence
-- Head SHA: b153f22
+- Head SHA: 323363e
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- b153f22 feat(extension): send preferred skills to Hermes, return match evidence, add FULL_NAME autofill — Jobfynder
+- 323363e test(auth): pass the seventh AuthService dependency in two specs — Jobfynder
 - Changed files:
-- modified: src/extension/extension-autofill.service.spec.ts
-- modified: src/extension/extension-autofill.service.ts
-- modified: src/extension/extension.service.spec.ts
-- modified: src/extension/extension.service.ts
+- modified: src/auth/oauth-upgrade.spec.ts
+- modified: src/auth/send-token-response.spec.ts
 
 ---
 
