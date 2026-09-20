@@ -8,31 +8,33 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder/hermes on branch feat/skill-intelligence-unknown-terms.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 0e7a9f0
+- Repository: jobfynder/hermes
+- Branch: feat/skill-intelligence-unknown-terms
+- Head SHA: 8b66e64
 - Commit count: 1
-- Triggered by: atult120
+- Triggered by: jobfynder
 - Commits:
-- 0e7a9f0 fix(hermes): break circular HermesModule <-> JobsModule import — atultiwari
+- 8b66e64 Skill Intelligence: reviewed glossary content, unknown terms for display, and tests that actually run in CI — Jobfynder
 - Changed files:
-- modified: src/hermes/hermes.module.ts
-- modified: src/hermes/hermes.service.ts
-- modified: src/jobs/jobs.module.ts
-- modified: src/jobs/jobs.service.ts
+- added: app/skill_intelligence/enrichment.py
+- added: tests/test_skill_enrichment.py
+- modified: .github/workflows/hermes-regression.yml
+- modified: app/skill_intelligence/service.py
+- modified: scripts/hermes-skill-intelligence-backfill.py
+- modified: tests/test_skill_intelligence.py
 
 ---
 
