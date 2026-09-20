@@ -23,17 +23,12 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: feat/extension-tracker-list
-- Head SHA: 53a13f4
-- Commit count: 2
+- Head SHA: 0c64770
+- Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 7cdd6a9 feat(extension): list the caller's private tracker and change a record's status — Jobfynder
-- 53a13f4 test(auth): pass the seventh AuthService dependency in two specs — Jobfynder
+- 0c64770 feat(extension): use the Job Tracker screen's status names for tracker records — Jobfynder
 - Changed files:
-- modified: src/auth/oauth-upgrade.spec.ts
-- modified: src/auth/send-token-response.spec.ts
-- modified: src/extension/extension-v3.controller.ts
-- modified: src/extension/extension.service.spec.ts
 - modified: src/extension/extension.service.ts
 
 ---
