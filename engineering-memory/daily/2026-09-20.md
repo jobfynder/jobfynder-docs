@@ -23,13 +23,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 8e700ea
+- Head SHA: 0e7a9f0
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 8e700ea fix(prisma): create JobSourceType before adding EMAIL — atultiwari
+- 0e7a9f0 fix(hermes): break circular HermesModule <-> JobsModule import — atultiwari
 - Changed files:
-- modified: prisma/migrations/20260829010000_add_email_job_source_and_hermes_system_user/migration.sql
+- modified: src/hermes/hermes.module.ts
+- modified: src/hermes/hermes.service.ts
+- modified: src/jobs/jobs.module.ts
+- modified: src/jobs/jobs.service.ts
 
 ---
 
