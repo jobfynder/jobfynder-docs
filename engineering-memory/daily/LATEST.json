@@ -1,19 +1,20 @@
 {
   "date": "2026-09-20",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder/hermes on branch fix/matching-canonical-skill-identity.",
+  "summary": "GitHub push event processed for jobfynder/hermes on branch main.",
   "repositories": [
     "jobfynder/hermes"
   ],
   "completed": [
     "Source: GitHub webhook",
     "Repository: jobfynder/hermes",
-    "Branch: fix/matching-canonical-skill-identity",
-    "Head SHA: 1ea6478",
-    "Commit count: 1",
+    "Branch: main",
+    "Head SHA: 64c8624",
+    "Commit count: 2",
     "Triggered by: jobfynder",
     "Commits:",
     "1ea6478 Matching: compare skills by canonical identity, not spelling \u2014 Jobfynder",
+    "64c8624 Merge pull request #16 from jobfynder/fix/matching-canonical-skill-identity \u2014 Jobfynder",
     "Changed files:",
     "added: tests/test_matching_canonical_identity.py",
     "modified: .github/workflows/hermes-regression.yml",

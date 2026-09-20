@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch fix/matching-canonical-skill-identity.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,13 @@ GitHub push event processed for jobfynder/hermes on branch fix/matching-canonica
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: fix/matching-canonical-skill-identity
-- Head SHA: 1ea6478
-- Commit count: 1
+- Branch: main
+- Head SHA: 64c8624
+- Commit count: 2
 - Triggered by: jobfynder
 - Commits:
 - 1ea6478 Matching: compare skills by canonical identity, not spelling — Jobfynder
+- 64c8624 Merge pull request #16 from jobfynder/fix/matching-canonical-skill-identity — Jobfynder
 - Changed files:
 - added: tests/test_matching_canonical_identity.py
 - modified: .github/workflows/hermes-regression.yml
