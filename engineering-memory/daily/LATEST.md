@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/extension-match-evidence.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/extension-tracker-list.
 
 ---
 
@@ -22,15 +22,19 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feat/extension-match-evidence
-- Head SHA: 323363e
-- Commit count: 1
+- Branch: feat/extension-tracker-list
+- Head SHA: 53a13f4
+- Commit count: 2
 - Triggered by: jobfynder-admin
 - Commits:
-- 323363e test(auth): pass the seventh AuthService dependency in two specs — Jobfynder
+- 7cdd6a9 feat(extension): list the caller's private tracker and change a record's status — Jobfynder
+- 53a13f4 test(auth): pass the seventh AuthService dependency in two specs — Jobfynder
 - Changed files:
 - modified: src/auth/oauth-upgrade.spec.ts
 - modified: src/auth/send-token-response.spec.ts
+- modified: src/extension/extension-v3.controller.ts
+- modified: src/extension/extension.service.spec.ts
+- modified: src/extension/extension.service.ts
 
 ---
 
