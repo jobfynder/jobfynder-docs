@@ -547,3 +547,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/extension-tracker-list|0c647
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/chore/sync-main-into-features|f80c8025d9ca284e434f55cac3f5a9475dac4a70
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/job-tracker-core|5cc990277a55c61f96e6329d133033bd957e827f
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/job-tracker-core|2c5b3a590308aacd4f66733a059c3af6c268cc81
+jobfynder-admin/jobFynder-FE-vite|refs/heads/feat/job-tracker-roles|f967546d14fa05fcc6ba17b3a4ace4f8cfba0601
