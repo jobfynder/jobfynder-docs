@@ -538,3 +538,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|8e700ea85677f420c501f667dc7d
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|0e7a9f0f69b838a8c763dbf1696a7f5640205b4c
 jobfynder/hermes|refs/heads/feat/skill-intelligence-unknown-terms|8b66e64c9e36ac9afe253a21015ea174c33de99e
 jobfynder/hermes|refs/heads/main|ea71722204ea73a9dd7fb0ba47167e38c7c9c7e9
+jobfynder/hermes|refs/heads/fix/matching-canonical-skill-identity|1ea64788b08e46874577746ab7c98441282f0821
