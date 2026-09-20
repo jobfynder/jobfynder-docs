@@ -23,30 +23,20 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: feat/job-tracker-core
-- Head SHA: 5cc9902
+- Head SHA: 2c5b3a5
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 5cc9902 feat(job-tracker): Core job tracker API for consultant, bench sales and recruiter — Jobfynder
+- 2c5b3a5 feat(job-tracker): stage chips and stat cards whose numbers equal their lists — Jobfynder
 - Changed files:
-- added: docs/job-tracker/JOB-TRACKER-API.md
-- added: prisma/migrations/20260920000000_submission_checklist/migration.sql
-- added: src/job-tracker/dto/job-tracker.dto.ts
-- added: src/job-tracker/job-tracker.constants.ts
-- added: src/job-tracker/job-tracker.controller.spec.ts
-- added: src/job-tracker/job-tracker.controller.ts
-- added: src/job-tracker/job-tracker.module.ts
-- added: src/job-tracker/submission-flags.spec.ts
-- added: src/job-tracker/submission-flags.ts
-- added: src/job-tracker/time.util.ts
-- added: src/job-tracker/tracker-jobs.service.spec.ts
-- added: src/job-tracker/tracker-jobs.service.ts
-- added: src/job-tracker/tracker-records.service.spec.ts
-- added: src/job-tracker/tracker-records.service.ts
-- added: src/job-tracker/tracker-submissions.service.spec.ts
-- added: src/job-tracker/tracker-submissions.service.ts
-- modified: prisma/schema.prisma
-- modified: src/app.module.ts
+- modified: docs/job-tracker/JOB-TRACKER-API.md
+- modified: src/job-tracker/dto/job-tracker.dto.ts
+- modified: src/job-tracker/job-tracker.constants.ts
+- modified: src/job-tracker/submission-flags.ts
+- modified: src/job-tracker/tracker-jobs.service.spec.ts
+- modified: src/job-tracker/tracker-jobs.service.ts
+- modified: src/job-tracker/tracker-submissions.service.spec.ts
+- modified: src/job-tracker/tracker-submissions.service.ts
 
 ---
 
