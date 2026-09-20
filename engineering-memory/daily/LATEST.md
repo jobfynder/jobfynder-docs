@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feat/skill-intelligence-unknown-terms.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,12 +22,13 @@ GitHub push event processed for jobfynder/hermes on branch feat/skill-intelligen
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feat/skill-intelligence-unknown-terms
-- Head SHA: 8b66e64
-- Commit count: 1
+- Branch: main
+- Head SHA: ea71722
+- Commit count: 2
 - Triggered by: jobfynder
 - Commits:
 - 8b66e64 Skill Intelligence: reviewed glossary content, unknown terms for display, and tests that actually run in CI — Jobfynder
+- ea71722 Merge pull request #15 from jobfynder/feat/skill-intelligence-unknown-terms — Jobfynder
 - Changed files:
 - added: app/skill_intelligence/enrichment.py
 - added: tests/test_skill_enrichment.py
