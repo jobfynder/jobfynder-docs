@@ -8,31 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/extension-match-evidence.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: main
-- Head SHA: 64c8624
-- Commit count: 2
-- Triggered by: jobfynder
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feat/extension-match-evidence
+- Head SHA: b153f22
+- Commit count: 1
+- Triggered by: jobfynder-admin
 - Commits:
-- 1ea6478 Matching: compare skills by canonical identity, not spelling — Jobfynder
-- 64c8624 Merge pull request #16 from jobfynder/fix/matching-canonical-skill-identity — Jobfynder
+- b153f22 feat(extension): send preferred skills to Hermes, return match evidence, add FULL_NAME autofill — Jobfynder
 - Changed files:
-- added: tests/test_matching_canonical_identity.py
-- modified: .github/workflows/hermes-regression.yml
-- modified: app/matching/scorer.py
+- modified: src/extension/extension-autofill.service.spec.ts
+- modified: src/extension/extension-autofill.service.ts
+- modified: src/extension/extension.service.spec.ts
+- modified: src/extension/extension.service.ts
 
 ---
 
