@@ -23,12 +23,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: bbafb3f
+- Head SHA: 17b4a34
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- bbafb3f fix(resume): add JwtAuthGuard to user-scoped CRUD routes — atultiwari
+- 17b4a34 feat(resume): restore POST /resume JSON create endpoint with builderMetadata — atultiwari
 - Changed files:
+- added: prisma/migrations/20260921195000_add_resume_builder_metadata/migration.sql
+- added: src/resume/dto/create-resume.dto.ts
+- modified: prisma/schema.prisma
 - modified: src/resume/resume.controller.spec.ts
 - modified: src/resume/resume.controller.ts
 
