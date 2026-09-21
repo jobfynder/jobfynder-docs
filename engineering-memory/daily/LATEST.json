@@ -9,20 +9,14 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: main",
-    "Head SHA: 68fbc1d",
-    "Commit count: 3",
+    "Head SHA: bbafb3f",
+    "Commit count: 1",
     "Triggered by: atult120",
     "Commits:",
-    "b153f22 feat(extension): send preferred skills to Hermes, return match evidence, add FULL_NAME autofill \u2014 Jobfynder",
-    "323363e test(auth): pass the seventh AuthService dependency in two specs \u2014 Jobfynder",
-    "68fbc1d Merge pull request #17: feat(extension): preferred skills to Hermes, match evidence, FULL_NAME autofill \u2014 atultiwari",
+    "bbafb3f fix(resume): add JwtAuthGuard to user-scoped CRUD routes \u2014 atultiwari",
     "Changed files:",
-    "modified: src/auth/oauth-upgrade.spec.ts",
-    "modified: src/auth/send-token-response.spec.ts",
-    "modified: src/extension/extension-autofill.service.spec.ts",
-    "modified: src/extension/extension-autofill.service.ts",
-    "modified: src/extension/extension.service.spec.ts",
-    "modified: src/extension/extension.service.ts"
+    "modified: src/resume/resume.controller.spec.ts",
+    "modified: src/resume/resume.controller.ts"
   ],
   "decisions": [
     {
