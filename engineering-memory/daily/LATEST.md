@@ -23,18 +23,18 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 102a608
+- Head SHA: b8d3a93
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 102a608 feat(profile): store primary and secondary skill type on user skills — atultiwari
+- b8d3a93 feat(profile): save tools under the skill category name sent by the client — atultiwari
 - Changed files:
-- added: prisma/migrations/20260925000000_add_user_skill_type/migration.sql
+- added: prisma/migrations/20260925010000_add_tool_category/migration.sql
 - modified: prisma/schema.prisma
+- modified: src/profile/common/master-data.service.ts
 - modified: src/profile/consultant-sections/consultant-crud.service.spec.ts
 - modified: src/profile/consultant-sections/consultant-crud.service.ts
 - modified: src/profile/consultant-sections/dto/crud.dto.ts
-- modified: src/profile/profile-transformers.service.ts
 
 ---
 
