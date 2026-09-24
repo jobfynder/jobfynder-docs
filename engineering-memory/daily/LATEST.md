@@ -8,33 +8,47 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch messenger.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 92fca20
-- Commit count: 1
-- Triggered by: atult120
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: messenger
+- Head SHA: b147433
+- Commit count: 2
+- Triggered by: jobfynder-admin
 - Commits:
-- 92fca20 feat(profile): return toolsFrameworks grouped by skill category — atultiwari
+- 39e7598 fix(messenger): improve search uploads presence and communication UX — Jobfynder
+- b147433 fix(messenger): harden message recovery and scrolling — Jobfynder
 - Changed files:
-- modified: src/profile/common/master-data.service.ts
-- modified: src/profile/consultant-sections/consultant-crud.service.spec.ts
-- modified: src/profile/consultant-sections/dto/crud.dto.ts
-- modified: src/profile/profile-transformers.service.ts
-- modified: src/profile/profile.service.ts
-- modified: src/profile/user-profile.service.ts
+- added: src/lib/mobileConversationSearch.ts
+- modified: src/components/messenger/ChatView.jsx
+- modified: src/components/messenger/ConversationSidebar.jsx
+- modified: src/components/messenger/MessageComposer.jsx
+- modified: src/components/messenger/composer/useAttachments.js
+- modified: src/components/messenger/messages/AttachmentCard.jsx
+- modified: src/components/messenger/messages/MessageItem.jsx
+- modified: src/components/messenger/messages/MessageList.jsx
+- modified: src/components/messenger/mobile/MobileInbox.jsx
+- modified: src/components/messenger/shell/CommunicationNavigation.jsx
+- modified: src/features/messenger/chat-desktop.module.css
+- modified: src/features/messenger/communication-navigation.module.css
+- modified: src/features/messenger/composer-desktop.module.css
+- modified: src/features/messenger/conversation-list.module.css
+- modified: src/features/messenger/messenger-foundation.module.css
+- modified: src/hooks/useThread.js
+- modified: src/lib/attachmentApi.js
+- modified: src/lib/messengerApi.ts
+- removed: src/lib/mobileConversationSearch.js
 
 ---
 
