@@ -23,29 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch mess
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: messenger
-- Head SHA: 58505aa
+- Head SHA: 435f158
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 58505aa feat(messenger): migrate composer and context panel — Jobfynder
+- 435f158 fix(messenger): persist selected conversation in URL — Jobfynder
 - Changed files:
-- added: src/features/messenger/composer-desktop.module.css
-- added: src/features/messenger/context-desktop.module.css
-- modified: src/components/messenger/ChatView.jsx
-- modified: src/components/messenger/CollapsibleSection.jsx
-- modified: src/components/messenger/ContextPanel.jsx
-- modified: src/components/messenger/MessageComposer.jsx
-- modified: src/components/messenger/composer/AttachmentTray.jsx
-- modified: src/components/messenger/panel/ContextAction.jsx
-- modified: src/components/messenger/panel/ContextField.jsx
-- modified: src/components/messenger/panel/ConversationSettingsSection.jsx
-- modified: src/components/messenger/panel/Introduction.jsx
-- modified: src/components/messenger/panel/NextAction.jsx
-- modified: src/components/messenger/panel/ParticipantsSection.jsx
-- modified: src/components/messenger/panel/PrivacyState.jsx
-- modified: src/components/messenger/panel/QuickActions.jsx
-- modified: src/components/messenger/panel/SharedFiles.jsx
-- modified: src/components/messenger/panel/UpcomingInterview.jsx
+- modified: src/components/messenger/NavLeaf.jsx
+- modified: src/components/messenger/shell/MessengerShell.jsx
 
 ---
 
