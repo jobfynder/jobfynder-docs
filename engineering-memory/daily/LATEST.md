@@ -23,19 +23,19 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch mess
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: messenger
-- Head SHA: 085ade7
+- Head SHA: d3a685f
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 085ade7 feat(messenger): redesign mobile messages experience — Jobfynder
+- d3a685f feat(messenger): polish mobile messenger UX — Jobfynder
 - Changed files:
-- added: src/components/messenger/mobile/MobileConversationRow.jsx
-- added: src/lib/mobileConversationSearch.js
+- added: src/components/messenger/mobile/MobileCurrentContext.jsx
 - modified: src/components/messenger/ChatView.jsx
+- modified: src/components/messenger/ContextPanel.jsx
 - modified: src/components/messenger/mobile/MobileContextSheet.jsx
+- modified: src/components/messenger/mobile/MobileConversationRow.jsx
 - modified: src/components/messenger/mobile/MobileInbox.jsx
-- modified: src/components/messenger/mobile/MobileMessenger.jsx
-- modified: src/components/messenger/mobile/SwipeRow.jsx
+- modified: src/components/messenger/panel/ParticipantsSection.jsx
 - modified: src/features/messenger/mobile-messenger.module.css
 
 ---
