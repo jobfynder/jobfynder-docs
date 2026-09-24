@@ -9,17 +9,18 @@
     "Source: GitHub webhook",
     "Repository: jobfynder-admin/jobFynder-BE-nestJS",
     "Branch: main",
-    "Head SHA: 27741cf",
+    "Head SHA: 102a608",
     "Commit count: 1",
     "Triggered by: atult120",
     "Commits:",
-    "27741cf feat(profile): update tools and frameworks by name on the skills controller \u2014 atultiwari",
+    "102a608 feat(profile): store primary and secondary skill type on user skills \u2014 atultiwari",
     "Changed files:",
-    "modified: src/profile/common/master-data.service.ts",
-    "modified: src/profile/consultant-sections/consultant-crud.controller.ts",
+    "added: prisma/migrations/20260925000000_add_user_skill_type/migration.sql",
+    "modified: prisma/schema.prisma",
     "modified: src/profile/consultant-sections/consultant-crud.service.spec.ts",
     "modified: src/profile/consultant-sections/consultant-crud.service.ts",
-    "modified: src/profile/consultant-sections/dto/crud.dto.ts"
+    "modified: src/profile/consultant-sections/dto/crud.dto.ts",
+    "modified: src/profile/profile-transformers.service.ts"
   ],
   "decisions": [
     {
