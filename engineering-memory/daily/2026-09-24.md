@@ -23,23 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch mess
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: messenger
-- Head SHA: 64dca4b
+- Head SHA: c672975
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 64dca4b feat(messenger): migrate mobile messenger experience — Jobfynder
+- c672975 fix(messenger): restore mobile application navigation — Jobfynder
 - Changed files:
-- added: src/features/messenger/mobile-messenger.module.css
-- modified: src/components/messenger/ChatView.jsx
-- modified: src/components/messenger/mobile/MobileChatView.jsx
-- modified: src/components/messenger/mobile/MobileContextSheet.jsx
-- modified: src/components/messenger/mobile/MobileInbox.jsx
-- modified: src/components/messenger/mobile/MobileMessenger.jsx
-- modified: src/components/messenger/mobile/MobileSearch.jsx
-- modified: src/components/messenger/shell/MessengerMobileLayout.jsx
-- modified: src/components/messenger/shell/MessengerShell.jsx
-- modified: src/lib/mobileNav.js
-- modified: src/lib/mobileNav.test.js
+- modified: src/components/components/landing/header/mobile-nav.tsx
+- modified: src/components/components/landing/header/nav-content.tsx
 
 ---
 
