@@ -570,3 +570,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/messenger|b7cd18a4e39fd56ce0e8274f2
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|27741cf57f70332b3146613956c02d7a956c68ea
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|102a60881c788375b7630c78d3f75153af87abd4
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|b8d3a93638aa89eea7b95cc5cb4a833d7a11784e
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|92fca207beb133bb7d69fe2ddab190dc40880491
