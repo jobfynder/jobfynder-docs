@@ -23,20 +23,28 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch mess
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: messenger
-- Head SHA: a9d15ef
+- Head SHA: b7cd18a
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- a9d15ef feat(messenger): add communication OS navigation shell — Jobfynder
+- b7cd18a feat(messenger): refine communication shell and inbox UX — Jobfynder
 - Changed files:
-- added: src/components/messenger/shell/CommunicationNavigation.jsx
-- added: src/features/messenger/communication-navigation.module.css
-- added: src/lib/communicationNavigation.js
-- modified: src/components/messenger/mobile/MobileInbox.jsx
-- modified: src/components/messenger/mobile/MobileMessenger.jsx
-- modified: src/components/messenger/shell/MessengerMobileLayout.jsx
+- modified: src/components/messenger/ChatView.jsx
+- modified: src/components/messenger/ContextStrip.jsx
+- modified: src/components/messenger/ConversationRow.jsx
+- modified: src/components/messenger/ConversationSidebar.jsx
+- modified: src/components/messenger/NewConversationDialog.jsx
+- modified: src/components/messenger/panel/CompanySection.jsx
+- modified: src/components/messenger/panel/Introduction.jsx
+- modified: src/components/messenger/panel/ParticipantsSection.jsx
+- modified: src/components/messenger/shell/CommunicationNavigation.jsx
+- modified: src/components/messenger/shell/ConversationListRegion.jsx
+- modified: src/components/messenger/shell/MessengerDesktopLayout.jsx
 - modified: src/components/messenger/shell/MessengerShell.jsx
-- modified: src/features/messenger/mobile-messenger.module.css
+- modified: src/features/messenger/communication-navigation.module.css
+- modified: src/features/messenger/conversation-list.module.css
+- modified: src/features/messenger/messenger-desktop.module.css
+- modified: src/lib/communicationNavigation.js
 
 ---
 
