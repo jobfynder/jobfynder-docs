@@ -23,16 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: feat/network-workspace
-- Head SHA: 0607f4d
+- Head SHA: e601d26
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 0607f4d feat(network): add Network workspace (dashboard, relationships by role, follow-ups, insights) — Jobfynder
+- e601d26 fix(network): correct follow-up due label for future dates and pluralise counts — Jobfynder
 - Changed files:
-- added: src/features/network-workspace/api.ts
-- added: src/features/network-workspace/components.tsx
-- added: src/pages/private/NetworkWorkspace.tsx
-- modified: src/routes.ts
+- modified: src/pages/private/NetworkWorkspace.tsx
 
 ---
 
