@@ -8,30 +8,32 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/network-workspace.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/network-workspace.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: feat/network-workspace
-- Head SHA: f4de5e6
+- Head SHA: 275856a
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- f4de5e6 feat(network): workspace search, last-contact filter, recentlyActive and topByOutcome lists — Jobfynder
+- 275856a feat(network): add relationship detail drawer (Overview, Opportunities, Activity, Notes, Follow-ups, Insights) — Jobfynder
 - Changed files:
-- modified: src/network-workspace/dto/network-workspace.dto.ts
-- modified: src/network-workspace/network-workspace.service.spec.ts
-- modified: src/network-workspace/network-workspace.service.ts
+- added: src/features/network-workspace/RelationshipDrawer.tsx
+- modified: src/features/network-workspace/NetworkShell.tsx
+- modified: src/features/network-workspace/api.ts
+- modified: src/features/network-workspace/components.tsx
+- modified: src/pages/private/NetworkWorkspace.tsx
 
 ---
 
