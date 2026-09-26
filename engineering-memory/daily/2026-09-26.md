@@ -23,27 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: feat/pulse-broadcast
-- Head SHA: 9e98e46
+- Head SHA: 8dc3d9a
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 9e98e46 feat(pulse): Phase 2 - Publish as Job, templates, segments, settings, request hints — Jobfynder
+- 8dc3d9a feat(pulse): expose linked job id to the signal owner only — Jobfynder
 - Changed files:
-- added: prisma/migrations/20260925010000_pulse_phase2/migration.sql
-- added: src/pulse/library.service.ts
-- added: src/pulse/preference.service.ts
-- added: src/pulse/pulse-phase2.spec.ts
-- added: src/pulse/signal-job.service.ts
-- modified: docs/11-open-pulse-and-broadcast-decision.md
-- modified: prisma/schema.prisma
-- modified: src/pulse/audience.service.ts
-- modified: src/pulse/broadcast.service.ts
-- modified: src/pulse/dto/pulse.dto.ts
-- modified: src/pulse/pulse.config.ts
-- modified: src/pulse/pulse.controller.ts
-- modified: src/pulse/pulse.module.ts
-- modified: src/pulse/pulse.spec.ts
-- modified: src/pulse/response.service.ts
+- modified: src/pulse/pulse-phase2.spec.ts
+- modified: src/pulse/signal.service.ts
 
 ---
 
