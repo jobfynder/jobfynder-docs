@@ -23,15 +23,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 9264985
+- Head SHA: ce768ce
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 9264985 fix(profile): return saved professional summary on bench-sales profiles — atultiwari
+- ce768ce fix(profile): stop appending specializations onto the bench-sales title — atultiwari
 - Changed files:
-- added: src/profile/profile-transformers.bio.spec.ts
-- modified: src/profile/consultant-sections/consultant-sections.service.spec.ts
-- modified: src/profile/consultant-sections/consultant-sections.service.ts
+- added: src/profile/common/professional-title.util.spec.ts
+- added: src/profile/common/professional-title.util.ts
+- modified: src/profile/header/header.service.spec.ts
+- modified: src/profile/header/header.service.ts
 - modified: src/profile/profile-transformers.service.ts
 
 ---

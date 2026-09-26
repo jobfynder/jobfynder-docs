@@ -595,3 +595,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/notification-digest-journeys
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/notification-digest-journeys|7cdb3e5d8695ede5f2f6638be906c8c4a20e423f
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|bcb34f3598dfbef84b0bef3a12109d1c73826916
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|9264985a13bf42b0b08b4aea71af2ef2a2ae64ff
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|ce768cee8f027085e2fdf7ffad68d3376ef1fd56
