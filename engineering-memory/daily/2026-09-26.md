@@ -8,38 +8,35 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Repository: jobfynder/hermes
 - Branch: main
-- Head SHA: 8df6230
-- Commit count: 3
-- Triggered by: jobfynder-admin
+- Head SHA: 59804e8
+- Commit count: 2
+- Triggered by: jobfynder
 - Commits:
-- 77a1f6c feat: orchestrate extension skill suggestions — Jobfynder
-- 6682caf test: align auth service constructor fixtures — Jobfynder
-- 8df6230 Merge pull request #28 from jobfynder-admin/feat/extension-skill-suggestions — JobFynder
+- 8289264 feat: queue governed skill suggestions — OpenAI Codex
+- 59804e8 Merge pull request #17 from jobfynder/feat/extension-skill-suggestions — Jobfynder
 - Changed files:
-- modified: src/auth/oauth-upgrade.spec.ts
-- modified: src/auth/send-token-response.spec.ts
-- modified: src/extension/extension-skill-intelligence.controller.ts
-- modified: src/extension/extension-skill-intelligence.service.spec.ts
-- modified: src/extension/extension-skill-intelligence.service.ts
-- modified: src/extension/extension-v3.service.ts
-- modified: src/hermes/hermes-client.types.ts
-- modified: src/hermes/hermes-intelligence.service.ts
-- modified: src/hermes/hermes.client.ts
+- added: app/skill_intelligence/suggestions.py
+- added: tests/test_skill_suggestions.py
+- modified: app/routers/moderation.py
+- modified: app/routers/skill_intelligence.py
+- modified: app/runtime/db.py
+- modified: app/skill_intelligence/models.py
+- modified: app/understanding/taxonomy/candidates.py
 
 ---
 
