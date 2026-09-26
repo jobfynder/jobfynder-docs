@@ -23,15 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: feat/pulse-broadcast
-- Head SHA: 579eb2f
+- Head SHA: 6bcc99c
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 579eb2f feat(pulse): list represented consultants for sharing and offering — Jobfynder
+- 6bcc99c fix(pulse): repair spec title syntax — Jobfynder
 - Changed files:
-- modified: src/pulse/pulse.controller.ts
 - modified: src/pulse/pulse.spec.ts
-- modified: src/pulse/signal.service.ts
 
 ---
 
