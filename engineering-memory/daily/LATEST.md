@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch backup/live-hermes-20260926.
+GitHub push event processed for jobfynder/hermes on branch deploy/extension-skill-suggestions-uat.
 
 ---
 
@@ -22,63 +22,20 @@ GitHub push event processed for jobfynder/hermes on branch backup/live-hermes-20
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: backup/live-hermes-20260926
-- Head SHA: 934e6de
-- Commit count: 11
+- Branch: deploy/extension-skill-suggestions-uat
+- Head SHA: 65eb368
+- Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 7c5a720 Limit taxonomy page-size choices — Jobfynder Automation
-- 82eaa74 Merge remote-tracking branch 'origin/main' — Jobfynder Automation
-- b78838b Merge remote-tracking branch 'origin/main' — Jobfynder Automation
-- 5a5016d Automate review cleanup and add operational filters — Jobfynder Automation
-- 652370a Skip empty scheduled review jobs — Jobfynder Automation
-- d3192d6 Classify job title families deterministically — Jobfynder Automation
-- 353ddb2 Clarify deterministic title classification — Jobfynder Automation
-- 7c15f24 Automate taxonomy cleanup and consolidate companies — Jobfynder Automation
-- c3e396b Prioritize named company evidence — Jobfynder Automation
-- 147c083 Block deterministic taxonomy noise — Jobfynder Automation
-- 934e6de Batch review rejection in one transaction — Jobfynder Automation
+- 65eb368 Merge remote-tracking branch 'origin/main' into deploy/extension-skill-suggestions-uat-local — OpenAI Codex
 - Changed files:
-- added: app/skill_intelligence/enrichment.py
-- added: deploy/systemd/hermes-review-resolution.service
-- added: deploy/systemd/hermes-review-resolution.timer
-- added: scripts/hermes-daily-review-resolution.py
-- added: scripts/hermes-scale-ops-check.py
-- added: tests/test_matching_canonical_identity.py
-- added: tests/test_productivity_automation.py
-- added: tests/test_skill_enrichment.py
-- modified: .env.example
-- modified: .github/workflows/hermes-regression.yml
-- modified: app/companies/service.py
-- modified: app/drafts/backfill.py
-- modified: app/drafts/listing.py
-- modified: app/drafts/review_rules.py
-- modified: app/drafts/service.py
-- modified: app/matching/scorer.py
-- modified: app/reporting/service.py
-- modified: app/routers/drafts.py
+- added: app/skill_intelligence/suggestions.py
+- added: tests/test_skill_suggestions.py
 - modified: app/routers/moderation.py
-- modified: app/routers/reporting.py
-- modified: app/routers/understanding.py
-- modified: app/skill_intelligence/service.py
+- modified: app/routers/skill_intelligence.py
+- modified: app/runtime/db.py
+- modified: app/skill_intelligence/models.py
 - modified: app/understanding/taxonomy/candidates.py
-- modified: app/understanding/taxonomy/title_family_classifier.py
-- modified: frontend/src/api/client.ts
-- modified: frontend/src/components/Pagination.tsx
-- modified: frontend/src/pages/DraftListPage.tsx
-- modified: frontend/src/pages/JobTitlesTaxonomyPage.tsx
-- modified: frontend/src/pages/ModerationPage.tsx
-- modified: frontend/src/pages/ReportsPage.tsx
-- modified: frontend/src/pages/SkillsTaxonomyPage.tsx
-- modified: frontend/src/types.ts
-- modified: scripts/hermes-900-daily-taxonomy-triage.py
-- modified: scripts/hermes-daily-review-resolution.py
-- modified: scripts/hermes-scale-ops-check.py
-- modified: scripts/hermes-skill-intelligence-backfill.py
-- modified: scripts/hermes-taxonomy-generate-descriptions.py
-- modified: tests/test_productivity_automation.py
-- modified: tests/test_skill_intelligence.py
-- modified: tests/test_taxonomy_pagination.py
 
 ---
 
