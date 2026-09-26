@@ -1,24 +1,25 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-25",
   "status": "green",
-  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.",
+  "summary": "GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/network-workspace.",
   "repositories": [
-    "jobfynder-admin/jobFynder-BE-nestJS"
+    "jobfynder-admin/jobFynder-FE-vite"
   ],
   "completed": [
     "Source: GitHub webhook",
-    "Repository: jobfynder-admin/jobFynder-BE-nestJS",
-    "Branch: main",
-    "Head SHA: 9264985",
+    "Repository: jobfynder-admin/jobFynder-FE-vite",
+    "Branch: feat/network-workspace",
+    "Head SHA: 275856a",
     "Commit count: 1",
-    "Triggered by: atult120",
+    "Triggered by: jobfynder-admin",
     "Commits:",
-    "9264985 fix(profile): return saved professional summary on bench-sales profiles \u2014 atultiwari",
+    "275856a feat(network): add relationship detail drawer (Overview, Opportunities, Activity, Notes, Follow-ups, Insights) \u2014 Jobfynder",
     "Changed files:",
-    "added: src/profile/profile-transformers.bio.spec.ts",
-    "modified: src/profile/consultant-sections/consultant-sections.service.spec.ts",
-    "modified: src/profile/consultant-sections/consultant-sections.service.ts",
-    "modified: src/profile/profile-transformers.service.ts"
+    "added: src/features/network-workspace/RelationshipDrawer.tsx",
+    "modified: src/features/network-workspace/NetworkShell.tsx",
+    "modified: src/features/network-workspace/api.ts",
+    "modified: src/features/network-workspace/components.tsx",
+    "modified: src/pages/private/NetworkWorkspace.tsx"
   ],
   "decisions": [
     {
