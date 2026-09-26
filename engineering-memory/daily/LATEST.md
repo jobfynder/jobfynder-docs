@@ -8,38 +8,43 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/network-pulse-broadcast.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/pulse-broadcast.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: feat/network-pulse-broadcast
-- Head SHA: b6ec2ae
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feat/pulse-broadcast
+- Head SHA: 4ca3ffe
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- b6ec2ae feat(network): Phase 2 UI, compact layout, Centrifugo hints, settings — Jobfynder
+- 4ca3ffe feat(pulse): standing gate, abuse review queue, job-linked outcomes, recipient interests — Jobfynder
 - Changed files:
-- added: src/features/network-workspace/NetworkSettings.tsx
-- added: src/features/network-workspace/pulse/LibraryTabs.tsx
-- added: src/features/network-workspace/pulse/PulseSettings.tsx
-- added: src/features/network-workspace/pulse/pulseRealtime.ts
-- modified: src/features/network-workspace/NetworkShell.tsx
-- modified: src/features/network-workspace/api.ts
-- modified: src/features/network-workspace/pulse/BroadcastCenter.tsx
-- modified: src/features/network-workspace/pulse/CreateBroadcast.tsx
-- modified: src/features/network-workspace/pulse/PulseView.tsx
-- modified: src/features/network-workspace/pulse/pulseApi.ts
-- modified: src/pages/private/NetworkWorkspace.tsx
+- added: prisma/migrations/20260925020000_pulse_abuse_and_interests/migration.sql
+- added: src/pulse/abuse.service.ts
+- added: src/pulse/pulse-admin.controller.ts
+- added: src/pulse/pulse-phase3.spec.ts
+- added: src/pulse/standing.service.ts
+- modified: docs/11-open-pulse-and-broadcast-decision.md
+- modified: prisma/schema.prisma
+- modified: src/pulse/audience.service.ts
+- modified: src/pulse/broadcast.service.ts
+- modified: src/pulse/dto/pulse.dto.ts
+- modified: src/pulse/preference.service.ts
+- modified: src/pulse/pulse-phase2.spec.ts
+- modified: src/pulse/pulse.config.ts
+- modified: src/pulse/pulse.controller.ts
+- modified: src/pulse/pulse.module.ts
+- modified: src/pulse/pulse.spec.ts
 
 ---
 
