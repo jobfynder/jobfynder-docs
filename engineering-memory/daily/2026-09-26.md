@@ -23,19 +23,13 @@ GitHub push event processed for jobfynder/hermes on branch deploy/extension-skil
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: deploy/extension-skill-suggestions-uat
-- Head SHA: 65eb368
+- Head SHA: 65b7d19
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 65eb368 Merge remote-tracking branch 'origin/main' into deploy/extension-skill-suggestions-uat-local — OpenAI Codex
+- 65b7d19 test: align deterministic triage assertion — OpenAI Codex
 - Changed files:
-- added: app/skill_intelligence/suggestions.py
-- added: tests/test_skill_suggestions.py
-- modified: app/routers/moderation.py
-- modified: app/routers/skill_intelligence.py
-- modified: app/runtime/db.py
-- modified: app/skill_intelligence/models.py
-- modified: app/understanding/taxonomy/candidates.py
+- modified: tests/test_skill_quality.py
 
 ---
 
