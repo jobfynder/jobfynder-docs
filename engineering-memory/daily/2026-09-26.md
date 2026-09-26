@@ -8,33 +8,36 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/notification-inbox-realtime.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/activity-feed-role-filter.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feat/notification-inbox-realtime
-- Head SHA: 7f2c6b3
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: feat/activity-feed-role-filter
+- Head SHA: 956a588
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 7f2c6b3 feat(notifications): realtime envelope, message burst coalescing, Dittofeed preference sync — Jobfynder
+- 956a588 feat(activity): real activity feed panel, role-filtered Communication categories, tracker realtime hint, first-time defaults — Jobfynder
 - Changed files:
-- modified: src/notifications/dittofeed-webhook.controller.spec.ts
-- modified: src/notifications/dittofeed-webhook.controller.ts
-- modified: src/notifications/notification-preferences.service.spec.ts
-- modified: src/notifications/notification-preferences.service.ts
-- modified: src/notifications/notify-dispatch-preferences.spec.ts
-- modified: src/notifications/notify-dispatch.service.ts
+- added: src/constants/settings/communicationVisibility.test.ts
+- added: src/constants/settings/communicationVisibility.ts
+- added: src/features/activity/activityLabels.ts
+- added: src/services/activity.ts
+- modified: src/components/components/private/dashboard/LiveActivityFeed.tsx
+- modified: src/components/components/private/settings/components/communication/useCommunicationPreferences.ts
+- modified: src/components/components/private/settings/sections/Communication.tsx
+- modified: src/features/notifications/useNotifications.ts
+- modified: src/services/notifications.ts
 
 ---
 
