@@ -23,19 +23,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: bcb34f3
+- Head SHA: 9264985
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- bcb34f3 feat(content): generate strengths, value proposition, and career goals — atultiwari
+- 9264985 fix(profile): return saved professional summary on bench-sales profiles — atultiwari
 - Changed files:
-- modified: src/content-generation/content-generation.service.spec.ts
-- modified: src/content-generation/content-generation.service.ts
-- modified: src/content-generation/dto/generate-content.dto.ts
-- modified: src/content-generation/normalize-generated-content.spec.ts
-- modified: src/content-generation/normalize-generated-content.ts
-- modified: src/hermes/hermes-intelligence.service.spec.ts
-- modified: src/hermes/hermes-intelligence.service.ts
+- added: src/profile/profile-transformers.bio.spec.ts
+- modified: src/profile/consultant-sections/consultant-sections.service.spec.ts
+- modified: src/profile/consultant-sections/consultant-sections.service.ts
+- modified: src/profile/profile-transformers.service.ts
 
 ---
 
