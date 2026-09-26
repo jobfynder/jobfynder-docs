@@ -23,19 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: feat/extension-skill-suggestions
-- Head SHA: 77a1f6c
+- Head SHA: 6682caf
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 77a1f6c feat: orchestrate extension skill suggestions — Jobfynder
+- 6682caf test: align auth service constructor fixtures — Jobfynder
 - Changed files:
-- modified: src/extension/extension-skill-intelligence.controller.ts
-- modified: src/extension/extension-skill-intelligence.service.spec.ts
-- modified: src/extension/extension-skill-intelligence.service.ts
-- modified: src/extension/extension-v3.service.ts
-- modified: src/hermes/hermes-client.types.ts
-- modified: src/hermes/hermes-intelligence.service.ts
-- modified: src/hermes/hermes.client.ts
+- modified: src/auth/oauth-upgrade.spec.ts
+- modified: src/auth/send-token-response.spec.ts
 
 ---
 
