@@ -8,38 +8,42 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/network-pulse-broadcast.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/pulse-broadcast.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: feat/network-pulse-broadcast
-- Head SHA: c0ccddd
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feat/pulse-broadcast
+- Head SHA: 9e98e46
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- c0ccddd feat(network): Pulse and Broadcast Center inside the Network workspace — Jobfynder
+- 9e98e46 feat(pulse): Phase 2 - Publish as Job, templates, segments, settings, request hints — Jobfynder
 - Changed files:
-- added: src/features/network-workspace/pulse/BroadcastCenter.tsx
-- added: src/features/network-workspace/pulse/CreateBroadcast.tsx
-- added: src/features/network-workspace/pulse/PostSignalModal.tsx
-- added: src/features/network-workspace/pulse/PulseView.tsx
-- added: src/features/network-workspace/pulse/RespondActions.tsx
-- added: src/features/network-workspace/pulse/SignalCard.tsx
-- added: src/features/network-workspace/pulse/pulseApi.ts
-- modified: src/features/network-workspace/NetworkShell.tsx
-- modified: src/features/network-workspace/api.ts
-- modified: src/features/network-workspace/roles.tsx
-- modified: src/pages/private/NetworkWorkspace.tsx
+- added: prisma/migrations/20260925010000_pulse_phase2/migration.sql
+- added: src/pulse/library.service.ts
+- added: src/pulse/preference.service.ts
+- added: src/pulse/pulse-phase2.spec.ts
+- added: src/pulse/signal-job.service.ts
+- modified: docs/11-open-pulse-and-broadcast-decision.md
+- modified: prisma/schema.prisma
+- modified: src/pulse/audience.service.ts
+- modified: src/pulse/broadcast.service.ts
+- modified: src/pulse/dto/pulse.dto.ts
+- modified: src/pulse/pulse.config.ts
+- modified: src/pulse/pulse.controller.ts
+- modified: src/pulse/pulse.module.ts
+- modified: src/pulse/pulse.spec.ts
+- modified: src/pulse/response.service.ts
 
 ---
 
