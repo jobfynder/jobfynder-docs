@@ -598,3 +598,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|9264985a13bf42b0b08b4aea71af
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|ce768cee8f027085e2fdf7ffad68d3376ef1fd56
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|f86ca950362c24a9d3efc4f8a07fc787b20696e8
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|633cbe66ed0bfd0f9fa94812e2a91036ad622d5c
+jobfynder/hermes|refs/heads/feat/extension-skill-suggestions|8289264f96713cedccdd8bc2626c7714983d4d1d
