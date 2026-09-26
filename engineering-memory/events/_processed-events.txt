@@ -592,3 +592,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/notification-inbox-realtime|
 jobfynder-admin/jobFynder-FE-vite|refs/heads/feat/activity-feed-role-filter|956a5882c0b7afb4df1941a10d889292ec43871f
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/notification-tracker-realtime-connections|a4df9942452342300a0d4336cc7781a1b0450bdb
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/notification-digest-journeys|22369f5195106ceeb3e3dd7ee6bdf8e9abd7e2ef
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/notification-digest-journeys|7cdb3e5d8695ede5f2f6638be906c8c4a20e423f

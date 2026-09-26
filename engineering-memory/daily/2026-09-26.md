@@ -23,24 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: feat/notification-digest-journeys
-- Head SHA: 22369f5
+- Head SHA: 7cdb3e5
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 22369f5 feat(notifications): per-channel Dittofeed events and Core-assembled digest batching — Jobfynder
+- 7cdb3e5 feat(notifications): add digestId to notify.digest for the journey entry key — Jobfynder
 - Changed files:
-- added: prisma/migrations/20260926120000_notification_digest/migration.sql
-- added: src/notifications/digest.service.spec.ts
-- added: src/notifications/digest.service.ts
-- added: src/notifications/digest.util.spec.ts
-- added: src/notifications/digest.util.ts
-- added: src/notifications/notification-copy.ts
-- modified: prisma/schema.prisma
-- modified: src/notifications/dittofeed-dispatch.service.spec.ts
-- modified: src/notifications/dittofeed-dispatch.service.ts
-- modified: src/notifications/notifications.module.ts
-- modified: src/notifications/notify-dispatch-preferences.spec.ts
-- modified: src/notifications/notify-dispatch.service.ts
+- modified: src/notifications/digest.service.ts
 
 ---
 
