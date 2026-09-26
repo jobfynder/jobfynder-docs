@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/network-pulse-broadcast.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/notification-preferences-ui.
 
 ---
 
@@ -22,23 +22,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: feat/network-pulse-broadcast
-- Head SHA: b814ed3
+- Branch: feat/notification-preferences-ui
+- Head SHA: 100f8c4
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- b814ed3 feat(network): sender guidance, outcomes, interests, admin review queue — Jobfynder
+- 100f8c4 feat(settings): persist Communication notification preferences with optimistic save and rollback — Jobfynder
 - Changed files:
-- added: src/features/network-workspace/pulse/ModerationView.tsx
-- modified: src/features/network-workspace/NetworkShell.tsx
-- modified: src/features/network-workspace/api.ts
-- modified: src/features/network-workspace/pulse/BroadcastCenter.tsx
-- modified: src/features/network-workspace/pulse/CreateBroadcast.tsx
-- modified: src/features/network-workspace/pulse/PulseSettings.tsx
-- modified: src/features/network-workspace/pulse/PulseView.tsx
-- modified: src/features/network-workspace/pulse/pulseApi.ts
-- modified: src/features/network-workspace/roles.tsx
-- modified: src/pages/private/NetworkWorkspace.tsx
+- added: src/services/notifications.ts
+- modified: src/components/components/private/settings/components/communication/useCommunicationPreferences.ts
+- modified: src/components/components/private/settings/sections/Communication.tsx
 
 ---
 
