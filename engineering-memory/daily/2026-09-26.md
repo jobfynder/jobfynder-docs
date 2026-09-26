@@ -8,30 +8,33 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/notification-preferences-ui.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/notification-inbox-realtime.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: feat/notification-preferences-ui
-- Head SHA: 100f8c4
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feat/notification-inbox-realtime
+- Head SHA: 7f2c6b3
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 100f8c4 feat(settings): persist Communication notification preferences with optimistic save and rollback — Jobfynder
+- 7f2c6b3 feat(notifications): realtime envelope, message burst coalescing, Dittofeed preference sync — Jobfynder
 - Changed files:
-- added: src/services/notifications.ts
-- modified: src/components/components/private/settings/components/communication/useCommunicationPreferences.ts
-- modified: src/components/components/private/settings/sections/Communication.tsx
+- modified: src/notifications/dittofeed-webhook.controller.spec.ts
+- modified: src/notifications/dittofeed-webhook.controller.ts
+- modified: src/notifications/notification-preferences.service.spec.ts
+- modified: src/notifications/notification-preferences.service.ts
+- modified: src/notifications/notify-dispatch-preferences.spec.ts
+- modified: src/notifications/notify-dispatch.service.ts
 
 ---
 

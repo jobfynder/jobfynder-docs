@@ -588,3 +588,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/feat/network-pulse-broadcast|b6ec2a
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/pulse-broadcast|4ca3ffeceef0c33814434b54d61977473c4194c0
 jobfynder-admin/jobFynder-FE-vite|refs/heads/feat/network-pulse-broadcast|b814ed3327d87c9016caec309cf980dcd3981746
 jobfynder-admin/jobFynder-FE-vite|refs/heads/feat/notification-preferences-ui|100f8c483cd549cf57b554ff01945301ef18cb9d
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/notification-inbox-realtime|7f2c6b383932974dd15e76145a2db1e67cc1c75e
