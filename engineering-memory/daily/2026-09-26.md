@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/network-workspace.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/pulse-broadcast.
 
 ---
 
@@ -22,19 +22,27 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feat/network-workspace
-- Head SHA: aaba90f
+- Branch: feat/pulse-broadcast
+- Head SHA: d17d167
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- aaba90f feat(network): private external contact creation and role-tailoring counts in workspace summary — Jobfynder
+- d17d167 feat(pulse): open Pulse signals and capped, previewed Broadcast (backend) — Jobfynder
 - Changed files:
-- modified: src/network-workspace/dto/network-workspace.dto.ts
-- modified: src/network-workspace/network-workspace.config.ts
-- modified: src/network-workspace/network-workspace.controller.ts
-- modified: src/network-workspace/network-workspace.module.ts
-- modified: src/network-workspace/network-workspace.service.spec.ts
-- modified: src/network-workspace/network-workspace.service.ts
+- added: docs/11-open-pulse-and-broadcast-decision.md
+- added: prisma/migrations/20260925000000_open_pulse_broadcast/migration.sql
+- added: src/pulse/audience.service.ts
+- added: src/pulse/broadcast.service.ts
+- added: src/pulse/dto/pulse.dto.ts
+- added: src/pulse/pulse-access.service.ts
+- added: src/pulse/pulse.config.ts
+- added: src/pulse/pulse.controller.ts
+- added: src/pulse/pulse.module.ts
+- added: src/pulse/pulse.spec.ts
+- added: src/pulse/response.service.ts
+- added: src/pulse/signal.service.ts
+- modified: prisma/schema.prisma
+- modified: src/app.module.ts
 
 ---
 
