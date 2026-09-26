@@ -8,43 +8,37 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/pulse-broadcast.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch feat/network-pulse-broadcast.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feat/pulse-broadcast
-- Head SHA: 4ca3ffe
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: feat/network-pulse-broadcast
+- Head SHA: b814ed3
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 4ca3ffe feat(pulse): standing gate, abuse review queue, job-linked outcomes, recipient interests — Jobfynder
+- b814ed3 feat(network): sender guidance, outcomes, interests, admin review queue — Jobfynder
 - Changed files:
-- added: prisma/migrations/20260925020000_pulse_abuse_and_interests/migration.sql
-- added: src/pulse/abuse.service.ts
-- added: src/pulse/pulse-admin.controller.ts
-- added: src/pulse/pulse-phase3.spec.ts
-- added: src/pulse/standing.service.ts
-- modified: docs/11-open-pulse-and-broadcast-decision.md
-- modified: prisma/schema.prisma
-- modified: src/pulse/audience.service.ts
-- modified: src/pulse/broadcast.service.ts
-- modified: src/pulse/dto/pulse.dto.ts
-- modified: src/pulse/preference.service.ts
-- modified: src/pulse/pulse-phase2.spec.ts
-- modified: src/pulse/pulse.config.ts
-- modified: src/pulse/pulse.controller.ts
-- modified: src/pulse/pulse.module.ts
-- modified: src/pulse/pulse.spec.ts
+- added: src/features/network-workspace/pulse/ModerationView.tsx
+- modified: src/features/network-workspace/NetworkShell.tsx
+- modified: src/features/network-workspace/api.ts
+- modified: src/features/network-workspace/pulse/BroadcastCenter.tsx
+- modified: src/features/network-workspace/pulse/CreateBroadcast.tsx
+- modified: src/features/network-workspace/pulse/PulseSettings.tsx
+- modified: src/features/network-workspace/pulse/PulseView.tsx
+- modified: src/features/network-workspace/pulse/pulseApi.ts
+- modified: src/features/network-workspace/roles.tsx
+- modified: src/pages/private/NetworkWorkspace.tsx
 
 ---
 
