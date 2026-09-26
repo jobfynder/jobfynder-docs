@@ -23,18 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: f86ca95
+- Head SHA: 633cbe6
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- f86ca95 feat(profile): save bench-sales operational details instead of static copy — atultiwari
+- 633cbe6 fix(profile): return an empty string when communication channels are unset — atultiwari
 - Changed files:
-- added: src/profile/profile-transformers.operational.spec.ts
-- modified: src/profile/header/dto/bench-sales-header.dto.ts
-- modified: src/profile/header/dto/header-dto.spec.ts
-- modified: src/profile/header/header.service.spec.ts
-- modified: src/profile/header/header.service.ts
-- modified: src/profile/profile-static-values.ts
+- modified: src/profile/profile-transformers.operational.spec.ts
 - modified: src/profile/profile-transformers.service.ts
 
 ---
