@@ -23,13 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: a6c7448
+- Head SHA: 33aca68
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- a6c7448 feat(profile): store bench-sales remote preference and return it on profile GET — atultiwari
+- 33aca68 feat(profile): store recruiter status and work authorization — atultiwari
 - Changed files:
-- modified: src/profile/header/dto/bench-sales-header.dto.ts
+- modified: src/profile/header/dto/recruiter-header.dto.ts
 - modified: src/profile/header/header.service.spec.ts
 - modified: src/profile/header/header.service.ts
 - modified: src/profile/profile-transformers.service.ts
