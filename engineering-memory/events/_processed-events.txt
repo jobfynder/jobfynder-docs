@@ -615,3 +615,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|79d4f0fcb7c79cebdccd152331cd
 jobfynder/hermes|refs/heads/hotfix/skill-suggestion-normalizer|1e89df30e9d48b14c751e6a0760a56b8c98e7938
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|89d87d59bdce1de2a730ccef94411afd7d5ffd23
 jobfynder/hermes|refs/heads/main|1e89df30e9d48b14c751e6a0760a56b8c98e7938
+jobfynder/hermes|refs/heads/hotfix/skill-suggestion-normalizer|0000000000000000000000000000000000000000
