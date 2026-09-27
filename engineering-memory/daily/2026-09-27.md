@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-duplicate.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 
 ---
 
@@ -22,25 +22,41 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev-duplicate
-- Head SHA: 9da1885
-- Commit count: 1
+- Branch: dev
+- Head SHA: 5baae80
+- Commit count: 3
 - Triggered by: jobfynder-admin
 - Commits:
+- 89d87d5 refactor(profile): streamline profile components and enhance UI feedback — Nishant Arora
 - 9da1885 feat(profile): enhance profile data model and UI components — Nishant Arora
+- 5baae80 Merge pull request #25 from jobfynder-admin/dev-duplicate — JobFynder
 - Changed files:
 - modified: docs/profile-data-model-backend-changes.md
 - modified: src/components/components/private/profile/components/BenchSalesEditProfileModal.tsx
 - modified: src/components/components/private/profile/components/ConsultantEditProfileModal.tsx
 - modified: src/components/components/private/profile/components/RecruiterEditProfileModal.tsx
+- modified: src/components/components/private/profile/components/RecruiterTrustVerificationCard.tsx
+- modified: src/components/components/private/profile/components/bench/BenchCoverageRates.tsx
+- modified: src/components/components/private/profile/components/bench/BenchHotlistPanel.tsx
 - modified: src/components/components/private/profile/components/bench/BenchOperationalDetails.tsx
+- modified: src/components/components/private/profile/components/bench/BenchPrimaryTechnologyStacks.tsx
+- modified: src/components/components/private/profile/components/bench/BenchSpecializationAreas.tsx
 - modified: src/components/components/private/profile/helpers/clientRequirementContextHelpers.ts
 - modified: src/components/components/private/profile/helpers/employerHiringPreferencesHelpers.ts
 - modified: src/components/components/private/profile/helpers/operationalDetailsHelpers.ts
+- modified: src/components/components/private/profile/helpers/primaryTechnologyStacksHelpers.ts
 - modified: src/components/components/private/profile/helpers/profileHeaderHelpers.ts
+- modified: src/components/components/private/profile/helpers/skillMatrixHelpers.ts
 - modified: src/components/components/private/profile/modals/EditClientRequirementContextModal.tsx
+- modified: src/components/components/private/profile/modals/EditCoverageRatesModal.tsx
 - modified: src/components/components/private/profile/modals/EditOperationalDetailsModal.tsx
+- modified: src/components/components/private/profile/modals/EditPrimaryTechnologyStacksModal.tsx
+- modified: src/components/components/private/resume-builder/ResumeATSCheckPanel.tsx
+- modified: src/components/ui/simple-multi-select.tsx
+- modified: src/components/ui/time-range-picker.tsx
+- modified: src/components/ui/timezone-select.tsx
 - modified: src/types/auth.ts
+- modified: src/utils/transformApiToFormData.ts
 
 ---
 
