@@ -619,3 +619,4 @@ jobfynder/hermes|refs/heads/hotfix/skill-suggestion-normalizer|00000000000000000
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/needs-you-and-notify-rules-v2|4e81b4268e92647441d281d53260df9717e42dc4
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/fix/core-master-skill-highlighting|0fb589de5c59ac964debf16e7a3ce3bc51035c81
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/job-board-messenger-tasks|012ca746ee44e00b08c57d7dfc857f93889852a4
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/fix/core-master-skill-highlighting|abfc67529e96215bf225eaaaced44f6cfd02ca41
