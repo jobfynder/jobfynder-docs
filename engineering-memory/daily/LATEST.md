@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feat/reviewed-skill-enrichment.
+GitHub push event processed for jobfynder/hermes on branch main.
 
 ---
 
@@ -22,23 +22,26 @@ GitHub push event processed for jobfynder/hermes on branch feat/reviewed-skill-e
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feat/reviewed-skill-enrichment
-- Head SHA: 802605b
+- Branch: main
+- Head SHA: 09f4eb6
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 802605b feat: add deterministic-first skill learning — OpenAI Codex
+- 09f4eb6 Add deterministic-first reviewed skill taxonomy learning (#19) — Jobfynder
 - Changed files:
 - added: app/understanding/taxonomy/skill_category_classifier.py
+- added: docs/skill-enrichment-review-workflow.md
 - added: tests/test_skill_category_classifier.py
 - modified: app/prompt_runtime/registry.json
 - modified: app/routers/moderation.py
+- modified: app/runtime/db.py
+- modified: app/skill_intelligence/models.py
 - modified: app/skill_intelligence/service.py
 - modified: app/skill_intelligence/suggestions.py
 - modified: app/understanding/parsers/skills.py
 - modified: app/understanding/taxonomy/candidates.py
 - modified: app/understanding/taxonomy/loader.py
-- modified: docs/skill-enrichment-review-workflow.md
+- modified: app/understanding/taxonomy/models.py
 - modified: tests/test_skill_intelligence.py
 - modified: tests/test_skill_suggestions.py
 
