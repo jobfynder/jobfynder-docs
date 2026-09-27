@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fix/core-master-skill-highlighting.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
@@ -22,14 +22,17 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fi
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: fix/core-master-skill-highlighting
-- Head SHA: abfc675
+- Branch: main
+- Head SHA: a6c7448
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: atult120
 - Commits:
-- abfc675 perf(extension): load Core skill index concurrently — Jobfynder
+- a6c7448 feat(profile): store bench-sales remote preference and return it on profile GET — atultiwari
 - Changed files:
-- modified: src/extension/extension-skill-intelligence.service.ts
+- modified: src/profile/header/dto/bench-sales-header.dto.ts
+- modified: src/profile/header/header.service.spec.ts
+- modified: src/profile/header/header.service.ts
+- modified: src/profile/profile-transformers.service.ts
 
 ---
 
