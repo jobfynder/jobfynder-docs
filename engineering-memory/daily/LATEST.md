@@ -8,32 +8,29 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder/hermes on branch hotfix/skill-suggestion-normalizer.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder/hermes
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 79d4f0f
-- Commit count: 2
-- Triggered by: jobfynder-admin
+- Repository: jobfynder/hermes
+- Branch: hotfix/skill-suggestion-normalizer
+- Head SHA: 1e89df3
+- Commit count: 1
+- Triggered by: jobfynder
 - Commits:
-- 2e07d79 feat: enforce weekly skill crowdseed quota — Jobfynder
-- 79d4f0f Merge pull request #29 from jobfynder-admin/feat/skill-crowdseed-rate-limit — JobFynder
+- 1e89df3 fix: restore taxonomy normalization in suggestion queue — Jobfynder Automation
 - Changed files:
-- added: prisma/migrations/20260927000000_add_extension_skill_crowdseed_quota/migration.sql
-- modified: prisma/schema.prisma
-- modified: src/extension/extension-skill-intelligence.service.spec.ts
-- modified: src/extension/extension-skill-intelligence.service.ts
+- added: tests/test_skill_candidate_suggestion_queue.py
+- modified: app/understanding/taxonomy/candidates.py
 
 ---
 

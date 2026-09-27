@@ -612,3 +612,4 @@ jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/skill-crowdseed-rate-limit|2
 jobfynder/hermes|refs/heads/feat/reviewed-skill-enrichment|802605b57646d6bca18cf4f8dd400f54db4c05dd
 jobfynder/hermes|refs/heads/main|09f4eb671b978b91eab5f27fbdc3a7c08099ce9b
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|79d4f0fcb7c79cebdccd152331cd3481fb5c8e03
+jobfynder/hermes|refs/heads/hotfix/skill-suggestion-normalizer|1e89df30e9d48b14c751e6a0760a56b8c98e7938
