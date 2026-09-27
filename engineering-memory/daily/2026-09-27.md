@@ -8,24 +8,46 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch hotfix/skill-suggestion-normalizer.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/needs-you-and-notify-rules-v2.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: hotfix/skill-suggestion-normalizer
-- Head SHA: 0000000
-- Commit count: 0
-- Triggered by: jobfynder
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feat/needs-you-and-notify-rules-v2
+- Head SHA: 4e81b42
+- Commit count: 1
+- Triggered by: jobfynder-admin
+- Commits:
+- 4e81b42 feat(notifications): notify_rules v2 (composite key + audience), NeedsYouService, two new task rules — Jobfynder
+- Changed files:
+- added: prisma/migrations/20260927090000_notify_rules_v2_composite_key/migration.sql
+- added: prisma/migrations/20260927100000_notify_rules_v2_new_rows/migration.sql
+- added: src/cron/resume-stale.service.ts
+- added: src/notifications/notify-dispatch-audience.spec.ts
+- added: src/tasks/auto-rules/auto-rules-v2.spec.ts
+- added: src/tasks/needs-you/needs-you.controller.ts
+- added: src/tasks/needs-you/needs-you.module.ts
+- added: src/tasks/needs-you/needs-you.service.spec.ts
+- added: src/tasks/needs-you/needs-you.service.ts
+- added: src/tasks/needs-you/needs-you.util.spec.ts
+- added: src/tasks/needs-you/needs-you.util.ts
+- modified: prisma/schema.prisma
+- modified: src/app.module.ts
+- modified: src/bench/submission.service.spec.ts
+- modified: src/bench/submission.service.ts
+- modified: src/cron/cron.module.ts
+- modified: src/notifications/notify-dispatch.service.spec.ts
+- modified: src/notifications/notify-dispatch.service.ts
+- modified: src/tasks/auto-rules/auto-rules.service.ts
 
 ---
 
