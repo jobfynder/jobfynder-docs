@@ -8,42 +8,32 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 09f4eb6
-- Commit count: 1
-- Triggered by: jobfynder
+- Head SHA: 79d4f0f
+- Commit count: 2
+- Triggered by: jobfynder-admin
 - Commits:
-- 09f4eb6 Add deterministic-first reviewed skill taxonomy learning (#19) — Jobfynder
+- 2e07d79 feat: enforce weekly skill crowdseed quota — Jobfynder
+- 79d4f0f Merge pull request #29 from jobfynder-admin/feat/skill-crowdseed-rate-limit — JobFynder
 - Changed files:
-- added: app/understanding/taxonomy/skill_category_classifier.py
-- added: docs/skill-enrichment-review-workflow.md
-- added: tests/test_skill_category_classifier.py
-- modified: app/prompt_runtime/registry.json
-- modified: app/routers/moderation.py
-- modified: app/runtime/db.py
-- modified: app/skill_intelligence/models.py
-- modified: app/skill_intelligence/service.py
-- modified: app/skill_intelligence/suggestions.py
-- modified: app/understanding/parsers/skills.py
-- modified: app/understanding/taxonomy/candidates.py
-- modified: app/understanding/taxonomy/loader.py
-- modified: app/understanding/taxonomy/models.py
-- modified: tests/test_skill_intelligence.py
-- modified: tests/test_skill_suggestions.py
+- added: prisma/migrations/20260927000000_add_extension_skill_crowdseed_quota/migration.sql
+- modified: prisma/schema.prisma
+- modified: src/extension/extension-skill-intelligence.service.spec.ts
+- modified: src/extension/extension-skill-intelligence.service.ts
 
 ---
 
