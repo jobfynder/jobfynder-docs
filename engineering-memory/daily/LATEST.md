@@ -23,11 +23,11 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 368f1b7
+- Head SHA: 0008773
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 368f1b7 feat(profile): persist recruiter requirement quality on header save — atultiwari
+- 0008773 feat(profile): save recruiter preferred format and contact hours on header — atultiwari
 - Changed files:
 - modified: src/profile/header/dto/header-dto.spec.ts
 - modified: src/profile/header/dto/recruiter-header.dto.ts
