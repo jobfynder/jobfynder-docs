@@ -8,31 +8,39 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev-duplicate.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-BE-nestJS
+- jobfynder-admin/jobFynder-FE-vite
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 0008773
+- Repository: jobfynder-admin/jobFynder-FE-vite
+- Branch: dev-duplicate
+- Head SHA: 9da1885
 - Commit count: 1
-- Triggered by: atult120
+- Triggered by: jobfynder-admin
 - Commits:
-- 0008773 feat(profile): save recruiter preferred format and contact hours on header — atultiwari
+- 9da1885 feat(profile): enhance profile data model and UI components — Nishant Arora
 - Changed files:
-- modified: src/profile/header/dto/header-dto.spec.ts
-- modified: src/profile/header/dto/recruiter-header.dto.ts
-- modified: src/profile/header/header.service.spec.ts
-- modified: src/profile/header/header.service.ts
+- modified: docs/profile-data-model-backend-changes.md
+- modified: src/components/components/private/profile/components/BenchSalesEditProfileModal.tsx
+- modified: src/components/components/private/profile/components/ConsultantEditProfileModal.tsx
+- modified: src/components/components/private/profile/components/RecruiterEditProfileModal.tsx
+- modified: src/components/components/private/profile/components/bench/BenchOperationalDetails.tsx
+- modified: src/components/components/private/profile/helpers/clientRequirementContextHelpers.ts
+- modified: src/components/components/private/profile/helpers/employerHiringPreferencesHelpers.ts
+- modified: src/components/components/private/profile/helpers/operationalDetailsHelpers.ts
+- modified: src/components/components/private/profile/helpers/profileHeaderHelpers.ts
+- modified: src/components/components/private/profile/modals/EditClientRequirementContextModal.tsx
+- modified: src/components/components/private/profile/modals/EditOperationalDetailsModal.tsx
+- modified: src/types/auth.ts
 
 ---
 
