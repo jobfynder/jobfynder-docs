@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feat/reviewed-skill-enrichment.
+GitHub push event processed for jobfynder/hermes on branch hotfix/skill-suggestion-normalizer.
 
 ---
 
@@ -22,22 +22,15 @@ GitHub push event processed for jobfynder/hermes on branch feat/reviewed-skill-e
 
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
-- Branch: feat/reviewed-skill-enrichment
-- Head SHA: 1212db8
+- Branch: hotfix/skill-suggestion-normalizer
+- Head SHA: 1e89df3
 - Commit count: 1
 - Triggered by: jobfynder
 - Commits:
-- 1212db8 feat: add reviewed skill enrichment proposals — OpenAI Codex
+- 1e89df3 fix: restore taxonomy normalization in suggestion queue — Jobfynder Automation
 - Changed files:
-- added: docs/skill-enrichment-review-workflow.md
-- modified: app/prompt_runtime/registry.json
-- modified: app/routers/moderation.py
-- modified: app/runtime/db.py
-- modified: app/skill_intelligence/models.py
-- modified: app/skill_intelligence/suggestions.py
-- modified: app/understanding/taxonomy/loader.py
-- modified: app/understanding/taxonomy/models.py
-- modified: tests/test_skill_suggestions.py
+- added: tests/test_skill_candidate_suggestion_queue.py
+- modified: app/understanding/taxonomy/candidates.py
 
 ---
 
