@@ -8,36 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder/hermes on branch feat/reviewed-skill-enrichment.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/skill-crowdseed-rate-limit.
 
 ---
 
 # Repositories
 
-- jobfynder/hermes
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder/hermes
-- Branch: feat/reviewed-skill-enrichment
-- Head SHA: 1212db8
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: feat/skill-crowdseed-rate-limit
+- Head SHA: 2e07d79
 - Commit count: 1
-- Triggered by: jobfynder
+- Triggered by: jobfynder-admin
 - Commits:
-- 1212db8 feat: add reviewed skill enrichment proposals — OpenAI Codex
+- 2e07d79 feat: enforce weekly skill crowdseed quota — Jobfynder
 - Changed files:
-- added: docs/skill-enrichment-review-workflow.md
-- modified: app/prompt_runtime/registry.json
-- modified: app/routers/moderation.py
-- modified: app/runtime/db.py
-- modified: app/skill_intelligence/models.py
-- modified: app/skill_intelligence/suggestions.py
-- modified: app/understanding/taxonomy/loader.py
-- modified: app/understanding/taxonomy/models.py
-- modified: tests/test_skill_suggestions.py
+- added: prisma/migrations/20260927000000_add_extension_skill_crowdseed_quota/migration.sql
+- modified: prisma/schema.prisma
+- modified: src/extension/extension-skill-intelligence.service.spec.ts
+- modified: src/extension/extension-skill-intelligence.service.ts
 
 ---
 

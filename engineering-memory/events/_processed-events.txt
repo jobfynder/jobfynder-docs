@@ -608,3 +608,4 @@ jobfynder/hermes|refs/heads/deploy/extension-skill-suggestions-uat|65eb368632ef8
 jobfynder/hermes|refs/heads/deploy/extension-skill-suggestions-uat|65b7d19f9484c3691755a8c12673c8fedebcfa43
 jobfynder/hermes|refs/heads/main|d4d94074d360b1232047581c9a08e59ed0dff982
 jobfynder/hermes|refs/heads/feat/reviewed-skill-enrichment|1212db881dcb6e702ef581a01de4455c6db795ca
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/skill-crowdseed-rate-limit|2e07d79ddd95951e989d1c952841ed1c728a0534
