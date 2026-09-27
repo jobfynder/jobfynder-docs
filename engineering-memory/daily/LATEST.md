@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fix/core-master-skill-highlighting.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/job-board-messenger-tasks.
 
 ---
 
@@ -22,15 +22,25 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fi
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: fix/core-master-skill-highlighting
-- Head SHA: 0fb589d
+- Branch: feat/job-board-messenger-tasks
+- Head SHA: 012ca74
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 0fb589d fix(extension): resolve skills from Core master data — Jobfynder
+- 012ca74 feat(notifications): Job Board lifecycle tasks + Messenger role-aware batching and reply_to_your_recruiter — Jobfynder
 - Changed files:
-- modified: src/extension/extension-skill-intelligence.service.spec.ts
-- modified: src/extension/extension-skill-intelligence.service.ts
+- added: prisma/migrations/20260927110000_notify_rules_job_board_v2/migration.sql
+- added: prisma/migrations/20260927120000_notify_rules_messenger_v2/migration.sql
+- added: src/cron/job-board-lifecycle.service.ts
+- added: src/cron/reply-to-your-recruiter.service.ts
+- added: src/jobs/job-board-auto-rules.module.ts
+- added: src/jobs/job-board-auto-rules.service.spec.ts
+- added: src/jobs/job-board-auto-rules.service.ts
+- added: src/tasks/auto-rules/auto-rules-messenger-v2.spec.ts
+- modified: src/cron/cron.module.ts
+- modified: src/tasks/auto-rules/auto-rules.service.ts
+- modified: src/tasks/task.service.spec.ts
+- modified: src/tasks/task.service.ts
 
 ---
 
