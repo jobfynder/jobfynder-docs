@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/needs-you-and-notify-rules-v2.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fix/core-master-skill-highlighting.
 
 ---
 
@@ -22,32 +22,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feat/needs-you-and-notify-rules-v2
-- Head SHA: 4e81b42
+- Branch: fix/core-master-skill-highlighting
+- Head SHA: 0fb589d
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 4e81b42 feat(notifications): notify_rules v2 (composite key + audience), NeedsYouService, two new task rules — Jobfynder
+- 0fb589d fix(extension): resolve skills from Core master data — Jobfynder
 - Changed files:
-- added: prisma/migrations/20260927090000_notify_rules_v2_composite_key/migration.sql
-- added: prisma/migrations/20260927100000_notify_rules_v2_new_rows/migration.sql
-- added: src/cron/resume-stale.service.ts
-- added: src/notifications/notify-dispatch-audience.spec.ts
-- added: src/tasks/auto-rules/auto-rules-v2.spec.ts
-- added: src/tasks/needs-you/needs-you.controller.ts
-- added: src/tasks/needs-you/needs-you.module.ts
-- added: src/tasks/needs-you/needs-you.service.spec.ts
-- added: src/tasks/needs-you/needs-you.service.ts
-- added: src/tasks/needs-you/needs-you.util.spec.ts
-- added: src/tasks/needs-you/needs-you.util.ts
-- modified: prisma/schema.prisma
-- modified: src/app.module.ts
-- modified: src/bench/submission.service.spec.ts
-- modified: src/bench/submission.service.ts
-- modified: src/cron/cron.module.ts
-- modified: src/notifications/notify-dispatch.service.spec.ts
-- modified: src/notifications/notify-dispatch.service.ts
-- modified: src/tasks/auto-rules/auto-rules.service.ts
+- modified: src/extension/extension-skill-intelligence.service.spec.ts
+- modified: src/extension/extension-skill-intelligence.service.ts
 
 ---
 
