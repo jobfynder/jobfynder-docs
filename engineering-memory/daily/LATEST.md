@@ -23,14 +23,9 @@ GitHub push event processed for jobfynder/hermes on branch hotfix/skill-suggesti
 - Source: GitHub webhook
 - Repository: jobfynder/hermes
 - Branch: hotfix/skill-suggestion-normalizer
-- Head SHA: 1e89df3
-- Commit count: 1
+- Head SHA: 0000000
+- Commit count: 0
 - Triggered by: jobfynder
-- Commits:
-- 1e89df3 fix: restore taxonomy normalization in suggestion queue — Jobfynder Automation
-- Changed files:
-- added: tests/test_skill_candidate_suggestion_queue.py
-- modified: app/understanding/taxonomy/candidates.py
 
 ---
 
