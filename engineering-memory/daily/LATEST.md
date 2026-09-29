@@ -8,32 +8,31 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
 # Repositories
 
-- jobfynder-admin/jobFynder-FE-vite
+- jobfynder-admin/jobFynder-BE-nestJS
 
 ---
 
 # Completed Today
 
 - Source: GitHub webhook
-- Repository: jobfynder-admin/jobFynder-FE-vite
-- Branch: dev
-- Head SHA: 102bac5
+- Repository: jobfynder-admin/jobFynder-BE-nestJS
+- Branch: main
+- Head SHA: efcb844
 - Commit count: 1
-- Triggered by: jobfynder-admin
+- Triggered by: atult120
 - Commits:
-- 102bac5 refactor(onboarding): simplify onboarding role selection and update signup flow — Nishant Arora
+- efcb844 feat(auth): allow registration without a role — atultiwari
 - Changed files:
-- modified: src/components/components/auth/onboarding/OnboardingRoleForm.tsx
-- modified: src/pages/auth/onboarding.tsx
-- modified: src/services/authService.ts
-- modified: src/utils/onboardingOAuthContext.ts
-- modified: src/utils/onboardingTransform.ts
+- modified: src/auth/auth.service.ts
+- modified: src/auth/dto/register.dto.ts
+- modified: src/auth/oauth-upgrade.spec.ts
+- modified: src/auth/register.dto.spec.ts
 
 ---
 
