@@ -616,3 +616,17 @@ jobfynder/hermes|refs/heads/hotfix/skill-suggestion-normalizer|1e89df30e9d48b14c
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|89d87d59bdce1de2a730ccef94411afd7d5ffd23
 jobfynder/hermes|refs/heads/main|1e89df30e9d48b14c751e6a0760a56b8c98e7938
 jobfynder/hermes|refs/heads/hotfix/skill-suggestion-normalizer|0000000000000000000000000000000000000000
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/needs-you-and-notify-rules-v2|4e81b4268e92647441d281d53260df9717e42dc4
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/fix/core-master-skill-highlighting|0fb589de5c59ac964debf16e7a3ce3bc51035c81
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/job-board-messenger-tasks|012ca746ee44e00b08c57d7dfc857f93889852a4
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/fix/core-master-skill-highlighting|abfc67529e96215bf225eaaaced44f6cfd02ca41
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|a6c744839925aea29e690b0906c30355e8e0a07e
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|33aca68b1ac3db35255bf1c27bebceb80cc29988
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|368f1b7ab06da403989b884eb355a3328e2efa61
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|000877335cd075161e48c37c89f686a89b069215
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|9da18854aeb982559d4e1a9f47e6f9f8b7d2b1ad
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|5baae80d7234b92559f9047db0ecb075b5668f0b
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|102bac5cdcd0fbaa4040924d60dbae2fdebac8b3
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|efcb844347f866b31e5714109b1563a48b188743
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|0eea906c0140c83ccb4044a69697385d591c075c
+jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|703b140811124e9be2ec649213bb25fed1da5428
