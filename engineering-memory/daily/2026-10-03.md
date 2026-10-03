@@ -23,23 +23,15 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 9bc6f75
+- Head SHA: 1693fa5
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 9bc6f75 feat(profile): store skills on each work experience — atultiwari
+- 1693fa5 feat(profile): enhance work experience management with skills handling — atultiwari
 - Changed files:
-- added: prisma/migrations/20261003120000_add_work_experience_skills/migration.sql
-- added: src/profile/profile-transformers.work-experience.spec.ts
-- modified: prisma/schema.prisma
-- modified: src/profile/import/import-normalize.util.ts
-- modified: src/profile/import/linkedin-import.mapper.spec.ts
-- modified: src/profile/import/profile-import.service.spec.ts
-- modified: src/profile/import/profile-import.service.ts
-- modified: src/profile/import/profile-import.types.ts
-- modified: src/profile/profile-static-values.ts
-- modified: src/profile/profile-transformers.service.ts
-- modified: src/profile/profile.service.ts
+- modified: src/profile/consultant-sections/consultant-crud.service.spec.ts
+- modified: src/profile/consultant-sections/consultant-crud.service.ts
+- modified: src/profile/consultant-sections/dto/crud.dto.ts
 
 ---
 
