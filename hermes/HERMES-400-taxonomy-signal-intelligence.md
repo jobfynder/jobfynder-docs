@@ -496,6 +496,8 @@ This means matching can handle aliases like:
 
 without requiring the original parser to already know the canonical form.
 
+**Correction (2026-09-20):** the alias-handling claim above described the *intended* integration, but `app/matching/scorer.py`'s skill comparison was not actually wired to taxonomy identity until commit `1ea64788` on `jobfynder/hermes` `main` — before that fix, the scorer only lower-cased raw skill text, so an alias on one side (e.g. resume says "K8s", job requires "Kubernetes") was reported as a missing required skill. See `JOBFYNDER-HERMES-COMM-CANONICAL.md` §4 (HERMES-300 section) for the full evidence trail.
+
 ---
 
 ## 18. Active HERMES-400 API Endpoints
