@@ -23,15 +23,14 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 1693fa5
+- Head SHA: c1e9b75
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 1693fa5 feat(profile): enhance work experience management with skills handling — atultiwari
+- c1e9b75 fix(profile): parse ISO work-experience end dates as a single day — atultiwari
 - Changed files:
-- modified: src/profile/consultant-sections/consultant-crud.service.spec.ts
-- modified: src/profile/consultant-sections/consultant-crud.service.ts
-- modified: src/profile/consultant-sections/dto/crud.dto.ts
+- added: src/common/utils/date-parser.util.spec.ts
+- modified: src/common/utils/date-parser.util.ts
 
 ---
 
