@@ -39,13 +39,13 @@ This file was last substantively updated 2026-07-14 and had drifted badly from t
 | HERMES-100 | Core Platform Review | ✅ | Production baseline complete after final smoke test, repo check, and Engineering Memory update |
 | HERMES-200 | Parse Jobs | ✅ | `/understanding/parse-text`, `/v1/jobs/parse` — deterministic first, confidence-gated LLM fallback |
 | HERMES-200 | Parse Resumes | ✅ | `/understanding/parse-text`, `/understanding/parse-file` — same pattern |
-| HERMES-200 | Parse Recruiter Emails | ✅ | Closed 2026-08-21 — see HERMES-850 rows below and `hermes/HERMES-850-email-parsing-foundation.md` |
+| HERMES-200 | Parse Recruiter Emails | ✅ | Closed 2026-08-21 — see HERMES-850 rows below and `hermes/HERMES-850-email-parsing-foundation.md`. **2026-10-04:** a new, separate `HERMES_EMAIL_LLM_FALLBACK_ENABLED` flag (default `false`, commit `17fe75a3` on `jobfynder/hermes`) now also gates this path's LLM fallback — not live-verified on INTEL-1, see `JOBFYNDER-HERMES-COMM-CANONICAL.md` HERMES-850 section |
 | HERMES-200 | Parse Telegram Messages | ✅ | Only channel with live credentials; webhook receiver live (`/channels/telegram/webhook`) |
 | HERMES-200 | Parse WhatsApp Messages | ⏳ | Contract normalized and ready (`/providers/whatsapp/*`), credentials not yet provisioned |
 | HERMES-300 | Engineering Memory | ✅ | Production baseline complete (this repo's own automation, separate from candidate/company memory below) |
 | HERMES-300 | Product Memory | ⏳ | Planned |
 | HERMES-300 | Recruiter Memory | ⏳ | Planned |
-| HERMES-300 | Company Memory | ⏳ | Planned |
+| HERMES-300 | Company Memory | ⏳ | Planned — note: a separate, deterministic **Company Directory** (source-backed entity resolution, not relationship memory) now exists; see §3 below, not yet the same thing as this planned capability |
 | HERMES-300 | Consultant Memory | ⏳ | Planned |
 | HERMES-300 | Conversation Memory | ⏳ | Planned — note: conversation *compression* for prompt context is built (`/context/conversation/compress`), which is a different capability from durable conversation memory |
 | HERMES-400 | Intent Understanding | ✅ | `/v1/messages/understand` — deterministic keyword/regex classifier, no LLM |
@@ -54,7 +54,7 @@ This file was last substantively updated 2026-07-14 and had drifted badly from t
 | HERMES-400 | Taxonomy near-duplicate auto-approval | ✅ | Added 2026-08-21, same branch. Product decision: a term scoring ≥92% similarity (`fuzz.ratio`) against something already in the taxonomy is auto-added as an alias with no human step — it's the same skill/title, just spelled differently. Anything below that still requires review. This is a deliberate, explicit narrowing of "never auto-approved" (not a removal of it) — every non-near-duplicate term still needs a human. Also fixed a real scoring bug found while calibrating: the original scorer (`fuzz.WRatio`) falsely scored "Prompt Engineer" as 85.5% similar to "Site Reliability Engineer" (shared only the word "Engineer") — switched to `fuzz.ratio`, verified empirically against several real and false-positive cases. Threshold is env-overridable (`HERMES_TAXONOMY_AUTO_APPROVE_THRESHOLD`), no redeploy needed to retune. 4/4 new checks pass, full regression (9 HERMES-400 + 3 HERMES-850 checks) still passes |
 | HERMES-400 | Taxonomy version history | ⏳ | Still not built. The snapshot endpoint reports a static version *label* (e.g. `jobfynder_canonical_skills_v1`), not a changelog of what/when/why/who — the doc's original §4.6 ambition ("what changed, when, why, which source, approved or seeded") is unmet. Not addressed in the 2026-08-20 suggestion-queue work; the `approved` event does emit via `emit_event()` but nothing aggregates that into a browsable history yet |
 | HERMES-400 | Taxonomy review UI | ⏳ | Still not built. The 2026-08-20 work added the API (queue/approve/reject endpoints) a UI could call, but no UI exists — review currently means calling the API directly |
-| HERMES-400 | Matching Engine | ✅ | `/matching/resume-to-job` — deterministic weighted scorer (skills/experience/work-auth/location), no LLM |
+| HERMES-400 | Matching Engine | ✅ | `/matching/resume-to-job` — deterministic weighted scorer (skills/experience/work-auth/location), no LLM. **2026-10-04:** commit `1ea64788` on `jobfynder/hermes` fixed the scorer's skill-matching dict to key by canonical taxonomy identity instead of bare lowercasing, so an alias spelling (e.g. "K8s") is no longer reported as a missing required skill — see `JOBFYNDER-HERMES-COMM-CANONICAL.md` HERMES-300 section |
 | HERMES-400 | Trust Scoring | ⏳ | Planned — deliberately deferred; Trust/Network frontend is still mockup-only, backend intentionally not built against a mockup UI |
 | HERMES-400 | Relationship Intelligence | ⏳ | Planned — same reason as Trust Scoring |
 | HERMES-500 | GitHub Webhook Automation | ✅ | Used by Engineering Memory |
@@ -86,8 +86,10 @@ The following capabilities exist in the running service (verified live 2026-08-1
 | Submission Intelligence Extraction | `/submissions/tracker-update/extract`, `/submissions/status/extract` | Deterministic phrase-matching first, LLM fallback below 0.70 confidence |
 | Messaging Actions Extraction | `/v1/messages/actions/extract` | Deterministic phrase-matching first, `jf.messaging.actions.extract` fallback |
 | Understanding LLM Fallback | (internal to `/understanding/parse-text`, `/understanding/parse-file`) | Confidence-gated, single-attempt fallback — no retry loops |
+| **Skill Intelligence API** (added 2026-10-04) | `app/skill_intelligence/` router, `/skill-intelligence/resolve-batch`, `/skill-intelligence/search`, `/skill-intelligence/skills/{skill_id}`, `/skill-intelligence/requirements/extract`, `/skill-intelligence/suggestions`, plus `/taxonomy-enrichment-requests*` on the existing moderation router | Built 2026-09-18 to 2026-09-27 (PRs #14, #15, #17, #19 on `jobfynder/hermes`). Layered on top of HERMES-400's taxonomy, not a replacement for it. Human-approval-gated enrichment (LLM may draft, never writes directly to `canonical_skills.json`), deterministic-first skill-category classification. See `JOBFYNDER-HERMES-COMM-CANONICAL.md`'s new "Built but not yet assigned a module number" subsection for the full evidence trail, including a CI-never-ran gap at introduction (fixed within days) and a `NameError` bug in the suggestion-queue path (fixed by `1e89df30`) |
+| **Company Directory** (added 2026-10-04) | `app/companies/` router: `GET /companies`, `GET /companies/{company_id}`, `POST /companies/import` | Built 2026-09-17 to 2026-09-25 on `jobfynder/hermes`. Deterministic, source-backed company-entity resolution from email-signature evidence — closer to the still-planned "Company Memory" row above than to HERMES-400's taxonomy, but distinct from it (no relationship/trust data, just entity identity). Design log: `docs/company-acquisition-engine.md` (in `jobfynder/hermes`). See the canonical doc for the full evidence trail, including a widening of what counts as company evidence (`7c15f240`) not present in the founding commit |
 
-**Recommendation:** assign these a module number (e.g. HERMES-825 or similar) and close them out properly, since `hermes-architecture-frozen-v1.md` already documents them in detail — the closure doc would mostly be a matter of extracting and formatting what's already written there.
+**Recommendation:** assign these a module number (e.g. HERMES-825 or similar) and close them out properly, since `hermes-architecture-frozen-v1.md` already documents the original six in detail — the closure doc would mostly be a matter of extracting and formatting what's already written there. The two rows added 2026-10-04 are newer and have no equivalent prior write-up outside this file and the canonical doc.
 
 ---
 
@@ -107,4 +109,4 @@ If a capability changes status, **edit the existing row** and commit it. Do not 
 
 ## 5. Next Target
 
-Current focus: assign module numbers and closure docs to the unnumbered capabilities in §3 (Context Cards, Broadcast, Runtime Cache, Submission/Messaging extraction) — HERMES-850 closed 2026-08-21.
+Current focus: assign module numbers and closure docs to the unnumbered capabilities in §3 (Context Cards, Broadcast, Runtime Cache, Submission/Messaging extraction, and the two added 2026-10-04: Skill Intelligence API, Company Directory) — HERMES-850 closed 2026-08-21.
