@@ -23,18 +23,16 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 3dc9a7d
+- Head SHA: 91a4f07
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 3dc9a7d fix(linkedin): keep a profile photo when the R2 copy fails — atultiwari
+- 91a4f07 fix(profile): persist consultant header work arrangement and relocation — atultiwari
 - Changed files:
-- added: prisma/migrations/20261006010000_widen_users_profile_photo/migration.sql
-- modified: prisma/schema.prisma
-- modified: src/profile/import/profile-import.service.spec.ts
-- modified: src/profile/import/profile-import.service.ts
-- modified: src/profile/profile-process.service.ts
-- modified: src/profile/profile-transformers.service.ts
+- modified: src/profile/header/dto/consultant-header.dto.ts
+- modified: src/profile/header/dto/header-dto.spec.ts
+- modified: src/profile/header/header.service.spec.ts
+- modified: src/profile/header/header.service.ts
 
 ---
 
