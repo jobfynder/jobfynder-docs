@@ -14,6 +14,7 @@ Engineering Operating System, Architecture, Standards, ADRs and Documentation fo
 - **`hermes/`** — the intelligence plane (INTEL-1). API docs, architecture, module build history.
 - **`comm/`** — the communication plane (COMM-1). See `comm/COMM-documentation-map.md`.
 - **`core/`** — Jobfynder Core (backend + frontend) product/engineering specs — dashboards, profiles, settings.
+- **[Jobfynder Chrome Extension](./core/jobfynder-chrome-extension.md)** — source-of-truth mirror for the Recruiting Companion implementation and its Core/Hermes governance contract.
 - **`Architecture/`** — durable platform-wide structural decisions (not day-to-day implementation detail).
 - **`Infrastructure/`** — server inventory, SSH access, network architecture — the source of truth for what's actually deployed and how to reach it.
 - **`DISASTER-RECOVERY/`** — per-component recovery runbooks.
