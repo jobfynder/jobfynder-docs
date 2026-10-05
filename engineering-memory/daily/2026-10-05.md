@@ -23,14 +23,18 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
 - Branch: main
-- Head SHA: 8eaf7f6
+- Head SHA: 3dc9a7d
 - Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 8eaf7f6 fix(linkedin): replace the stored profile photo on scrape — atultiwari
+- 3dc9a7d fix(linkedin): keep a profile photo when the R2 copy fails — atultiwari
 - Changed files:
+- added: prisma/migrations/20261006010000_widen_users_profile_photo/migration.sql
+- modified: prisma/schema.prisma
 - modified: src/profile/import/profile-import.service.spec.ts
 - modified: src/profile/import/profile-import.service.ts
+- modified: src/profile/profile-process.service.ts
+- modified: src/profile/profile-transformers.service.ts
 
 ---
 
