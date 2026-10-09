@@ -23,39 +23,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-FE-vite on branch dev.
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-FE-vite
 - Branch: dev
-- Head SHA: 23610ce
+- Head SHA: 2b47bd5
 - Commit count: 1
 - Triggered by: jobfynder-admin
 - Commits:
-- 23610ce refactor(profile): remove react-select and enhance profile modals — Nishant Arora
+- 2b47bd5 feat(profile): add placeholders for rate input fields in EditRatesEngagementModal — Nishant Arora
 - Changed files:
-- added: src/components/ui/formFieldStyles.ts
-- modified: package-lock.json
-- modified: package.json
-- modified: src/components/components/private/profile/components/ConsultantEditProfileModal.tsx
-- modified: src/components/components/private/profile/components/ProfileCompletionWidget.tsx
-- modified: src/components/components/private/profile/components/SubmissionSnapshot.tsx
-- modified: src/components/components/private/profile/helpers/submissionSnapshotHelpers.ts
-- modified: src/components/components/private/profile/modals/AddBenchHotlistConsultantModal.tsx
-- modified: src/components/components/private/profile/modals/EditOperationalDetailsModal.tsx
-- modified: src/components/components/private/profile/modals/EducationModal.tsx
-- modified: src/components/components/private/profile/modals/WorkExperienceModal.tsx
-- modified: src/components/components/public/job-board/create-job-modal-tabs/PreScreeningTab.tsx
-- modified: src/components/ui/TaxonomyMultiSelect.tsx
-- modified: src/components/ui/dialog.tsx
-- modified: src/components/ui/input.tsx
-- modified: src/components/ui/places-autocomplete.tsx
-- modified: src/components/ui/select.tsx
-- modified: src/components/ui/simple-multi-select.tsx
-- modified: src/components/ui/simple-select.tsx
-- modified: src/components/ui/textarea.tsx
-- modified: src/components/ui/timezone-select.tsx
-- modified: src/hooks/useProfileMutations.ts
-- modified: src/pages/private/Profile.tsx
-- modified: src/services/profileApi.ts
-- modified: src/types/auth.ts
-- modified: src/utils/profileCompletion.ts
-- modified: vite.config.ts
+- modified: src/components/components/private/profile/modals/EditRatesEngagementModal.tsx
 
 ---
 
