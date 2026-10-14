@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/open-positions-jobs-facade.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
@@ -22,12 +22,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feat/open-positions-jobs-facade
-- Head SHA: eb15caf
-- Commit count: 1
+- Branch: main
+- Head SHA: 417695f
+- Commit count: 2
 - Triggered by: atult120
 - Commits:
 - eb15caf fix(mail, profile): surface AutoSend errors and accept fullName on team invite — atultiwari
+- 417695f Merge pull request #34 from jobfynder-admin/feat/open-positions-jobs-facade — Atul Tiwari
 - Changed files:
 - added: src/mail/mail.service.spec.ts
 - modified: src/mail/mail.service.ts
