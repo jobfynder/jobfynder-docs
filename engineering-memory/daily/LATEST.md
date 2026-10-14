@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/open-positions-jobs-facade.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
 
 ---
 
@@ -22,12 +22,13 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch fe
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: feat/open-positions-jobs-facade
-- Head SHA: 821dc67
-- Commit count: 1
+- Branch: main
+- Head SHA: 000e696
+- Commit count: 2
 - Triggered by: atult120
 - Commits:
 - 821dc67 feat(open-positions): proxy open positions to job postings — atultiwari
+- 000e696 Merge pull request #33 from jobfynder-admin/feat/open-positions-jobs-facade — Atul Tiwari
 - Changed files:
 - added: prisma/migrations/20261014210000_link_open_roles_to_job_postings/migration.sql
 - added: src/profile/employer-ops/employer-ops.service.spec.ts
