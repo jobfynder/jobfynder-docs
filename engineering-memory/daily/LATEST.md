@@ -8,7 +8,7 @@ Status: green
 
 # Executive Summary
 
-GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch main.
+GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch feat/open-positions-jobs-facade.
 
 ---
 
@@ -22,20 +22,17 @@ GitHub push event processed for jobfynder-admin/jobFynder-BE-nestJS on branch ma
 
 - Source: GitHub webhook
 - Repository: jobfynder-admin/jobFynder-BE-nestJS
-- Branch: main
-- Head SHA: 000e696
-- Commit count: 2
+- Branch: feat/open-positions-jobs-facade
+- Head SHA: eb15caf
+- Commit count: 1
 - Triggered by: atult120
 - Commits:
-- 821dc67 feat(open-positions): proxy open positions to job postings — atultiwari
-- 000e696 Merge pull request #33 from jobfynder-admin/feat/open-positions-jobs-facade — Atul Tiwari
+- eb15caf fix(mail, profile): surface AutoSend errors and accept fullName on team invite — atultiwari
 - Changed files:
-- added: prisma/migrations/20261014210000_link_open_roles_to_job_postings/migration.sql
-- added: src/profile/employer-ops/employer-ops.service.spec.ts
-- modified: prisma/schema.prisma
-- modified: src/profile/employer-ops/dto/employer-ops.dto.ts
-- modified: src/profile/employer-ops/employer-ops.service.ts
-- modified: src/profile/profile.module.ts
+- added: src/mail/mail.service.spec.ts
+- modified: src/mail/mail.service.ts
+- modified: src/profile/service-provider-ops/dto/service-provider-ops.dto.ts
+- modified: src/profile/service-provider-ops/service-provider-ops.service.ts
 
 ---
 

@@ -644,3 +644,4 @@ jobfynder-admin/jobFynder-FE-vite|refs/heads/dev|523451979460bf61b8281b31f59aa7a
 jobfynder-admin/jobFynder-FE-vite|refs/heads/dev-duplicate|bd433c6968f3763522c39a1fdb0d6266c0ac2def
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/open-positions-jobs-facade|821dc67579d30467cb292dcdab0dc9c0055ad04d
 jobfynder-admin/jobFynder-BE-nestJS|refs/heads/main|000e69630005d007c5b7533528506672d4ced221
+jobfynder-admin/jobFynder-BE-nestJS|refs/heads/feat/open-positions-jobs-facade|eb15caf449471f4a698d7c5aa510d6c975c9c3e1
